@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Durch Trennzeichen getrennte Textdatei lesen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Gibt die Werte in jeder Spalte und Zeile aus einer Textdatei mit durch Kommas getrennten Daten zurück. Andere Trennzeichen können verwendet werden.</Description>
+      <Shortcut>filParseText</Shortcut>
+    </Header>
+    <Snippet>
+	<Imports>
+          <Import>
+            <Namespace>Microsoft.VisualBasic.FileIO</Namespace>
+          </Import>
+  </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Filename</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Dateinamen der Textdatei.</ToolTip>
+          <Default>"C:\Test.txt"</Default>
+        </Literal>
+        <Literal>
+          <ID>Delimiter</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die Trennzeichen-Zeichenfolgen.</ToolTip>
+          <Default>","</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim filename As String = $Filename$
+        Dim fields As String()
+        Dim delimiter As String = $Delimiter$
+        Using parser As New TextFieldParser(filename)
+            parser.SetDelimiters(delimiter)
+            While Not parser.EndOfData
+                ' Read in the fields for the current line
+                fields = parser.ReadFields()
+                ' Add code here to use data in fields variable.
+
+            End While
+        End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

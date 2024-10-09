@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>TableAdapter mit partiellen Klassen erweitern</Title>
+      <Author>Microsoft</Author>
+      <Description>Erweitert einen TableAdapter mithilfe von partiellen Klassen.  Schließt den für den Verweis auf vorhandene TableAdapters erforderlichen Namespace ein.</Description>
+      <Shortcut>dtTableAdaptPartial</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Namespace</ID>
+          <Type>String</Type>
+          <ToolTip>Name des DataSet, auf dem TableAdapters funktionieren</ToolTip>
+          <Default>NorthwindDataSet</Default>
+        </Literal>
+        <Literal>
+          <ID>TableAdapter</ID>
+          <Type>String</Type>
+          <ToolTip>Name des TableAdapter, den Sie aufklappen möchten</ToolTip>
+          <Default>CustomersTableAdapter</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Namespace $Namespace$TableAdapters
+    Partial Public Class $TableAdapter$
+
+    End Class
+End Namespace
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

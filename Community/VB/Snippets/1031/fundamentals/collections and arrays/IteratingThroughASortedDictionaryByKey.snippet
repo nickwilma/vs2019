@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Sortiertes Wörterbuch nach Schlüsseln durchlaufen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Durchläuft alle Elemente in einem Wörterbuch basierend auf der sortierten Liste der Schlüssel.</Description>
+      <Shortcut>colIterSort</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>itemVar</ID>
+          <ToolTip>Ersetzen Sie dies durch einen Bezeichner für ein Element in der Sammlung.</ToolTip>
+          <Default>student</Default>
+        </Literal>
+        <Literal>
+          <ID>keyVar</ID>
+          <ToolTip>Ersetzen Sie dies durch einen Bezeichner für einen Schlüssel in der Sammlung.</ToolTip>
+          <Default>rank</Default>
+        </Literal>
+        <Literal>
+          <ID>keyType</ID>
+          <ToolTip>Ersetzen Sie dies durch den Typ eines Schlüssels in der Sammlung.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Ersetzen Sie dies durch den Typ der Elemente in der Sammlung.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Object>
+          <ID>dicVar</ID>
+          <Type>IDictionary(Of TKey, TValue)</Type>
+          <ToolTip>Ersetzen Sie dies durch das sortierte Wörterbuch, das durchlaufen werden soll.</ToolTip>
+          <Default>sortedStudents</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[ ' Loop through the items based on key
+        For Each $keyVar$ As $keyType$ In $dicVar$.Keys
+            Dim $itemVar$ As $itemType$ = $dicVar$.Item($keyVar$)
+
+        Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

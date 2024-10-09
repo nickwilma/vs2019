@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>WriteOnly-Eigenschaft definieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Definiert eine WriteOnly-Eigenschaft mit einem dahinter liegenden Feld.</Description>
+      <Shortcut>PropWrite</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>PropertyName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch einen Eigenschaftennamen.</ToolTip>
+          <Default>NewProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>PropertyType</ID>
+          <Type>
+          </Type>
+          <ToolTip>Durch den Eigenschaftentyp ersetzen.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Object>
+          <ID>PrivateVariable</ID>
+          <Type>Object</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der privaten Variablen.</ToolTip>
+          <Default>newPropertyValue</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Private $PrivateVariable$ As $PropertyType$
+Public WriteOnly Property $PropertyName$() As $PropertyType$
+    Set(ByVal value as $PropertyType$)
+        $PrivateVariable$ = value
+    End Set
+End Property]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

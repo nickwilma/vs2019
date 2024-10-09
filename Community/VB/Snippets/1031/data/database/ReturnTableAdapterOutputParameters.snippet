@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Ausgabeparameter für eine TableAdapter-Abfrage zurückgeben</Title>
+      <Author>Microsoft</Author>
+      <Description>TableAdapter-Methoden, die "keinen Wert zurückgeben", verwenden ExecuteNonQuery, wodurch die betroffenen Zeilen zurückgegeben werden.  Dieser Ausschnitt gibt den Wert von einem der Befehlsparameter auf einem TableAdapter zurück.</Description>
+      <Shortcut>dtNonQueryOutParam</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der neuen Methode, die Sie auf dem TableAdapter verfügbar machen möchten.</ToolTip>
+          <Default>GetNonQueryOutputParameter</Default>
+        </Literal>
+        <Literal>
+          <ID>existingMethod</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die vorhandene ExecuteNonQuery-Methode auf dem TableAdapter.</ToolTip>
+          <Default>GetCustomerCount</Default>
+        </Literal>
+        <Literal>
+          <ID>commandIndex</ID>
+          <Type>Int</Type>
+          <ToolTip>Ersetzen Sie dies durch den Index des Befehls in TableAdapter _commandCollection.  
+Hinweis: Wählen Sie in der vorhandenen Methode "Gehe zu Definition", um den Index zu bestimmen.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>parameterIndex</ID>
+          <Type>Int</Type>
+          <ToolTip>Ersetzen Sie dies durch den Index des Parameters, den Sie zurückgeben möchten.  
+Hinweis: Verwenden Sie den DataSet-Designer, um den Index des Parameters in der Abfrage von TableAdapter zu bestimmen.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Object>
+          <ID>dataType</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Ersetzen Sie dies durch den DataType, den die Methode zurückgeben wird.  </ToolTip>
+          <Default>Integer</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Public Function $methodName$() As $dataType$
+	Me.$existingMethod$()
+	Return Me._commandCollection($commandIndex$).Parameters($parameterIndex$).Value
+End Function
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SnippetCollection>
+	<Language Lang="VB" Guid="{3A12D0B8-C26C-11D0-B442-00A0244A1DD2}">
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%MyDocs%\Code Snippets\Visual Basic\My Code Snippets\</DirPath>
+			<LocalizedName>Meine Codeausschnitte</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\</DirPath>
+			<LocalizedName>Office-Entwicklung</LocalizedName>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\excel\</DirPath>
+				<LocalizedName>Excel</LocalizedName>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\excel\controls\</DirPath>
+					<LocalizedName>Steuerelemente</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\excel\importing\</DirPath>
+					<LocalizedName>Importieren</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\excel\Formatting\</DirPath>
+					<LocalizedName>Formatierung</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\excel\Environment\</DirPath>
+					<LocalizedName>Umgebung</LocalizedName>
+				</SnippetSubDir>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\Word\</DirPath>
+				<LocalizedName>Word</LocalizedName>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\word\controls\</DirPath>
+					<LocalizedName>Steuerelemente</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\word\environment\</DirPath>
+					<LocalizedName>Umgebung - Dokumentvariablen</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\word\formatting\</DirPath>
+					<LocalizedName>Formatierung</LocalizedName>
+				</SnippetSubDir>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\office\</DirPath>
+				<LocalizedName>Office</LocalizedName>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\office\environment\</DirPath>
+					<LocalizedName>Umgebung - Menüs, Aktionsbereich</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\officedevelopment\office\server\</DirPath>
+					<LocalizedName>Server - Zwischengespeicherte Daten, Serverdokument</LocalizedName>
+				</SnippetSubDir>
+			</SnippetSubDir>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\application\</DirPath>
+			<LocalizedName>Anwendung - Kompilierung, Ressourcen und Einstellungen</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\fundamentals\</DirPath>
+			<LocalizedName>Grundlagen – Sammlungen, Datentypen, Dateisystem, Berechnungen</LocalizedName>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\fundamentals\collections and arrays\</DirPath>
+				<LocalizedName>Sammlungen und Arrays</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\fundamentals\datatypes\</DirPath>
+				<LocalizedName>Datentypen</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\fundamentals\filesystem\</DirPath>
+				<LocalizedName>Dateisystem - Verarbeiten von Laufwerken, Ordnern und Dateien</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\fundamentals\math\</DirPath>
+				<LocalizedName>Berechnungen</LocalizedName>
+			</SnippetSubDir>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\</DirPath>
+			<LocalizedName>Daten - LINQ, XML, Designer, ADO.NET</LocalizedName>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\database\</DirPath>
+				<LocalizedName>Designerfunktionen und ADO.NET</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\LINQ Queries\</DirPath>
+				<LocalizedName>LINQ-Abfragen</LocalizedName>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\LINQ Queries\Query - Filter with 'Where'\</DirPath>
+					<LocalizedName>Abfrage - Filtern mit "Where"</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\LINQ Queries\Query - Grouping\</DirPath>
+					<LocalizedName>Abfrage - Gruppieren</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\LINQ Queries\Query - Joining\</DirPath>
+					<LocalizedName>Abfrage - Verknüpfen</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\LINQ Queries\Query - Sort with 'Order By'\</DirPath>
+					<LocalizedName>Abfrage - Sortieren mit "Order By"</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\LINQ Queries\Query - Take and Skip\</DirPath>
+					<LocalizedName>Abfrage - "Take" und "Skip"</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\LINQ Queries\Using Different Sources\</DirPath>
+					<LocalizedName>Abfrage - Verwenden unterschiedlicher Quellen</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\LINQ Queries\Using Query Results\</DirPath>
+					<LocalizedName>Abfrage - Verwenden von Abfrageergebnissen</LocalizedName>
+				</SnippetSubDir>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\xml\</DirPath>
+				<LocalizedName>XML</LocalizedName>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\xml\XML - Write</DirPath>
+					<LocalizedName>XML - Schreiben</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\xml\XML - Update</DirPath>
+					<LocalizedName>XML - Aktualisieren</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\xml\XML - Read</DirPath>
+					<LocalizedName>XML - Lesen</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\xml\XML - Query</DirPath>
+					<LocalizedName>XML - Abfrage</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\data\xml\XML - Create</DirPath>
+					<LocalizedName>XML - Erstellen</LocalizedName>
+				</SnippetSubDir>
+			</SnippetSubDir>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\other\</DirPath>
+			<LocalizedName>Sonstiges - Konnektivität, Sicherheit, Workflow</LocalizedName>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\other\connectivity\</DirPath>
+				<LocalizedName>Konnektivität und Netzwerk</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\other\security\</DirPath>
+				<LocalizedName>Sicherheit</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\other\Workflow\</DirPath>
+				<LocalizedName>Workflow</LocalizedName>
+			</SnippetSubDir>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\</DirPath>
+			<LocalizedName>Windows Forms-Anwendungen</LocalizedName>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\forms\</DirPath>
+				<LocalizedName>Formulare</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\clipboard\</DirPath>
+				<LocalizedName>Zwischenablage</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\</DirPath>
+				<LocalizedName>Steuerelemente und Komponenten</LocalizedName>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\button\</DirPath>
+					<LocalizedName>Schaltfläche</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\textbox\</DirPath>
+					<LocalizedName>TextBox</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\richtextbox\</DirPath>
+					<LocalizedName>RichTextBox</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\menu\</DirPath>
+					<LocalizedName>Menü</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\listview\</DirPath>
+					<LocalizedName>ListView</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\treeview\</DirPath>
+					<LocalizedName>TreeView</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\datagridview\</DirPath>
+					<LocalizedName>DataGridView</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\listbox\</DirPath>
+					<LocalizedName>ListBox</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\calendar\</DirPath>
+					<LocalizedName>Kalender</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\combobox\</DirPath>
+					<LocalizedName>ComboBox</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\progressbar\</DirPath>
+					<LocalizedName>ProgressBar</LocalizedName>
+				</SnippetSubDir>
+				<SnippetSubDir>
+					<OnOff>on</OnOff>
+					<Installed>true</Installed>
+					<Locale>1031</Locale>
+					<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\controls\radiobutton\</DirPath>
+					<LocalizedName>RadioButton</LocalizedName>
+				</SnippetSubDir>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\drawing\</DirPath>
+				<LocalizedName>Zeichnung</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\fonts\</DirPath>
+				<LocalizedName>Schriftarten</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\windowsforms\sound\</DirPath>
+				<LocalizedName>Sound</LocalizedName>
+			</SnippetSubDir>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\common code patterns\</DirPath>
+			<LocalizedName>Codemuster - If, For Each, Try Catch, Property usw.</LocalizedName>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\common code patterns\conditionals and loops\</DirPath>
+				<LocalizedName>Konditionelle Abschnitte und Schleifen</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\common code patterns\exception handling\</DirPath>
+				<LocalizedName>Fehlerbehandlung (Ausnahmen)</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\common code patterns\properties and procedures\</DirPath>
+				<LocalizedName>Eigenschaften, Prozeduren, Ereignisse</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\common code patterns\types\</DirPath>
+				<LocalizedName>Enumerationen, Generics, Schnittstellen, Strukturen</LocalizedName>
+			</SnippetSubDir>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\os\</DirPath>
+			<LocalizedName>Windows-System - Protokollierung, Prozesse, Registrierung, Dienste</LocalizedName>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\os\eventlog\</DirPath>
+				<LocalizedName>Windows - Ereignisprotokolle</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\os\messaging\</DirPath>
+				<LocalizedName>Windows - Meldungswarteschlangen</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\os\process\</DirPath>
+				<LocalizedName>Windows - Prozesse</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\os\registry\</DirPath>
+				<LocalizedName>Windows - Registrierung</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\os\systeminfo\</DirPath>
+				<LocalizedName>Windows - Systeminformationen</LocalizedName>
+			</SnippetSubDir>
+			<SnippetSubDir>
+				<OnOff>on</OnOff>
+				<Installed>true</Installed>
+				<Locale>1031</Locale>
+				<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\os\services\</DirPath>
+				<LocalizedName>Windows - Dienste</LocalizedName>
+			</SnippetSubDir>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\WPF\</DirPath>
+			<LocalizedName>WPF</LocalizedName>
+		</SnippetDir>
+		<SnippetDir>
+			<OnOff>on</OnOff>
+			<Installed>true</Installed>
+			<Locale>1031</Locale>
+			<DirPath>%InstallRoot%\Vb\Snippets\%LCID%\Test\</DirPath>
+			<LocalizedName>Test</LocalizedName>
+		</SnippetDir>
+	</Language>
+</SnippetCollection>

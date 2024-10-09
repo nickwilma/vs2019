@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Zwischen breiten und schmalen Zeichen konvertieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Konvertiert zwischen breiten und schmalen Zeichen in Zeichenfolgen.</Description>
+      <Shortcut>typeWidth</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Wide</ID>
+          <Type/>
+          <ToolTip>Ersetzen Sie dies durch eine breite Zeichenfolge.</ToolTip>
+          <Default>"Wide String"</Default>
+          <Function/>
+        </Literal>
+        <Literal>
+          <ID>Narrow</ID>
+          <Type/>
+          <ToolTip>Ersetzen Sie dies durch eine schmale Zeichenfolge.</ToolTip>
+          <Default>"Narrow String"</Default>
+          <Function/>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[' Convert Wide to Narrow.
+Dim nString As String = StrConv($Wide$, VbStrConv.Narrow)
+' Convert Narrow to Wide.
+Dim wString As String = StrConv($Narrow$, VbStrConv.Wide)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

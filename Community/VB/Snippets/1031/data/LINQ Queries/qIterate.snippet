@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Abfrageergebnisse durchlaufen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine Abfrage und weist die Verwendung der Abfrage durch eine nachfolgende "For Each"-Anweisung nach.</Description>
+      <Shortcut>qIterate</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Bereichsvariablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field1</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner des ersten Felds, das aus der Datenquelle abgerufen werden soll.</ToolTip>
+          <Default>ToUpper()</Default>
+        </Literal>
+        <Literal>
+          <ID>field2</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner des zweiten Felds, das aus der Datenquelle abgerufen werden soll.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>iterationVar</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Iterationsvariablen, die zum Durchlaufen der Abfrage verwendet wird.</ToolTip>
+          <Default>item</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Select $item$.$field1$, $item$.$field2$
+
+                     For Each $iterationVar$ In $queryResult$
+                         ' sum = sum + $item$.$field2$                   
+                     Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

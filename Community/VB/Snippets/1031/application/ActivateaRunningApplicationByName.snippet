@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Ausgeführte Anwendung über den Namen aktivieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Aktiviert eine ausgeführte Anwendung mithilfe des Namens der Anwendung.</Description>
+      <Shortcut>appActNa</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>applicationName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Anwendung. Dies ist oft der Titel des Anwendungsfensters.</ToolTip>
+          <Default>"Untitled - Notepad"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[AppActivate($applicationName$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

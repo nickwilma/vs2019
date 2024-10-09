@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Neue Zeile einer eingegebenen DataTable hinzufügen</Title>
+      <Description>Fügt eine neue Zeile einer eingegebenen DataTable hinzu. </Description>
+      <Shortcut>adoNewRow</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Xml.dll</Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Object>
+          <ID>dataTableType</ID>
+          <Type>DataRow</Type>
+          <ToolTip>Ersetzen Sie dies durch den hinzuzufügenden Zeilentyp.</ToolTip>
+          <Default>NorthwindDataSet.CustomersRow</Default>
+        </Object>
+        <Object>
+          <ID>table</ID>
+          <Type>DataTable</Type>
+          <ToolTip>Ersetzen Sie dies durch die DataTable für die neue Zeile.</ToolTip>
+          <Default>Me.NorthwindDataSet.Customers</Default>
+        </Object>
+        <Literal>
+          <ID>column1</ID>
+          <ToolTip>Ersetzen Sie dies durch die erste Spalte der neuen DataRow.</ToolTip>
+          <Default>CustomerID</Default>
+        </Literal>
+        <Literal>
+          <ID>column2</ID>
+          <ToolTip>Ersetzen Sie dies durch die zweite Spalte der neuen DataRow.</ToolTip>
+          <Default>CompanyName</Default>
+        </Literal>
+        <Literal>
+          <ID>column1Value</ID>
+          <ToolTip>Ersetzen Sie dies durch den neuen Wert für diese Spalte.</ToolTip>
+          <Default>"A124"</Default>
+        </Literal>
+        <Literal>
+          <ID>column2Value</ID>
+          <ToolTip>Ersetzen Sie dies durch den neuen Wert für diese Spalte.</ToolTip>
+          <Default>"Acme"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim newRow = CType($table$.NewRow(), $dataTableType$)
+newRow.$column1$= $column1Value$
+newRow.$column2$= $column2Value$
+$table$.Rows.Add(newRow)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

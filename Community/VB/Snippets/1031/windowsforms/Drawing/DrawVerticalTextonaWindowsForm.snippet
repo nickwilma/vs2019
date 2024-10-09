@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Vertikalen Text in einem Windows Form zeichnen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Zeichnet Text in einem Formular mit vertikaler Ausrichtung.</Description>
+      <Shortcut>drawVertText</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>FontName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch Schriftnamen und -größe.</ToolTip>
+          <Default>"Arial"</Default>
+        </Literal>
+        <Literal>
+          <ID>FontSize</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch die Schriftgröße.</ToolTip>
+          <Default>16</Default>
+        </Literal>
+        <Object>
+          <ID>text</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den zu schreibenden Text.</ToolTip>
+          <Default>"hello"</Default>
+        </Object>
+        <Literal>
+          <ID>Xlocation</ID>
+          <Type>Single</Type>
+          <ToolTip>Ersetzen Sie dies durch die X-Koordinate der Position, an der der Text angezeigt wird.</ToolTip>
+          <Default>150.0</Default>
+        </Literal>
+        <Literal>
+          <ID>Ylocation</ID>
+          <Type>Single</Type>
+          <ToolTip>Ersetzen Sie dies durch die Y-Koordinate der Position, an der der Text angezeigt wird.</ToolTip>
+          <Default>50.0</Default>
+        </Literal>
+        <Literal>
+          <ID>color</ID>
+          <ToolTip>Ersetzen Sie dies durch die Textfarbe.</ToolTip>
+          <Default>Color.Red</Default>
+        </Literal>
+        <Object>
+          <ID>form</ID>
+          <Type>System.Windows.Forms.Form</Type>
+          <ToolTip>Ersetzen Sie dies durch einen Verweis, auf dem das Formular oder Steuerelement den Text zeichnet.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[    Dim drawFormat As New StringFormat()
+
+    Using formGraphics As Graphics = $form$.CreateGraphics(), _
+        drawFont As New System.Drawing.Font($FontName$, $FontSize$), _
+        drawBrush As New SolidBrush($color$)
+
+        drawFormat.FormatFlags = StringFormatFlags.DirectionVertical
+        formGraphics.DrawString($text$, drawFont, drawBrush, _
+            $Xlocation$, $Ylocation$, drawFormat)
+    End Using
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

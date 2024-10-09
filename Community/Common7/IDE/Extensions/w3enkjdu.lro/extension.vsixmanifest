@@ -1,0 +1,24 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="innovaphoneSDKPackage.d5e92965-1253-414f-a7ec-c3feba9c73ee" Version="2.0.43.0" Language="en-US" Publisher="innovaphone AG" />
+    <DisplayName>innovaphoneSDKPackage</DisplayName>
+    <Description xml:space="preserve">This package helps to develop apps for the innovaphone AppPlatform.</Description>
+  </Metadata>
+  <Installation AllUsers="true">
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,]" />
+    <InstallationTarget Version="[15.0,]" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[15.0,]" Id="Microsoft.VisualStudio.Enterprise" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.15.0" DisplayName="Visual Studio MPF 15.0" Version="[15.0]" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.8.27729.1,]" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="innovaphoneSDK.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" Path="innovaphoneSDK.dll" AssemblyName="innovaphoneSDK, Version=2.0.43.0, Culture=neutral, PublicKeyToken=eb368c92d732bf5e" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="ProjectTemplates" />
+  </Assets>
+</PackageManifest>

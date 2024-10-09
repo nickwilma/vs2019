@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Struktur definieren </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Definiert eine Struktur.</Description>
+      <Shortcut>Struct</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>StructureName</ID>
+          <Type></Type>
+          <ToolTip>Ersetzen Sie dies durch den Strukturnamen.</ToolTip>
+          <Default>MyStructure</Default>
+        </Literal>
+        <Literal>
+          <ID>Member1Name</ID>
+          <Type></Type>
+          <ToolTip>Ersetzen Sie dies durch einen Strukturmember.</ToolTip>
+          <Default>ValueOne</Default>
+        </Literal>
+        <Literal>
+          <ID>Member1Type</ID>
+          <Type></Type>
+          <ToolTip>Ersetzen Sie dies durch den Datentyp des Strukturmembers.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>Member2Name</ID>
+          <Type></Type>
+          <ToolTip>Ersetzen Sie dies durch einen Strukturmember.</ToolTip>
+          <Default>ValueTwo</Default>
+        </Literal>
+        <Literal>
+          <ID>Member2Type</ID>
+          <Type></Type>
+          <ToolTip>Ersetzen Sie dies durch den Datentyp des Strukturmembers.</ToolTip>
+          <Default>Boolean</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="type decl"><![CDATA[Structure $StructureName$
+    Public $Member1Name$ As $Member1Type$
+    Public $Member2Name$ As $Member2Type$
+End Structure]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

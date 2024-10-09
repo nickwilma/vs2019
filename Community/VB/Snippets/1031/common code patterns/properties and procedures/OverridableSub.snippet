@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Überschreibbares Sub definieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Definiert ein überschreibbares Sub-Schlüsselwort.</Description>
+      <Shortcut>SubOver</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>MethodName</ID>
+          <Type></Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Funktion.</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Overridable Sub $MethodName$()
+
+End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

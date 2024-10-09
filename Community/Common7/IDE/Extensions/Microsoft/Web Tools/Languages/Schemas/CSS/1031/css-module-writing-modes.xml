@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Writing Modes" standard-reference="http://www.w3.org/TR/css-writing-modes-3/" status="CR" pub-date="2014-03-20">
+
+  <CssProperty _locID="direction" _locAttrData="description" restriction="enum" version="2.0" syntax="div { $(name): rtl; }" description="Gibt die Basisrichtung von Text und Elementen in einer Zeile an sowie die Richtung von eingebetteten Objekten und Außerkraftsetzungen für den bidirektionalen Unicode-Algorithmus." standard-reference="http://www.w3.org/TR/css-writing-modes-3/#direction">
+
+    <entry _locID="direction_rtl" _locAttrData="description" value="rtl" description="Richtung von rechts nach links."/>
+    <entry _locID="direction_ltr" _locAttrData="description" value="ltr" description="Richtung von links nach rechts"/>
+  </CssProperty>
+
+  <CssProperty _locID="unicode-bidi" _locAttrData="description" restriction="enum" version="2.0" syntax="p { $(name): embed; }" description="Die Einbettungsebene in Bezug auf den bidirektionalen Algorithmus." standard-reference="http://www.w3.org/TR/css-writing-modes-3/#unicode-bidi">
+
+    <entry _locID="unicode-bidi_normal" _locAttrData="description" value="normal" description="Das Element öffnet keine zusätzliche Einbettungsebene in Bezug auf den bidirektionalen Algorithmus. Für Elemente der Inlineebene funktioniert die explizite Neuanordnung über die Elementgrenzen hinweg."/>
+    <entry _locID="unicode-bidi_embed" _locAttrData="description" value="embed" description="Wenn das Element der Inlineebene angehört, öffnet dieser Wert eine weitere Einbettungsebene in Bezug auf den bidirektionalen Algorithmus. Die Richtung dieser Einbettungsebene wird durch die Eigenschaft &quot;direction&quot; vorgegeben."/>
+    <entry _locID="unicode-bidi_isolate" _locAttrData="description" value="isolate" version="3.0" browsers="none" description="Für den Inhalt des Elements wird angenommen, dass er sich in einem separaten, unabhängigen Absatz befindet."/>
+    <entry _locID="unicode-bidi_isolate-override" _locAttrData="description" value="isolate-override" description="Dies kombiniert das Isolierungsverhalten von &quot;isolate&quot; mit dem Verhalten für Richtungsaußerkraftsetzung von &quot;bidi-override&quot;."/>
+    <entry _locID="unicode-bidi_plaintext" _locAttrData="description" value="plaintext" version="3.0" browsers="none" description="Für die Zwecke des bidirektionalen Unicode-Algorithmus wird die Basisrichtung jedes bidirektionalen Absatzes, für den das Element den enthaltenden Block bildet, nicht durch die berechnete &quot;direction&quot; des Elements ermittelt."/>
+    <entry _locID="unicode-bidi_bidi-override" _locAttrData="description" value="bidi-override" description="Innerhalb des Elements erfolgt die Neuanordnung streng in der Reihenfolge gemäß der Eigenschaft &quot;direction&quot;. Der implizite Teil des bidirektionalen Algorithmus wird ignoriert."/>
+  </CssProperty>
+
+  <CssProperty _locID="writing-mode" _locAttrData="description" version="3.0" restriction="enum" syntax="span { $(name): lr-tb; }" description="Dies ist eine Kompakteigenschaft für &quot;direction&quot; und &quot;block-progression&quot;." standard-reference="http://www.w3.org/TR/css-writing-modes-3/#writing-mode">
+
+    <entry _locID="writing-mode_horizontal-tb" _locAttrData="description" value="horizontal-tb" description="Textflussrichtung von oben nach unten. Der Schreibmodus ist horizontal."/>
+    <entry _locID="writing-mode_vertical-rl" _locAttrData="description" value="vertical-rl" description="Textflussrichtung von rechts nach links. Der Schreibmodus ist vertikal."/>
+    <entry _locID="writing-mode_vertical-lr" _locAttrData="description" value="vertical-lr" description="Textflussrichtung von links nach rechts. Der Schreibmodus ist vertikal."/>
+  </CssProperty>
+
+  <CssProperty _locID="text-orientation" _locAttrData="description" version="3.0" restriction="enum" syntax="span { $(name): mixed; }" description="Diese Eigenschaft gibt die Ausrichtung von Text in einer Zeile an." standard-reference="http://www.w3.org/TR/css-writing-modes-3/#text-orientation">
+
+    <entry _locID="text-orientation_mixed" _locAttrData="description" value="mixed" description="In vertikalen Schreibmodi werden Zeichen aus nur-horizontalen Schriften seitlich ausgerichtet, also um 90° im Uhrzeigersinn aus ihrer Standardausrichtung in horizontalem Text gedreht."/>
+    <entry _locID="text-orientation_upright" _locAttrData="description" value="upright" description="In vertikalen Schreibmodi werden Zeichen aus nur-horizontalen Schriften aufrecht dargestellt, also in ihrer horizontalen Standardausrichtung"/>
+    <entry _locID="text-orientation_sideways-right" _locAttrData="description" value="sideways-right" description="In vertikalen Schreibmodi bewirkt dies, dass Text wie in einem horizontalen Layout ausgerichtet wird, jedoch um 90° im Uhrzeigersinn gedreht."/>
+    <entry _locID="text-orientation_sideways-left" _locAttrData="description" value="sideways-left" description="In vertikalen Schreibmodi bewirkt dies, dass Text wie in einem horizontalen Layout ausgerichtet wird, jedoch um 90° gegen den Uhrzeigersinn gedreht."/>
+    <entry _locID="text-orientation_sideways" _locAttrData="description" value="sideways" description="Dieser Wert ist identisch mit &quot;sideways-right&quot; im Schreibmodus &quot;vertical-rl&quot; und identisch mit &quot;sideways-left&quot; im Schreibmodus &quot;vertical-lr&quot;."/>
+    <entry _locID="text-orientation_use-glyph-orientation" _locAttrData="description" value="use-glyph-orientation" description="Dieser Wert ist veraltet und gilt nur für SVG."/>
+  </CssProperty>
+
+  <CssProperty name="caption-side">
+    <entry value="block-start"/>
+    <entry value="block-end"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-combine-upright" _locAttrData="description" version="3.0" restriction="enum, integer" syntax="span { $(name): all; }" description="Diese Eigenschaft gibt die Kombination mehrerer Zeichen in der räumlichen Ausdehnung eines einzelnen Zeichens an." standard-reference="http://www.w3.org/TR/css-writing-modes-3/#text-combine-upright">
+
+    <entry _locID="text-orientation_none" _locAttrData="description" value="none" description="Keine besondere Verarbeitung."/>
+    <entry _locID="text-orientation_all" _locAttrData="description" value="all" description="Versuch, alle aufeinanderfolgenden Zeichen im Rechteck so horizontal anzuordnen, dass sie den Raum eines einzelnen Zeichens im vertikalen Rechteck einnehmen."/>
+    <entry _locID="text-orientation_digits" _locAttrData="description" value="digits" description="Versuch, jede maximale Sequenz aufeinanderfolgender ASCII-Ziffern (U+0030–U+0039), die ebenso viele Zeichen wie oder weniger Zeichen als die angegebene ganze Zahl besitzen, so horizontal anzuordnen, dass sie den Raum eines einzelnen Zeichens im vertikalen Rechteck einnehmen."/>
+  </CssProperty>
+
+</CssModule>

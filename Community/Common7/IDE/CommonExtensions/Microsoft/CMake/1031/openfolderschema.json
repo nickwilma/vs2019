@@ -1,0 +1,132 @@
+{
+  "debugExtensions": {
+    "remoteWindows": {
+      "vsDebugEngineGuid": "{​​​​​3B476D35-A401-11D2-AAD4-00C04F990171}​​​​​",
+      "VsDebugTargetInfo4": {
+        "bstrCurDir": "${​​​​​debugInfo.defaultWorkingDirectory}​​​​​",
+        "bstrExe": "${​​​​​debugInfo.fullTargetPath}​​​​​",
+        "bstrOptions": "*"
+      },
+      "templates": [
+        {
+          "templateId": "launchRemoteWindows",
+          "displayName": "{F50A0AB8-B1FA-4901-BA52-1AF791ABA4B1}:5001",
+          "description": "{F50A0AB8-B1FA-4901-BA52-1AF791ABA4B1}:5002",
+          "fileExtensions": [
+            "*.exe",
+            "*.dll"
+          ],
+          "initialConfiguration": {
+            "remoteMachineName": "",
+            "cwd": "${debugInfo.defaultWorkingDirectory}",
+            "program": "${debugInfo.fullTargetPath}",
+            "deploy": [],
+            "comment": "Erfahren Sie, wie das Windows-Remotedebuggen konfiguriert wird. Weitere Informationen finden Sie unter https://docs.microsoft.com/cpp/build/cmake-remote-debugging.",
+            "args": [],
+            "env": {}
+          }
+        }
+      ],
+      "schema": {
+        "definitions": {
+          "remote_windows_schema": {
+            "type": "object",
+            "properties": {
+              "program": {
+                "type": "string",
+                "default": "${debugInfo.fullTargetPath}",
+                "description": "Gibt den auszuführenden Debugbefehl an. Bei Verwendung von CMake kann das Makro \"${debugInfo.fullTargetPath}\" als Wert für dieses Feld verwendet werden."
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "remoteWindows"
+                ]
+              },
+              "args": {
+                "type": "array",
+                "description": "Gibt die Befehlszeilenargumente an, die an das gedebuggte Programm übergeben werden.",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "remoteMachineName": {
+                "type": "string",
+                "description": "Name des Remoteservers/der IP-Adresse."
+              },
+              "debugType": {
+                "type": "string",
+                "enum": [
+                  "native",
+                  "mixed"
+                ],
+                "default": "native",
+                "description": "Gibt den Debugtyp \"native\" oder \"mixed\" an."
+              },
+              "deployDirectory": {
+                "type": "string",
+                "description": "Gibt das Verzeichnis auf dem Remotecomputer an, in dem Projektausgaben automatisch bereitgestellt werden."
+              },
+              "deploy": {
+                "type": "array",
+                "description": "Gibt die erweiterte Konfiguration für Bereitstellungseinstellungen an.",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "sourcePath": {
+                      "type": "string",
+                      "description": "Gibt den Speicherort der Datei oder des Verzeichnisses auf dem lokalen Computer an."
+                    },
+                    "targetPath": {
+                      "type": "string",
+                      "description": "Gibt den Speicherort der Datei oder des Verzeichnisses auf dem Remotecomputer an."
+                    }
+                  }
+                }
+              },
+              "cwd": {
+                "type": "string",
+                "default": "${debugInfo.defaultWorkingDirectory}",
+                "description": "Gibt den vollständigen Pfad zum Verzeichnis auf dem Remotecomputer an, auf dem \"program\" ausgeführt wird. Der Standardwert ist das Verzeichnis, das die im Feld \"program\" angegebene ausführbare Datei enthält."
+              },
+              "authenticationType": {
+                "type": "string",
+                "enum": [
+                  "windows",
+                  "none"
+                ],
+                "default": "windows",
+                "description": "Gibt den Verbindungstyp an. Der zugehörige Wert muss mit dem Wert des Remotedebuggers übereinstimmen, der auf dem Remotecomputer ausgeführt wird. \"windows\" entspricht der Windows-Authentifizierung. Bei \"none\" wird keine Authentifizierung durchgeführt."
+              },
+              "deployDebugRuntimeLibraries": {
+                "type": "boolean",
+                "description": "Gibt an, ob die Debug-Laufzeitbibliotheken für die aktive Plattform bereitgestellt werden. Der Standardwert lautet \"true\", wenn der aktive configurationType auf \"Debug\" festgelegt ist."
+              },
+              "deployRuntimeLibraries": {
+                "type": "boolean",
+                "description": "Gibt an, ob die Laufzeitbibliotheken für die aktive Plattform bereitgestellt werden. Der Standardwert lautet \"true\", wenn der aktive configurationtype auf \"MinSizeRel\" , \"RelWithDebInfo\" oder \"Release\" festgelegt ist."
+              },
+              "disableDeploy": {
+                "type": "boolean",
+                "description": "Gibt an, ob die Bereitstellung von Dateien auf dem Remotecomputer deaktiviert werden soll.",
+                "default": "false"
+              }
+            },
+            "required": [
+              "type",
+              "remoteMachineName"
+            ]
+          },
+          "remoteWindowsTemplateLayout": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/remote_windows_schema"
+              }
+            ]
+          }
+        },
+        "configuration": "#/definitions/remoteWindowsTemplateLayout"
+      }
+    }
+  }
+}

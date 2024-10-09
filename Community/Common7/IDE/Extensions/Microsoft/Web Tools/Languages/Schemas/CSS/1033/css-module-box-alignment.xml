@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Box Alignment" standard-reference="http://www.w3.org/TR/css-align-3/" status="WD" pub-date="2020-04-21">
+
+  <CssPropertyValue type="justify-content">
+    <entry value="normal" />
+    <entry value="left" />
+    <entry value="right" />
+    <entry value="space-between" />
+    <entry value="space-around" />
+    <entry value="space-evenly" />
+    <entry value="stretch" />
+    <entry value="safe center" />
+    <entry value="unsafe center" />
+    <entry value="center" />
+    <entry value="start" />
+    <entry value="end" />
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="justify-content"
+               _locAttrData="description"
+               version="3.0"
+               browsers="C29,FF28,IE11,O17,S9"
+               restriction="enum"
+               type="justify-content"
+               description="Aligns the contents of the box as a whole (as the alignment subject) within the box itself (as the alignment container) along the inline/row/main axis of the box."
+               syntax="div { $(name): flex-start; }"
+               standard-reference="http://www.w3.org/TR/css-align-3/#propdef-justify-content" />
+
+  <CssPropertyValue type="align-content">
+    <entry value="normal" />
+    <entry value="baseline" />
+    <entry value="first baseline" />
+    <entry value="last baseline" />
+    <entry value="space-between" />
+    <entry value="space-around" />
+    <entry value="space-evenly" />
+    <entry value="stretch" />
+    <entry value="safe center" />
+    <entry value="unsafe center" />
+    <entry value="center" />
+    <entry value="start" />
+    <entry value="end" />
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="align-content"
+               _locAttrData="description"
+               version="3.0"
+               browsers="C21,FF28,IE11,O12.1,S9"
+               restriction="enum"
+               type="align-content"
+               description="Aligns the contents of the box as a whole (as the alignment subject) within the box itself (as the alignment container) along the block/column/cross axis of the box."
+               syntax="div { $(name): stretch; }"
+               standard-reference="http://www.w3.org/TR/css-align-3/#propdef-align-content" />
+
+  <CssProperty _locID="place-content"
+               _locAttrData="description"
+               version="3.0"
+               restriction="enum"
+               type="align-content, justify-content"
+               description="Sets both the align-content and justify-content properties in one declaration."
+               syntax="div { $(name): end center; }"
+               standard-reference="https://www.w3.org/TR/css-align-3/#place-content" />
+
+  <CssPropertyValue type="justify-self">
+    <entry value="auto" />
+    <entry value="normal" />
+    <entry value="stretch" />
+    <entry value="left" />
+    <entry value="right" />
+    <entry value="baseline" />
+    <entry value="first baseline" />
+    <entry value="last baseline" />
+    <entry value="baseline" />
+    <entry value="safe center" />
+    <entry value="unsafe center" />
+    <entry value="center" />
+    <entry value="start" />
+    <entry value="end" />
+    <entry value="self-start" />
+    <entry value="self-end" />
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="justify-self"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF,IE"
+               restriction="enum"
+               type="justify-self"
+               description="Justifies the box (as the alignment subject) within its containing block (as the alignment container) along the inline/row/main axis of the alignment container."
+               syntax="div { $(name): stretch; }"
+               standard-reference="http://www.w3.org/TR/css-align-3/#propdef-justify-self" />
+
+  <CssPropertyValue type="align-self">
+    <entry value="auto" />
+    <entry value="normal" />
+    <entry value="stretch" />
+    <entry value="baseline" />
+    <entry value="first baseline" />
+    <entry value="last baseline" />
+    <entry value="baseline" />
+    <entry value="safe center" />
+    <entry value="unsafe center" />
+    <entry value="center" />
+    <entry value="start" />
+    <entry value="end" />
+    <entry value="self-start" />
+    <entry value="self-end" />
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="align-self"
+               _locAttrData="description"
+               version="3.0"
+               browsers="C21,FF20,IE11,O12.1,S9"
+               restriction="enum"
+               type="align-self"
+               description="Aligns the box (as the alignment subject) within its containing block (as the alignment container) along the block/column/cross axis of the alignment container."
+               syntax="div { $(name): auto; }"
+               standard-reference="http://www.w3.org/TR/css-align-3/#propdef-align-self" />
+
+  <CssProperty _locID="place-self"
+               _locAttrData="description"
+               version="3.0"
+               restriction="enum"
+               type="align-self, justify-self"
+               description="Sets both the align-self and justify-self properties in one declaration."
+               syntax="div { $(name): end center; }"
+               standard-reference="https://www.w3.org/TR/css-align-3/#place-self" />
+
+  <CssPropertyValue type="justify-items">
+    <entry value="normal" />
+    <entry value="stretch" />
+    <entry value="baseline" />
+    <entry value="first baseline" />
+    <entry value="last baseline" />
+    <entry value="baseline" />
+    <entry value="safe center" />
+    <entry value="unsafe center" />
+    <entry value="center" />
+    <entry value="start" />
+    <entry value="end" />
+    <entry value="self-start" />
+    <entry value="self-end" />
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+    <entry value="left" />
+    <entry value="right" />
+    <entry value="legacy right" />
+    <entry value="legacy left" />
+    <entry value="legacy center" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="justify-items"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF,IE"
+               restriction="enum"
+               type="justify-items"
+               description="This property specifies the default justify-self for all of the child boxes (including anonymous boxes) participating in this box’s formatting context."
+               syntax="div { $(name): stretch; }"
+               standard-reference="http://www.w3.org/TR/css-align-3/#propdef-justify-items" />
+
+  <CssPropertyValue type="align-items">
+    <entry value="normal" />
+    <entry value="stretch" />
+    <entry value="baseline" />
+    <entry value="first baseline" />
+    <entry value="last baseline" />
+    <entry value="baseline" />
+    <entry value="safe center" />
+    <entry value="unsafe center" />
+    <entry value="center" />
+    <entry value="start" />
+    <entry value="end" />
+    <entry value="self-start" />
+    <entry value="self-end" />
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="align-items"
+               _locAttrData="description"
+               version="3.0"
+               browsers="CC21,FF20,IE11,O12.1,S9"
+               restriction="enum"
+               type="align-items"
+               description="This property specifies the default align-self for all of the child boxes (including anonymous boxes) participating in this box’s formatting context."
+               syntax="div { $(name): stretch; }"
+               standard-reference="http://www.w3.org/TR/css-align-3/#propdef-align-items" />
+
+  <CssProperty _locID="place-items"
+               _locAttrData="description"
+               version="3.0"
+               restriction="enum"
+               type="align-items, justify-items"
+               description="Sets both the align-items and justify-items properties in one declaration."
+               syntax="div { $(name): end center; }"
+               standard-reference="https://www.w3.org/TR/css-align-3/#place-items" />
+
+  <CssProperty _locID="column-gap"
+               _locAttrData="description"
+               version="3.0"
+               restriction="length, percentage"
+               description="Specifies fixed-length gutters between items in the container, adding space between them—in a manner to the space-between keyword of the content-distribution properties, but of a fixed size instead of as a fraction of remaining space."
+               syntax="div { $(name): 20px }"
+               standard-reference="https://www.w3.org/TR/css-align-3/#column-row-gap">
+    <entry value="normal" />
+  </CssProperty>
+
+  <CssProperty _locID="row-gap"
+               _locAttrData="description"
+               version="3.0"
+               restriction="length, percentage"
+               description="Specifies fixed-length gutters between items in the container, adding space between them—in a manner to the space-between keyword of the content-distribution properties, but of a fixed size instead of as a fraction of remaining space."
+               syntax="div { $(name): 20px }"
+               standard-reference="https://www.w3.org/TR/css-align-3/#column-row-gap">
+    <entry value="normal" />
+  </CssProperty>
+
+  <CssProperty _locID="gap"
+               _locAttrData="description"
+               version="3.0"
+               restriction="length, percentage"
+               description="This property is a shorthand that sets row-gap and column-gap in one declaration. If 'column-gap' is omitted, it’s set to the same value as 'row-gap'"
+               syntax="div { $(name): 10px 20px }"
+               standard-reference="https://www.w3.org/TR/css-align-3/#column-row-gap">
+    <entry value="normal" />
+  </CssProperty>
+
+</CssModule>

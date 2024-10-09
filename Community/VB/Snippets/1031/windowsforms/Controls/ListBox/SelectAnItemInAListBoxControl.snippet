@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Element in einem ListBox-Steuerelement in Windows Forms auswählen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Wählt ein Element programmgesteuert in einem ListBox-Steuerelement aus.</Description>
+      <Shortcut>lbSelect</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>listBoxName</ID>
+          <Type>ListBox</Type>
+          <ToolTip>Ersetzen Sie dies durch ein ListBox-Steuerelement auf Ihrem Formular.</ToolTip>
+          <Default>ListBox1</Default>
+        </Object>
+        <Object>
+          <ID>index</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch den Index des auszuwählenden ListBox-Elements.</ToolTip>
+          <Default>1</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$listBoxName$.SelectedIndex = $index$
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

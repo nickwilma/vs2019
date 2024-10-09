@@ -1,0 +1,40 @@
+﻿<VSTemplateManifest Version="1.0" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Project" Locale="1031">
+    <RelativePathOnDisk>VC\Cross Platform\Linux\1031\LinuxEmptyProject</RelativePathOnDisk>
+    <TemplateFileName>EmptyProject.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>Leeres Projekt</Name>
+        <Description>Hiermit starten Sie von Grund auf neu mit C++ für Linux. Startdateien werden nicht bereitgestellt.</Description>
+        <ProjectType>VC</ProjectType>
+        <TemplateID>Microsoft.VisualStudio.Linux.VC.EmptyProject</TemplateID>
+        <SortOrder>1000</SortOrder>
+        <CreateNewFolder>true</CreateNewFolder>
+        <DefaultName>Project</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <LocationField>Enabled</LocationField>
+        <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+        <Icon>Icon.ico</Icon>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Project" Locale="1031">
+    <RelativePathOnDisk>VC\Cross Platform\Linux\1031\LinuxMakefileProject</RelativePathOnDisk>
+    <TemplateFileName>Project.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>Makefile-Projekt</Name>
+        <Description>Ermöglichen Sie die Kompilierung von C++ für Linux in Ihrem eigenen Buildsystem.</Description>
+        <ProjectType>VC</ProjectType>
+        <TemplateID>Microsoft.VisualStudio.Linux.VC.MakefileProject</TemplateID>
+        <SortOrder>1000</SortOrder>
+        <CreateNewFolder>true</CreateNewFolder>
+        <DefaultName>Project</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <LocationField>Enabled</LocationField>
+        <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+        <Icon>Icon.ico</Icon>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

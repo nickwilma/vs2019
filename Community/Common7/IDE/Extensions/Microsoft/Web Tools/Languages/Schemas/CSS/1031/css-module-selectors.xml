@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Selectors" standard-reference="http://www.w3.org/TR/selectors4/" status="WD" pub-date="2012-08-23">
+
+  <CssAtDirective name="viewport" version="3.0" browsers="none" include-root-properties="false" include-root-directives="false" syntax="@$(name) { width: device-width; }" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh868813.aspx">
+
+    <CssProperty ref="width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="height">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="max-width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="min-width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty name="zoom" restriction="number, percentage">
+      <entry value="auto"/>
+    </CssProperty>
+
+    <CssProperty name="max-lines" restriction="integer, enum">
+        <entry value="none"/>
+    </CssProperty>
+
+    <CssProperty name="user-zoom">
+      <entry value="zoom"/>
+      <entry value="fixed"/>
+    </CssProperty>
+
+    <CssProperty name="orientation">
+      <entry value="auto"/>
+      <entry value="landscape"/>
+      <entry value="portrait"/>
+    </CssProperty>
+  </CssAtDirective>
+
+  <CssPseudo name=":before" _locID="before-pseudo-class" _locAttrData="description" version="2.0" browsers="C,FF1,IE8,O8,S1" syntax="div:before { content: 'abc'; }" description="Das Pseudoelement wird verwendet, um Inhalt unmittelbar vor dem Inhalt eines Elements (oder anderen Pseudoelements) einzufügen. Die 'content'-Eigenschaft wird verwendet, um den einzufügenden Inhalt anzugeben." standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name=":after" _locID="after-pseudo-class" _locAttrData="description" version="2.0" browsers="C,FF1,IE8,O8,S1" syntax="div:after { content: 'abc'; }" description="Das Pseudoelement wird verwendet, um Inhalt unmittelbar nach dem Inhalt eines Elements (oder anderen Pseudoelements) einzufügen. Die 'content'-Eigenschaft wird verwendet, um den einzufügenden Inhalt anzugeben." standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name=":link" _locID="link-pseudo-element" _locAttrData="description" version="2.0" syntax="a:link { text-decoration: none; }" description="Die ':link'-Pseudoklasse wird auf Links angewendet, die noch nicht aktiviert wurden." standard-reference="http://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited"/>
+
+  <CssPseudo name=":any-link" version="3.0" syntax="a:any-link { text-decoration: none; }" standard-reference="http://www.w3.org/TR/selectors4/#the-any-link-pseudo"/>
+
+  <CssPseudo name=":local-link" version="3.0" syntax="a:local-link { text-decoration: none; }" standard-reference="http://www.w3.org/TR/selectors4/#local-pseudo"/>
+
+  <CssPseudo name=":local-link(0)" version="3.0" syntax="a:local-link(0) { text-decoration: none; }" standard-reference="http://www.w3.org/TR/selectors4/#local-pseudo"/>
+
+  <CssPseudo name=":current" version="3.0" syntax=":current { text-decoration: none; }" standard-reference="http://www.w3.org/TR/selectors4/#current-pseudo"/>
+
+  <CssPseudo name=":current(div)" version="3.0" syntax=":current(div, p) { color: blue; }" standard-reference="http://www.w3.org/TR/selectors4/#current-pseudo"/>
+
+  <CssPseudo name=":visited" _locID="visited-pseudo-element" _locAttrData="description" version="2.0" syntax="a:visited { color: purple; }" description="Die ':visited'-Pseudoklasse wird angewendet, sobald der Link vom Benutzer aktiviert wurde." standard-reference="http://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited"/>
+
+  <CssPseudo name=":active" _locID="active-pseudo-element" _locAttrData="description" version="2.0" syntax="a:active { color: red; }" description="Die ':active'-Pseudoklasse wird angewendet, während ein Element vom Benutzer aktiviert wird, z.B. in der Zeit zwischen dem Drücken und Loslassen der Maustaste." standard-reference="http://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act"/>
+
+  <CssPseudo name=":hover" _locID="hover-pseudo-element" _locAttrData="description" version="2.0" syntax="a:hover { text-decoration: none; }" description="Die ':hover'-Pseudoklasse wird angewendet, während der Benutzer ein Element mit einem Zeigegerät ansteuert, aber nicht unbedingt aktiviert. Ein visueller Benutzer-Agent könnte die Pseudoklasse beispielsweise anwenden, wenn der Cursor (Mauszeiger) über eine Box bewegt wird, die vom Element erzeugt wurde." standard-reference="http://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act"/>
+
+  <CssPseudo name=":focus" _locID="focus-pseudo-element" _locAttrData="description" version="2.0" syntax="a:focus { color: yellow; }" description="Die ':focus'-Pseudoklasse wird angewendet, während ein Element den Fokus besitzt (Tastatur- oder Mausereignisse oder andere Eingabemethoden)." standard-reference="http://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act"/>
+
+  <CssPseudo name=":focus-visible" _locID="focus-visible-pseudo-element" _locAttrData="description" version="4.0" syntax="a:focus-visible { color: yellow; }" description="Die Pseudoklasse &quot;:focus-visible&quot; gilt, wenn ein Element mit der Pseudoklasse &quot;:focus&quot; übereinstimmt und der Benutzer-Agent per Heuristik bestimmt, dass der Fokus auf dem Element deutlich gemacht werden soll." standard-reference="https://drafts.csswg.org/selectors-4/#the-focus-visible-pseudo"/>
+
+  <CssPseudo name=":focus-within" _locID="focus-within-pseudo-element" _locAttrData="description" version="4.0" syntax="a:focus-within { color: yellow; }" description="Die Pseudoklasse &quot;:focus-within&quot; gilt für alle Elemente, für die die Pseudoklasse &quot;:focus&quot; gilt, sowie für Elemente, deren Nachfolger in der flachen Struktur (einschließlich Nicht-Element-Knoten wie beispielsweise Textknoten) die Bedingungen für die Übereinstimmung mit &quot;:focus&quot; erfüllen." standard-reference="https://drafts.csswg.org/selectors-4/#the-focus-within-pseudo"/>
+
+  <CssPseudo name=":first-child" _locID="first-child-pseudo-class" _locAttrData="description" version="2.0" browsers="C,FF3,IE7,O9.5,S3.1" syntax="li:first-child { font-size: 1.2em; }" description="Identisch mit ':nth-child(1)'. Die ':first-child'-Pseudoklasse stellt ein Element dar, das dem ersten untergeordneten Element eines anderen Elements entspricht." standard-reference="http://www.w3.org/TR/css3-selectors/#first-child-pseudo"/>
+
+  <CssPseudo name=":first-line" _locID="first-line-pseudo-class" _locAttrData="description" version="2.0" syntax="p:first-line { color: green; }" description="Das ':first-line'-Pseudoelement beschreibt den Inhalt der ersten formatierten Zeile eines Elements." standard-reference="http://www.w3.org/TR/css3-selectors/#first-line"/>
+
+  <CssPseudo name=":first-letter" _locID="first-letter-pseudo-class" _locAttrData="description" version="2.0" syntax="p:first-letter { font-size: 200%; }" description="Das ':first-letter'-Pseudoelement stellt den ersten Buchstaben eines Elements dar, wenn diesem kein anderer Inhalt in derselben Zeile vorausgeht (z.B. ein Bild oder eine Inlinetabelle)." standard-reference="http://www.w3.org/TR/css3-selectors/#first-letter"/>
+
+  <CssPseudo name=":lang(en)" _locID="lang-pseudo-function" _locAttrData="description" version="2.0" browsers="C,FF1,IE8,O8,S3" syntax="html:lang(en) { color: blue; }" description="Die ':lang(C)'-Pseudoklasse stellt ein Element dar, das in der Programmiersprache C geschrieben ist." standard-reference="http://www.w3.org/TR/css3-selectors/#lang-pseudo"/>
+
+  <CssPseudo name=":checked" _locID="checked-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9,S3.13" syntax="input:checked { color: red; }" description="Optionsfelder und Kontrollkästchen können vom Benutzer ein-/ausgeschaltet werden. Einige Menüelemente sind 'aktiviert', wenn sie vom Benutzer ausgewählt werden. Die ':checked'-Pseudoklasse wird angewendet, wenn diese Elemente eingeschaltet (aktiviert) werden." standard-reference="http://www.w3.org/TR/css3-selectors/#checked"/>
+
+  <CssPseudo name=":empty" _locID="empty-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE9,O9,S3.1" syntax="div:empty { background-color: red; }" description="Die ':empty'-Pseudoklasse stellt ein Element dar, das überhaupt keine untergeordneten Elemente aufweist." standard-reference="http://www.w3.org/TR/css3-selectors/#empty-pseudo"/>
+
+  <CssPseudo name=":enabled" _locID="enabled-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE9,O9,S3.1" syntax="input:enabled { background-color: green; }" description="Die ':enabled'-Pseudoklasse stellt Benutzeroberflächenelemente dar, die sich in einem aktivierten Zustand befinden; die Elemente verfügen dementsprechend auch über einen deaktivierten Zustand." standard-reference="http://www.w3.org/TR/css3-selectors/#enableddisabled"/>
+
+  <CssPseudo name=":disabled" _locID="disabled-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE9,O9,S3.1" syntax="input:disabled { background-color: silver; }" description="Die ':disabled'-Pseudoklasse stellt Benutzeroberflächenelemente darf, die sich in einem deaktivierten Zustand befinden; die Elemente verfügen dementsprechend auch über einen aktivierten Zustand." standard-reference="http://www.w3.org/TR/css3-selectors/#enableddisabled"/>
+
+  <CssPseudo name=":first-of-type" _locID="first-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.2" syntax="dl dt:first-of-type { font-size: 200%; }" description="Identisch mit ':nth-of-type(1)'. Die ':first-of-type'-Pseudoklasse stellt ein Element dar, das dem ersten gleichgeordneten Element dieses Typs in der Liste der Elemente entspricht, die dem übergeordneten Element untergeordnet sind." standard-reference="http://www.w3.org/TR/css3-selectors/#first-of-type-pseudo"/>
+
+  <CssPseudo name=":last-child" _locID="last-child-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9.5,S3.1" syntax="li:last-child { font-size: 1.2em; }" description="Identisch mit ':nth-last-child(1)'. Die ':last-child'-Pseudoklasse stellt ein Element dar, das dem letzten untergeordneten Element eines anderen Elements entspricht." standard-reference="http://www.w3.org/TR/css3-selectors/#last-child-pseudo"/>
+
+  <CssPseudo name=":last-of-type" _locID="last-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="dl dt:last-of-type { font-size: 200%; }" description="Identisch mit ':nth-last-of-type(1)'. Die ':last-of-type'-Pseudoklasse stellt ein Element dar, das dem letzten gleichgeordneten Element seines Typs in der Liste der Elemente entspricht, die dem übergeordneten Element untergeordnet sind." standard-reference="http://www.w3.org/TR/css3-selectors/#last-of-type-pseudo"/>
+
+  <CssPseudo name=":not(:empty)" _locID="not-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9.5,S2" syntax="div:not(:empty) { border-color: pink; }" description="Die 'negation'-Pseudoklasse ':not(X)' ist eine Funktionsschreibweise, die einen einfachen Selektor (mit Ausnahme der 'negation'-Pseudoklasse selbst) als Argument akzeptiert. Sie stellt ein Element dar, das nicht durch sein Argument repräsentiert wird." standard-reference="http://www.w3.org/TR/css3-selectors/#negation"/>
+
+  <CssPseudo name=":matches(:hover)" _locID="matches-pseudo-class" _locAttrData="description" version="3.0" browsers="none" syntax="div:matches(:hover) { border-color: pink; }" description="Eine Funktionsschreibweise, die eine Auswahlliste als Argument annimmt. Sie stellt ein Element dar, das durch sein Argument dargestellt wird." standard-reference="http://www.w3.org/TR/selectors4/#matches"/>
+
+  <CssPseudo name=":dir(ltr)" _locID="dir-pseudo-class" _locAttrData="description" version="3.0" browsers="none" syntax="section:dir(ltr) { border-color: pink; }" description="Die Pseudoklasse &quot;:dir()&quot; ermöglicht dem Ersteller das Schreiben von Selektoren, die ein Element basierend auf seiner Richtung darstellen, die von der Dokumentsprache bestimmt wird." standard-reference="http://www.w3.org/TR/selectors4/#dir-pseudo"/>
+
+  <CssPseudo name=":scope" _locID="scope-pseudo-class" _locAttrData="description" version="3.0" browsers="none" syntax=":scope { border-color: pink; }" description="Die Pseudoklasse &quot;:scope&quot; stellt ein beliebiges Element dar, das in der kontextuellen Verweiselementsammlung enthalten ist." standard-reference="http://www.w3.org/TR/selectors4/#scope-pseudo"/>
+
+  <CssPseudo name=":nth-child(2n+1)" _locID="nth-child-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="tr:nth-child(2n+1) { border-color: pink; }" description="Die Schreibweise der ':nth-child(an+b)'-Pseudoklasse stellt ein Element dar, das für jede positive ganze Zahl oder den Nullwert von 'n' über vorangestellte, gleichgeordnete an+b-1-Elemente in der Dokumentstruktur verfügt und ein übergeordnetes Element aufweist." standard-reference="http://www.w3.org/TR/css3-selectors/#nth-child-pseudo"/>
+
+  <CssPseudo name=":nth-last-child(-n+2)" _locID="nth-last-child-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="tr:nth-last-child(-n+2) { border-color: pink; }" description="Die Schreibweise der :nth-last-child(an+b)'-Pseudoklasse stellt ein Element dar, das für jede positive ganze Zahl oder den Nullwert von 'n' über nachgestellte, gleichgeordnete an+b-1-Elemente in der Dokumentstruktur verfügt und ein übergeordnetes Element aufweist." standard-reference="http://www.w3.org/TR/css3-selectors/#nth-last-child-pseudo"/>
+
+  <CssPseudo name=":nth-last-of-type(n+2)" _locID="nth-last-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="tr:nth-last-of-type(n+2) { border-color: pink; }" description="Die Schreibweise der ':nth-last-of-type(an+b)'-Pseudoklasse stellt ein Element dar, das für jede Null oder positive ganze Zahl von 'n' über nachgestellte, gleichgeordnete an+b-1-Elemente in der Dokumentstruktur verfügt und ein übergeordnetes Element aufweist." standard-reference="http://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo"/>
+
+  <CssPseudo name=":nth-of-type(2n+1)" _locID="nth-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="tr:nth-of-type(2n) { border-color: pink; }" description="Die Schreibweise der ':nth-of-type(an+b)'-Pseudoklasse stellt ein Element dar, das für jede Null oder positive ganze Zahl von 'n' über vorangestellte, gleichgeordnete an+b-1-Elemente mit demselben erweiterten Elementnamen in der Dokumentstruktur verfügt und ein übergeordnetes Element aufweist." standard-reference="http://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo"/>
+
+  <CssPseudo name=":nth-match(div)" _locID="nth-match-pseudo-class" _locAttrData="description" version="3.0" browsers="none" syntax="div:nth-match(p) { border-color: pink; }" description="Stellt ein Element dar, das An+B-1 gleichgeordnete Elemente besitzt, die mit der angegebenen Auswahlliste vor ihm in der Dokumentstruktur übereinstimmen." standard-reference="http://www.w3.org/TR/selectors4/#the-nth-match-pseudo"/>
+
+  <CssPseudo name=":nth-last-match(div)" _locID="nth-last-match-pseudo-class" _locAttrData="description" version="3.0" browsers="none" syntax="div:nth-last-match(p) { border-color: pink; }" description="Stellt ein Element dar, das An+B-1 gleichgeordnete Elemente besitzt, die mit der angegebenen Auswahlliste nach ihm in der Dokumentstruktur übereinstimmen." standard-reference="http://www.w3.org/TR/selectors4/#nth-last-match-pseudo"/>
+
+  <CssPseudo name=":only-child" _locID="only-child-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE9,O9.5,S3.1" syntax="p:only-child { color: #f00; }" description="Stellt ein Element dar, das über ein übergeordnetes Element verfügt, das keine weiteren untergeordneten Elemente aufweist. Identisch mit ':first-child:last-child' oder ':nth-child(1):nth-last-child(1)', jedoch mit einer niedrigeren Detailgenauigkeit." standard-reference="http://www.w3.org/TR/css3-selectors/#only-child-pseudo"/>
+
+  <CssPseudo name=":only-of-type" _locID="only-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.2" syntax="p:only-of-type { color: #f00; }" description="Der ':only-of-type'-Selektor vergleicht jedes Element, das das einzige untergeordnete Element seines Typs für das jeweilige übergeordnete Element ist. Identisch mit ':first-of-type:last-of-type' oder ':nth-of-type(1):nth-last-of-type(1)', jedoch mit niedrigerer Detailgenauigkeit." standard-reference="http://www.w3.org/TR/css3-selectors/#only-of-type-pseudo"/>
+
+  <CssPseudo name=":root" _locID="root-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9.5,S1" syntax=":root { padding: auto 3em; }" description="Die ':root'-Pseudoklasse stellt ein Element dar, das das Stammelement des Dokuments ist. In HTML 4 handelt es sich dabei immer um das HTML-Element." standard-reference="http://www.w3.org/TR/css3-selectors/#root-pseudo"/>
+
+  <CssPseudo name=":target" _locID="target-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9.5,S1" syntax="h2:target { background-color: yellow; }" description="Einige URIs verweisen auf einen Ort innerhalb einer Ressource. Diese URIs enden mit einem 'Nummernzeichen' (#), gefolgt von einem Ankerbezeichner (dem so genannten Fragmentbezeichner)." standard-reference="http://www.w3.org/TR/css3-selectors/#root-pseudo"/>
+
+  <CssPseudo name="::selection" _locID="selection-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF4,IE9,O9.5,S1.1" syntax="p::selection { color: red; }" description="Der '::selection'-Selektor vergleicht den Teil eines Elements, das von einem Benutzer ausgewählt wird. Nur einige wenige CSS-Eigenschaften können auf ::selection: color, background, cursor und outline angewendet werden." standard-reference="http://www.w3.org/TR/css3-selectors/#selection"/>
+
+  <CssPseudo name="::before" _locID="before-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE10,O8,S1" syntax="div::before { content: 'abc'; }" description="Das Pseudoelement wird verwendet, um Inhalt unmittelbar vor dem Inhalt eines Elements (oder anderen Pseudoelements) einzufügen. Die 'content'-Eigenschaft wird verwendet, um den einzufügenden Inhalt anzugeben." standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name="::after" _locID="after-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE10,O7,S4" syntax="div::after { content: 'abc'; }" description="Das Pseudoelement wird verwendet, um Inhalt unmittelbar nach dem Inhalt eines Elements (oder anderen Pseudoelements) einzufügen. Die 'content'-Eigenschaft wird verwendet, um den einzufügenden Inhalt anzugeben." standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name="::first-line" _locID="first-line-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE10,O7,S1" syntax="p::first-line { color: green; }" description="Das '::first-line'-Pseudoelement beschreibt den Inhalt der ersten formatierten Zeile eines Elements." standard-reference="http://www.w3.org/TR/css3-selectors/#first-line"/>
+
+  <CssPseudo name="::first-letter" _locID="first-letter-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE10,O7,S1" syntax="p::first-letter { font-size: 200%; }" description="Das '::first-letter'-Pseudoelement stellt den ersten Buchstaben eines Elements dar, wenn ihm kein anderer Inhalt in der Zeile vorausgeht (z.B. ein Bild oder eine Inlinetabelle)." standard-reference="http://www.w3.org/TR/css3-selectors/#first-letter"/>
+
+  <CssPseudo name="::backdrop" version="3.0" browsers="none" syntax="*|*:fullscreen::backdrop { position: fixed; }" standard-reference="http://www.w3.org/TR/fullscreen/#::backdrop-pseudo-element"/>
+
+  <CssPseudo name=":fullscreen" version="3.0" browsers="none" syntax="iframe:fullscreen { border: none; }" standard-reference="http://www.w3.org/TR/fullscreen/#:fullscreen-pseudo-class"/>
+
+  <!-- Begin <track> element subtitle -->
+  <CssPseudo name="::cue" version="3.0" browsers="C,O16,S6" syntax="::cue { color: red; }" standard-reference="https://dvcs.w3.org/hg/text-tracks/raw-file/default/webvtt/Overview.html#the-cue-pseudo-element"/>
+
+  <CssPseudo name="::cue()" version="3.0" browsers="C,O16,S6" syntax="::cue(v(voice=woman)) { color: red; }" standard-reference="https://dvcs.w3.org/hg/text-tracks/raw-file/default/webvtt/Overview.html#the-cue-pseudo-element"/>
+
+  <CssPseudo name="::cue-region()" version="3.0" browsers="C,O16,S6" syntax="::cue-region { border: none; }" standard-reference="https://dvcs.w3.org/hg/text-tracks/raw-file/default/webvtt/Overview.html#the-cue-region-pseudo-element"/>
+
+  <CssPseudo name="::cue-region" version="3.0" browsers="C,O16,S6" syntax="::cue-region(v(voice=woman)) { color: red; }" standard-reference="https://dvcs.w3.org/hg/text-tracks/raw-file/default/webvtt/Overview.html#the-cue-region-pseudo-element"/>
+
+  <CssPseudo name=":past" version="3.0" browsers="C,O16,S6" syntax=":past { color: green; }" standard-reference="https://dvcs.w3.org/hg/text-tracks/raw-file/default/webvtt/Overview.html#dfn-past-pseudo-class"/>
+
+  <CssPseudo name=":future" version="3.0" browsers="C,O16,S6" syntax=":future { color: yellow; }" standard-reference="https://dvcs.w3.org/hg/text-tracks/raw-file/default/webvtt/Overview.html#dfn-future-pseudo-class"/>
+
+  <!-- End <track> element subtitle -->
+
+  <!-- Begin Shadow DOM selectors -->
+
+  <CssPseudo name="::content" version="3.0" browsers="C,FF,O" syntax="::content &gt; span { color: yellow; }" standard-reference="http://w3c.github.io/webcomponents/spec/shadow/#content-pseudo-element"/>
+
+  <!-- End Shadow DOM selectors -->
+
+  <!-- Begin Polymer selectors -->
+
+  <CssPseudo name=":host" version="3.0" browsers="C,FF,O" syntax=":host { display: block; }"/>
+
+  <CssPseudo name=":host()" version="3.0" browsers="C,FF,O" syntax=":host(.myclass) { color: blue; }"/>
+
+  <!-- End Polymer selectors -->
+
+  <!-- Begin Grid selectors -->
+
+  <CssPseudo name=":nth-column(2n+1)" version="3.0" browsers="none" syntax=":nth-column(2n+1) &gt; span { color: yellow; }" standard-reference="http://www.w3.org/TR/selectors4/#nth-column-pseudo"/>
+
+  <CssPseudo name=":nth-last-column(2n+1)" version="3.0" browsers="none" syntax=":nth-last-column(2n+1) &gt; span { color: yellow; }" standard-reference="http://www.w3.org/TR/selectors4/#nth-column-pseudo"/>
+
+  <!-- End Grid selectors -->
+</CssModule>

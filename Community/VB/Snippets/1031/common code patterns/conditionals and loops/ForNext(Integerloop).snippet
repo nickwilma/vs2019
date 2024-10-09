@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>For...Next-Anweisung</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Durchläuft eine Sequenz von Zahlen.</Description>
+      <Shortcut>For</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>LowerBound</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch einen Ganzzahlwert.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>UpperBound</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch einen Ganzzahlwert.</ToolTip>
+          <Default>10</Default>
+        </Literal>
+        <Literal>
+          <ID>Variable</ID>
+          <Type>Object</Type>
+          <ToolTip>Ersetzen Sie dies durch den Indikatorvariablennamen.</ToolTip>
+          <Default>index</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[For $Variable$ = $LowerBound$ To $UpperBound$
+
+Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

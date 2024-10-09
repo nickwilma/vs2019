@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Grid Layout" standard-reference="http://www.w3.org/TR/css3-grid-layout" status="WD" pub-date="2012-03-22">
+
+    <CssProperty _locID="display">
+        <entry value="grid" version="3.0" browsers="none"/>
+        <entry value="inline-grid" version="3.0" browsers="none"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-column" _locAttrData="description" version="3.0" browsers="none" restriction="identifier, integer, enum" syntax="#item1 { $(name): span 2 / auto; }" description="Die Kurzform für &quot;grid-column-start&quot; und &quot;grid-column-end&quot;." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-column">
+
+        <entry value="auto"/>
+        <entry value="start"/>
+        <entry value="end"/>
+        <entry value="span"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-column-end" _locAttrData="description" version="3.0" browsers="none" restriction="identifier, integer, enum" syntax="#item1 { $(name): span 2; }" description="Bestimmt die Größe und Position eines Rasterelements im Raster, indem eine Zeile, ein Bereich oder nichts (automatisch) für die Platzierung des Elements im Raster verwendet wird." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-column-end">
+
+        <entry value="auto"/>
+        <entry value="span"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-column-start" _locAttrData="description" version="3.0" browsers="none" restriction="identifier, integer, enum" syntax="#item1 { $(name): span 2; }" description="Bestimmt die Größe und Position eines Rasterelements im Raster, indem eine Zeile, ein Bereich oder nichts (automatisch) für die Platzierung des Elements im Raster verwendet wird." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-column-start">
+
+        <entry value="auto"/>
+        <entry value="span"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-row" _locAttrData="description" version="3.0" browsers="none" restriction="identifier, integer, enum" syntax="#item1 { $(name): span 2 / auto; }" description="Die Kurzform für &quot;grid-row-start&quot; und &quot;grid-row-end&quot;." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-row">
+
+        <entry value="auto"/>
+        <entry value="start"/>
+        <entry value="end"/>
+        <entry value="span"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-row-end" _locAttrData="description" version="3.0" browsers="none" restriction="identifier, integer, enum" syntax="#item1 { $(name): span 2; }" description="Bestimmt die Größe und Position eines Rasterelements im Raster, indem eine Zeile, ein Bereich oder nichts (automatisch) für die Platzierung des Elements im Raster verwendet wird." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-row-start">
+
+        <entry value="auto"/>
+        <entry value="span"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-row-start" _locAttrData="description" version="3.0" browsers="none" restriction="identifier, integer, enum" syntax="#item1 { $(name): span 2; }" description="Bestimmt die Größe und Position eines Rasterelements im Raster, indem eine Zeile, ein Bereich oder nichts (automatisch) für die Platzierung des Elements im Raster verwendet wird." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-column-start">
+
+        <entry value="auto"/>
+        <entry value="span"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-gap" _locAttrData="description" version="3.0" browsers="none" restriction="length" syntax="#item1 { $(name): 2em 1em; }" description="Eine Kurzform, die die Bundstege zwischen Rasterspalten und Rasterzeilen in einer Deklaration angibt." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-gap"/>
+
+    <CssProperty _locID="grid-column-gap" _locAttrData="description" version="3.0" browsers="none" restriction="length" syntax="#item1 { $(name): 2em; }" description="Gibt die Bundstege zwischen Rasterspalten an." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-column-gap"/>
+
+    <CssProperty _locID="grid-row-gap" _locAttrData="description" version="3.0" browsers="none" restriction="length" syntax="#item1 { $(name): 2em; }" description="Gibt die Bundstege zwischen Rasterzeilen an." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-row-gap"/>
+
+    <CssProperty _locID="grid-template" _locAttrData="description" restriction="identifier, length, percentage, string, enum, line-names" version="3.0" browsers="none" syntax="#item1 { $(name): auto 1fr auto / auto 1fr; }" description="Die Kurzform zum Festlegen von &quot;grid-template-columns&quot;, &quot;grid-template-rows&quot; und &quot;grid-template-areas&quot; in einer Deklaration." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-template">
+
+        <entry value="none"/>
+        <entry value="min-content"/>
+        <entry value="max-content"/>
+        <entry value="auto"/>
+        <entry value="subgrid"/>
+        <entry value="minmax()"/>
+        <entry value="repeat()"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-template-areas" _locAttrData="description" restriction="string" version="3.0" browsers="none" syntax="#item1 { $(name): 'head head' 'nav main' 'foot foot'; }" description="Gibt benannte Rasterbereiche an, die keinem bestimmten Rasterelement zugeordnet sind, auf die aber über die Eigenschaften der Rasterposition verwiesen werden kann." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-template-areas">
+
+        <entry value="none"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-template-columns" _locAttrData="description" restriction="identifier, length, percentage, enum, line-names" version="3.0" browsers="none" syntax="#item1 { $(name): 100px 1fr max-content minmax(min-content, 1fr); }" description="Gibt (als durch Leerzeichen getrennte Nachverfolgungsliste) die Zeilennamen und die Nachverfolgungsfunktionen der Größe des Rasters an." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-template-columns">
+
+        <entry value="none"/>
+        <entry value="min-content"/>
+        <entry value="max-content"/>
+        <entry value="auto"/>
+        <entry value="subgrid"/>
+        <entry value="minmax()"/>
+        <entry value="repeat()"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-template-rows" _locAttrData="description" restriction="identifier, length, string, percentage, enum, line-names" version="3.0" browsers="none" syntax="#item1 { $(name): 100px 1fr max-content minmax(min-content, 1fr); }" description="Gibt (als durch Leerzeichen getrennte Nachverfolgungsliste) die Zeilennamen und die Nachverfolgungsfunktionen der Größe des Rasters an." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-template-rows">
+
+        <entry value="none"/>
+        <entry value="min-content"/>
+        <entry value="max-content"/>
+        <entry value="auto"/>
+        <entry value="subgrid"/>
+        <entry value="minmax()"/>
+        <entry value="repeat()"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-area" _locAttrData="description" restriction="identifier, integer" version="3.0" browsers="none" syntax="#item1 { $(name): a; }" description="Bestimmt die Größe und Position eines Rasterelements im Raster, indem eine Zeile, ein Bereich oder nichts (automatisch) für die Platzierung des Elements im Raster verwendet wird. Die Kurzform für &quot;grid-row-start&quot;, &quot;grid-column-start&quot;, &quot;grid-row-end&quot; und &quot;grid-column-end&quot;." standard-reference="http://www.w3.org/TR/css3-grid-layout/#propdef-grid-area">
+
+        <entry value="auto"/>
+        <entry value="span"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-auto-columns" _locAttrData="description" restriction="length, percentage" version="3.0" browsers="none" syntax="div { $(name): 100px; }" description="Gibt die Größe implizit erstellter Spalten an." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-auto-columns">
+
+        <entry value="auto"/>
+        <entry value="min-content"/>
+        <entry value="max-content"/>
+        <entry value="minmax()"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-auto-rows" _locAttrData="description" restriction="length, percentage" version="3.0" browsers="none" syntax="div { $(name): 100px; }" description="Gibt die Größe implizit erstellter Zeilen an." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-auto-rows">
+
+        <entry value="auto"/>
+        <entry value="min-content"/>
+        <entry value="max-content"/>
+        <entry value="minmax()"/>
+    </CssProperty>
+
+    <CssProperty _locID="grid-auto-flow" _locAttrData="description" restriction="enum" version="3.0" browsers="none" syntax="div { $(name): column; }" description="Steuert, wie der automatische Platzierungsalgorithmus funktioniert, und gibt dabei genau an, wie automatisch platzierte Elemente in das Raster einfließen." standard-reference="http://www.w3.org/TR/css-grid-1/#propdef-grid-auto-flow">
+
+        <entry value="row"/>
+        <entry value="column"/>
+        <entry value="dense"/>
+    </CssProperty>
+
+</CssModule>

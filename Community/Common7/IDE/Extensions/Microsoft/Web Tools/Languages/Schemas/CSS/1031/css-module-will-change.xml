@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Will Change" standard-reference="http://www.w3.org/TR/css-will-change/" status="WD" pub-date="2014-04-29">
+
+    <CssProperty _locID="will-change" _locAttrData="description" version="3.0" browsers="C,FF,O" restriction="enum, identifier" syntax="div { $(name): transform; }" description="Stellt einen Renderinghinweis für den Benutzer-Agent zur Verfügung, der angibt, welche Arten von Änderungen der Autor für das Element erwartet." standard-reference="http://www.w3.org/TR/css-will-change/#will-change">
+
+        <entry _locID="will-change-auto" _locAttrData="description" value="auto" description="Gibt keine bestimmte Absicht an. Der Benutzer-Agent soll die Heuristiken und Optimierungen anwenden, die er üblicherweise anwendet."/>
+        <entry _locID="will-change-scroll-position" _locAttrData="description" value="scroll-position" description="Gibt an, dass der Autor erwartet, die Bildlaufposition des Elements in naher Zukunft zu animieren oder zu ändern."/>
+        <entry _locID="will-change-contents" _locAttrData="description" value="contents" description="Gibt an, dass der Autor erwartet, Inhalte des Elements in naher Zukunft zu animieren oder zu ändern."/>
+    </CssProperty>
+</CssModule>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Byte() in Bild konvertieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Konvertiert Byte() in ein Bild. Bytearrays werden häufig zum Speichern von Bildinformationen in einer Datenbank verwendet.</Description>
+      <Shortcut>byteImage</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>inputArray</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Eingabebytearrays.</ToolTip>
+          <Default>bytes</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Public Function GetImageFromByteArray(ByVal $inputArray$ As Byte()) As Bitmap
+                  Return CType(Bitmap.FromStream(New IO.MemoryStream($inputArray$)), Bitmap)
+              End Function]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Paged Media" standard-reference="http://www.w3.org/TR/css3-page/" status="WD" pub-date="2006-10-10">
+
+  <CssProperty _locID="page" _locAttrData="description" version="3.0" browsers="none" restriction="identifier" syntax="auto | &lt;identifier&gt;" description="Legt einen bestimmten Seitentyp fest, auf dem ein Element angezeigt werden SOLL." standard-reference="http://www.w3.org/TR/css3-page/#page">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssPropertyValue type="page-size" version="3.0">
+    <entry _locID="page-size-val_A5" _locAttrData="description" value="A5" description="ISO-A5-Medien: 148 mm breit und 210 mm hoch"/>
+    <entry _locID="page-size-val_A4" _locAttrData="description" value="A4" description="ISO-A4-Medien: 210 mm breit und 297 mm hoch"/>
+    <entry _locID="page-size-val_A3" _locAttrData="description" value="A3" description="ISO-A3-Medien: 297 mm breit und 420 mm hoch"/>
+    <entry _locID="page-size-val_B5" _locAttrData="description" value="B5" description="ISO-B5-Medien: 176 mm breit und 250 mm hoch"/>
+    <entry _locID="page-size-val_B4" _locAttrData="description" value="B4" description="ISO-B4-Medien: 250 mm breit und 353 mm hoch"/>
+    <entry _locID="page-size-val_letter" _locAttrData="description" value="letter" description="Nordamerikanisches Letter-Format: 8,5 Zoll breit und 11 Zoll hoch"/>
+    <entry _locID="page-size-val_legal" _locAttrData="description" value="legal" description="Nordamerikanisches Legal-Format: 8,5 Zoll breit und 14 Zoll hoch"/>
+    <entry _locID="page-size-val_ledger" _locAttrData="description" value="ledger" description="Nordamerikanisches Ledger-Format: 11 Zoll breit und 17 Zoll hoch"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="page-break-before" _locAttrData="description" version="2.0" browsers="all" restriction="enum" syntax="table { $(name): always; }" description="Legt Regeln für Seitenumbrüche vor einem Element fest." standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-page-break-before">
+
+    <entry _locID="page-break-before_always" _locAttrData="description" value="always" description="Erzwingt immer einen Seitenumbruch vor der erzeugten Box."/>
+    <entry _locID="page-break-before_auto" _locAttrData="description" value="auto" description="Vor der erzeugten Box wird ein Seitenumbruch weder erzwungen noch unterbunden."/>
+    <entry _locID="page-break-before_avoid" _locAttrData="description" value="avoid" description="Vermeidet einen Seitenumbruch vor der erzeugten Box."/>
+    <entry _locID="page-break-before_left" _locAttrData="description" value="left" description="Erzwingt ein oder zwei Seitenumbrüche vor der erzeugten Box, sodass die nächste Seite als linke Seite formatiert wird."/>
+    <entry _locID="page-break-before_right" _locAttrData="description" value="right" description="Erzwingt ein oder zwei Seitenumbrüche vor der erzeugten Box, sodass die nächste Seite als rechte Seite formatiert wird."/>
+  </CssProperty>
+
+  <CssProperty _locID="page-break-after" _locAttrData="description" version="2.0" browsers="all" restriction="enum" syntax="table { $(name): always; }" description="Definiert Regeln für Seitenumbrüche nach einem Element." standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-page-break-after">
+
+    <entry _locID="page-break-after_always" _locAttrData="description" value="always" description="Erzwingt immer einen Seitenumbruch nach der erzeugten Box."/>
+    <entry _locID="page-break-after_auto" _locAttrData="description" value="auto" description="Nach der erzeugten Box wird ein Seitenumbruch weder erzwungen noch unterbunden."/>
+    <entry _locID="page-break-after_avoid" _locAttrData="description" value="avoid" description="Vermeidet einen Seitenumbruch nach der erzeugten Box."/>
+    <entry _locID="page-break-after_left" _locAttrData="description" value="left" description="Erzwingt ein oder zwei Seitenumbrüche nach der erzeugten Box, sodass die nächste Seite als linke Seite formatiert wird."/>
+    <entry _locID="page-break-after_right" _locAttrData="description" value="right" description="Erzwingt ein oder zwei Seitenumbrüche nach der erzeugten Box, sodass die nächste Seite als rechte Seite formatiert wird."/>
+  </CssProperty>
+
+  <CssProperty _locID="page-break-inside" _locAttrData="description" version="2.0" browsers="C,IE8,O7,S1.3" restriction="enum" syntax="table { $(name): avoid; }" description="Definiert Regeln für Seitenumbrüche innerhalb eines Elements." standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-page-break-inside">
+
+    <entry _locID="page-break-inside_auto" _locAttrData="description" value="auto" description="Innerhalb der erzeugten Box wird ein Seitenumbruch weder erzwungen noch unterbunden."/>
+    <entry _locID="page-break-inside_avoid" _locAttrData="description" value="avoid" description="Vermeidet einen Seitenumbruch innerhalb der erzeugten Box."/>
+  </CssProperty>
+
+  <CssProperty _locID="orphans" _locAttrData="description" version="2.0" browsers="C,IE8,O7,S1.3" restriction="integer" description="Gibt die Mindestanzahl von Zeilen in einem Blockelement an, die am Ende einer Seite übrig bleiben müssen." syntax="&lt;integer&gt;" standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-orphans"/>
+
+  <CssProperty _locID="widows" _locAttrData="description" version="2.0" browsers="C,IE8,O9.5,S1" restriction="integer" description="Gibt die Mindestanzahl von Zeilen in einem Blockelement an, die am Anfang einer Seite übrig bleiben müssen." syntax="&lt;integer&gt;" standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-widows"/>
+
+  <CssAtDirective name="page" _locID="page-rule" _locAttrData="description" version="2.0" include-root-directives="false" syntax="@page" description="Die Regel definiert verschiedene Seitenparameter." standard-reference="http://www.w3.org/TR/css3-page/#page-box-page-rule">
+
+    <CssPseudo name=":right" _locID="right-page-selector" _locAttrData="description" version="2.0" type="pseudo-class" syntax="@page :right { margin-left: 4cm; }" description="Die Seitenboxen auf linken und rechten Seiten können bei der Ausgabe doppelseitiger Dokumente unterschiedlich sein. Dies kann durch CSS-Pseudoklassen ausgedrückt werden, die im Seitenkontext definiert sind." standard-reference="http://www.w3.org/TR/css3-page/#left-right-first"/>
+
+    <CssPseudo name=":left" _locID="left-page-selector" _locAttrData="description" version="2.0" type="pseudo-class" syntax="@page :left { margin-left: 4cm; }" description="Die Seitenboxen auf linken und rechten Seiten können bei der Ausgabe doppelseitiger Dokumente unterschiedlich sein. Dies kann durch CSS-Pseudoklassen ausgedrückt werden, die im Seitenkontext definiert sind." standard-reference="http://www.w3.org/TR/css3-page/#left-right-first"/>
+
+    <CssPseudo name=":first" _locID="first-page-selector" _locAttrData="description" version="2.0" type="pseudo-class" syntax="@page :first { margin-left: 4cm; }" description="Die Seitenboxen auf linken und rechten Seiten können bei der Ausgabe doppelseitiger Dokumente unterschiedlich sein. Dies kann durch CSS-Pseudoklassen ausgedrückt werden, die im Seitenkontext definiert sind." standard-reference="http://www.w3.org/TR/css3-page/#left-right-first"/>
+
+    <CssProperty _locID="size" version="2.1" browsers="C,O8" type="page-size" restriction="length" syntax="&lt;length&gt;{1,2} | auto | [ &lt;page-size&gt; || [ portrait | landscape] ]" standard-reference="http://www.w3.org/TR/css3-page/#page-size-prop">
+
+      <entry _locID="size_auto" _locAttrData="description" value="auto" description="Die Seitenbox wird auf die Größe und Ausrichtung des vom Benutzer-Agent ausgewählten Seitenblatts festgelegt."/>
+      <entry _locID="size_portrait" _locAttrData="description" value="portrait" description="Gibt an, dass der Inhalt der Seite im Hochformat gedruckt wird."/>
+      <entry _locID="size_landscape" _locAttrData="description" value="landscape" description="Gibt an, dass der Inhalt der Seite im Querformat gedruckt wird."/>
+    </CssProperty>
+
+    <CssProperty _locID="marks" _locAttrData="description" version="2.0-2.0" browsers="none" restriction="enum" description="Fügt auf Seitenmedien Schneidemarken ein, damit Ausdrucke zugeschnitten und ausgerichtet werden können.">
+
+      <entry _locID="marks_crop" _locAttrData="description" value="crop" description="Schneidemarken werden auf der Seite gedruckt."/>
+      <entry _locID="marks_" _locAttrData="description" value="cross" description="Passmarken werden auf der Seite gedruckt."/>
+      <entry _locID="marks_" _locAttrData="description" value="none" description="Auf der Seite werden keine Schneide- oder Passmarken gedruckt."/>
+    </CssProperty>
+
+    <CssAtDirective name="top-left" _locID="top-left-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Breite innerhalb des Bereichs, der durch den oberen Rand definiert wird, und die an die obere linke Randbox angrenzt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="top-left-corner" _locID="top-left-corner-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box fester Größe, die den Bereich ausfüllt, der durch den Schnittpunkt des oberen und linken Rands der Seitenbox definiert wird." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="top-center" _locID="top-center-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Breite, die durch den oberen Rand definiert wird, auf der Seitenfläche zentriert ist und zwischen der oberen linken und oberen rechten Randbox liegt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="top-right" _locID="top-right-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Breite innerhalb des Bereichs, der durch den oberen Rand definiert wird, und die an die obere rechte Randbox angrenzt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="top-right-corner" _locID="top-right-corner-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box, die den Bereich ausfüllt, der durch den Schnittpunkt des oberen und rechten Rands der Seitenbox definiert wird." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="left-top" _locID="left-top-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Höhe innerhalb des durch den linken Rand definierten Bereichs, die am unteren Rand der oberen linken Ecke angrenzt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="left-middle" _locID="left-middle-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Höhe, die durch den linken Rand definiert wird, auf der Seitenfläche zentriert ist und zwischen der oberen linken und unteren linken Randbox liegt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="left-bottom" _locID="left-bottom-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Höhe innerhalb des durch den linken Rand definierten Bereichs, die am oberen Rand der unteren linken Ecke angrenzt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="right-top" _locID="right-top-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Höhe innerhalb des durch den rechten Rand definierten Bereichs, die am unteren Rand der oberen rechten Ecke angrenzt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="right-middle" _locID="right-middle-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Höhe, die durch den rechten Rand definiert wird, auf der Seitenfläche zentriert ist und zwischen der oberen rechten und unteren rechten Randbox liegt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="right-bottom" _locID="right-bottom-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Höhe innerhalb des durch den rechten Rand definierten Bereichs, die am oberen Rand der unteren rechten Ecke angrenzt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-left-corner" _locID="bottom-left-corner-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box, die den Bereich ausfüllt, der durch den Schnittpunkt des unteren und linken Rands der Seitenbox definiert wird." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-left" _locID="bottom-left-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Breite innerhalb des Bereichs, der durch den unteren Rand definiert wird, und die an die untere linke Randbox angrenzt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-center" _locID="bottom-center-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Breite, die durch den unteren Rand definiert wird, auf der Seitenfläche zentriert ist und zwischen der unteren linken und unteren rechten Randbox liegt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-right" _locID="bottom-right-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box variabler Breite innerhalb des Bereichs, der durch den unteren Rand definiert wird, und die an die untere rechte Randbox angrenzt." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-right-corner" _locID="bottom-center-page-rule" _locAttrData="description" version="3" browsers="none" description="Eine Box, die den Bereich ausfüllt, der durch den Schnittpunkt des unteren und rechten Rands der Seitenbox definiert wird." standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+  </CssAtDirective>
+
+</CssModule>

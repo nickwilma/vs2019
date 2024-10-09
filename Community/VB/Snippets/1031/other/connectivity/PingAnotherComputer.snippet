@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Anderen Computer pingen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Bestimmt, ob die angegebene Website reagiert.</Description>
+      <Shortcut>conPing</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Web.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>url</ID>
+          <ToolTip>Ersetzen Sie dies durch den Hostnamen oder die IP-Adresse des Computers, den Sie pingen möchten.</ToolTip>
+          <Default>"somehost.my.domain"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim siteResponds = My.Computer.Network.Ping($url$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

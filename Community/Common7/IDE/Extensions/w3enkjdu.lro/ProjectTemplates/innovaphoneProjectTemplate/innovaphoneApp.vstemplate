@@ -1,0 +1,27 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>innovaphone App</Name>
+    <Description>Create an app for the innovaphone App Platform. A wizard will open after defining the name of the project where you have to select the type of app to create.</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType/>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>NewApp</DefaultName>
+    <LanguageTag>C++</LanguageTag>
+    <LanguageTag>JavaScript</LanguageTag>
+    <PlatformTag>innovaphone App Platform</PlatformTag>
+    <ProjectTypeTag>innovaphone App</ProjectTypeTag>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>VSTemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="template.vcxproj" ReplaceParameters="true">
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>innovaphoneSDK, Version=2.0.43.0, Culture=neutral, PublicKeyToken=eb368c92d732bf5e</Assembly>
+    <FullClassName>innovaphoneSDK.NewProjectWizard</FullClassName>  
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Microsoft Extensions" standard-reference="http://msdn.microsoft.com/en-us/ie/gg192966.aspx" pub-date="2012-02-23">
+
+  <CssAtDirective name="-ms-keyframes" version="3.0" browsers="none" description="Defines set of animation key frames." obsolete="Use @keyframes instead"/>
+
+  <CssAtDirective name="-ms-viewport" version="3.0" browsers="IE10" include-root-properties="false" include-root-directives="false" syntax="@$(name) { width: device-width; }" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh868813.aspx">
+
+    <CssProperty ref="width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="height">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="max-width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="min-width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty name="zoom" restriction="number, percentage">
+      <entry value="auto"/>
+    </CssProperty>
+
+    <CssProperty name="max-zoom" restriction="number, percentage">
+    </CssProperty>
+
+    <CssProperty name="min-zoom" restriction="number, percentage">
+    </CssProperty>
+
+    <CssProperty name="user-zoom">
+      <entry value="zoom"/>
+      <entry value="fixed"/>
+    </CssProperty>
+
+    <CssProperty name="orientation">
+      <entry value="auto"/>
+      <entry value="landscape"/>
+      <entry value="portrait"/>
+    </CssProperty>
+  </CssAtDirective>
+
+  <CssPseudo name="::-ms-browse" _locID="ms-browse-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf die Schaltfläche 'Durchsuchen' eines 'input type=file'-Steuerelements an." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh779844.aspx"/>
+
+  <CssPseudo name="::-ms-check" _locID="ms-check-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf das Häkchen einer Kontrollkästchen- oder Optionsfeld-Eingabesteuerung an." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465739.aspx"/>
+
+  <CssPseudo name="::-ms-clear" _locID="ms-clear-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf den Eingabebereich eines Texteingabe-Steuerelements an, wenn dieses leer ist." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465740.aspx"/>
+
+  <CssPseudo name="::-ms-expand" _locID="ms-expand-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf die Dropdown-Schaltfläche eines Auswahlsteuerelements an." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465742.aspx"/>
+
+  <CssPseudo name="::-ms-fill" _locID="ms-fill-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf den Teil der Leiste einer Statusanzeige an." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465757.aspx"/>
+
+  <CssPseudo name="::-ms-fill-lower" _locID="ms-fill-lower-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf den Teil der Schiebereglerleiste vom kleinsten Wert bis zu dem Wert an, der aktuell durch den Ziehpunkt ausgewählt ist. In einem von links nach rechts verlaufenden Layout ist dies der Teil der Schiebereglerleiste links vom Ziehpunkt." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465745.aspx"/>
+
+  <CssPseudo name="::-ms-fill-upper" _locID="ms-fill-upper-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf den Teil der Schiebereglerleiste vom kleinsten Wert bis zu dem Wert an, der aktuell durch den Ziehpunkt ausgewählt ist. In einem von links nach rechts verlaufenden Layout ist dies der Teil der Schiebereglerleiste rechts vom Ziehpunkt." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465748.aspx"/>
+
+  <CssPseudo name="::-ms-reveal" _locID="ms-reveal-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf die Schaltfläche zum Anzeigen des Kennworts eines 'input type=password'-Steuerelements an." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465773.aspx"/>
+
+  <CssPseudo name="::-ms-thumb" _locID="ms-thumb-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf den Teil der Bereichseingabesteuerung an (auch als Schieberegler-Steuerelement bezeichnet), das vom Benutzer gezogen wird." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465780.aspx"/>
+
+  <CssPseudo name="::-ms-ticks-after" _locID="ms-ticks-after-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf die Teilstriche eines Schiebereglers an, die beim Ziehpunkt beginnen und beim höchsten Wert des Schiebereglers enden. In einem von links nach rechts verlaufenden Layout sind dies die Teilstriche rechts vom Ziehpunkt." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465789.aspx"/>
+
+  <CssPseudo name="::-ms-ticks-before" _locID="ms-ticks-before-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf die Teilstriche eines Schiebereglers an, die die kleinsten Werte bis zu dem aktuell durch den Ziehpunkt ausgewählten Wert darstellen. In einem von links nach rechts verlaufenden Layout sind dies die Teilstriche links vom Ziehpunkt." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465796.aspx"/>
+
+  <CssPseudo name="::-ms-tooltip" _locID="ms-tooltip-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf die QuickInfo eines Schiebereglers an ('input type=range')." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465805.aspx"/>
+
+  <CssPseudo name="::-ms-track" _locID="ms-track-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf die Leiste eines Schiebereglers an." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465813.aspx"/>
+
+  <CssPseudo name="::-ms-value" _locID="ms-value-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="Wendet mindestens ein Format auf den Inhalt einer Text- oder Kennwort-Eingabesteuerung oder auf ein Auswahlsteuerelement an." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465820.aspx"/>
+
+  <CssPseudo name=":-ms-lang(en)" _locID="lang-pseudo-function" _locAttrData="description" version="3.0" browsers="IE10" syntax="html:-ms-lang(en) { color: blue; }" description="Die Pseudoklasse ':-ms-lang(C)' stellt ein Element in der Programmiersprache C dar." standard-reference="http://www.w3.org/TR/css3-selectors/#lang-pseudo"/>
+
+  <CssPseudo name=":-ms-input-placeholder" version="3.0" browsers="IE10" syntax="input:-ms-input-placeholder { color: red; }" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh767367.aspx"/>
+
+  <CssPseudo name=":-ms-keyboard-active" version="3.0" browsers="IE10" syntax="input:-ms-keyboard-active { background: red; }" standard-reference="#NoOnlineDocs"/>
+
+  <CssPseudo name="::-ms-backdrop" version="3.0" browsers="IE11" syntax="*|*:fullscreen::backdrop { position: fixed; }" standard-reference="http://www.w3.org/TR/fullscreen/#::backdrop-pseudo-element"/>
+
+  <CssPseudo name=":-ms-fullscreen" version="3.0" browsers="IE11" syntax="iframe:fullscreen { border: none; }" standard-reference="http://www.w3.org/TR/fullscreen/#:fullscreen-pseudo-class"/>
+
+  <CssProperty _locID="zoom" _locAttrData="description" version="3.0" browsers="IE6,S4" restriction="enum, integer, number, percentage" syntax=".example { $(name): 1; }" description="Legt den Vergrößerungsmaßstab des Objekts fest oder ruft ihn ab." standard-reference="http://msdn.microsoft.com/en-us/ie/gg192966.aspx">
+
+    <entry value="normal"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-zoom" ref="zoom" browsers="IE8"/>
+
+  <CssProperty _locID="behavior" _locAttrData="description" version="3.0" browsers="IE6" type="url" restriction="url" syntax="div { $(name): url(http://example.com/png_fix.htc); }" description="Nur IE. Wird verwendet, um das Verhaltensspektrum von Browsern zu erweitern." standard-reference="http://msdn.microsoft.com/en-us/ie/gg192966.aspx">
+
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-behavior" ref="behavior" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-accelerator" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="u { $(name): true; }" description="Nur IE. Ist in der Lage, die vom System vorgegebenen Unterstreichungen für Zugriffstasten so lange auszublenden, bis die ALT-TASTE gedrückt wird." standard-reference="http://www.css3.com/css-accelerator/">
+
+    <entry _locID="-ms-accelerator_true" _locAttrData="description" value="true" description="Das Element enthält eine Abfolge von Zugriffstasten."/>
+    <entry _locID="-ms-accelerator_false" _locAttrData="description" value="false" description="Das Element enthält keine Abfolge von Zugriffstasten."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-line-break" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="p { $(name): strict; }" description="Gibt an, welche Zeilenumbrucheinschränkungen für das Element gelten." standard-reference="http://www.w3.org/TR/css3-text/#line-break0">
+
+    <entry _locID="-ms-line-break_auto" _locAttrData="description" value="auto" description="Der Benutzer-Agent legt die Zeilenumbrucheinschränkungen fest, die für CJK-Schriftarten verwendet werden. Er kann die Einschränkungen abhängig von der Zeilenlänge abändern, d.h. einen weniger restriktiven Satz von Zeilenumbruchregeln für kurze Zeilen verwenden."/>
+    <entry _locID="-ms-line-break_newspaper" _locAttrData="description" value="newspaper" description="Führt für CJK-Schriftarten Umbrüche anhand der am wenigsten restriktivsten Gruppe von Zeilenumbruchregeln durch. Wird normalerweise für kurze Zeilen, z. B. in Zeitungen, verwendet."/>
+    <entry _locID="-ms-line-break_normal" _locAttrData="description" value="normal" description="Führt für CJK-Schriftarten Umbrüche anhand der normalen Zeilenumbruchregeln durch."/>
+    <entry _locID="-ms-line-break_strict" _locAttrData="description" value="strict" description="Verwendet in CJK-Schriftarten einen restriktiveren Satz von Zeilenumbruchregeln als bei der Einstellung 'normal'."/>
+    <entry _locID="-ms-line-break_keep-all" _locAttrData="description" value="keep-all" description="Es ist nicht möglich, die Abfolge von CJK-Zeichen an optionalen Umbruchpunkten zu trennen. Diese Option sollte nur verwendet werden, wenn Wortbegrenzungszeichen verfügbar sind, die Zeilentrennungen weiterhin möglich machen, z. B. in der koreanischen Sprache."/>
+  </CssProperty>
+
+  <!-- Text -->
+
+  <CssProperty _locID="-ms-text-overflow" ref="text-overflow" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-text-underline-position" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): auto; }" description="Legt die Position einer für dasselbe Element angegebenen Unterstreichung fest: Dies wirkt sich nicht auf die von Vorgängerelementen angegebenen Unterstreichungen aus. Diese Eigenschaft wird normalerweise für vertikale Schriften, z.B. in japanischen Dokumenten verwendet, in denen die Unterstreichung häufig gegenüber (rechts vom) jeweiligen Textlauf angezeigt werden soll." standard-reference="http://www.w3.org/TR/css3-text/#text-underline-position0">
+
+    <entry _locID="-ms-text-underline-position_auto" _locAttrData="description" value="auto" description="Der Benutzer-Agent kann auch einen Algorithmus anwenden, um die Position der Unterstreichung festzulegen. In einem Layout mit horizontalen Zeilen wird die Unterstreichung wie bei 'alphabetic' ausgerichtet. In einem Layout mit vertikalen Zeilen (mit der Spracheinstellung Japanisch oder Koreanisch) wird die Unterstreichung rechts neben der Zeile ausgerichtet."/>
+    <entry _locID="-ms-text-underline-position_under" _locAttrData="description" value="under" description="Die Unterstreichung ist auf die untere (bzw. bei vertikaler Schreibweise linke) Kante der EM-Box des Elements ausgerichtet. In diesem Fall werden Unterlängen normalerweise nicht durchgestrichen. Wird teilweise auch als 'buchhalterische' Unterstreichung bezeichnet."/>
+    <entry _locID="-ms-text-underline-position_alphabetic" _locAttrData="description" value="alphabetic" description="Die Unterstreichung wird an der 'alphabetic'-Grundlinie ausgerichtet. Es kann vorkommen, dass einige Unterlängen durchgestrichen sind."/>
+    <entry _locID="-ms-text-underline-position_over" _locAttrData="description" value="over" description="Die Unterstreichung ist auf die obere (bzw. bei vertikaler Schreibweise rechte) Kante der EM-Box des Elements ausgerichtet. In diesem Fall wird die Seite für eine Überstreichung ebenfalls ausgetauscht."/>
+  </CssProperty>
+
+  <CssProperty name="-ms-word-wrap" ref="word-wrap" version="3.0" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-word-break" ref="word-break" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-text-align-last" ref="text-align-last" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-text-justify" ref="text-justify" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-text-autospace" _locAttrData="description" version="3.0" browsers="IE8" restriction="enum" syntax="div { $(name): ideograph-numeric; }" description="Legt fest, ob ein Satzzeichen voller Breite am Anfang einer Zeile angepasst werden soll, sodass das Inhalt auf die ersten Glyphe der darüber und darunter liegenden Zeile ausgerichtet ist." standard-reference="http://www.w3.org/TR/css3-text/#text-autospace">
+
+    <entry _locID="-ms-text-autospace_none" _locAttrData="description" value="none" description="Es wird kein zusätzlicher Leeraum erstellt."/>
+    <entry _locID="-ms-text-autospace_ideograph-numeric" _locAttrData="description" value="ideograph-numeric" description="Erstellt einen zusätzlichen 1/4em-Abstand zwischen der Ausgabe ideografischer Zeichen und numerischer Glyphen."/>
+    <entry _locID="-ms-text-autospace_ideograph-alpha" _locAttrData="description" value="ideograph-alpha" description="Erstellt einen zusätzlichen 1/4em-Abstand zwischen der Ausgabe ideografischer und nicht ideografischer Zeichen, wie sie z.B. in lateinischen Sprachen, Kyrillisch, Griechisch, Arabisch und Hebräisch vorkommen."/>
+    <entry _locID="-ms-text-autospace_ideograph-space" _locAttrData="description" value="ideograph-space" description="Vergrößert die Breite von Leerzeichen, wenn diese zwischen ideografischen Zeichen stehen."/>
+    <entry _locID="-ms-text-autospace_ideograph-parenthesis" _locAttrData="description" value="ideograph-parenthesis" description="Vergrößert den Abstand zwischen normalen (nicht breiten) Klammern und ideografischen Zeichen."/>
+    <entry _locID="-ms-text-autospace_punctuation" _locAttrData="description" value="punctuation" description="Erzeugt zusätzlichen geschützten Leerraum um Satzzeichen gemäß den typografischen Konventionen der jeweiligen Sprache."/>
+  </CssProperty>
+
+  <!-- 3D transforms -->
+
+  <CssProperty name="-ms-transform" ref="transform" browsers="IE9-9"/>
+
+  <CssProperty name="-ms-transform-origin" ref="transform-origin" browsers="IE9-9"/>
+
+  <CssProperty _locID="-ms-transform-origin-x" _locAttrData="description" version="3.0" browsers="IE10" restriction="length, percentage" description="Die X-Koordinate des Ursprungs für Transformationen, die auf ein Element in Bezug zu dessen Rahmenbox angewendet werden." standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin"/>
+
+  <CssProperty _locID="-ms-transform-origin-y" _locAttrData="description" version="3.0" browsers="IE10" restriction="length, percentage" description="Die Y-Koordinate des Ursprungs für Transformationen, die auf ein Element in Bezug zu dessen Rahmenbox angewendet werden." standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin"/>
+
+  <CssProperty _locID="-ms-transform-origin-z" _locAttrData="description" version="3.0" browsers="IE10" restriction="length, percentage" description="Die Z-Koordinate des Ursprungs für Transformationen, die auf ein Element in Bezug zu dessen Rahmenbox angewendet werden." standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin"/>
+
+  <CssProperty _locID="-ms-block-progression" _locAttrData="description" version="3.0" browsers="IE8" restriction="enum" syntax="div { $(name): bt; }" description="Die 'block-progression'-Eigenschaft legt den 'block-progression'-Wert und die Ausrichtung des Textflusses fest." standard-reference="http://www.w3.org/TR/2003/CR-css3-text-20030514/#Progression">
+
+    <entry value="tb"/>
+    <entry value="rl"/>
+    <entry value="lr"/>
+    <entry _locID="-ms-block-progression_bt" _locAttrData="description" value="bt" description="Textfluss von unten nach oben. Das Layout ist horizontal."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-writing-mode" _locAttrData="description" version="3.0" browsers="IE8" restriction="enum" syntax="span { $(name): lr-tb; }" description="Kurzschreibweise sowohl für 'direction' als auch für 'block-progression'." standard-reference="http://www.w3.org/TR/2003/CR-css3-text-20030514/#writing-mode">
+
+    <entry value="lr-tb"/>
+    <entry value="tb-rl"/>
+    <entry value="rl-tb"/>
+    <entry value="bt-rl"/>
+    <entry value="tb-lr"/>
+    <entry value="bt-lr"/>
+    <entry value="lr-bt"/>
+    <entry value="rl-bt"/>
+  </CssProperty>
+
+
+
+  <!-- Grid Alignment -->
+
+  <CssProperty _locID="display">
+    <entry _locID="display_-ms-grid" _locAttrData="description" value="-ms-grid" version="3.0" browsers="IE10" description="Ein Rasterwert führt dazu, dass ein Element als Block-Level-Rasterelement angezeigt wird."/>
+    <entry _locID="display_-ms-inline-grid" _locAttrData="description" value="-ms-inline-grid" version="3.0" browsers="IE10" description="Elin Wert des Inlinerasters führt dazu, dass ein Element als Inline-Level-Rasterelement angezeigt wird."/>
+    <entry value="-ms-flexbox" browsers="IE10"/>
+    <entry value="-ms-inline-flexbox" browsers="IE10"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-grid-column" ref="grid-column" browsers="IE10"/>
+
+  <CssProperty name="-ms-grid-row" ref="grid-row" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-grid-layer" _locAttrData="description, syntax" version="3.0" browsers="IE10" restriction="integer" syntax="div { $(name): 2; }" description="'Grid-layer' ist in etwa vergleichbar mit 'z-index', verhindert jedoch eine zu weite Auslegung der Bedeutung der 'z-index'-Eigenschaft, die nur für positionierte Elemente gilt." standard-reference="http://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/#grid-layer"/>
+
+  <!-- Flex box-->
+
+  <CssProperty _locID="-ms-flex" _locAttrData="description" version="3.0" browsers="IE10" restriction="length, number, percentage" syntax="p { $(name): 1 auto; }" description="Gibt die Parameter einer flexiblen Länge an: die positive und negative Flexibilität sowie die bevorzugte Größe." standard-reference="http://www.w3.org/TR/css3-flexbox/#flex">
+
+    <entry value="auto"/>
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-flex-align" _locAttrData="description" version="3.0" browsers="IE10" type="flexaligns" restriction="enum" syntax="div { $(name): center; }" description="Durch die 'flex-align'-Eigenschaft wird die Verteilung von Leerraum auf der Längenachse verändert." standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-align0"/>
+
+  <CssProperty _locID="-ms-flex-direction" _locAttrData="description" version="3.0" browsers="IE10" type="flexdirections" restriction="enum" syntax="div { $(name): column; }" description="Gibt an, wie Flexboxelemente in der Flexbox platziert werden." standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-direction0"/>
+
+  <CssProperty _locID="-ms-flex-flow" ref="flex-flow" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-flex-wrap" ref="flex-wrap" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-flex-item-align" _locAttrData="description" version="3.0" browsers="IE10" type="flexaligns" restriction="enum" syntax="div { $(name): center; }" description="Durch die 'flex-align'-Eigenschaft wird die Verteilung von Leerraum auf der Längenachse verändert." standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-item-align">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-flex-line-pack" _locAttrData="description" version="3.0" browsers="IE10" type="flexpacks" restriction="enum" syntax="div { $(name): justify; }" description="Durch die 'flex-line-pack'-Eigenschaft werden die Zeilen einer Flexbox innerhalb der Flexbox ausgerichtet, wenn zusätzlicher Leerraum auf der Querachse vorhanden ist. Dies ist vergleichbar mit der Vorgehensweise, die 'flex-pack' anwendet, um einzelne Elemente auf der Hauptachse auszurichten." standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-line-pack0">
+
+    <entry _locID="flex-line-pack_stretch" _locAttrData="description" value="stretch" description="Zeilen werden gestreckt, um den verbleibenden Leerraum auszufüllen. Wenn der verbleibende Leerraum negativ ist, entspricht dieser Wert 'start'."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-flex-order" _locAttrData="description" version="3.0" browsers="IE10" restriction="integer" syntax="p { $(name): 1; }" description="Diese Eigenschaft entspricht einer ganzen Zahl mit dem Anfangswert 1." standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-order0"/>
+
+  <CssProperty _locID="-ms-flex-pack" _locAttrData="description" version="3.0" browsers="IE10" type="flexpacks" restriction="enum" syntax="div { $(name): justify; }" description="Die 'flex-pack'-Eigenschaft definiert, wie diese Leerräume flexibel einsetzbar sind." standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-pack0"/>
+
+  <CssPropertyValue type="flexaligns">
+    <entry _locID="flex-align_center" _locAttrData="description" value="center" description="Die Randbox des Flexboxelements wird auf der Querachse innerhalb der Zeile zentriert."/>
+    <entry _locID="flex-align_stretch" _locAttrData="description" value="stretch" description="Wenn die 'cross-size'-Eigenschaft für das Flexboxelement auf einen anderen Wert als 'auto' festgelegt ist, dann ist dieser Wert identisch mit 'start'."/>
+    <entry _locID="flex-align_baseline" _locAttrData="description" value="baseline" description="Richtet alle Flexboxelemente an ihrer Grundlinie aus und verteilt den Leerraum oberhalb und unterhalb des Inhalts."/>
+    <entry _locID="flex-align_start" _locAttrData="description" value="start" description="Die Begrenzung des Flexboxelements am Anfang der Querachse (cross-start) schließt bündig mit der Zeilenbegrenzung am Anfang der Querachse ab."/>
+    <entry _locID="flex-align_end" _locAttrData="description" value="end" description="Die Begrenzung des Flexboxelements am Ende der Querachse (cross-end) schließt bündig mit der Zeilenbegrenzung am Ende der Querachse ab."/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="flexpacks">
+    <entry _locID="flex-pack_start" _locAttrData="description" value="start" description="In einer Box mit normaler Richtung wird die linke Kante des ersten untergeordneten Elements auf der linken Seite platziert, wobei der gesamte zusätzliche Leerraum nach dem letzten untergeordneten Element angeordnet wird. In einer Box mit umgekehrter Richtung wird die rechte Kante des letzten untergeordneten Elements auf der rechten Seite platziert, wobei der gesamte zusätzliche Leerraum vor dem ersten untergeordneten Element angeordnet wird."/>
+    <entry _locID="flex-pack_end" _locAttrData="description" value="end" description="In einer Box mit normaler Richtung wird die rechte Kante des letzten untergeordneten Elements auf der rechten Seite platziert, wobei der gesamte zusätzliche Leerraum vor dem ersten untergeordneten Element angeordnet wird. In einer Box mit umgekehrter Richtung wird die linke Kante des ersten untergeordneten Elements auf der linken Seite platziert, wobei der gesamte zusätzliche Leerraum nach dem letzten untergeordneten Element angeordnet wird."/>
+    <entry _locID="flex-pack_center" _locAttrData="description" value="center" description="Der zusätzliche Leerraum wird gleichmäßig verteilt, wobei eine Hälfte vor dem ersten untergeordneten Element und die andere Hälfte nach dem letzten untergeordneten Element positioniert wird."/>
+    <entry _locID="flex-pack_justify" _locAttrData="description" value="justify" description="Der Leerraum wird gleichmäßig auf die Abstände zwischen den untergeordneten Elementen verteilt, ohne dass zusätzlicher Leerraum vor dem ersten oder nach dem letzten untergeordneten Element positioniert wird. Wenn nur ein untergeordnetes Element vorhanden ist, wird der 'flex-pack'-Wert so behandelt wie 'start'."/>
+    <entry _locID="flex-pack_distribute" _locAttrData="description" value="distribute" description="Zeilen werden in der Flexbox gleichmäßig verteilt, wobei der Leerraum jeweils zur Hälfte an beiden Enden platziert wird."/>
+  </CssPropertyValue>
+
+  <CssProperty name="-ms-align-content" ref="align-content" browsers="IE10" syntax="div { $(name): center; }"/>
+
+  <!-- Scrollbar -->
+
+  <CssProperty _locID="scrollbar-arrow-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="body { $(name): #00ffff; }" description="Bestimmt die Farbe der Pfeilelemente eines Bildlaufpfeils." standard-reference="http://msdn.microsoft.com/en-us/library/ms531154(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-3dlight-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="Bestimmt die Farbe des oberen und linken Rands des Bildlauffelds und der Bildlaufpfeile einer Bildlaufleiste." standard-reference="http://msdn.microsoft.com/en-us/library/ms531153(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-base-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="Bestimmt die Farbe der Hauptelemente einer Bildlaufleiste bestehend aus Bildlauffeld, Ziehpunkt und Bildlaufpfeilen." standard-reference="http://msdn.microsoft.com/en-us/library/ms531155(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-darkshadow-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="Bestimmt die Farbe des Stegs einer Bildlaufleiste." standard-reference="http://msdn.microsoft.com/en-us/library/ms531156(v=VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-face-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="Bestimmt die Farbe des Bildlauffelds und der Bildlaufpfeile auf einer Bildlaufleiste." standard-reference="http://msdn.microsoft.com/en-us/library/ms531157(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-highlight-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="Bestimmt die Farbe des oberen und linken Rands des Bildlauffelds und der Bildlaufpfeile einer Bildlaufleiste." standard-reference="http://msdn.microsoft.com/en-us/library/ms531158(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-shadow-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="Bestimmt die Farbe des unteren und rechten Rands des Bildlauffelds und der Bildlaufpfeile auf einer Bildlaufleiste." standard-reference="http://msdn.microsoft.com/en-us/library/ms531159(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-track-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="Bestimmt die Farbe des Statuselements einer Bildlaufleiste." standard-reference="http://msdn.microsoft.com/en-us/library/ms531160(VS.85).aspx"/>
+
+  <CssProperty name="-ms-scrollbar-arrow-color" ref="scrollbar-arrow-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-3dlight-color" ref="scrollbar-3dlight-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-base-color" ref="scrollbar-base-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-darkshadow-color" ref="scrollbar-darkshadow-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-face-color" ref="scrollbar-face-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-highlight-color" ref="scrollbar-highlight-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-shadow-color" ref="scrollbar-shadow-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-track-color" ref="scrollbar-track-color" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-content-zooming" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): zoom; }" description="Ruft einen Wert, der angibt, ob Zoomen aktiviert ist." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441251.aspx">
+
+    <entry value="none"/>
+    <entry value="zoom"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-snap" _locAttrData="description" version="3.0" browsers="IE10" syntax="header { $(name): proximity; }" description="Ruft eine Kurzschreibweise zum Festlegen der Werte für die '-ms-content-zoom-snap-type'-Eigenschaft und die '-ms-content-zoom-snap-points'-Eigenschaft ab oder legt sie fest. " standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441255.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-snap-type" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="header { $(name): proximity; }" description="Ruft einen Wert ab, der angibt, wie sich definierte Fangpunkte auf das Zoomen auswirken, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441264.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-snap-points" _locAttrData="description" version="3.0" browsers="IE10" description="Ruft einen Wert ab, der angibt, wo die Fangpunkte beim Zoomen positioniert sind, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441259.aspx">
+
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-chaining" _locAttrData="description" version="3.0" browsers="IE10" syntax="div { $(name): chained; }" description="Ruft einen Wert ab oder legt einen Wert fest, der das Zoomverhalten angibt, das auftritt, wenn ein Benutzer während eines Bearbeitungsvorgang die Inhaltsgrenzen berührt." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441243.aspx">
+
+    <entry value="none"/>
+    <entry value="chained"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-limit" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage" syntax="div { $(name): 10%; }" description="Ruft eine Kurzschreibweise zum Festlegen der Werte für die '-ms-content-zoom-limit-min'-Eigenschaft und '-ms-content-zoom-limit-max'-Eigenschaft ab oder legt sie fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996912.aspx"/>
+
+  <CssProperty _locID="-ms-content-zoom-limit-min" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage" syntax="div { $(name): 10%; }" description="Ruft einen Wert ab, der den Mindestwert für die msContentZoomFactor-Eigenschaft angibt, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996914.aspx"/>
+
+  <CssProperty _locID="-ms-content-zoom-limit-max" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage" syntax="div { $(name): 10%; }" description="Ruft einen Wert ab, der den Höchstwert für die msContentZoomFactor-Eigenschaft angibt, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996913.aspx"/>
+
+  <CssProperty _locID="-ms-user-select" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): none; }" description="Steuert die Darstellung einer Auswahl." standard-reference="http://ie.microsoft.com/testdrive/HTML5/msUserSelect/">
+
+    <entry value="none"/>
+    <entry value="text"/>
+    <entry value="element"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-flow-from" ref="flow-from" browsers="IE10"/>
+
+  <CssProperty name="-ms-flow-into" ref="flow-into" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-wrap-flow" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): maximum; }" description="Ein Element wird zu einer Exklusion, wenn die zugehörige 'wrap-flow'-Eigenschaft über einen von 'auto' abweichenden berechneten Wert verfügt." standard-reference="http://www.w3.org/TR/css3-exclusions/#wrap-flow-property">
+
+    <entry _locID="-ms-wrap-flow_auto" _locAttrData="description" value="auto" description="Für float-Elemente wird eine Exklusion erstellt, für andere Elemente nicht."/>
+    <entry _locID="-ms-wrap-flow_both" _locAttrData="description" value="both" description="Der Inlineinhalt umfließt alle Seiten der Exklusion."/>
+    <entry _locID="-ms-wrap-flow_start" _locAttrData="description" value="start" description="Der Fluss des Inlineinhalts kann am Startrand des Exklusionsbereichs umbrochen werden. Der Bereich am Endrand des Exklusionsbereichs muss jedoch leer bleiben."/>
+    <entry _locID="-ms-wrap-flow_end" _locAttrData="description" value="end" description="Der Fluss des Inlineinhalts kann am Ende des Exklusionsbereichs umbrochen werden. Der Bereich am Startrand des Exklusionsbereichs muss jedoch leer bleiben."/>
+    <entry _locID="-ms-wrap-flow_maximum" _locAttrData="description" value="maximum" description="Der Fluss des Inlineinhalts kann auf der Seite der Exklusion umbrochen werden, die den meisten Platz für die jeweilige Zeile bietet. Die andere Seite der Exklusion muss jedoch leer bleiben."/>
+    <entry _locID="-ms-wrap-flow_clear" _locAttrData="description" value="clear" description="Der Fluss des Inlineinhalts kann nur oberhalb und unterhalb der Exklusion umbrochen werden. Die Bereiche am Start- und Endrand der Exklusionsbox müssen leer bleiben."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-wrap-margin" _locAttrData="description" version="3.0" browsers="IE10" restriction="length, percentage" syntax="div { $(name): 20px; }" description="Ruft einen Wert ab, mit dem der Offset der inneren umschließenden Form in Bezug zu anderen Formen festgelegt wird, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466103.aspx"/>
+
+  <CssProperty _locID="-ms-wrap-through" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): wrap; }" description="Ruft einen Wert ab, der angibt, auf welche Weise ein Exklusionselement von Inhalt umschlossen werden soll, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441290.aspx">
+
+    <entry _locID="-ms-wrap-through_wrap" _locAttrData="description" value="wrap" description="Der Umbruchkontext des übergeordneten Knotens wird vom Exklusionselement geerbt. Außerhalb des Elements definierte Exklusionen werden vom Inlineinhalt der untergeordneten Elemente umschlossen."/>
+    <entry _locID="-ms-wrap-through_none" _locAttrData="description" value="none" description="Der Umbruchkontext des übergeordneten Knotens wird vom Exklusionselement nicht geerbt. Die untergeordneten Elemente richten sich ausschließlich nach den innerhalb des Elements definierten Exklusionsformen."/>
+  </CssProperty>
+
+  <!-- Touch: Zooming and Panning  -->
+
+  <CssProperty _locID="-ms-scroll-chaining" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum, length" syntax="div { $(name): chained; }" description="Ruft einen Wert ab oder legt einen Wert fest, der das Bildlaufverhalten angibt, das auftritt, wenn ein Benutzer während eines Bearbeitungsvorgangs die Inhaltsgrenze berührt." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466007.aspx">
+
+    <entry value="none"/>
+    <entry value="chained"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-rails" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum, length" syntax="div { $(name): railed; }" description="Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob kleinere, senkrecht zur primären Bewegungsachse ausgeführte Bewegungen zu einer Änderung sowohl der 'scrollTop'-Eigenschaft als auch der 'scrollLeft'-Eigenschaft oder zu einer Änderung der primären Achse führen (entweder die 'scrollTop'-Eigenschaft oder die 'scrollLeft'-Eigenschaft wird geändert, aber nicht beide)." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466018.aspx">
+
+    <entry value="none"/>
+    <entry value="railed"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-points-x" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): snapInterval(100%, 100%); }" description="Ruft einen Wert ab, der festlegt, wo die Fangpunkte entlang der X-Achse positioniert sind, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466031.aspx">
+
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-points-y" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): snapInterval(100%, 100%); }" description="Ruft einen Wert ab, der festlegt, wo die Fangpunkte entlang der Y-Achse positioniert sind, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466042.aspx">
+
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-type" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): proximity; }" description="Ruft einen Wert ab oder legt einen Wert fest, der angibt, welche Art Fangpunkt für das aktuelle Element verwendet werden soll. Es gibt zwei Arten von Fangpunkten, die sich in erster Linie darin unterscheiden, ob der Benutzer bei einem Fangpunkt immer anhält." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466057.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-x" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): proximity snapInterval(100%, 100%); }" description="Ruft eine Kurzschreibweise zum Festlegen von Werten für die '-ms-scroll-snap-type'-Eigenschaft und die '-ms-scroll-snap-points-x'-Eigenschaft ab oder legt sie fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466066.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-y" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): proximity snapInterval(100%, 100%); }" description="Ruft eine Kurzschreibweise zum Festlegen von Werten für die '-ms-scroll-snap-type'-Eigenschaft und die '-ms-scroll-snap-points-y'-Eigenschaft ab oder legt sie fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466078.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-limit-x-max" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): auto; }" description="Ruft einen Wert ab, der den Höchstwert für die 'scrollLeft'-Eigenschaft angibt, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996919.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-limit-x-min" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): 5px; }" description="Ruft einen Wert ab, der den Mindestwert für die 'scrollLeft'-Eigenschaft angibt, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996920.aspx"/>
+
+  <CssProperty _locID="-ms-scroll-limit-y-max" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): auto; }" description="Ruft einen Wert ab, der den Höchstwert für die 'scrollTop'-Eigenschaft angibt, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996921.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-limit-y-min" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): 5px; }" description="Ruft einen Wert ab, der den Mindestwert für die 'scrollTop'-Eigenschaft angibt, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996922.aspx"/>
+
+  <CssProperty _locID="-ms-scroll-limit" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" description="Ruft eine Kurzschreibweise zum Festlegen der Werte für die Eigenschaften '-ms-scroll-limit-x-min', '-ms-scroll-limit-y-min', '-ms-scroll-limit-x-max' und '-ms-scroll-limit-y-max' ab oder legt sie fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996918.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-translation" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): vertical-to-horizontal; }" description="Ruft einen Wert ab, der angibt, ob vertikale Mausradbewegungen für das angegebene Element in horizontale Bewegungen umgesetzt werden, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996917.aspx">
+
+    <entry value="none"/>
+    <entry value="vertical-to-horizontal"/>
+  </CssProperty>
+
+  <CssProperty name="touch-action" version="3.0" browsers="IE11" restriction="enum" syntax="div { $(name): manipulation double-tap-zoom; }" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx">
+
+    <entry value="auto"/>
+    <entry value="none"/>
+    <entry value="pan-x"/>
+    <entry value="pan-y"/>
+    <entry value="pinch-zoom"/>
+    <entry value="manipulation"/>
+    <entry value="double-tap-zoom"/>
+    <entry value="cross-slide-x"/>
+    <entry value="cross-slide-y"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-touch-action" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): manipulation double-tap-zoom; }" description="Ruft einen Wert ab, der angibt, ob und wie ein angegebener Bereich vom Benutzer bearbeitet werden kann, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx">
+
+    <entry _locID="-ms-touch-action_auto" _locAttrData="description" value="auto" description="Das Element ist bis auf einige Ausnahmen ein passives Element."/>
+    <entry _locID="-ms-touch-action_none" _locAttrData="description" value="none" description="Das Element blockiert einen Bearbeitungsvorgang."/>
+    <entry _locID="-ms-touch-action_pan-x" _locAttrData="description" value="pan-x" description="Das Element erlaubt berührungsgesteuerte Verschiebung auf der horizontalen Achse. Die Berührungsverschiebung wird für den nächsten Vorgänger mit horizontal bildlauffähigem Inhalt ausgeführt."/>
+    <entry _locID="-ms-touch-action_pan-y" _locAttrData="description" value="pan-y" description="Das Element erlaubt berührungsgesteuerte Verschiebung auf der vertikalen Achse. Die Berührungsverschiebung wird für den nächsten Vorgänger mit vertikal bildlauffähigem Inhalt ausgeführt."/>
+    <entry _locID="-ms-touch-action_pinch-zoom" _locAttrData="description" value="pinch-zoom" description="Das Element erlaubt Vergrößerung/Verkleinerung. Die Vergrößerung/Verkleinerung wird für den nächsten Vorgänger mit zoombarem Inhalt ausgeführt."/>
+    <entry _locID="-ms-touch-action_manipulation" _locAttrData="description" value="manipulation" description="Das Element löst einen Bearbeitungsvorgang aus."/>
+    <entry _locID="-ms-touch-action_double-tap-zoom" _locAttrData="description" value="double-tap-zoom" description="Das Element führt bei einem Doppeltippen einen Zoomvorgang aus."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-touch-select" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div::selection { $(name): grippers; }" description="Ruft einen Wert ab, der die visuellen Ziehelemente umschaltet, die Touchtextauswahl ermöglichen, oder legt diesen Wert fest." standard-reference="http://msdn.microsoft.com/en-us/library/ie/hh975292(v=vs.85).aspx">
+
+    <entry _locID="-ms-touch-select_grippers" _locAttrData="description" value="grippers" description="Ziehelemente sind immer aktiviert."/>
+    <entry _locID="-ms-touch-select_none" _locAttrData="description" value="none" description="Ziehelemente sind immer deaktiviert."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-zoom-animation" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): none; }" description="Ruft einen Wert ab, der angibt, ob eine Animation beim Zoomen ausgeführt wird, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466117.aspx">
+
+    <entry value="default"/>
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-overflow-style" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" description="Gibt an, ob der Inhalt abgeschnitten wird, wenn er im Inhaltsbereich des Elements überläuft." syntax="p { $(name): scrollbar; }" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441298.aspx">
+
+    <entry _locID="-ms-overflow-style_auto" _locAttrData="description" value="auto" description="Keine Voreinstellung. Der Benutzer-Agent sollte die erste Bildlaufmethode in der Liste unterstützter Methoden verwenden."/>
+    <entry _locID="-ms-overflow-style_scrollbar" _locAttrData="description" value="scrollbar" description="Bildlaufleisten sind in der Regel schmale Leisten auf einer oder beiden Seiten eines Elements, die häufig Pfeile zum Klicken und einen 'Ziehpunkt' aufweisen, der nach oben oder unten (bzw. links oder rechts) gezogen wird, um den Inhalt des Elements zu verschieben."/>
+    <entry _locID="-ms-overflow-style_none" _locAttrData="description" value="none" description="Gibt an, dass das Element selbst bei überlaufendem Inhalt keine Bildlaufleisten oder Verschiebeindikatoren anzeigt."/>
+    <entry _locID="-ms-overflow-style_autohiding-scrollbar" _locAttrData="description" value="-ms-autohiding-scrollbar" description="Gibt an, dass das Element bei Mausinteraktionen automatisch ausgeblendete Bildlaufleisten und beim Drücken von Tasten/Schaltflächen sowie bei Interaktionen mit der Tastatur Verschiebeindikatoren anzeigt."/>
+  </CssProperty>
+
+  <CssProperty name="font-stretch">
+    <entry _locID="font-stretch_wider" _locAttrData="description" value="wider" browsers="IE10" description="Gibt im Verhältnis zur Breite des übergeordneten Elements einen Wert mit einer größeren Breite an."/>
+    <entry _locID="font-stretch_narrower" _locAttrData="description" value="narrower" browsers="IE10" description="Gibt im Verhältnis zur Breite des übergeordneten Elements einen Wert mit einer geringeren Breite an."/>
+  </CssProperty>
+
+  <CssProperty _locID="background-position-x" _locAttrData="description" version="3.0" browsers="IE6" type="background-position" restriction="length, percentage" syntax="body { $(name): center; }" description="Wenn Hintergrundbilder festgelegt wurden, gibt diese Eigenschaft deren Ausgangsposition (nach einer Größenänderung) innerhalb des entsprechenden Hintergrundpositionierungsbereichs an." standard-reference="http://www.w3.org/TR/css3-background/#the-background-position"/>
+
+  <CssProperty _locID="background-position-y" _locAttrData="description" version="3.0" browsers="IE6" type="background-position" restriction="length, percentage" syntax="body { $(name): center; }" description="Wenn Hintergrundbilder festgelegt wurden, gibt diese Eigenschaft deren Ausgangsposition (nach einer Größenänderung) innerhalb des entsprechenden Hintergrundpositionierungsbereichs an." standard-reference="http://www.w3.org/TR/css3-background/#the-background-position"/>
+
+  <CssProperty _locID="-ms-hyphenate-limit-chars" _locAttrData="description" version="3.0" browsers="IE10" restriction="integer" syntax="div { $(name): 5 2 2; }" description="Ruft bis zu drei Werte ab, die die Mindestanzahl von Zeichen in einem getrennten Wort angeben, oder legt sie fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441147.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-hyphenate-limit-lines" _locAttrData="description" version="3.0" browsers="IE10" restriction="integer" syntax="div { $(name): 2; }" description="Ruft einen Wert ab, der die maximale Anzahl aufeinander folgender Zeilen in einem Element angibt, das mit einem getrennten Wort enden kann, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441157.aspx">
+
+    <entry value="no-limit"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-hyphenate-limit-zone" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage, length" syntax="div { $(name): 25%; }" description="Ruft einen Wert ab, der die Breite der Silbentrennzone definiert, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441168.aspx"/>
+
+  <CssProperty name="-ms-hyphens" ref="hyphens" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-high-contrast-adjust" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="section { $(name): auto; }" description="Ruft einen Wert ab, der angibt, ob CSS (Cascading Style Sheets)-Eigenschaften, die im Modus 'Hoher Kontrast' festgelegt worden wären, überschrieben werden sollen, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441137.aspx">
+
+    <entry value="none"/>
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-ime-mode" ref="ime-mode" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-layout-grid" _locAttrData="description" version="3.0" browsers="IE10" syntax="div { $(name): both fixed 12px 12px}" description="Legt die Eigenschaften des Rasters für Verbunddokumente fest, mit denen das Layout von Textzeichen angegeben wird, oder ruft sie ab." standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530771(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid_mode" _locAttrData="description" value="mode" description="Alle für die '-ms-layout-grid-mode'-Eigenschaft verfügbaren Modusbereichswerte."/>
+    <entry _locID="-ms-layout-grid_type" _locAttrData="description" value="type" description="Alle für die '-ms-layout-grid-type'-Eigenschaft verfügbaren Typbereichswerte."/>
+    <entry _locID="-ms-layout-grid_line" _locAttrData="description" value="line" description="Alle für die '-ms-layout-grid-line'-Eigenschaft verfügbaren Zeilenbereichswerte."/>
+    <entry _locID="-ms-layout-grid_char" _locAttrData="description" value="char" description="Alle für die '-ms-layout-grid-char'-Eigenschaft verfügbaren Zeichenbereichswerte."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-layout-grid-char" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum, length, percentage" syntax="div { $(name): auto; }" description="Legt die Größe des zum Rendern des Textinhalts eines Elements verwendeten Zeichenrasters fest oder ruft sie ab." standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530772(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid-char_none" _locAttrData="description" value="none" description="Standardwert. Es ist kein Zeichenraster festgelegt."/>
+    <entry _locID="-ms-layout-grid-char_auto" _locAttrData="description" value="auto" description="Das größte Zeichen in der Schriftart des Elements wird zum Festlegen des Zeichenrasters verwendet."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-layout-grid-line" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): auto; }" description="Legt den zum Rendern des Textinhalts eines Elements verwendeten Gitternetzlinienwert fest oder ruft ihn ab." standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530773(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid-line_none" _locAttrData="description" value="none" description="Standardwert. Es ist keine Gitternetzlinie festgelegt."/>
+    <entry _locID="-ms-layout-grid-line_auto" _locAttrData="description" value="auto" description="Das größte Zeichen in der Schriftart des Elements wird zum Festlegen des Zeichenrasters verwendet."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-layout-grid-mode" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): line; }" description="Ruft ab oder legt fest, ob das Textlayoutraster zwei Dimensionen verwendet." standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530774(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid-mode_both" _locAttrData="description" value="both" description="Standardwert. Sowohl der Zeichen- als auch der Zeilenrastermodus ist aktiviert. Diese Einstellung ist erforderlich, um das Layoutraster für ein Element vollständig zu aktivieren."/>
+    <entry _locID="-ms-layout-grid-mode_none" _locAttrData="description" value="none" description="Es wird kein Raster verwendet."/>
+    <entry _locID="-ms-layout-grid-mode_line" _locAttrData="description" value="line" description="Es wird nur ein Zeilenraster verwendet. Dies wird bei Verwendung von Inlineelementen, wie 'span', empfohlen, um das horizontale Raster bei Textausführungen zu deaktivieren, die im Rasterlayout als einzelne Entitäten fungieren."/>
+    <entry _locID="-ms-layout-grid-mode_char" _locAttrData="description" value="char" description="Es wird nur ein Zeichenraster verwendet. Dies wird bei Verwendung von Block-Level-Elementen, wie 'blockquote', empfohlen, wenn das Zeilenraster deaktiviert sein sollte."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-layout-grid-type" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): strict; }" description="Legt den zum Rendern des Textinhalts eines Elements verwendeten Rastertyp fest oder ruft ihn ab." standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530775(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid-type_loose" _locAttrData="description" value="loose" description="Standardwert. Für japanische und koreanische Zeichen verwendetes Raster."/>
+    <entry _locID="-ms-layout-grid-type_strict" _locAttrData="description" value="strict" description="Für chinesische sowie für japanische (Genko) und koreanische Zeichen verwendetes Raster. Nur die Ideogramme, Kanas und Breitzeichen werden am Raster ausgerichtet."/>
+    <entry _locID="-ms-layout-grid-type_fixed" _locAttrData="description" value="fixed" description="Für Festbreitenlayout verwendetes Raster. Alle nicht kursiven Zeichen werden gleich behandelt. Jedes Zeichen wird standardmäßig innerhalb eines einzelnen Rasterabstands zentriert."/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-progress-appearance" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="progress { $(name): bar; }" description="Ruft einen Wert ab, der angibt, ob ein Statussteuerelement als Balken oder Ring angezeigt wird, oder legt ihn fest." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/Hh779845.aspx">
+
+    <entry value="bar"/>
+    <entry value="ring"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-text-kashida-space" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage" syntax="article { $(name): 10%; }" description="Legt das Verhältnis der Kashida-Erweiterung zur Leerzeichenerweiterung beim Ausrichten von Textzeilen im Objekt fest oder ruft es ab." standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh453798.aspx"/>
+
+  <CssProperty name="-ms-text-size-adjust" ref="text-size-adjust" browsers="IE10"/>
+
+  <CssProperty name="-ms-perspective" ref="perspective" browsers="IE10"/>
+
+  <CssProperty name="-ms-perspective-origin" ref="perspective-origin" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-perspective-origin-x" _locAttrData="description" version="3.0" browsers="IE10" type="perspective-origins" restriction="percentage, length" description="Legt den Ursprung für die 'perspective'-Eigenschaft fest. Dabei wird tatsächlich die X-Position festgelegt, was einer 'Draufsicht' auf die untergeordneten Elemente des Elements entspricht." standard-reference="http://www.w3.org/TR/css3-3d-transforms/#perspective-origin"/>
+
+  <CssProperty _locID="-ms-perspective-origin-y" _locAttrData="description" version="3.0" browsers="IE10" type="perspective-origins" restriction="percentage, length" description="Legt den Ursprung für die 'perspective'-Eigenschaft fest. Dabei wird tatsächlich die Y-Position festgelegt, was einer 'Draufsicht' auf die untergeordneten Elemente des Elements entspricht." standard-reference="http://www.w3.org/TR/css3-3d-transforms/#perspective-origin"/>
+
+  <CssProperty _locID="-ms-interpolation-mode" _locAttrData="description" version="3.0" browsers="IE7" restriction="enum" syntax="img.highqual { $(name): bicubic; }" description="Ruft die zum Strecken von Bildern verwendete Interpolationsmethode (Neuberechnung) ab oder legt sie fest." standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530822(v=vs.85).aspx">
+
+    <entry value="nearest-neighbor"/>
+    <entry value="bicubic"/>
+  </CssProperty>
+
+  <CssProperty name="position">
+    <entry _locID="position_ms-page" _locAttrData="description" value="-ms-page" version="3.0" browsers="IE10" description="Die Position der Box wird gemäß dem absoluten Modell berechnet."/>
+  </CssProperty>
+
+  <CssProperty name="-ms-columns" ref="columns" browsers="IE10" obsolete="Use the unprefixed version instead"/>
+
+  <CssProperty name="-ms-column-width" ref="column-width" browsers="IE10" obsolete="Use the unprefixed version instead"/>
+
+  <CssProperty name="-ms-column-count" ref="column-count" browsers="IE10" obsolete="Use the unprefixed version instead"/>
+
+  <CssProperty name="-ms-column-gap" ref="column-gap" browsers="IE10" obsolete="Use the unprefixed version instead"/>
+
+  <CssProperty name="-ms-column-rule" ref="column-rule" browsers="IE10" obsolete="Use the unprefixed version instead"/>
+
+  <CssProperty name="-ms-column-rule-color" ref="column-rule-color" browsers="IE10" obsolete="Use the unprefixed version instead"/>
+
+  <CssProperty name="-ms-column-rule-style" ref="column-rule-style" browsers="IE10" obsolete="Use the unprefixed version instead"/>
+
+  <CssProperty name="-ms-column-rule-width" ref="column-rule-width" browsers="IE10" obsolete="Use the unprefixed version instead"/>
+</CssModule>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Ruby" standard-reference="http://www.w3.org/TR/css3-ruby/" status="WD" pub-date="2011-06-30">
+
+  <CssProperty _locID="ruby-position" _locAttrData="description" version="3.0" browsers="FF10,IE5" restriction="enum" description="Diese Eigenschaft wird vom übergeordneten Element der Elemente mit 'display: ruby-text' verwendet, um die Position des Ruby-Texts mit Bezug zum Basistext zu steuern." syntax="before | after | right" standard-reference="http://www.w3.org/TR/css3-ruby/#ruby-position">
+
+    <entry _locID="ruby-position_before" _locAttrData="description" value="before" description="Der Ruby-Text wird vor dem Basistext angezeigt. Dies ist die gebräuchlichste Einstellung in ideografischen ostasiatischen Schriftsystemen."/>
+    <entry _locID="ruby-position_after" _locAttrData="description" value="after" description="Der Ruby-Text wird nach dem Basistext angezeigt. Dies ist eine relativ seltene Einstellung in ideografischen ostasiatischen Schriftsystemen; sie wird meistens in edukativen Texten verwendet."/>
+    <entry _locID="ruby-position_right" _locAttrData="description" value="right" description="Der Ruby-Text wird rechts vom Basistext angezeigt. Im Unterschied zu 'before' und 'after' verhält sich dieser Wert nicht relativ zur Textflussrichtung."/>
+    <entry value="inline"/>
+  </CssProperty>
+
+  <CssProperty _locID="ruby-align" _locAttrData="description" version="3.0" browsers="FF10,IE5" restriction="enum" description="Diese Eigenschaft kann für beliebige Elemente verwendet werden, um die Ausrichtung des Ruby-Texts und des Inhalts des Ruby-Basistexts relativ zueinander zu steuern." syntax="auto | start | left | center | end | right | distribute-letter | distribute-space | line-edge" standard-reference="http://www.w3.org/TR/css3-ruby/#rubyalign">
+
+    <entry _locID="ruby-align_auto" _locAttrData="description" value="auto" description="Der Benutzer-Agent legt fest, wie der Ruby-Textinhalt ausgerichtet wird. Dies ist der Ausgangswert."/>
+    <entry _locID="ruby-align_start" _locAttrData="description" value="start" description="Der Ruby-Textinhalt wird am Startrand des Basistexts ausgerichtet."/>
+    <entry _locID="ruby-align_left" _locAttrData="description" value="left" description="Der Ruby-Textinhalt wird am Startrand des Basistexts ausgerichtet."/>
+    <entry _locID="ruby-align_center" _locAttrData="description" value="center" description="Der Ruby-Textinhalt wird innerhalb der Breite des Basistexts zentriert. Wenn die Länge des Basistexts kürzer als die Länge des Ruby-Texts ist, wird der Basistext innerhalb der Breite des Ruby-Texts zentriert."/>
+    <entry _locID="ruby-align_end" _locAttrData="description" value="end" description="Der Ruby-Textinhalt wird am Endrand des Basistexts ausgerichtet."/>
+    <entry _locID="ruby-align_right" _locAttrData="description" value="right" description="Der Ruby-Textinhalt wird am Endrand des Basistexts ausgerichtet."/>
+    <entry _locID="ruby-align_distribute-letter" _locAttrData="description" value="distribute-letter" description="Wenn die Breite des Ruby-Texts geringer ist als die des Basistexts, wird der Inhalt des Ruby-Texts gleichmäßig auf die Breite des Basistexts verteilt, wobei die erste und letzte Glyphe des Ruby-Texts auf die entsprechende erste und letzte Glyphe des Basistexts ausgerichtet wird. Wenn die Breite des Ruby-Texts mindestens der Breite des Basistexts entspricht, werden die Buchstaben des Basistexts gleichmäßig auf die Breite des Ruby-Texts verteilt."/>
+    <entry _locID="ruby-align_distribute-space" _locAttrData="description" value="distribute-space" description="Wenn die Breite des Ruby-Texts geringer ist als die des Basistexts, wird der Inhalt des Ruby-Texts gleichmäßig auf die Breite des Basistexts verteilt, wobei vor dem ersten und nach dem letzten Zeichen im Ruby-Text ein bestimmter Leerraum eingefügt wird. Dieser Leerraum entspricht normalerweise der Hälfte des Zeichenzwischenraums des Ruby-Texts."/>
+    <entry _locID="ruby-align_line-edge" _locAttrData="description" value="line-edge" description="Wenn der Ruby-Text nicht an einen Zeilenrand angrenzt, wird er gemäß der Einstellung 'auto' ausgerichtet. Wenn er an einen Zeilenrand angrenzt, wird er zwar weiterhin wie in 'auto' ausgerichtet, aber die Seite des Ruby-Texts, die an das Ende der Zeile anstößt, wird auf den entsprechenden Rand des Basistexts ausgerichtet."/>
+  </CssProperty>
+
+  <CssProperty _locID="ruby-overhang" _locAttrData="description" version="3.0" browsers="FF10,IE5" restriction="enum" description="Legt fest, ob und auf welcher Seite Ruby-Text über den eigenen Basistext hinaus teilweise über angrenzenden Text hinausragen darf, wenn der Ruby-Text breiter als der Ruby-Basistext ist." syntax="auto | start | end | none" standard-reference="http://www.w3.org/TR/css3-ruby/#rubyover">
+
+    <entry _locID="ruby-overhang_auto" _locAttrData="description" value="auto" description="Der Ruby-Text kann auf beiden Seiten über Text hinausragen, der an den Basistext angrenzt. Dies ist der Ausgangswert."/>
+    <entry _locID="ruby-overhang_start" _locAttrData="description" value="start" description="Der Ruby-Text darf über den vorangehenden Text hinausragen."/>
+    <entry _locID="ruby-overhang_end" _locAttrData="description" value="end" description="Der Ruby-Text darf über nachfolgenden Text hinausragen."/>
+    <entry _locID="ruby-overhang_none" _locAttrData="description" value="none" description="Der Ruby-Text darf nicht über Text hinausragen, der an seinen Basistext angrenzt, sondern nur über seinen eigenen Basistext."/>
+  </CssProperty>
+
+  <CssProperty _locID="ruby-span" _locAttrData="description" version="3.0" browsers="FF10" restriction="enum" description="Legt fest, ob und auf welcher Seite Ruby-Text über den eigenen Basistext hinaus teilweise über angrenzenden Text hinausragen darf, wenn der Ruby-Text breiter als der Ruby-Basistext ist." syntax="attr(x) | none" standard-reference="http://www.w3.org/TR/css3-ruby/#rubyspan">
+
+    <entry _locID="ruby-span_none" _locAttrData="description" value="none" description="Keine Ausdehnung. Der berechnete Wert ist '1'."/>
+    <entry _locID="ruby-span_attr" _locAttrData="description" value="attr(x)" description="Der Wert des Attributs 'x' ist ein Zeichenfolgenwert. Der Zeichenfolgenwert wird als &lt;number&gt; ausgewertet, um die Anzahl der Ruby-Basiselemente festzulegen, auf die sich das Anmerkungselement erstreckt."/>
+  </CssProperty>
+
+</CssModule>

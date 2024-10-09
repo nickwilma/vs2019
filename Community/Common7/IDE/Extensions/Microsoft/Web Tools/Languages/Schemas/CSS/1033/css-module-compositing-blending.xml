@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2020: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2019 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Compositing and Blending" standard-reference="https://www.w3.org/TR/compositing-1/" status="CR" pub-date="2019-12-03">
+
+  <CssPropertyValue type="blend-modes">
+    <entry value="normal" />
+    <entry value="multiply" />
+    <entry value="screen" />
+    <entry value="overlay" />
+    <entry value="darken" />
+    <entry value="lighten" />
+    <entry value="color-dodge" />
+    <entry value="color-burn" />
+    <entry value="hard-light" />
+    <entry value="soft-light" />
+    <entry value="difference" />
+    <entry value="exclusion" />
+    <entry value="hue" />
+    <entry value="saturation" />
+    <entry value="color" />
+    <entry value="luminosity" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="mix-blend-mode"
+               _locAttrData="description"
+               restriction="enum"
+               type="blend-modes"
+               description="Defines the formula that must be used to mix the colors with the backdrop."
+               syntax="sub { $(name): multiply; }"
+               standard-reference="https://drafts.fxtf.org/compositing-1/#mix-blend-mode"
+               />
+
+  <CssProperty _locID="isolation"
+               _locAttrData="description"
+               restriction="enum"
+               syntax="div { $(name): isolate; }"
+               description="In CSS setting to 'isolate' will turn the element into a stacking context. In SVG, it defines whether an element is isolated or not."
+               standard-reference="http://www.w3.org/TR/compositing-1/#isolation">
+
+      <entry value="auto" />
+      <entry value="isolate" />
+  </CssProperty>
+
+  <CssProperty _locID="background-blend-mode"
+               _locAttrData="description"
+               restriction="enum"
+               type="blend-modes"
+               description="Defines the blending mode of each background layer. Each background layer must blend with the element’s background layer that is below it and the element’s background color. Background layers must not blend with the content that is behind the element, instead they must act as if they are rendered into an isolated group."
+               syntax="sub { $(name): multiply; }"
+               standard-reference="https://drafts.fxtf.org/compositing-1/#background-blend-mode"
+               />
+
+</CssModule>

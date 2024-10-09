@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="CSS Legacy" standard-reference="http://www.w3.org/TR/CSS2/visuren.html" status="WD" pub-date="2011-11-29">
+
+    <CssProperty _locID="position" version="2.0" restriction="enum" syntax="div { $(name): absolute; }" standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-position">
+
+        <entry _locID="position_absolute" _locAttrData="description" value="absolute" description="Die Position (und möglicherweise Größe) der Box wird über die Eigenschaften 'top', 'right', 'bottom' und 'left' angegeben. Diese Eigenschaften legen die Abstände in Bezug zum 'umschließenden Block' der Box fest."/>
+        <entry _locID="position_fixed" _locAttrData="description" value="fixed" description="Die Position der Box wird gemäß dem absoluten Modell berechnet, zusätzlich wird die Position jedoch unter Beachtung einiger Angaben fixiert. Wie beim absoluten Modell fallen die Ränder der Box nicht mit anderen Rändern zusammen."/>
+        <entry _locID="position_relative" _locAttrData="description" value="relative" description="Die Position der Box wird gemäß dem normalen Fluss berechnet (und folglich als Positionierung im normalen Fluss bezeichnet). Anschließend wird die Box relativ zu ihrer normalen Position versetzt."/>
+        <entry _locID="position_static" _locAttrData="description" value="static" description="Eine normale Box, die entsprechend dem normalen Fluss positioniert wird. Die Eigenschaften 'top', 'right', 'bottom' und 'left' werden nicht angewendet."/>
+        <entry _locID="position_sticky" _locAttrData="description" value="sticky" description="Die Position der Box wird gemäß dem normalen Fluss berechnet. Die Box wird dann relativ zu ihrem Flussstamm und dem umschließenden Block versetzt. In allen Fällen (einschließlich Tabellenelementen) wirkt sich dies nicht auf die Position folgender Boxen aus."/>
+        <entry _locID="position_center" _locAttrData="description" value="center" description="Zentrierte Boxen werden aus dem normalen Fluss ausgeschlossen. Dies bedeutet, dass sie keinerlei Auswirkungen auf das Layout späterer gleichgeordneter Elemente besitzen."/>
+        <entry _locID="position_page" _locAttrData="description" value="page" description="Die Position der Box wird gemäß dem absoluten Modell berechnet."/>
+    </CssProperty>
+
+    <CssProperty _locID="left" _locAttrData="description" version="2.0" restriction="length, percentage" description="Gibt an, wie groß der Abstand des linken Rands einer absolut positionierten Box zum inneren linken Rand des 'umschließenden Blocks' der Box ist." syntax="article { $(name): 50px; }" standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-left">
+
+        <entry _locID="left_auto" _locAttrData="description" value="auto" description="Wie sich dieser Wert bei nicht ersetzten Elementen auswirkt, hängt von den verknüpften Eigenschaften ab, die ebenfalls den Wert 'Auto' aufweisen."/>
+    </CssProperty>
+
+    <CssProperty _locID="top" _locAttrData="description" ref="left" description="Gibt an, wie groß der Abstand des oberen Rands einer absolut positionierten Box zum oberen Rand des 'umschließenden Blocks' der Box ist." standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-top"/>
+
+    <CssProperty _locID="right" _locAttrData="description" ref="left" description="Gibt an, wie groß der Abstand des rechten Rands einer absolut positionierten Box zum inneren rechten Rand des 'umschließenden Blocks' der Box ist." standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-right"/>
+
+    <CssProperty _locID="bottom" _locAttrData="description" ref="left" description="Gibt an, wie groß der Abstand des unteren Rands einer absolut positionierten Box zum inneren unteren Rand des 'umschließenden Blocks' der Box ist." standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-bottom"/>
+
+    <CssProperty _locID="z-index" _locAttrData="description" version="2.0" restriction="integer" description="Bei einer positionierten Box gibt die 'z-index'-Eigenschaft die Stapelebene der Box im aktuellen Stapelkontext an und ob ein lokaler Stapelkontext von der Box festgelegt wird." syntax="img { $(name): 3; }" standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-z-index">
+
+        <entry _locID="z-index_auto" _locAttrData="description" value="auto" description="Die Stapelebene der generierten Box im aktuellen Stapelkontext lautet '0'. Von der Box wird erst ein neuer Stapelkontext eingerichtet, wenn es sich um das Stammelement handelt."/>
+    </CssProperty>
+
+    <CssProperty _locID="line-height" _locAttrData="description" version="1.0" restriction="number, length, percentage" description="Legt die 'block-progression-dimension' des Textinhaltsbereichs einer Inlinebox fest." syntax="#menu { $(name): 22px; }" standard-reference="http://www.w3.org/TR/css3-linebox/#line-height">
+        <entry _locID="line-height_normal" _locAttrData="description" value="normal" description="Weist die Benutzer-Agents an, den berechneten Wert in Bezug zum Schriftgrad des Elements auf einen angemessenen Wert festzulegen."/>
+    </CssProperty>
+
+    <CssProperty _locID="line-grid" _locAttrData="description" version="3.0" restriction="enum" description="Gibt an, ob dieses Feld ein neues Grundlinienraster für seine Nachfolgerelemente erstellt oder das gleiche Grundlinienraster als übergeordnetes Element verwendet." syntax="div { $(name): create; }" standard-reference="http://www.w3.org/TR/css-line-grid-1/#propdef-line-grid">
+
+        <entry value="match-parent"/>
+        <entry value="create"/>
+    </CssProperty>
+
+    <CssProperty _locID="line-snap" _locAttrData="description" version="3.0" restriction="enum" description="Richtet im Element enthaltene Zeilenfelder am Zeilenraster aus, das durch die Eigenschaft &quot;line-grid&quot; angegeben wird." syntax="div { $(name): baseline; }" standard-reference="http://www.w3.org/TR/css-line-grid-1/#propdef-line-snap">
+
+        <entry value="none"/>
+        <entry value="baseline"/>
+        <entry value="contain"/>
+    </CssProperty>
+
+    <CssProperty _locID="vertical-align" _locAttrData="description" version="1.0" restriction="percentage, length" description="Wirkt sich auf die vertikale Positionierung der Inlineboxen aus, die von einem Inline-Level-Element innerhalb einer Zeilenbox erzeugt wurden." syntax="div { $(name): middle; }" standard-reference="http://www.w3.org/TR/css3-linebox/#vertical-align">
+
+        <entry _locID="vertical-align_baseline" _locAttrData="description" value="baseline" description="Richtet die als 'alphabetic' festgelegte Grundlinie des Elements auf die als 'alphabetic' festgelegte Grundlinie des übergeordneten Elements aus."/>
+        <entry _locID="vertical-align_sub" _locAttrData="description" value="sub" description="Senkt die Grundlinie der Box auf die richtige Position für tiefgestellte Elemente in der Box des übergeordneten Elements ab. (Dieser Wert wirkt sich nicht auf die Schriftartgröße des Elementtexts aus.)"/>
+        <entry _locID="vertical-align_super" _locAttrData="description" value="super" description="Hebt die Grundlinie der Box auf die richtige Position für hochgestellte Elemente in der Box des übergeordneten Elements an. (Dieser Wert wirkt sich nicht auf die Schriftartgröße des Elementtexts aus.)"/>
+        <entry _locID="vertical-align_top" _locAttrData="description" value="top" description="Richtet 'before-edge' der erweiterten Inlinebox auf 'before-edge' der Zeilenbox aus."/>
+        <entry _locID="vertical-align_text-top" _locAttrData="description" value="text-top" description="Richtet den oberen Rand der Box auf 'before-edge' der Schriftart des übergeordneten Elements aus."/>
+        <entry _locID="vertical-align_bottom" _locAttrData="description" value="bottom" description="Richtet 'after edge' der erweiterten Inlinebox auf 'after-edge' der Zeilenbox aus."/>
+        <entry _locID="vertical-align_text-bottom" _locAttrData="description" value="text-bottom" description="Richtet den unteren Rand der Box auf 'after-edge' der Schriftart des übergeordneten Elements aus."/>
+        <entry _locID="vertical-align_auto" _locAttrData="description" value="auto" version="3.0" description="Richtet die 'dominant-baseline' der Box des übergeordneten Elements auf die äquivalente oder heuristisch neu erstellte Grundlinie der Inlinebox des Elements aus."/>
+        <entry _locID="vertical-align_use-script" _locAttrData="description" value="use-script" version="3.0" browsers="none" description="Richtet die vom Schriftsystem bevorzugte Grundlinie des Elements (die durch den berechneten Wert des Schriftsystems festgelegt wird) auf die äquivalente Grundlinie des übergeordneten Elements aus."/>
+        <entry _locID="vertical-align_central" _locAttrData="description" value="central" browsers="none" version="3.0" description="Richtet die 'central'-Grundlinie des Inlineelements auf die 'central'-Grundlinie des übergeordneten Elements aus."/>
+        <entry _locID="vertical-align_middle" _locAttrData="description" value="middle" version="3.0" description="Richtet die 'middle'-Grundlinie des Inlineelements auf die 'middle'-Grundlinie des übergeordneten Elements aus."/>
+    </CssProperty>
+
+    <!--<CssProperty _locID="chains"
+               _locAttrData="syntax"
+               version="3.0"
+               browsers="none"
+               restriction="integer"
+               syntax="Example: @page:first { chains: a b c d e f; }"
+               standard-reference="http://www.w3.org/TR/css3-layout/#chains">
+
+    <entry _locID="z-index_auto"
+           _locAttrData="description"
+           value="auto"
+           description="The stack level of the generated box in the current stacking context is the same as its parent's box. The box does not establish a new local stacking context." />
+  </CssProperty>
+
+  <CssPseudo name="::slot(b)"
+           _locID="slot-pseudo-function"
+           _locAttrData="description"
+           version="3.0"
+           browsers="none"
+           syntax="body::slot(b) { background: #FF0 }"
+           description="'::slot(X)' pseudo-element selects the slot with name X (a letter or &quot;@&quot;) of the subject of a selector. If that subject is not a template element, or if it has no such slot, the pseudo-element selects nothing."
+           standard-referece="http://www.w3.org/TR/css3-layout/#slot" />
+
+  <CssProperty _locID="break-inside">
+    <entry value="avoid-slot" />
+  </CssProperty>
+
+  <CssProperty _locID="break-before">
+    <entry value="slot" />
+    <entry value="avoid-slot" />
+  </CssProperty>
+
+  <CssProperty _locID="break-after">
+    <entry value="slot" />
+    <entry value="avoid-slot" />
+  </CssProperty>-->
+</CssModule>

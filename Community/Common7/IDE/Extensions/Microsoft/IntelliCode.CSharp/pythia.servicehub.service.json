@@ -1,0 +1,11 @@
+{
+  "host": "desktopClr.x86",
+  "hostId": "RoslynCodeAnalysisService32",
+  "hostGroupAllowed": true,
+  "entryPoint": {
+    "assemblyPath": "Microsoft.VisualStudio.IntelliCode.CSharp.Extraction.dll",
+    "fullClassName": "Microsoft.VisualStudio.IntelliCode.CSharp.Extraction.RemotePythiaExtractionService",
+    "appBasePath": "%VSAPPIDDIR%",
+    "configPath": "%PkgDefApplicationConfigFile%"
+  }
+}

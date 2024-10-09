@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Einem ToolStripMenuItem eine Tastenkombination hinzufügen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Fügt einem ToolStripMenuItem eine Tastenkombination hinzu. </Description>
+      <Shortcut>menuAddShort</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+		<Import>
+		  <Namespace>System.Windows.Forms.Keys</Namespace>
+		</Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>menuItemName</ID>
+          <Type>ToolStripMenuItem</Type>
+          <ToolTip>Ersetzen Sie dies durch ein Dropdown-Menüelement auf Ihrem Formular.</ToolTip>
+          <Default>ToolStripMenuItem1</Default>
+        </Object>
+        <Object>
+          <ID>shortcutKey</ID>
+          <Type>Keys</Type>
+          <ToolTip>Ersetzen Sie dies durch die Tastenkombination, die Sie verwenden möchten.</ToolTip>
+          <Default>F6</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$menuItemName$.ShortcutKeys = $shortcutKey$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,27 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>form</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>form</Shortcut>
+    <Description>Markupausschnitt für ein HTML-Formular</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>action</ID>
+        <ToolTip>Gibt an, wohin die Formulardaten gesendet werden, wenn ein Formular übermittelt wird.</ToolTip>
+        <Default>/</Default>
+      </Literal>
+      <Literal>
+        <ID>method</ID>
+        <ToolTip>Gibt an, wie die Formulardaten gesendet werden.</ToolTip>
+        <Default>post</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html"><![CDATA[<form action="$action$" method="$method$">$selected$$end$</form>]]></Code>
+  </Snippet>
+</CodeSnippet>

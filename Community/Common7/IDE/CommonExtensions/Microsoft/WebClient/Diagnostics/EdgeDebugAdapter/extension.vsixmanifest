@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="ca0efd2c-aefe-4944-bc15-0d5928f75513">
+    <Name>EdgeDebugAdapterHost</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Edge debug adapter host</Description>
+    <Locale>1033</Locale>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+    <InstalledByMsi>true</InstalledByMsi>
+  </Identifier>
+  <References>
+  </References>
+  <Content>
+    <VsPackage>EdgeDebugAdapterHost.pkgdef</VsPackage>
+    <VsPackage>MSEdgeDebugAdapterHost.pkgdef</VsPackage>
+  </Content>
+</Vsix>

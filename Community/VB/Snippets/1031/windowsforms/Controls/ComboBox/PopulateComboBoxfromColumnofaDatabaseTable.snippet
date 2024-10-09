@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ComboBox aus der Spalte einer Datenbanktabelle füllen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Füllt ein ComboBox mit Daten aus einem DataTable-Objekt.</Description>
+      <Shortcut>cbData</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Data.dll</Assembly>
+			</Reference>
+			<Reference>
+				<Assembly>System.Windows.Forms.dll</Assembly>
+			</Reference>
+			<Reference>
+				<Assembly>System.xml</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>System</Namespace>
+			</Import>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Data</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Windows.Forms</Namespace>
+			</Import>
+		</Imports>
+		<Declarations>
+		<Object>
+			<ID>ComboBoxName</ID>
+			<Type>ComboBox</Type>
+			<ToolTip>Ersetzen Sie dies durch ein ComboxBox-Steuerelement auf Ihrem Formular.</ToolTip>
+			<Default>ComboBox1</Default>
+		</Object>
+		<Object>
+			<ID>table</ID>
+			<Type>DataTable</Type>
+			<ToolTip>Ersetzen Sie dies durch die DataTable, deren Spalte Sie verwenden möchten, um ComboBox zu füllen.</ToolTip>
+			<Default>DataTable1</Default>
+		</Object>
+		<Literal>
+			<ID>columnName</ID>
+			<Type>String</Type>
+			<ToolTip>Ersetzen Sie dies durch den Namen der Spalte aus DataTable, die Sie verwenden möchten.</ToolTip>
+			<Default>"ColumnName"</Default>
+		</Literal>
+		</Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Me.$ComboBoxName$.DataSource = $table$
+Me.$ComboBoxName$.DisplayMember = $columnName$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

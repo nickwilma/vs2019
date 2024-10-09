@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="SVG Filters" standard-reference="http://www.w3.org/TR/SVG11/filters.html" status="REC" pub-date="2011-08-16">
+
+  <CssProperty _locID="enable-background" _locAttrData="description" version="3.0" restriction="integer, length, percentage, enum" description="Ordnet allen Grafikelementen innerhalb eines Containers ein gemeinsames Hintergrundbild zu." standard-reference="http://www.w3.org/TR/SVG11/filters.html#EnableBackgroundProperty">
+
+    <entry _locID="enable-background_new" _locAttrData="description" value="new" description="Erstellt eine neue Zeichenfläche für das Hintergrundbild. Alle untergeordneten Elemente des aktuellen Containerelements können auf den Hintergrund zugreifen und werden sowohl auf der Zeichenfläche des Hintergrundbilds des übergeordneten Elements als auch auf dem Zielgerät gerendert."/>
+    <entry _locID="enable-background_accumulate" _locAttrData="description" value="accumulate" description="Wenn das Vorgängercontainerelement über eine 'new'-Eigenschaft verfügt, werden alle Grafikelemente innerhalb des aktuellen Containers sowohl im Hintergrundbild des übergeordneten Elements als auch im Ziel gerendert."/>
+  </CssProperty>
+
+  <CssProperty _locID="lighting-color" _locAttrData="description" version="3.0" type="color" restriction="color" description="Definiert die Farbe der Lichtquelle für die Filterprimitiven 'feDiffuseLighting' und 'feSpecularLighting'." standard-reference="http://www.w3.org/TR/SVG11/filters.html#LightingColorProperty"/>
+
+  <CssProperty _locID="flood-color" _locAttrData="description" version="3.0" type="color" restriction="color" description="Gibt an, welche 'flood-color' für die FilterPrimitive-Unterregion verwendet werden soll." standard-reference="http://www.w3.org/TR/SVG11/filters.html#FloodColorProperty"/>
+
+  <CssProperty _locID="flood-opacity" _locAttrData="description" version="3.0" restriction="number(0-1)" description="Gibt an, welche 'flood-opacity' für die FilterPrimitive-Unterregion verwendet werden soll." standard-reference="http://www.w3.org/TR/SVG11/filters.html#FloodOpacityProperty"/>
+
+</CssModule>

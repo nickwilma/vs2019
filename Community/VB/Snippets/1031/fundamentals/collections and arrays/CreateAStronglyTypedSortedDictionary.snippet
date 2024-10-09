@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Sortiertes Wörterbuch erstellen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt ein sortiertes Wörterbuch, das einen bestimmten Typ von Elementen enthält.</Description>
+      <Shortcut>colCreateSort</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>keyType</ID>
+          <ToolTip>Schlüsseltyp</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Ersetzen Sie dies durch den Typ des Elements, das die Sammlung speichern soll.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>storageVar</ID>
+          <ToolTip>Ersetzen Sie dies durch einen Bezeichner für den Hintergrundspeicher.</ToolTip>
+          <Default>sortedStudents</Default>
+        </Literal>
+        <Literal>
+          <ID>keyValue1</ID>
+          <ToolTip>Ersetzen Sie dies durch den Schlüssel für den ersten Wert.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>keyValue2</ID>
+          <ToolTip>Ersetzen Sie dies durch den Schlüssel für den zweiten Wert.</ToolTip>
+          <Default>2</Default>
+        </Literal>
+        <Literal>
+          <ID>itemValue1</ID>
+          <ToolTip>Ersetzen Sie dies durch das Element für den ersten Wert.</ToolTip>
+          <Default>"Mary Chase"</Default>
+        </Literal>
+        <Literal>
+          <ID>itemValue2</ID>
+          <ToolTip>Ersetzen Sie dies durch das Element für den zweiten Wert.</ToolTip>
+          <Default>"Barnaby Williams"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[        ' Backing storage -- a generic dictionary
+        Dim $storageVar$ As New SortedDictionary(Of $keyType$, $itemType$)
+
+        ' Add items to the dictionary
+        $storageVar$.Add($keyValue1$, $itemValue1$)
+        $storageVar$.Add($keyValue2$, $itemValue2$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

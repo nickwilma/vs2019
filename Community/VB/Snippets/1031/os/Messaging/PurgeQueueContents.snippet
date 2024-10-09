@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Warteschlangeninhalt endgültig löschen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Verwendet die Purge-Methode, um den Inhalt einer beliebigen Warteschlange, für die Sie Zugriffsrechte besitzen, im Message Queuing-System zu löschen.</Description>
+      <Shortcut>mqPurge</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Messaging.dll</Assembly>
+          <Url/>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Messaging</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>QueueName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Warteschlange. "." steht für den lokalen Computer.</ToolTip>
+          <Default>".\QueueName"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim queue As New MessageQueue($QueueName$)
+queue.Purge()]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

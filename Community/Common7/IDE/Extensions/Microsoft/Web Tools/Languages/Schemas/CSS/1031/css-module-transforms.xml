@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="2D Transforms" standard-reference="http://www.w3.org/TR/css-transforms-1/" status="WD" pub-date="2013-11-26">
+
+    <CssProperty _locID="transform" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5" type="transforms" restriction="enum" syntax="div { $(name): rotate(-90deg); }" description="Eine 2D-Transformation wird über die Eigenschaft &quot;transform&quot; auf ein Element angewendet. Diese Eigenschaft enthält eine Liste von Transformationsfunktionen ähnlich den gemäß der SVG-Spezifikation zulässigen Funktionen." standard-reference="http://www.w3.org/TR/css-transforms-1//#transform-property"/>
+
+    <CssPropertyValue type="transforms">
+        <entry value="none"/>
+        <entry _locID="transform_matrix" _locAttrData="description" value="matrix()" description="Gibt eine 2D-Transformation in Form einer aus sechs Werten bestehenden Transformationsmatrix an. &quot;matrix(a,b,c,d,e,f)&quot; ist äquivalent zum Anwenden der Transformationsmatrix &quot;[a b c d e f]&quot;."/>
+        <entry _locID="transform_matrix3d" _locAttrData="description" value="matrix3d()" description="Gibt eine 3D-Transformation als homogene 4x4-Matrix an, die aus 16 Werten in der Reihenfolge &quot;column-major&quot; (spaltenweise Anordnung) besteht."/>
+        <entry value="perspective()"/>
+        <entry _locID="transform_translate" _locAttrData="description" value="translate()" description="Gibt eine 2D-Translation (Verschiebung) um den Vektor [tx, ty] an, wobei &quot;tx&quot; dem ersten Parameter &quot;translation-value&quot; und &quot;ty&quot; dem optionalen zweiten Parameter &quot;translation-value&quot; entspricht."/>
+        <entry _locID="transform_translate3d" _locAttrData="description" value="translate3d()" description="Gibt eine 3D-Translation (Verschiebung) um den Vektor [tx,ty,tz] an, wobei &quot;tx&quot;, &quot;ty&quot; und &quot;tz&quot; dem ersten, zweiten bzw. dritten Parameter &quot;translation-value&quot; entsprechen."/>
+        <entry _locID="transform_translateX" _locAttrData="description" value="translateX()" description="Gibt eine Verschiebung um den jeweiligen Wert entlang der X-Achse an."/>
+        <entry _locID="transform_translateY" _locAttrData="description" value="translateY()" description="Gibt eine Verschiebung um den jeweiligen Wert entlang der Y-Achse an."/>
+        <entry _locID="transform_translateZ" _locAttrData="description" value="translateZ()" description="Gibt eine Verschiebung um den jeweiligen Wert entlang der Z-Achse an. Beachten Sie, dass Prozentwerte in &quot;translateZ translation-value&quot; nicht zulässig sind und (falls vorhanden) den Wert 0 ergeben."/>
+        <entry _locID="transform_scale" _locAttrData="description" value="scale()" description="Gibt einen 2D-Skalierungsvorgang um den Skalierungsvektor [sx,sy] an, der durch die beiden Parameter beschrieben wird. Wenn der zweite Parameter nicht angegeben ist, wird der Wert des ersten Parameters angenommen."/>
+        <entry _locID="transform_scale3d" _locAttrData="description" value="scale3d()" description="Gibt einen 3D-Skalierungsvorgang um den Skalierungsvektor [sx,sy,sz] an, der durch die drei Parameter beschrieben wird."/>
+        <entry _locID="transform_scaleX" _locAttrData="description" value="scaleX()" description="Gibt einen Skalierungsvorgang um den Skalierungsvektor [sx,1] an, wobei &quot;sx&quot; als Parameter angegeben wird."/>
+        <entry _locID="transform_scaleY" _locAttrData="description" value="scaleY()" description="Gibt einen Skalierungsvorgang um den Skalierungsvektor [sy,1] an, wobei &quot;sy&quot; als Parameter angegeben wird."/>
+        <entry _locID="transform_scaleZ" _locAttrData="description" value="scaleZ()" description="Gibt einen Skalierungsvorgang um den Skalierungsvektor [1,1,sz] an, wobei &quot;sz&quot; als Parameter angegeben wird."/>
+        <entry _locID="transform_rotate" _locAttrData="description" value="rotate()" description="Gibt eine 2D-Drehung um den Winkel an, der im Parameter zum Elementursprung angegeben ist, wie in der Eigenschaft &quot;transform-origin&quot; definiert."/>
+        <entry _locID="transform_rotate3d" _locAttrData="description" value="rotate3d()" description="Gibt eine 3D-Drehung im Uhrzeigersinn um den Winkel an, der im letzten Parameter zum Richtungsvektor [x,y,z], wie durch die ersten drei Parameter beschrieben, angegeben ist."/>
+        <entry _locID="transform_rotateX" _locAttrData="description" value="rotateX('angle')" description="Gibt eine Drehung im Uhrzeigersinn um den angegebenen Winkel um die X-Achse an."/>
+        <entry _locID="transform_rotateY" _locAttrData="description" value="rotateY('angle')" description="Gibt eine Drehung im Uhrzeigersinn um den angegebenen Winkel um die Y-Achse an."/>
+        <entry _locID="transform_rotateZ" _locAttrData="description" value="rotateZ('angle')" description="Gibt eine Drehung im Uhrzeigersinn um den angegebenen Winkel um die Z-Achse an."/>
+        <entry _locID="transform_skewX" _locAttrData="description" value="skewX()" description="Gibt eine Neigungstransformation entlang der X-Achse um den angegebenen Winkel an."/>
+        <entry _locID="transform_skewY" _locAttrData="description" value="skewY()" description="Gibt eine Neigungstransformation entlang der Y-Achse um den angegebenen Winkel an."/>
+        <entry _locID="transform_skew" _locAttrData="description" value="skew()" description="Gibt eine Neigungstransformation entlang der X- und Y-Achse an. Der erste Winkelparameter gibt die Neigung zur X-Achse an. Der zweite Winkelparameter gibt die Neigung zur Y-Achse an. Wenn der zweite Parameter nicht festgelegt ist, wird für den Y-Winkel der Wert 0 verwendet (keine Neigung zur Y-Achse)."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="transform-origin" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5" type="transform-origins" restriction="length, percentage" syntax=".album { $(name): 20% 40%; }" description="Legt den Ausgangspunkt der Transformation eines Elements fest. Diese Eigenschaft wird in drei Schritten angewendet: Translation des Elements um den negierten Eigenschaftenwert, Anwenden der Transformation des Elements und Translation um den Eigenschaftenwert." standard-reference="http://www.w3.org/TR/css-transforms-1/#transform-origin"/>
+
+    <CssPropertyValue type="transform-origins">
+        <entry value="left"/>
+        <entry value="center"/>
+        <entry value="right"/>
+        <entry value="top"/>
+        <entry value="bottom"/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="transform-style" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5" restriction="enum" syntax="div { $(name): flat; }" description="Definiert, wie geschachtelte Elemente im dreidimensionalen Raum dargestellt werden." standard-reference="http://www.w3.org/TR/css-transforms-1/#transform-origin">
+
+        <entry _locID="transform-style_flat" _locAttrData="description" value="flat" description="Alle untergeordneten Elemente dieses Elements werden flach (zweidimensional) in der 2D-Ebene des Elements dargestellt."/>
+        <entry _locID="transform-style_preserve-3d" _locAttrData="description" value="preserve-3d" browsers="none" description="Es wird keine flache Ansicht dargestellt, d.h., die untergeordneten Elemente behalten ihre Position im dreidimensionalen Raum bei."/>
+    </CssProperty>
+
+    <CssProperty _locID="perspective" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5" restriction="length" syntax="div { $(name): none; }" description="Wendet die gleiche Transformation an wie die Transformationsfunktion &quot;perspective(&lt;number&gt;)&quot;. Sie wird jedoch nur auf die positionierten bzw. transformierten untergeordneten Elemente des Elements angewendet und nicht auf die Transformation im Element selbst." standard-reference="http://www.w3.org/TR/css-transforms-1/#perspective">
+
+        <entry _locID="perspective_none" _locAttrData="description" value="none" description="Es wird keine perspektivische Transformation angewendet."/>
+    </CssProperty>
+
+    <CssPropertyValue type="perspective-origins">
+        <entry value="left"/>
+        <entry value="center"/>
+        <entry value="right"/>
+        <entry value="top"/>
+        <entry value="bottom"/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="perspective-origin" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5" type="perspective-origins" restriction="percentage, length" syntax="div { $(name): 10px; }" description="Legt den Ursprung für die Eigenschaft &quot;perspective&quot; fest. Dabei werden tatsächlich die X-Position und Y-Position festgelegt, was einer &quot;Draufsicht&quot; auf die untergeordneten Elemente des Elements entspricht." standard-reference="http://www.w3.org/TR/css-transforms-1/#perspective-origin"/>
+
+    <CssProperty _locID="backface-visibility" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5" restriction="enum" syntax="div { $(name): hidden; }" description="Legt fest, ob die Rückseite eines transformierten Elements sichtbar ist. Bei einer Identitätstransformation zeigt die Vorderseite eines Elements nach vorne." standard-reference="http://www.w3.org/TR/css-transforms-1/#backface-visibility">
+        <entry value="visible"/>
+        <entry value="hidden"/>
+    </CssProperty>
+
+</CssModule>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SnippetCollection>
+    <Language Lang="HTMLX" Guid="{9BBFD173-9770-47DC-B191-651B7FF493CD}">
+        <SnippetDir>
+            <OnOff>On</OnOff>
+            <Installed>true</Installed>
+            <Locale>1033</Locale>
+            <DirPath>%InstallRoot%\Web\Snippets\HTML\%LCID%\HTML\</DirPath>	
+            <LocalizedName>HTML</LocalizedName>
+        </SnippetDir>
+    </Language>
+</SnippetCollection>

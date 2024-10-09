@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>QuickInfo einem Windows Forms-Steuerelement hinzufügen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Fügt eine QuickInfo einem Windows Forms-Steuerelement hinzu.</Description>
+      <Shortcut>controlTip</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Windows.Forms.dll</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Windows.Forms</Namespace>
+			</Import>
+		</Imports>
+      <Declarations>
+        <Object>
+          <ID>control</ID>
+          <Type>Control</Type>
+          <ToolTip>Ersetzen Sie dies durch ein Steuerelement in Ihrem Formular.</ToolTip>
+          <Default>Button1</Default>
+        </Object>
+        <Literal>
+          <ID>text</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch eine Zeichenfolge, die in der QuickInfo angezeigt werden soll.</ToolTip>
+          <Default>"ToolTip Text"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim tooltip As New ToolTip()
+tooltip.SetToolTip($control$, $text$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

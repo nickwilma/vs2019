@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Transitions" standard-reference="http://www.w3.org/TR/css3-transitions/" status="WD" pub-date="20132-11-19">
+
+    <CssProperty _locID="transition" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5,S" restriction="time, property, enum" type="transition-property, timing-functions" syntax="div { $(name): background-color linear 1s; }" description="Kurzschreibweise zur Zusammenfassung von vier Transitionseigenschaften in einer einzelnen Eigenschaft." standard-reference="http://www.w3.org/TR/css3-transitions/#transition"/>
+
+    <CssProperty _locID="transition-delay" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5,S" restriction="time" syntax="div { $(name): 1s; }" description="Legt fest, wann die Transition beginnt. Der Beginn der Transition kann auf einen späteren Zeitpunkt festgelegt werden." standard-reference="http://www.w3.org/TR/css3-transitions/#transition-delay"/>
+
+    <CssProperty _locID="transition-duration" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5,S" restriction="time" syntax="div { $(name): 1s; }" description="Legt fest, wie lange die Transition vom alten in den neuen Wert dauern soll." standard-reference="http://www.w3.org/TR/css3-transitions/#transition-duration"/>
+
+    <CssProperty _locID="transition-property" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5,S" restriction="property" type="transition-property" syntax="div { $(name): background-color; }" description="Gibt den Namen der CSS-Eigenschaft an, auf die die Zustandsänderung (Transition) angewendet wird." standard-reference="http://www.w3.org/TR/css3-transitions/#transition-property"/>
+
+    <CssPropertyValue type="transition-property">
+        <entry _locID="transition-property_none" _locAttrData="description" value="none" description="Der Zustand keiner Eigenschaft wird verändert."/>
+        <entry _locID="transition-property_all" _locAttrData="description" value="all" description="Jede Eigenschaft, die für eine Transition infrage kommt, wird verändert."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="transition-timing-function" _locAttrData="description" version="3.0" browsers="C,FF16,IE10,O12.5,S" type="timing-functions" restriction="enum" syntax="div { $(name): linear; }" description="Beschreibt, wie die während einer Transition verwendeten Zwischenwerte berechnet werden." standard-reference="http://www.w3.org/TR/css3-transitions/#transition-timing-function"/>
+
+    <CssPropertyValue type="timing-functions">
+        <entry _locID="transition-timing-function_ease" _locAttrData="description" value="ease" description="Entspricht 'cubic-bezier(0.25, 0.1, 0.25, 1.0)'."/>
+        <entry _locID="transition-timing-function_linear" _locAttrData="description" value="linear" description="Entspricht 'cubic-bezier(0.0, 0.0, 1.0, 1.0)'."/>
+        <entry _locID="transition-timing-function_ease-in" _locAttrData="description" value="ease-in" description="Entspricht 'cubic-bezier(0.42, 0, 1.0, 1.0)'."/>
+        <entry _locID="transition-timing-function_ease-out" _locAttrData="description" value="ease-out" description="Entspricht 'cubic-bezier(0, 0, 0.58, 1.0)'."/>
+        <entry _locID="transition-timing-function_ease-in-out" _locAttrData="description" value="ease-in-out" description="Entspricht 'cubic-bezier(0.42, 0, 0.58, 1.0)'."/>
+        <entry _locID="transition-timing-function_cubic-bezier" _locAttrData="description" value="cubic-bezier()" description="Gibt eine kubische Bézier-Kurve an. Die vier Werte geben die Punkte P1 and P2 der Kurve als (x1, y1, x2, y2) an. Alle Werte müssen im Bereich [0, 1] liegen."/>
+        <entry _locID="transition-timing-function_step-start" _locAttrData="description" value="step-start" description="Die 'step-start'-Funktion entspricht 'steps(1, start)'."/>
+        <entry _locID="transition-timing-function_step-end" _locAttrData="description" value="step-end" description="Die 'step-end'-Funktion entspricht 'steps(1, end)'."/>
+        <entry _locID="transition-timing-function_steps" _locAttrData="description" value="steps(1, start)" description="Der erste Parameter gibt die Anzahl der Intervalle in der Funktion an. Der zweite Parameter ist optional und entspricht entweder dem 'start'-Wert oder 'end'-Wert."/>
+    </CssPropertyValue>
+
+</CssModule>

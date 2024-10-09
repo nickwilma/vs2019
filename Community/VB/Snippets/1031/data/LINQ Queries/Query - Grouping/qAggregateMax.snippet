@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>In Max() aggregieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Verwendet ein Aggregat zur Berechnung der maximalen Zeichenanzahl im Namen einer Frucht.</Description>
+      <Shortcut>qAggregateMax</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana", "apple"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Felds, das für die zweite Aggregation verwendet wird.</ToolTip>
+          <Default>Length</Default>
+       </Literal>
+        <Literal>
+          <ID>groupingCondition</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Aggregator, der für die Gruppe aufgerufen werden soll.</ToolTip>
+          <Default>Max</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = Aggregate $item$ In $dataSource$ _
+                     Into $groupingCondition$($item$.$field$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

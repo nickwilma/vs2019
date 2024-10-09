@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Using-Anweisung</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Fügt eine Using-Anweisung ein.</Description>
+      <Shortcut>Using</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>DisposeObject</ID>
+          <Type>Object</Type>
+          <ToolTip>Ersetzen Sie dies durch den Variablennamen des Objekts.</ToolTip>
+          <Default>resource</Default>
+        </Object>
+        <Literal>
+          <ID>ObjectType</ID>
+          <Type></Type>
+          <ToolTip>Ersetzen Sie dies durch eine Type- oder eine New-Anweisung.</ToolTip>
+          <Default>New Object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Using $DisposeObject$ As $ObjectType$
+
+End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

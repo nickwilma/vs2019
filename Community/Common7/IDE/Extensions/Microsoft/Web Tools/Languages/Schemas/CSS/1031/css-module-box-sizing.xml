@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2019: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2020 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Box Sizing" standard-reference="https://www.w3.org/TR/css-sizing-4/" status="WD" pub-date="2020-10-20">
+
+  <CssPropertyValue type="sizing_values">
+    <entry _locID="sizing_auto" _locAttrData="description" value="auto" description="The size depends on the values of other properties."/>
+    <entry _locID="sizing_none" _locAttrData="description" value="none" description="No limit on the size of the box."/>
+    <entry _locID="size_min-content" _locAttrData="description" value="min-content" description="Use the minimum content size in the relevant axis."/>
+    <entry _locID="size_max-content" _locAttrData="description" value="max-content" description="Use the maximum content size in the relevant axis."/>
+    <entry _locID="size_stretch" _locAttrData="description" value="stretch" description="Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block."/>
+    <entry _locID="size_fit-content" _locAttrData="description" value="fit-content" description="Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch))."/>
+    <entry _locID="size_contain" _locAttrData="description" value="contain" description="If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible."/>
+    <!-- fit-content() is defined in the Box Sizing Level 3 module, but isn't supported by any browsers. Instead, they seem to be adopting fit-content from the Level 4 module. -->
+    <!-- <entry value="fit-content()" /> -->
+  </CssPropertyValue>
+
+  <CssProperty _locID="width" _locAttrData="description" version="1.0" type="sizing_values" restriction="length, percentage" description="Specifies the width of the content area, padding area or border area (depending on 'box-sizing') of certain boxes." syntax="header { $(name): 200px; }" standard-reference="https://www.w3.org/TR/css-sizing-3/#sizing-properties">
+  </CssProperty>
+
+  <CssProperty _locID="height" _locAttrData="description" version="1.0" type="sizing_values" restriction="length, percentage" description="Specifies the height of the content area, padding area or border area (depending on 'box-sizing') of certain boxes." syntax="footer { $(name): 100px; }" standard-reference="https://www.w3.org/TR/css-sizing-3/#sizing-properties">
+  </CssProperty>
+
+  <CssProperty _locID="min-width" _locAttrData="description" version="2.0" browsers="C,FF1,IE7,O7,S1" type="sizing_values" restriction="length, percentage" description="Allows authors to constrain content width to a certain range." syntax="footer { $(name): 300px; }" standard-reference="https://www.w3.org/TR/css-sizing-3/#sizing-properties">
+  </CssProperty>
+
+  <CssProperty _locID="max-width" _locAttrData="description" version="2.0" browsers="C,FF1,IE7,O7,S1" type="sizing_values" restriction="length, percentage" description="Allows authors to constrain content width to a certain range." syntax="footer { $(name): 300px; }" standard-reference="https://www.w3.org/TR/css-sizing-3/#sizing-properties">
+  </CssProperty>
+
+  <CssProperty _locID="min-height" _locAttrData="description" version="2.0" browsers="C,FF1,IE7,O7,S1" type="sizing_values" restriction="length, percentage" description="Allows authors to constrain content height to a certain range." syntax="footer { $(name): 300px; }" standard-reference="https://www.w3.org/TR/css-sizing-3/#sizing-properties">
+  </CssProperty>
+
+  <CssProperty _locID="max-height" _locAttrData="description" version="2.0" browsers="C,FF1,IE7,O7,S1" type="sizing_values" restriction="length, percentage" description="Allows authors to constrain content height to a certain range." syntax="footer { $(name): 300px; }" standard-reference="https://www.w3.org/TR/css-sizing-3/#sizing-properties">
+  </CssProperty>
+
+  <CssPropertyValue type="box-sizings">
+      <entry _locID="box-sizing_content-box" _locAttrData="description" value="content-box" description="Behavior of width and height as specified by CSS2.1. The specified width and height (and respective min/max properties) apply to the width and height respectively of the content box of the element."/>
+      <entry _locID="box-sizing_border-box" _locAttrData="description" value="border-box" description="The specified width and height (and respective min/max properties) on this element determine the border box of the element."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="box-sizing" _locAttrData="description" version="3.0" browsers="C,IE8,O8,S5.1" type="box-sizings" restriction="enum" description="Box Model addition in CSS3." syntax="div { $(name): content-box; }" standard-reference="https://www.w3.org/TR/css-sizing-3/#propdef-box-sizing"/>
+
+  <CssProperty _locID="aspect-ratio" _locAttrData="description" restriction="enum, ratio" description="Sets a preferred aspect ratio for the box, which will be used in the calculation of auto sizes and some other layout functions." syntax="div { $(name): 4 / 3;" standard-reference="https://www.w3.org/TR/css-sizing-4/#aspect-ratio">
+    <entry value="auto"/>
+    <entry value="auto &amp;&amp;"/>
+  </CssProperty>
+
+  <CssProperty _locID="contain-intrinsic-size" _locAttrData="description" restriction="length" description="" syntax="" standard-reference="https://www.w3.org/TR/css-sizing-4/#intrinsic-size-override">
+    <entry value="none"/>
+  </CssProperty>
+
+</CssModule>

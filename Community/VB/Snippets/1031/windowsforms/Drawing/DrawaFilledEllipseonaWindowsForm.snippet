@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Gefüllte Ellipse in einem Windows Form zeichnen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Zeichnet eine gefüllte Ellipse in einem Formular.</Description>
+      <Shortcut>drawEll</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>color</ID>
+          <Type>System.Drawing.Color</Type>
+          <ToolTip>Ersetzen Sie dies durch die Pinselfarbe.</ToolTip>
+          <Default>Color.Red</Default>
+        </Object>
+        <Object>
+          <ID>form</ID>
+          <Type>System.Windows.Forms.Form</Type>
+          <ToolTip>Ersetzen Sie dies durch einen Verweis, auf dem das Formular oder Steuerelement die Ellipse zeichnet.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+        <Literal>
+          <ID>location</ID>
+          <ToolTip>Ersetzen Sie dies durch die Koordinaten für Position und Größe der Ellipse.</ToolTip>
+          <Default>0, 0, 200, 300</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Using brush As New SolidBrush($color$)
+    Using formGraphics = $form$.CreateGraphics()
+        formGraphics.FillEllipse(brush, New Rectangle($location$))
+    End Using
+End Using
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

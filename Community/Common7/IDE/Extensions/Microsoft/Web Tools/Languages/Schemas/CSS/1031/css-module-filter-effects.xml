@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2020: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2019 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Filter Effects" standard-reference="https://drafts.fxtf.org/filter-effects-2/" status="ED" pub-date="2020-07-16">
+
+  <CssPropertyValue type="filter-functions">
+    <entry _locID="filter-function_blur" _locAttrData="description" value="blur()" description="Applies a Gaussian blur to the input image."/>
+    <entry _locID="filter-function_brightness" _locAttrData="description" value="brightness()" description="Applies a linear multiplier to input image, making it appear more or less bright."/>
+    <entry _locID="filter-function_contrast" _locAttrData="description" value="contrast()" description="Adjusts the contrast of the input."/>
+    <entry _locID="filter-function_drop-shadow" _locAttrData="description" value="drop-shadow()" description="Applies a drop shadow effect to the input image."/>
+    <entry _locID="filter-function_grayscale" _locAttrData="description" value="grayscale()" description="Converts the input image to grayscale."/>
+    <entry _locID="filter-function_hue-rotate" _locAttrData="description" value="hue-rotate()" description="Applies a hue rotation on the input image."/>
+    <entry _locID="filter-function_invert" _locAttrData="description" value="invert()" description="Inverts the samples in the input image."/>
+    <entry _locID="filter-function_opacity" _locAttrData="description" value="opacity()" description="Applies transparency to the samples in the input image."/>
+    <entry _locID="filter-function_saturate" _locAttrData="description" value="saturate()" description="Saturates the input image."/>
+    <entry _locID="filter-function_sepia" _locAttrData="description" value="sepia()" description="Converts the input image to sepia."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="filter" _locAttrData="description" restriction="enum, url" type="url, filter-functions" syntax="div { $(name): blur(5px); }" description="The first filter function or filter reference in the list takes the element as the input image. Subsequent operations take the output from the previous filter function or filter reference as the input image." standard-reference="https://drafts.csswg.org/cssom-view/#smooth-scrolling">
+
+      <entry _locId="filter-none" _locAttrData="description" value="none" description="No filter effect gets applied."/>
+  </CssProperty>
+
+  <CssProperty _locID="backdrop-filter" ref="filter"/>
+
+  <CssProperty _locID="color-interpolation-filters" _locAttrData="description" restriction="enum" description="Specifies the color space for imaging operations performed via filter effects." standard-reference="https://www.w3.org/TR/filter-effects-1/#ColorInterpolationFiltersProperty">
+
+    <entry value="auto"/>
+    <entry value="sRGB"/>
+    <entry value="linearRGB"/>
+  </CssProperty>
+
+  <CssProperty _locID="lighting-color" _locAttrData="description" restriction="color" description="The lighting-color property defines the color of the light source for filter primitives feDiffuseLighting and feSpecularLighting." standard-reference="https://www.w3.org/TR/filter-effects-1/#LightingColorProperty"/>
+
+</CssModule>

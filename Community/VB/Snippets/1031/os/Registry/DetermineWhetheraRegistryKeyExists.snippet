@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Bestimmen, ob ein Registrierungsschlüssel vorhanden ist </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Überprüft, ob der angegebene Registrierungsschlüssel vorhanden ist.</Description>
+      <Shortcut>regExist</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.Win32</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>keyPath</ID>
+          <ToolTip>Ersetzen Sie dies durch den Pfad zum Registrierungsschlüssel.</ToolTip>
+          <Default>"Software\Microsoft\TestApp\1.0"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim exists As Boolean = False
+Try
+    If My.Computer.Registry.CurrentUser.OpenSubKey($keyPath$) IsNot Nothing Then
+        exists = True
+    End If
+Finally
+    My.Computer.Registry.CurrentUser.Close()
+End Try]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

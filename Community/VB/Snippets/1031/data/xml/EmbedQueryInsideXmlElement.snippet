@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Abfrage in XElement einbetten</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Bettet eine Abfrage in ein XElement ein.</Description>
+      <Shortcut>xmlQuery</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Root</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Stammnamen.</ToolTip>
+          <Default>Root</Default>
+        </Literal>
+         <Literal>
+          <ID>Result</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Ergebnisnamen.</ToolTip>
+          <Default>Result</Default>
+        </Literal>
+        <Literal>
+          <ID>QueryExpr</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch Ihre Sammlung.</ToolTip>
+          <Default>"abc"</Default>          
+        </Literal>       
+        <Literal>
+          <ID>QueryExpr2</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die Bedingung.</ToolTip>
+          <Default>= "b"</Default>          
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[
+        Dim y = <$Root$>
+                    <%= From i in $QueryExpr$ _
+                        where i $QueryExpr2$ _
+                        Select <$Result$>
+                                   <%= i %>
+                               </$Result$> _
+                               %>
+                </$Root$>
+
+      ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

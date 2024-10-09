@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Backgrounds and Borders" standard-reference="http://www.w3.org/TR/css3-background/" status="CR" pub-date="2014-09-09">
+
+    <CssProperty _locID="background" _locAttrData="description" version="1.0" restriction="enum, color, length, percentage, url" type="background-image, background-repeat, background-attachment, background-position, box" description="Der Hintergrund eines Elements." syntax="section { $(name): url(image.png) no-repeat #999; }" standard-reference="http://www.w3.org/TR/css3-background/#background"/>
+
+    <CssProperty _locID="background-color" _locAttrData="description" type="color" version="1.0" restriction="color" syntax="body { $(name): white; }" description="Die als Elementhintergrund verwendete Farbe." standard-reference="http://www.w3.org/TR/css3-background/#background-color"/>
+
+    <CssProperty _locID="background-image" _locAttrData="description" version="1.0" description="Das als Elementhintergrund verwendete Bild." syntax="article { $(name): url(image.png); }" restriction="url, enum" type="background-image" standard-reference="http://www.w3.org/TR/css3-background/#background-image"/>
+
+    <CssPropertyValue type="background-image" extends="image">
+        <entry _locID="background-image_none" _locAttrData="description" value="none" description="Der Wert 'none' zählt als eine Bildebene, auf der jedoch nichts gezeichnet wird."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="background-repeat" _locAttrData="description" restriction="enum" type="background-repeat" version="1.0" description="Legt fest, wie das Hintergrundbild innerhalb eines Elements unterteilt ist." syntax="article { $(name): no-repeat; }" standard-reference="http://www.w3.org/TR/css3-background/#background-repeat"/>
+
+    <CssPropertyValue type="background-repeat">
+        <entry _locID="background-repeat_no-repeat" _locAttrData="description" value="no-repeat" version="1.0" description="Das Bild wird als Einzelbild angezeigt und nicht in diese Richtung wiederholt."/>
+        <entry _locID="background-repeat_repeat" _locAttrData="description" value="repeat" version="1.0" description="Das Bild wird so oft wie nötig in diese Richtung wiederholt, bis die Hintergrundzeichenfläche ausgefüllt ist."/>
+        <entry _locID="background-repeat_repeat-x" _locAttrData="description" value="repeat-x" version="1.0" description="Entspricht 'repeat no-repeat'."/>
+        <entry _locID="background-repeat_repeat-y" _locAttrData="description" value="repeat-y" version="1.0" description="Entspricht 'no-repeat repeat'."/>
+        <entry _locID="background-repeat_round" _locAttrData="description" value="round" version="3.0" description="Das Bild wird so häufig wiederholt, wie es in den Hintergrundpositionierungsbereich passt. Wenn die Anzahl der Wiederholungen keiner ganzen Zahl entspricht, wird das Bild entsprechend neu skaliert."/>
+        <entry _locID="background-repeat_space" _locAttrData="description" value="space" version="3.0" description="Das Bild wird so häufig wiederholt, wie es in den Hintergrundpositionierungsbereich passt, ohne abgeschnitten zu werden. Anschließend wird der Abstand zwischen den Bildern (nicht die Bilder selbst) vergrößert, sodass die Bilder die gesamte Fläche ausfüllen. Das erste und letzte Bild berührt die Kanten der Fläche."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="background-attachment" _locAttrData="description" version="1.0" browsers="all" restriction="enum" type="background-attachment" description="Wenn Hintergrundbilder angegeben wurden, legt diese Eigenschaft fest, ob die Bilder auf dem Viewport fixiert ('fixed') sind oder beim Bildlauf mit dem Element ('scroll') oder seinem Inhalt ('local') verschoben werden." syntax=".box { $(name): fixed; }" standard-reference="http://www.w3.org/TR/css3-background/#background-attachment"/>
+
+    <CssPropertyValue type="background-attachment">
+        <entry _locID="background-attachment_fixed" _locAttrData="description" value="fixed" version="1.0" description="Der Hintergrund wird in Bezug zum Viewport fixiert. Bei seitenweisen Medien, die über keinen Viewport verfügen, wird ein feststehender Hintergrund relativ zur Seitenbox platziert und daher auf jeder Seite repliziert."/>
+        <entry _locID="background-attachment_local" _locAttrData="description" value="local" version="3.0" description="Der Hintergrund wird in Bezug zum Inhalt des Elements fixiert: Wenn das Element über einen Bildlaufmechanismus verfügt, wird der Hintergrund beim Bildlauf mit dem Inhalt des Elements verschoben."/>
+        <entry _locID="background-attachment_scroll" _locAttrData="description" value="scroll" version="1.0" description="Der Hintergrund wird in Bezug zum Element selbst fixiert und beim Bildlauf nicht mit dessen Inhalt verschoben. (Der Hintergrund ist tatsächlich an den Rand des Elements angeheftet.)"/>
+    </CssPropertyValue>
+
+    <CssPropertyValue type="background-position">
+        <entry _locID="background-position_bottom" _locAttrData="description" value="bottom" description="Entspricht '100%' für die vertikale Position, wenn ein oder zwei Werte angegeben sind; gibt andernfalls die untere Kante als Ursprung des nächsten Offsets an."/>
+        <entry _locID="background-position_center" _locAttrData="description" value="center" description="Entspricht '50%' ('50%' vom linken Rand) für die horizontale Position, wenn für die horizontale Position kein anderer Wert angegeben ist, bzw. '50%' ('50%' vom oberen Rand) für die vertikale Position, falls angegeben."/>
+        <entry _locID="background-position_left" _locAttrData="description" value="left" description="Entspricht '0%' für die horizontale Position, wenn ein oder zwei Werte angegeben sind, bzw. gibt andernfalls den linken Rand als Ursprung für den nächsten Versatz an."/>
+        <entry _locID="background-position_right" _locAttrData="description" value="right" description="Entspricht '100%' für die horizontale Position, wenn ein oder zwei Werte angegeben sind, bzw. gibt andernfalls den rechten Rand als Ursprung für den nächsten Versatz an."/>
+        <entry _locID="background-position_top" _locAttrData="description" value="top" description="Entspricht '0%' für die vertikale Position, wenn ein oder zwei Werte angegeben sind, bzw. gibt andernfalls den oberen Rand als Ursprung für den nächsten Versatz an."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="background-position" _locAttrData="description" version="1.0" type="background-position" restriction="length, percentage" description="Wenn Hintergrundbilder festgelegt wurden, gibt diese Eigenschaft deren Ausgangsposition (nach einer Größenänderung) innerhalb des entsprechenden Hintergrundpositionierungsbereichs an." syntax="div { $(name): left center}" standard-reference="http://www.w3.org/TR/css3-background/#background-position"/>
+
+    <CssPropertyValue type="box">
+        <entry _locID="background-clip_border-box" _locAttrData="description" value="border-box" description="Der Hintergrund wird bis unter den Rahmen gezeichnet und an dessen Rand abgeschnitten."/>
+        <entry _locID="background-clip_padding-box" _locAttrData="description" value="padding-box" description="Der Hintergrund wird innerhalb des Innenabstands gezeichnet und an dessen Rand abgeschnitten."/>
+        <entry _locID="background-clip_content-box" _locAttrData="description" value="content-box" description="Der Hintergrund wird innerhalb des Inhaltsbereichs gezeichnet und an dessen Rand abgeschnitten."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="background-clip" _locAttrData="description, syntax" version="3.0" browsers="C,FF4,IE9,O10.5,S3" type="box" restriction="enum" description="Legt den Hintergrundzeichenbereich fest." syntax="header { $(name): border-box; }" standard-reference="http://www.w3.org/TR/css3-background/#background-clip"/>
+
+    <CssProperty _locID="background-origin" _locAttrData="description" version="3.0" browsers="C,FF4,IE9,O10.5,S3" type="box" restriction="enum" description="Gibt bei Elementen, die als Einzelbox dargestellt werden, den Hintergrundpositionierungsbereich an. Bei Elementen, die in Form mehrerer Boxen dargestellt werden (z.B. Inlineboxen über mehrere Zeilen oder Boxen über mehrere Seiten) gibt diese Eigenschaft an, für welche Boxen 'box-decoration-break' den Hintergrundpositionierungsbereich bestimmt." syntax="header { $(name): border-box; }" standard-reference="http://www.w3.org/TR/css3-background/#background-origin"/>
+
+    <CssPropertyValue type="bg-size">
+        <entry _locID="background-size_contain" _locAttrData="description" value="contain" description="Skaliert das Bild unter Beibehaltung des tatsächlichen Seitenverhältnisses (falls vorhanden) so groß wie möglich, sodass sowohl die Breite als auch die Höhe in den Hintergrundpositionierungsbereich passen."/>
+        <entry _locID="background-size_cover" _locAttrData="description" value="cover" description="Skaliert das Bild unter Beibehaltung des tatsächlichen Seitenverhältnisses (falls vorhanden) so klein wie möglich, sodass sowohl die Breite als auch die Höhe den Hintergrundpositionierungsbereich vollständig ausfüllen."/>
+        <entry value="auto"/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="background-size" _locAttrData="description" version="3.0" browsers="C,FF4,IE9,O10,S4.1" type="bg-size" restriction="length, percentage" description="Gibt die Größe der Hintergrundbilder an." syntax="header { $(name): 20px; }" standard-reference="http://www.w3.org/TR/css3-background/#background-size"/>
+
+    <CssProperty _locID="border" _locAttrData="description" version="1.0" restriction="length, color, enum" type="border-style, border-width" description="Kurzschreibweise zum Festlegen von Rahmenbreite, -stil und -farbe." syntax="header { $(name): 5px solid red;}" standard-reference="http://www.w3.org/TR/css3-background/#borders"/>
+
+    <CssProperty _locID="border-left" ref="border"/>
+    <CssProperty _locID="border-top" ref="border"/>
+    <CssProperty _locID="border-right" ref="border"/>
+    <CssProperty _locID="border-bottom" ref="border"/>
+
+    <CssPropertyValue type="border-width">
+        <entry version="1.0" value="medium"/>
+        <entry version="1.0" value="thin"/>
+        <entry version="1.0" value="thick"/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="border-width" _locAttrData="description" type="border-width" restriction="length" version="1.0" description="'Border-width' ist eine Kurzschreibweise zum Festlegen der vier 'border-*-width'-Eigenschaften. Bei vier Werten werden der obere, rechte, untere und linke Rahmen in dieser Reihenfolge festgelegt. Wenn der Wert für den linken Rahmen fehlt, ist er identisch mit dem für den rechten Rahmen; wenn der Wert für den unteren Rahmen fehlt, ist er identisch mit dem für den oberen Rahmen; wenn der Wert für den rechten Rahmen fehlt, ist er identisch mit dem für den oberen Rahmen." syntax="td { $(name): 2px; }" standard-reference="http://www.w3.org/TR/css3-background/#border-width"/>
+
+    <CssProperty _locID="border-top-width" ref="border-width"/>
+    <CssProperty _locID="border-left-width" ref="border-width"/>
+    <CssProperty _locID="border-right-width" ref="border-width"/>
+    <CssProperty _locID="border-bottom-width" ref="border-width"/>
+
+    <CssProperty _locID="border-color" _locAttrData="description" type="color" restriction="color" version="1.0" description="Die Farbe des Rahmens um alle vier Seiten eines Elements." syntax="td { $(name): blue; }" standard-reference="http://www.w3.org/TR/css3-background/#border-color"/>
+
+    <CssProperty _locID="border-top-color" ref="border-color"/>
+    <CssProperty _locID="border-left-color" ref="border-color"/>
+    <CssProperty _locID="border-right-color" ref="border-color"/>
+    <CssProperty _locID="border-bottom-color" ref="border-color"/>
+
+    <CssPropertyValue type="border-style">
+        <entry _locID="border-style_dashed" _locAttrData="description" version="1.0" value="dashed" description="Eine gestrichelte Linie."/>
+        <entry _locID="border-style_dotted" _locAttrData="description" version="1.0" value="dotted" description="Eine gepunktete Linie."/>
+        <entry _locID="border-style_double" _locAttrData="description" version="1.0" value="double" description="Zwei parallele durchgezogene Linien mit etwas Abstand. (Die Stärke der Linien ist nicht angegeben, aber die Summe aus Linien und Abstand muss gleich 'border-width' sein.)"/>
+        <entry _locID="border-style_groove" _locAttrData="description" version="1.0" value="groove" description="Der Rahmen sieht aus, als wäre er in die Zeichenfläche eingemeißelt. (Dieser Effekt wird normalerweise durch einen 'Schatten&quot; aus zwei Farben erzielt, die etwas heller bzw. dunkler sind als 'border-color'.)"/>
+        <entry _locID="border-style_hidden" _locAttrData="description" version="3.0" value="hidden" description="Entspricht dem Wert 'none', weist bei Tabellen mit der Einstellung 'border-collapse' jedoch ein abweichendes Verhalten bezüglich der Regeln zur Auflösung von Rahmenkonflikten auf."/>
+        <entry _locID="border-style_inset" _locAttrData="description" version="1.0" value="inset" description="Der Inhalt sieht aus, als wäre er in die Zeichenfläche eingebettet. Wird in Tabellen mit der Einstellung 'border-collapse' als 'ridge' behandelt."/>
+        <entry _locID="border-style_none" _locAttrData="description" version="1.0" value="none" description="Kein Rahmen. Farbe und Breite werden ignoriert (d.h., der Rahmen hat die Breite 0, sofern es sich nicht um ein Bild handelt)."/>
+        <entry _locID="border-style_outset" _locAttrData="description" version="1.0" value="outset" description="Der Inhalt sieht aus, als würde er sich aus der Zeichenfläche erheben. Wird in Tabellen mit der Einstellung 'border-collapse' als 'groove' behandelt."/>
+        <entry _locID="border-style_ridge" _locAttrData="description" version="1.0" value="ridge" description="Der Rahmen sieht aus, als käme er aus der Zeichenfläche hervor (Grat)."/>
+        <entry _locID="border-style_solid" _locAttrData="description" version="1.0" value="solid" description="Ein einzelnes durchgezogenes Liniensegment."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="border-style" _locAttrData="description" type="border-style" restriction="enum" version="1.0" syntax="td { $(name): solid; }" description="Der Stil des Rahmens, der ein Element umgibt." standard-reference="http://www.w3.org/TR/css3-background/#border-style"/>
+
+    <CssProperty _locID="border-left-style" ref="border-style"/>
+    <CssProperty _locID="border-top-style" ref="border-style"/>
+    <CssProperty _locID="border-right-style" ref="border-style"/>
+    <CssProperty _locID="border-bottom-style" ref="border-style"/>
+
+    <CssProperty _locID="border-radius" _locAttrData="description" version="3.0" browsers="C,FF4,IE9,O10.5,S5" restriction="length, percentage" syntax="td { $(name): 3px 4px; }" description="Durch die beiden Längen- oder Prozentwerte der 'border-*-radius'-Eigenschaften wird der Radius einer Viertelellipse definiert, die die Form der Ecke der äußeren Rahmenkante festlegt. Der erste Wert entspricht dem horizontalen und der zweite Wert dem vertikalen Radius. Wenn der zweite Wert ausgelassen wird, wird der erste Wert übernommen. Wenn eine der Längen 0 ist, ist die Ecke quadratisch und nicht abgerundet. Die Prozentwerte für den horizontalen Radius beziehen sich auf die Breite des Rahmens, während sich die Prozentwerte für den vertikalen Radius auf die Höhe des Rahmens beziehen." standard-reference="http://www.w3.org/TR/css3-background/#border-radius"/>
+
+    <CssProperty _locID="border-top-left-radius" browsers="C,FF4,IE9,O10.5,S5" ref="border-radius" syntax="td { $(name): 4px; }"/>
+    <CssProperty _locID="border-top-right-radius" browsers="C,FF4,IE9,O10.5,S5" ref="border-top-left-radius"/>
+    <CssProperty _locID="border-bottom-left-radius" browsers="C,FF4,IE9,O10.5,S5" ref="border-top-left-radius"/>
+    <CssProperty _locID="border-bottom-right-radius" browsers="C,FF4,IE9,O10.5,S5" ref="border-top-left-radius"/>
+
+    <CssProperty _locID="border-image-source" _locAttrData="description" version="3.0" browsers="C,IE11,FF13" restriction="url" type="border-image-source" syntax="aside { $(name): url(image.png); }" description="Gibt ein Bild an, das anstelle der durch die 'border-style'-Eigenschaften angegebenen Rahmenart verwendet wird und eine zusätzliche Hintergrundebene für das Element bereitstellt. Wenn der Wert 'none' ist bzw. das Bild nicht angezeigt werden kann, werden die Rahmenarten verwendet." standard-reference="http://www.w3.org/TR/css3-background/#border-image-source"/>
+
+    <CssPropertyValue type="border-image-source" extends="image">
+        <entry value="none"/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="border-image-slice" _locAttrData="description" version="3.0" browsers="C,IE11,FF12" restriction="number, percentage" type="border-image-slice" syntax="div { $(name): 10%; }" description="Die vier 'border-image-slice'-Werte stellen den Innenabstand zur oberen, rechten, unteren bzw. linken Bildkante dar und unterteilen das Bild in neun Einzelteile: vier Ecken, vier Kanten und eine Mitte. Der mittlere Bildteil wird ignoriert (als vollständig transparent behandelt), es sei denn, das fill-Schlüsselwort ist vorhanden. (Der mittlere Teil wird in diesem Fall über den Hintergrund gezeichnet; siehe 'border-image'-Zeichenprozess.) Wenn die vierte Zahl bzw. der vierte Prozentwert fehlt, wird der zweite Wert übernommen. Wenn der dritte Wert ebenfalls fehlt, wird der erste übernommen. Wenn der zweite Wert ebenfalls fehlt, wird automatisch der erste übernommen." standard-reference="http://www.w3.org/TR/css3-background/#border-image-slice"/>
+
+    <CssPropertyValue type="border-image-slice">
+        <entry value="fill" description="Causes the middle part of the border-image to be preserved. (By default it is discarded, i.e., treated as empty.)"/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="border-image-width" _locAttrData="description" version="3.0" browsers="FF13,IE11" restriction="length, percentage, number" type="border-image-width" syntax=".album { $(name): 4px; }" description="Die vier Werte von 'border-image-width' geben die Abstände an, die bei der Unterteilung der Rahmenbildfläche in neun Teile gezeichnet werden. Sie stehen für den Innenabstand zur oberen, rechten, unteren bzw. linken Kante der Fläche." standard-reference="http://www.w3.org/TR/css3-background/#border-image-slice"/>
+
+    <CssPropertyValue type="border-image-width">
+        <entry _locID="border-image-width_auto" _locAttrData="description" value="auto" description="Wenn &quot;auto&quot; angegeben ist, entspricht die Rahmenbildbreite der tatsächlichen Breite oder Höhe (je nachdem, was zutrifft) des entsprechenden Bildslice. Wenn die erforderliche Dimension für ein Bild nicht vorliegt, wird stattdessen die entsprechende border-width-Eigenschaft verwendet."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="border-image-outset" _locAttrData="description" version="3.0" browsers="FF13,IE11" restriction="length, number" syntax="div { $(name): 3px; }" description="Die Werte geben an, wie weit der Rahmenbildbereich oben, rechts, unten bzw. links über den Rahmen hinausragen soll. Wenn der vierte Wert fehlt, wird der zweite Wert übernommen. Wenn der dritte Wert ebenfalls fehlt, wird der erste Wert übernommen. Wenn der zweite Wert ebenfalls fehlt, wird der erste Wert übernommen. Die Zahlen stellen Vielfache der entsprechenden 'border-width'-Eigenschaft dar." standard-reference="http://www.w3.org/TR/css3-background/#border-image-outset"/>
+
+    <CssProperty _locID="border-image-repeat" _locAttrData="description" version="3.0" browsers="FF13,IE11" restriction="enum" type="border-image-repeat" syntax="td { $(name): stretch; }" description="Gibt an, wie Bilder für die Seiten und den Mittelteil des Rahmenbildes skaliert und unterteilt werden. Wenn das zweite Schlüsselwort fehlt, wird automatisch der Wert des ersten Schlüsselworts übernommen." standard-reference="http://www.w3.org/TR/css3-background/#border-image-repeat"/>
+
+    <CssPropertyValue type="border-image-repeat">
+        <entry _locID="border-image-repeat_stretch" _locAttrData="description" value="stretch" description="Das Bild wird gestreckt, um die Fläche auszufüllen."/>
+        <entry _locID="border-image-repeat_repeat" _locAttrData="description" value="repeat" description="Das Bild wird gekachelt (wiederholt), um die Fläche auszufüllen."/>
+        <entry _locID="border-image-repeat_round" _locAttrData="description" value="round" description="Das Bild wird gekachelt (wiederholt), um die Fläche auszufüllen. Wenn die Fläche nicht mit einer ganzen Zahl von Kacheln aufgefüllt werden kann, wird das Bild entsprechend neu skaliert."/>
+        <entry _locID="border-image-repeat_space" _locAttrData="description" value="space" description="Das Bild wird gekachelt (wiederholt), um die Fläche auszufüllen. Wenn die Fläche nicht mit einer ganzen Zahl von Kacheln aufgefüllt werden kann, wird der zusätzliche Platz auf alle Kacheln verteilt."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="border-image" _locAttrData="description" version="3.0" browsers="C,FF13,IE11" restriction="length, percentage, number, url, enum" type="border-image-source, border-image-slice, border-image-width, border-image-repeat" syntax="td { $(name): url(border.png) 30 30 round;}" description="Kurzschreibweise zum Festlegen von 'border-image-source', 'border-image-slice', 'border-image-width', 'border-image-outset' und 'border-image-repeat'. Ausgelassene Werte werden auf ihre Ausgangswerte festgelegt." standard-reference="http://www.w3.org/TR/css3-background/#border-image"/>
+
+    <CssProperty _locID="box-decoration-break" _locAttrData="description" version="3.0" browsers="O11" restriction="enum" syntax="div { $(name): clone; }" description="Gibt an, ob Einzelboxen als einzelne Bestandteile einer zusammen hängenden Box behandelt werden, bzw. ob jede Box einzeln mit Rahmen und Innenabstand umbrochen wird." standard-reference="http://www.w3.org/TR/css3-background/#box-decoration-break">
+
+        <entry _locID="box-decoration-break_clone" _locAttrData="description" value="clone" description="Jede Box wird einzeln mit Rahmen und Innenabstand umbrochen. 'border-radius' und 'border-image' und 'box-shadow', falls angegeben, werden separat auf jede Box angewendet. Der Hintergrund wird in jeder Box des Elements unabhängig (d.h. neu) gezeichnet. Folglich wird in jeder Box des Elements ein nicht wiederholtes Hintergrundbild gezeichnet."/>
+        <entry _locID="box-decoration-break_slice" _locAttrData="description" value="slice" description="Beim Umbruch wird kein Rahmen und kein Innenabstand eingefügt. An der umbrochenen Kante wird kein 'box-shadow' gezeichnet; 'border-radius' wirkt sich nicht auf die Ecken aus; 'border-image' wird für die gesamte Box gerendert, so als wäre sie nicht umbrochen. Es entsteht ein Effekt, als würde das Element ohne Umbruch dargestellt und anschließend durch den Umbruch in Teilstücke unterteilt."/>
+    </CssProperty>
+
+    <CssPropertyValue type="shadow">
+        <entry value="none"/>
+        <entry _locID="box-shadow_inset" _locAttrData="description" value="inset" description="Ändert den Schlagschatten von einem äußeren Schatten (der den Schatten der Box auf die Zeichenfläche wirft, so als würde sich diese aus der Zeichenfläche erheben) in einen inneren Schatten (der den Schatten der Zeichenfläche auf die Box wirft, so als würde die Box aus der Zeichenfläche herausgeschnitten und dahinter verschoben)."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="box-shadow" _locAttrData="description" version="3.0" browsers="C,FF9,IE9,O11.6,S5.1" restriction="length, color, enum" type="shadow" syntax="div { $(name): rgba(0,0,0,0.4) 10px 10px inset; }" description="Fügt mindestens einen 'drop-shadow' an die Box an. Die Eigenschaft entspricht einer durch Trennzeichen getrennten Liste von Schatteneffekten mit jeweils zwei bis vier Längenwerten, einer optionalen Farbe und einem optionalen 'inset'-Schlüsselwort. Ausgelassene Längen werden zu 0 und ausgelassene Farben zu einer vom Benutzer-Agent ausgewählten Farbe." standard-reference="http://www.w3.org/TR/css3-background/#box-shadow"/>
+
+</CssModule>

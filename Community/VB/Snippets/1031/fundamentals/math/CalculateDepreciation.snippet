@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Arithmetisch-degressive Abschreibung berechnen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Gibt ein Double zurück, das die arithmetisch-degressive Abschreibung einer Anlage in einem bestimmten Zeitraum angibt.</Description>
+      <Shortcut>mathDep</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Cost</ID>
+          <Type>Double</Type>
+          <ToolTip>Ersetzen Sie dies durch die ursprünglichen Kosten der Anlage.</ToolTip>
+          <Default>1000</Default>
+        </Literal>
+        <Literal>
+          <ID>EndValue</ID>
+          <Type>Double</Type>
+          <ToolTip>Ersetzen Sie dies durch den Wert der Anlage am Ende der Nutzungsdauer.</ToolTip>
+          <Default>200</Default>
+        </Literal>
+        <Literal>
+          <ID>UsefulLife</ID>
+          <Type>Double</Type>
+          <ToolTip>Ersetzen Sie dies durch die Länge der Nutzungsdauer der Anlage in Jahren.</ToolTip>
+          <Default>3</Default>
+        </Literal>
+        <Literal>
+          <ID>Year</ID>
+          <Type>Double</Type>
+          <ToolTip>Ersetzen Sie dies durch das Jahr, für das die Anlagenabschreibung berechnet wird.</ToolTip>
+          <Default>2005</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim depreciation As Double
+depreciation = SYD($Cost$, $EndValue$, $UsefulLife$, $Year$)
+
+
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

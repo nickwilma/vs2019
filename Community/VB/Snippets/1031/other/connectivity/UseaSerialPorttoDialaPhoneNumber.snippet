@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>SerialPort verwenden, um eine Telefonnummer zu wählen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Verwendet einen SerialPort, um eine Telefonnummer zu wählen.</Description>
+      <Shortcut>condialser</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.IO.Ports</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>com</ID>
+          <ToolTip>Ersetzen Sie dies durch den Namen des COM-Anschlusses für das Modem.</ToolTip>
+          <Default>"COM1"</Default>
+        </Literal>
+        <Literal>
+          <ID>baud</ID>
+          <ToolTip>Ersetzen Sie dies durch die Baudrate.</ToolTip>
+          <Default>2400</Default>
+        </Literal>
+        <Literal>
+          <ID>dial</ID>
+          <ToolTip>Ersetzen Sie dies durch die Wählbefehlszeichenfolge.</ToolTip>
+          <Default>"ATDT 206-555-1000"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Using comPort = My.Computer.Ports.OpenSerialPort($Com$, $Baud$)
+    comPort.DtrEnable = True
+    comPort.Write($Dial$ & vbCrLf)
+
+    ' All data transfer code goes here.
+
+End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

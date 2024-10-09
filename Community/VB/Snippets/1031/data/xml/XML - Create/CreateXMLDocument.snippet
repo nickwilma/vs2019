@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>XML-Dokument erstellen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt ein XML-Dokument mit eingebetteten Ausdrücken.</Description>
+      <Shortcut>xmlDoc</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Root</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Elementnamen.</ToolTip>
+          <Default>Root</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Attributwert.</ToolTip>
+          <Default>value</Default>
+        </Literal>
+        <Literal>
+          <ID>Attr1</ID>
+          <Type>String</Type>
+          <ToolTip>Führt eine Ersetzung mit dem Namen des ersten Attributs durch.</ToolTip>
+          <Default>attr</Default>
+        </Literal>
+        <Literal>
+          <ID>Child</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Elementnamen.</ToolTip>
+          <Default>Child</Default>
+        </Literal>
+        <Literal>
+          <ID>Attr2</ID>
+          <Type>String</Type>
+          <ToolTip>Führt eine Ersetzung mit dem Namen des zweiten Attributs durch.</ToolTip>
+          <Default>attr</Default>
+        </Literal>
+        <Literal>
+          <ID>Expr</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch einen beliebigen Ausdruck, der einen Wert erzeugt.</ToolTip>
+          <Default>SomeFunction()</Default>
+        </Literal>
+        <Literal>
+          <ID>StrExpr</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch einen beliebigen Ausdruck, der eine Zeichenfolge erzeugt.</ToolTip>
+          <Default>StrExpression</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[
+        Dim xmllit = <?xml version="1.0"?>
+                      <$Root$ $Attr1$="$value$">
+                                      <%= $Expr$ %>
+                    <$Child$ $Attr2$=<%= $StrExpr$ %>/>
+                </>
+      ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

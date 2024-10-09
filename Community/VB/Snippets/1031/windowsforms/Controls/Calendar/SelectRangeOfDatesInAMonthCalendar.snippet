@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Datumsbereich in einem Windows Forms-MonthCalendar auswählen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Wählt einen Datumsbereich in einem MonthCalendar-Steuerelement aus.</Description>
+      <Shortcut>calRange</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Windows.Forms.dll</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>System</Namespace>
+			</Import>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+		</Imports>
+      <Declarations>
+        <Object>
+          <ID>calendar</ID>
+          <Type>MonthCalendar</Type>
+          <ToolTip>Ersetzen Sie dies durch einen MonthCalendar aus Ihrem Formular.</ToolTip>
+          <Default>MonthCalendar1</Default>
+        </Object>
+        <Object>
+          <ID>startDate</ID>
+          <Type>Date</Type>
+          <ToolTip>Ersetzen Sie dies durch ein Startdatum für den Auswahlbereich.</ToolTip>
+          <Default>#3/1/2005#</Default>
+        </Object>
+        <Object>
+          <ID>endDate</ID>
+          <Type>Date</Type>
+          <ToolTip>Ersetzen Sie dies durch ein Enddatum für den Auswahlbereich.</ToolTip>
+          <Default>#3/21/2005#</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$calendar$.SetSelectionRange($startDate$, $endDate$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

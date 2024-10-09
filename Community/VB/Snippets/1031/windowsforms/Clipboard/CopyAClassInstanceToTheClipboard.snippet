@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Klasseninstanz in die Zwischenablage kopieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Kopiert eine Instanz einer serialisierbaren Klasse in die Zwischenablage.</Description>
+      <Shortcut>clipCopyClass</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Windows.Forms.dll</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>System</Namespace>
+			</Import>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Windows.Forms</Namespace>
+			</Import>
+		</Imports>
+      <Declarations>
+        <Literal>
+          <ID>className</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Typ der Instanz (als Zeichenfolge), den Sie in die Zwischenablage kopieren möchten.  Beachten Sie, dass der Typ serialisierbar sein muss.</ToolTip>
+          <Default>Object</Default>
+        </Literal>
+        <Object>
+          <ID>classInstance</ID>
+          <Type>Object</Type>
+          <ToolTip>Ersetzen Sie dies durch die Instanz, die Sie in die Zwischenablage kopieren möchten.</ToolTip>
+          <Default>classInstance</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[My.Computer.Clipboard.SetData("$className$", $classInstance$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

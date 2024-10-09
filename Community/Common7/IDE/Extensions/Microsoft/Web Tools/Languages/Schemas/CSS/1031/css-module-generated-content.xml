@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Generated and Replaced Content" standard-reference="http://www.w3.org/TR/css3-content/" status="WD" pub-date="2003-05-14">
+
+  <CssPseudo name="::before(2)" _locID="before-pseudo-function" _locAttrData="description" version="3.0" browsers="none" syntax="span::before(2) { content: 'B'; }" description="Das Pseudoelement wird verwendet, um Inhalt unmittelbar vor dem Inhalt eines Elements (oder anderen Pseudoelements) einzufügen. Der Ziffernparameter wird verwendet, wenn mehrere '::before()'-Funktionen zusammen verwendet werden. Die 'content'-Eigenschaft wird verwendet, um den einzufügenden Inhalt anzugeben." standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name="::after(2)" _locID="after-pseudo-function" _locAttrData="description" version="3.0" browsers="none" syntax="span::after(2) { content: 'B'; }" description="Das Pseudoelement wird verwendet, um Inhalt unmittelbar nach dem Inhalt eines Elements (oder anderen Pseudoelements) einzufügen. Der Ziffernparameter wird verwendet, wenn mehrere '::after()'-Funktionen zusammen verwendet werden. Die 'content'-Eigenschaft wird verwendet, um den einzufügenden Inhalt anzugeben." standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name="::outside" _locID="outside-pseudo-element" _locAttrData="description" version="3.0" browsers="none" syntax="span::outside::before { content: 'A'; }" description="Das '::outside'-Pseudoelement wird unmittelbar außerhalb des übergeordneten Elements des Pseudoelements erzeugt." standard-reference="http://www.w3.org/TR/css3-content/#wrapping"/>
+
+  <CssPseudo name="::outside(2)" _locID="outside-pseudo-function" _locAttrData="description" version="3.0" browsers="none" syntax="span::outside(1)::before { content: 'A'; }" description="Das '::outside'-Pseudoelement wird unmittelbar außerhalb des übergeordneten Elements des Pseudoelements erzeugt. Wenn ein Parameter angegeben wird, stellt '::outside(n)' das n-te Pseudoelement dar, das direkt um das n-1ste Pseudoelement erzeugt wird." standard-reference="http://www.w3.org/TR/css3-content/#wrapping"/>
+
+  <CssPseudo name="::alternate" _locID="alternate-pseudo-element" _locAttrData="description" version="3.0" browsers="none" description="Dieses Pseudoelement wird erstellt, indem die zugehörige 'move-to'-Eigenschaft auf einen Bezeichner festgelegt wird. Es wird beim nächsten Auftreten von 'pending()' in einer content-'Eigenschaft' gerendert." syntax="span::after::alternate { content: 'alternate2'; move-to: example; }" standard-reference="http://www.w3.org/TR/css3-content/#inserting1"/>
+
+  <CssPseudo name="::marker" _locID="marker-selector" _locAttrData="description" version="3.0" browsers="none" syntax="li::marker { content: counter(item, decimal) '.'; }" description="Damit das '::marker'-Pseudoelement erzeugt werden kann, muss das übergeordnete Element über einen berechneten 'display'-Wert von 'list-item' verfügen." standard-reference="http://www.w3.org/TR/css3-content/#block"/>
+
+  <CssPseudo name="::line-marker" _locID="line-marker-selector" _locAttrData="description" version="3.0" browsers="none" syntax="pre::line-marker { width: 2em; }" description="Das '::line-marker'-Pseudoelement wird genauso positioniert wie das '::marker'-Pseudoelement, mit der Ausnahme, dass es auf jeder Zeile und nicht nur in der ersten angezeigt wird." standard-reference="http://www.w3.org/TR/css3-content/#block"/>
+
+  <CssProperty _locID="crop" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Ein ersetztes Element kann einfach als rechteckige Fläche eines Objekts anstatt als ganzes Objekt dargestellt werden." syntax="&lt;shape&gt; | auto" standard-reference="http://www.w3.org/TR/css3-content/#the-crop">
+
+    <entry _locID="crop_auto" _locAttrData="description" value="auto" description="Die berechnete Breite und Höhe des Elements sind identisch mit dessen tatsächlicher Breite und Höhe."/>
+    <entry _locID="crop_rect" _locAttrData="description" value="rect(top, right, bottom, left)" description="Jedes der vier Argumente kann als &lt;length&gt; oder &lt;percentage&gt; definiert sein. Alle Prozentwerte werden relativ zu den tatsächlichen Abmessungen des Elements, falls vorhanden, berechnet. Die Werte sind Offsets, die den relativen Abstand zur oberen linken Ecke des Elements angeben."/>
+    <entry _locID="crop_insert-rect" _locAttrData="description" value="insert-rect(top, right, bottom, left)" description="Jedes der vier Argumente kann als &lt;length&gt; oder &lt;percentage&gt; definiert sein. Alle Prozentwerte werden relativ zu den tatsächlichen Abmessungen des Elements, falls vorhanden, berechnet. Die Werte sind Offsets, die den relativen Abstand zu den jeweiligen Seiten des Elements angeben."/>
+  </CssProperty>
+
+  <CssProperty _locID="move-to" _locAttrData="description" version="3.0" browsers="none" restriction="identifier" description="Die Eigenschaft führt dazu, dass das Element oder Pseudoelement aus dem Fluss entfernt und an einer späteren Stelle wieder in das Dokument eingefügt wird." syntax="normal | here | &lt;identifier&gt;" standard-reference="http://www.w3.org/TR/css3-content/#moving">
+
+    <entry _locID="move-to_normal" _locAttrData="description" value="normal" description="Wenn das übergeordnete Element den 'footnote'-Zähler in der 'content'-Eigenschaft verwendet, ändert sich der berechnete Wert bei '::alternate'-Pseudoelementen von 'move-to' in 'footnotes'."/>
+    <entry _locID="move-to_here" _locAttrData="description" value="here" description="Das Element oder Pseudoelement wird nicht verschoben. Durch diesen Wert wird verhindert, dass '::alternate'-Pseudoelemente und andere Pseudoelemente erstellt werden, die über ein solches Pseudoelement als übergeordnetes Element verfügen."/>
+  </CssProperty>
+
+  <CssProperty _locID="quotes" _locAttrData="description" version="2.0" browsers="C,FF1.5,IE8,O8,S5.1" restriction="string" description="Gibt die Anführungszeichen für eine beliebige Anzahl eingebetteter Wörter/Wortgruppen an, die eine Auszeichnung erforderlich machen." syntax="none | [ &lt;string&gt; &lt;string&gt; ]+" standard-reference="http://www.w3.org/TR/css3-content/#quotes">
+
+    <entry _locID="quotes_none" _locAttrData="description" value="none" description="Beim 'open-quote'-Wert und 'close-quote'-Wert der 'content'-Eigenschaft werden keine Anführungszeichen erzeugt, was der Verwendung von 'no-open-quote' bzw. 'no-close-quote' entspricht."/>
+  </CssProperty>
+
+  <CssProperty _locID="counter-increment" _locAttrData="description" version="2.0" browsers="C,FF1.5,IE8,O10.5,S3" restriction="identifier, integer" description="Zähler werden bei der 'counter()'-Funktion und 'counters()'-Funktion der 'content'-Eigenschaft verwendet." syntax="h1:before { $(name): section; }" standard-reference="http://www.w3.org/TR/css3-content/#counters">
+
+    <entry _locID="counter-increment_none" _locAttrData="description" value="none" description="Der Zähler wird nicht geändert."/>
+  </CssProperty>
+
+  <CssProperty _locID="counter-reset" _locAttrData="description" version="2.0" browsers="C,FF1.5,IE8,O10.5,S3" restriction="identifier, integer" syntax="h1 { $(name): section; }" description="Diese Eigenschaft akzeptiert mindestens einen Namen von Zählern (Bezeichnern), wobei auf jeden optional eine ganze Zahl folgen kann. Die ganze Zahl gibt an, auf welchen Wert der Zähler bei jedem Vorkommen des Elements festgelegt wird." standard-reference="http://www.w3.org/TR/css3-content/#counters">
+
+    <entry _locID="counter-increment_none" _locAttrData="description" value="none" description="Der Zähler wird nicht geändert."/>
+  </CssProperty>
+
+  <CssProperty _locID="page-policy" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="@string chapter { $(name): last; }" description="Legt fest, welches seitenbasierte Vorkommen eines bestimmten Elements auf einen Zähler oder einen Zeichenfolgenwert angerechnet wird." standard-reference="http://www.w3.org/TR/css3-content/#page-policy">
+
+    <entry _locID="page-policy_start" _locAttrData="description" value="start" description="Nimmt den Wert des Zählers oder der Zeichenfolge am Anfang der Seite an (bevor Stileigenschaften auf die Seitenelemente angewendet werden, aber nachdem sie auf den @page-Kontext selbst angewendet wurden)."/>
+    <entry _locID="page-policy_first" _locAttrData="description" value="first" description="Nimmt den Wert nach dem ersten Statuswechsel im Zähler oder der Zeichenfolge an, der sich während der Verarbeitung der Seite ereignet."/>
+    <entry _locID="page-policy_last" _locAttrData="description" value="last" description="Nimmt den Wert nach der abschließenden Statusänderung der Seite an."/>
+  </CssProperty>
+
+  <CssAtDirective name="counter" _locID="counter-rule" _locAttrData="description" version="3.0" browsers="none" include-root-properties="false" include-root-directives="false" syntax="@counter footnote { list-style-type: super-decimal; }" description="Autoren können @counter-Deklarationsblöcke und die 'page-policy'-Eigenschaft verwenden. Nur anwendbar auf Zeichenfolgen und Zähler." standard-reference="http://www.w3.org/TR/css3-content/#counter0">
+
+    <CssProperty ref="list-style-type"/>
+  </CssAtDirective>
+
+  <CssAtDirective name="string" _locID="string-rule" _locAttrData="description" version="3.0" syntax="@string chapter { page-policy: last; }" browsers="none" description="Autoren können @string-Deklarationsblöcke und die 'page-policy'-Eigenschaft verwenden. Nur anwendbar auf Zeichenfolgen und Zähler." standard-reference="http://www.w3.org/TR/css3-content/#string"/>
+
+  <CssProperty _locID="content" _locAttrData="description" version="2.0" browsers="C,FF1,IE8,O4,S1" restriction="string, url" type="image" description="Legt fest, welches seitenbasierte Vorkommen eines bestimmten Elements auf einen Zähler oder einen Zeichenfolgenwert angerechnet wird." syntax="a:after { $(name): ' ( attr(href))';}" standard-reference="http://www.w3.org/TR/css3-content/#content">
+
+    <entry _locID="content_normal" _locAttrData="description" value="normal" description="Informationen zu Berechnungsregeln finden Sie unter 'http://www.w3.org/TR/css3-content/#content'."/>
+    <entry _locID="content_none" _locAttrData="description" value="none" description="Bei Elementen wird verhindert, dass untergeordnete Elemente des Elements als untergeordnete Elemente dieses Elements erzeugt werden, so als wäre das Element leer. Bei Pseudoelementen führt dies dazu, dass das Pseudoelement keinen Inhalt enthält."/>
+    <entry _locID="content_inhibit" _locAttrData="description" value="inhibit" version="3.0" browsers="none" description="Bei Elementen wird verhindert, dass untergeordnete Elemente des Elements als untergeordnete Elemente dieses Elements erzeugt werden, so als wäre das Element leer. Bei Pseudoelementen wird die Erstellung des Pseudoelements verhindert, so als würde 'display' den Wert 'none' ergeben."/>
+    <entry _locID="content_contents" _locAttrData="description" value="contents" version="3.0" browsers="none" description="Zeigt die untergeordneten Elemente des Elements an."/>
+    <entry _locID="content_footnote" _locAttrData="description" value="footnote" version="3.0" browsers="none" description="Kurzschreibweise für 'counter(footnote, normal)', die im Einflusstext einer Fußnote verwendet werden soll."/>
+    <entry _locID="content_endnote" _locAttrData="description" value="endnote" version="3.0" browsers="none" description="Kurzschreibweise für 'counter(endnote, normal)', die im Einflusstext einer Endnote verwendet werden soll."/>
+    <entry _locID="content_section-note" _locAttrData="description" value="section-note" version="3.0" browsers="none" description="Kurzschreibweise für 'counter(section-note, normal)', die im Einflusstext einer Abschnittsnote verwendet werden soll."/>
+    <entry _locID="content_list-item" _locAttrData="description" value="list-item" version="3.0" browsers="none" description="Kurzschreibweise für 'counter(list-item, normal)'. Bei Verwendung für ein '::marker'-Pseudoelement, das über ein übergeordnetes Element verfügt, dessen 'display'-Eigenschaft auf 'list-item' festgelegt ist, ist diese Schreibweise nicht äquivalent zu 'normal'. Dies liegt daran, dass die 'list-style'-Eigenschaften ignoriert werden."/>
+    <entry _locID="content_open-quote" _locAttrData="description" value="open-quote" browsers="none" description="Der Wert wird durch die entsprechende Zeichenfolge aus der 'quotes'-Eigenschaft ersetzt."/>
+    <entry _locID="content_close-quote" _locAttrData="description" value="close-quote" browsers="none" description="Der Wert wird durch die entsprechende Zeichenfolge aus der 'quotes'-Eigenschaft ersetzt."/>
+    <entry _locID="content_no-open-quote" _locAttrData="description" value="no-open-quote" browsers="none" description="Es findet keine Einfügung statt (wie bei 'none'), die Schachtelungsebene des mit Anführungszeichen ausgezeichneten Texts wird jedoch erhöht (bzw. verringert)."/>
+    <entry _locID="content_no-close-quote" _locAttrData="description" value="no-close-quote" browsers="none" description="Es findet keine Einfügung statt (wie bei 'none'), die Schachtelungsebene des mit Anführungszeichen ausgezeichneten Texts wird jedoch erhöht (bzw. verringert)."/>
+    <entry _locID="content_box" _locAttrData="description" value="box" version="3.0" browsers="none" description="Ein leeres Quadrat."/>
+    <entry _locID="content_check" _locAttrData="description" value="check" version="3.0" browsers="none" description="Ein Häkchen."/>
+    <entry _locID="content_circle" _locAttrData="description" value="circle" version="3.0" browsers="none" description="Ein leerer Kreis."/>
+    <entry _locID="content_diamond" _locAttrData="description" value="diamond" version="3.0" browsers="none" description="Eine gefüllte Raute. Auf manchen Plattformen ist dies vergleichbar mit 'disc'."/>
+    <entry _locID="content_disc" _locAttrData="description" value="disc" version="3.0" browsers="none" description="Ein ausgefüllter Kreis."/>
+    <entry _locID="content_hyphen" _locAttrData="description" value="hyphen" version="3.0" browsers="none" description="Ein Bindestrich als Aufzählungszeichen."/>
+    <entry _locID="content_square" _locAttrData="description" value="square" version="3.0" browsers="none" description="Ein ausgefülltes Quadrat."/>
+    <entry _locID="content_attr" _locAttrData="description" value="attr()" description="Die attr(n)-Funktion gibt den Wert des Attributs 'n' als Zeichenfolge für das Subjekt des Selektors zurück."/>
+    <entry _locID="content_date" _locAttrData="description" value="date(format)" version="3.0" browsers="none" description="Aktuelles Datum und/oder aktuelle Uhrzeit, die entsprechend der angegebenen Formatierungszeichenfolge formatiert werden. Das Format basiert auf der POSIX-Datumsformatierung."/>
+    <entry _locID="content_counterN" _locAttrData="description" value="counter(name)" description="Zähler sind durch Bezeichner gekennzeichnet (siehe die 'counter-increment'-Eigenschaft und die 'counter-reset'-Eigenschaft)."/>
+    <entry _locID="content_counterNSty" _locAttrData="description" value="counter(name, style)" browsers="none" description="Zähler sind durch Bezeichner gekennzeichnet (siehe die 'counter-increment'-Eigenschaft und die 'counter-reset'-Eigenschaft)."/>
+    <entry _locID="content_counterstr" _locAttrData="description" value="counters(name, string)" browsers="none" description="Zähler sind durch Bezeichner gekennzeichnet (siehe die 'counter-increment'-Eigenschaft und die 'counter-reset'-Eigenschaft)."/>
+    <entry _locID="content_countersNSS" _locAttrData="description" browsers="none" value="counters(name, string, style)" description="Zähler sind durch Bezeichner gekennzeichnet (siehe die 'counter-increment'-Eigenschaft und die 'counter-reset'-Eigenschaft)."/>
+    <entry _locID="content_string" _locAttrData="description" browsers="none" value="string(name)" description="Gibt einen Zeichenfolgenwert an."/>
+    <entry _locID="content_pending" _locAttrData="description" browsers="none" value="pending()" description="Führt dazu, dass alle Elemente und Pseudoelemente, deren 'move-to'-Eigenschaft angegebenen Bezeichner ergibt, als untergeordnete Elemente des aktuellen Elements (oder Pseudoelements) eingefügt werden."/>
+  </CssProperty>
+
+  <CssProperty _locID="display">
+    <entry value="normal" version="3.0"/>
+  </CssProperty>
+
+</CssModule>

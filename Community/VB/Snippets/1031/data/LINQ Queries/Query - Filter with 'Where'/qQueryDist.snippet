@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Eindeutige Ergebnisse</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine Abfrage, die eindeutige Datenzeilen zurückgibt.</Description>
+      <Shortcut>qQueryDist</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana", "apple"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field1</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Felds, das gefiltert wird.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>condition1</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die erste Bedingung, nach der gefiltert wird.</ToolTip>
+          <Default>&gt; 5</Default>
+        </Literal>
+        <Literal>
+          <ID>field2</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Felds, das zurückgegeben wird.</ToolTip>
+          <Default>ToUpper()</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Where $item$.$field1$ $condition1$ _
+                    Select $item$.$field2$ _
+                    Distinct]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Umfang des isolierten Speichers bestimmen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Bestimmt den Umfang des isolierten Speichers.</Description>
+      <Shortcut>appIsoScope</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.IO.IsolatedStorage</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>varName</ID>
+          <Type>String</Type>
+          <ToolTip>Der Variablenname für den isolierten Speicher.</ToolTip>
+          <Default>isolatedStorage</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim scope = $varName$.Scope]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

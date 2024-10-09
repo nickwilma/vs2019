@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="3a5c0f4d-c938-4365-b7ee-f6ffa52e13ec">
+    <Name>ChromeDebugAdapterHost</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Chrome debug adapter host</Description>
+    <Locale>1033</Locale>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+    <InstalledByMsi>true</InstalledByMsi>
+  </Identifier>
+  <References>
+  </References>
+  <Content>
+    <VsPackage>ChromeDebugAdapterHost.pkgdef</VsPackage>
+  </Content>
+</Vsix>

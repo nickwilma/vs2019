@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>From-, "Order By"-, Select-Abfrage</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine Abfrage mit From-, "Order By"- und Select-Klauseln.</Description>
+      <Shortcut>qFromOBSelect</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Bereichsvariablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field1</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner des ersten Felds, das aus der Datenquelle abgerufen werden soll.</ToolTip>
+          <Default>ToUpper()</Default>
+        </Literal>
+        <Literal>
+          <ID>field2</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner des zweiten Felds, das aus der Datenquelle abgerufen werden soll.</ToolTip>
+          <Default>ToLower()</Default>
+        </Literal>
+        <Literal>
+          <ID>orderField</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Felds, nach dem Sie die Daten sortieren möchten.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Order By $item$.$orderField$ _
+                    Select $item$.$field1$, $item$.$field2$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

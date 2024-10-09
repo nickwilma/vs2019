@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Cursordatei von einer Assembly laden</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Legt den Cursor eines Windows Form aus einer Cursordatei fest, die eine eingebettete Ressource der Anwendung ist.</Description>
+      <Shortcut>appCur</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Reflection</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>cursorFilename</ID>
+          <Type>String</Type>
+          <ToolTip>Der Name der als Ressource eingebetteten Cursordatei.</ToolTip>
+          <Default>"CursorResourceName"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim newCursor As New Cursor(My.Resources.ResourceManager.GetStream($cursorFilename$))
+Me.Cursor = newCursor
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

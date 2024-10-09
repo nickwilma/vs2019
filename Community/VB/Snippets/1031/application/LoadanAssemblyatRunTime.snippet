@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Assembly zur Laufzeit laden</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Lädt eine Assembly zur Laufzeit.</Description>
+      <Shortcut>appLoad</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Reflection</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>fileName</ID>
+          <Type>String</Type>
+          <ToolTip>Der vollständige Pfad der Assemblydatei.</ToolTip>
+          <Default>"C:\Folder\AssemblyName.dll"</Default>
+        </Literal>
+        <Object>
+          <ID>loadedAssembly</ID>
+          <Type>Assembly</Type>
+          <ToolTip>Das Assemblyobjekt, das die Assembly speichert, die geladen wird.</ToolTip>
+          <Default>loadedAssembly</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$loadedAssembly$ = Assembly.LoadFile($fileName$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

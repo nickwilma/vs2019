@@ -1,0 +1,19 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Microsoft.VisualStudio.Linux.CMake.VC.10F84D6A-F5B4-4FB8-9988-352ED3051200" Version="1.0" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>CMake support for Visual Studio</DisplayName>
+    <Description>Microsoft CMake support for Visual Studio extension, works for any CMake project, and provides IntelliSense.</Description>
+    <Locale>1033</Locale>
+    <AllowClientRole>true</AllowClientRole>
+  </Metadata>
+  <Installation SystemComponent="true">
+    <InstallationTarget Version="15.0" Id="Microsoft.VisualStudio.Pro" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.15.0" DisplayName="Visual Studio MPF 15.0" Version="[15.0]" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.VisualStudio.CMake.Linux.Project.dll" />
+  </Assets>
+</PackageManifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Regions" standard-reference="http://dev.w3.org/csswg/css-regions/" status="WD" pub-date="2013-10-15">
+
+  <CssProperty name="break-after">
+    <entry value="avoid-region"/>
+    <entry value="region"/>
+  </CssProperty>
+
+  <CssProperty name="break-before">
+    <entry value="avoid-region"/>
+    <entry value="region"/>
+  </CssProperty>
+
+  <CssProperty name="break-inside">
+    <entry value="avoid-region"/>
+  </CssProperty>
+
+  <CssProperty _locID="flow-from" _locAttrData="description" version="3.0" browsers="none" restriction="identifier" syntax="div { $(name): identifier; }" description="Ruft einen Wert ab, der einen Container für verbundene Frames im Dokument identifiziert, der den Inhaltsdatenfluss aus der Datenquelle aufnimmt, oder legt diesen Wert fest." standard-reference="http://www.w3.org/TR/css3-regions/#flow-from">
+
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="flow-into" _locAttrData="description" version="3.0" browsers="none" restriction="identifier" syntax="div { $(name): identifier; }" description="Ruft einen Wert ab, der einen iframe-Container im Dokument identifiziert, der als Datenquelle für verbundene Frames fungiert, oder legt diesen Wert fest." standard-reference="http://www.w3.org/TR/css3-regions/#flow-into">
+
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="region-fragment" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="article { $(name): break; }" description="Die Eigenschaft &quot;region-fragment&quot; steuert das Verhalten der letzten Region, die einem benannten Datenfluss zugeordnet ist." standard-reference="http://dev.w3.org/csswg/css-regions/#region-fragment">
+
+    <entry _locID="region-fragment-auto" _locAttrData="description" value="auto" description="Der Inhalt wird wie in einem regulären Inhaltsbereich übermittelt."/>
+    <entry _locID="region-fragment-break" _locAttrData="description" value="break" description="Wenn der Inhalt in die CSS-Region passt, besitzt diese Eigenschaft keine Auswirkungen."/>
+  </CssProperty>
+
+</CssModule>

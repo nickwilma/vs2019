@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Zufallszahl mithilfe der Random-Klasse abrufen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Generiert eine zufällige ganze Zahl zwischen einer oberen und einer unteren Begrenzung.</Description>
+      <Shortcut>mathRand</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>LowerBound</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch die kleinste im Resultset gewünschte ganze Zahl.</ToolTip>
+          <Default>10</Default>
+        </Literal>
+        <Literal>
+          <ID>UpperBound</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch die größte im Resultset gewünschte Zahl plus eins.</ToolTip>
+          <Default>100</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim generator As New Random
+Dim randomValue As Integer
+randomValue = generator.Next($LowerBound$, $UpperBound$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

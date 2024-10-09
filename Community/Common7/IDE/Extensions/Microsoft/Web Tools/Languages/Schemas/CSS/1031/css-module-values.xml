@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Values" standard-reference="https://www.w3.org/TR/css-values-4" status="WD" pub-date="2020-11-11">
+
+  <CssPropertyValue type="all">
+    <entry _locID="all-val_inherit" _locAttrData="description" value="inherit" version="2.1" description="Das Element übernimmt den berechneten Wert des übergeordneten Elements für die Eigenschaft."/>
+    <entry _locID="all-val_initial" _locAttrData="description" value="initial" version="3.0" browsers="none" description="Der Standardwert einer beliebigen Eigenschaft."/>
+    <entry _locID="all-val_unset" _locAttrData="description" value="unset" version="3.0" browsers="none" description="Wenn der kaskadierende Wert einer Eigenschaft das Schlüsselwort &quot;unset&quot; ist und es sich um eine geerbte Eigenschaft handelt, wird dieser Wert als &quot;inherit&quot; behandelt. Andernfalls wird er als &quot;initial&quot; behandelt."/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="url">
+    <entry value="src()"/>
+    <entry value="url()"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="all" _locAttrData="description" version="3.0" restriction="enum" description="Die Eigenschaft &quot;all&quot; ist eine Kompakteigenschaft, die alle CSS-Eigenschaften mit Ausnahme von &quot;direction&quot; und &quot;unicode-bidi&quot; zurücksetzt." syntax="div { $(name): initial; }" standard-reference="http://www.w3.org/TR/css-cascade-3/#all-shorthand"/>
+
+</CssModule>

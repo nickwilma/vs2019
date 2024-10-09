@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Group Join - Benannte Gruppe</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine Abfrage, die die Ergebnisse aus 2 unterschiedlichen Quellen gruppiert und die Anzahl der Elemente pro Gruppe zurückgibt. Die Gruppen werden benannt.</Description>
+      <Shortcut>queGroJoName</Shortcut>
+    </Header>
+    <Snippet>
+   <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item1</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der ersten Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>size</Default>
+        </Literal>
+        <Literal>
+          <ID>item2</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der zweiten Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource2</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der ersten Datenquelle.</ToolTip>
+         <Default>New String() {"apple", "orange", "pear", "banana", "strawberry", "blueberry"}</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource1</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der zweiten Datenquelle.</ToolTip>
+          <Default>fruitLength</Default>
+        </Literal>       
+        <Literal>
+          <ID>dataType1</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Typ der ersten Datenquelle.</ToolTip>
+          <Default>Integer()</Default>
+        </Literal>
+        <Literal>
+          <ID>groupfield</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die Gruppierung der Quellen.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>aggregate</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch das Aggregat für die Gruppe.</ToolTip>
+          <Default>Count()</Default>
+        </Literal>
+        <Literal>
+          <ID>groupName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Gruppe.</ToolTip>
+          <Default>Fruits</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $dataSource1$() As $dataType1$ = {"4", "5", "6"}
+
+                 Dim $queryResult$ = From $item1$ In $dataSource1$ _
+                             Group Join $item2$ In $dataSource2$ _
+                                   On $item2$.$groupfield$ Equals $item1$ _
+                                   Into $groupName$ = Group, $aggregate$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

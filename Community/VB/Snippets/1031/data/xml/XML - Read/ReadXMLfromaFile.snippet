@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>XML mit XmlTextReader aus Datei lesen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Verwendet die XMLTextReader-Klasse, um den Inhalt aus einer XML-Datei zu extrahieren.</Description>
+      <Keywords>
+        <Keyword>
+          
+        </Keyword>
+      </Keywords>
+      <Shortcut>xmlReadTxt</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Xml.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>filename</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Datei, die den XML-Code enthält.</ToolTip>
+          <Default>"Snippet.xml"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim reader = New XmlTextReader($filename$)
+Dim readElement = XElement.Load(reader)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

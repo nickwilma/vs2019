@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Scroll Snap" standard-reference="http://www.w3.org/TR/css-scroll-snap-1/" status="WD" pub-date="2021-03-11">
+
+  <CssPropertyValue type="scroll-snap-axis">
+    <entry value="x"/>
+    <entry value="y"/>
+    <entry value="block"/>
+    <entry value="inline"/>
+    <entry value="both"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="scroll-snap-strictness">
+    <entry value="none"/>
+    <entry _locID="scroll-snap-strictness_proximity" _locAttrData="description" value="proximity" description="The scroll container is required to be snapped to a snap position when there are no active scrolling operations"/>
+    <entry _locID="scroll-snap-strictness_mandatory" _locAttrData="description" value="mandatory" description="The scroll container may snap to a snap position at the termination of a scroll."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="scroll-snap-type" _locAttrData="description" restriction="enum" type="scroll-snap-axis, scroll-snap-strictness" syntax="h1 { $(name): x mandatory; }" description="Specifies whether a scroll container is a scroll snap container, how strictly it snaps, and which axes are considered." standard-reference="https://www.w3.org/TR/css-scroll-snap-1/#scroll-snap-type"/>
+
+  <CssProperty _locID="scroll-padding" _locAttrData="description" restriction="length, percentage" syntax="h1 { $(name): 0 500px 0 0; }" description="Specifies (for all scroll containers, not just scroll snap containers) offsets that define the optimal viewing region of a scrollport.  The scroll-padding property is a shorthand property that sets all of the scroll-padding-* longhands in one declaration, assigning values to the longhands representing each side exactly as the padding property does for its longhands." standard-reference="https://www.w3.org/TR/css-scroll-snap-1/#scroll-padding">
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="scroll-padding-inline" ref="scroll-padding" syntax="h1 { $(name): 20px 10px; }"/>
+  <CssProperty _locID="scroll-padding-block" ref="scroll-padding-inline"/>
+  <CssProperty _locID="scroll-padding-top" ref="scroll-padding" syntax="h1 { $(name): 20px; }"/>
+  <CssProperty _locID="scroll-padding-right" ref="scroll-padding-top"/>
+  <CssProperty _locID="scroll-padding-bottom" ref="scroll-padding-top"/>
+  <CssProperty _locID="scroll-padding-left" ref="scroll-padding-top"/>
+  <CssProperty _locID="scroll-padding-inline-start" ref="scroll-padding-top"/>
+  <CssProperty _locID="scroll-padding-block-start" ref="scroll-padding-top"/>
+  <CssProperty _locID="scroll-padding-inline-end" ref="scroll-padding-top"/>
+  <CssProperty _locID="scroll-padding-block-end" ref="scroll-padding-top"/>
+
+  <CssProperty _locID="scroll-margin" _locAttrData="description" restriction="length" syntax="h1 { $(name): 0 500px 0 0; }" description="This property is a shorthand property that sets all of the scroll-margin-* longhands in one declaration, assigning values to the longhands representing each side exactly as the margin property does for its longhands." standard-reference="https://www.w3.org/TR/css-scroll-snap-1/#scroll-margin">
+  </CssProperty>
+
+  <CssProperty _locID="scroll-margin-inline" ref="scroll-margin" syntax="h1 { $(name): 0 50px; }"/>
+  <CssProperty _locID="scroll-margin-block" ref="scroll-margin-inline"/>
+  <CssProperty _locID="scroll-margin-top" ref="scroll-margin" syntax="h1 { $(name): 50px; }"/>
+  <CssProperty _locID="scroll-margin-right" ref="scroll-margin-top"/>
+  <CssProperty _locID="scroll-margin-bottom" ref="scroll-margin-top"/>
+  <CssProperty _locID="scroll-margin-left" ref="scroll-margin-top"/>
+  <CssProperty _locID="scroll-margin-inline-start" ref="scroll-margin-top"/>
+  <CssProperty _locID="scroll-margin-block-start" ref="scroll-margin-top"/>
+  <CssProperty _locID="scroll-margin-inline-end" ref="scroll-margin-top"/>
+  <CssProperty _locID="scroll-margin-block-end" ref="scroll-margin-top"/>
+
+  <CssProperty _locID="scroll-snap-align" _locAttrData="description" restriction="enum" syntax="h1 { $(name): start end; }" description="Specifies the box’s snap position as an alignment of its snap area (as the alignment subject) within its snap container’s snapport (as the alignment container). The two values specify the snapping alignment in the block axis and inline axis, respectively, as determined by the snap container’s writing mode. If only one value is specified, the second value defaults to the same value." standard-reference="https://www.w3.org/TR/css-scroll-snap-1/#scroll-snap-align">
+    <entry value="none"/>
+    <entry value="start"/>
+    <entry value="end"/>
+    <entry value="center"/>
+  </CssProperty>
+
+  <CssProperty _locID="scroll-snap-stop" _locAttrData="description" restriction="enum" syntax="h1 { $(name): normal; }" description="When scrolling with an intended direction, the scroll container can “pass over” several possible snap positions (that would be valid to snap to, if the scrolling operation used the same direction but a lesser distance) before reaching the natural endpoint of the scroll operation and selecting its final scroll position. The scroll-snap-stop property allows such a possible snap position to “trap” the scrolling operation, forcing the scroll container to stop before the scrolling operation would naturally end." standard-reference="https://www.w3.org/TR/css-scroll-snap-1/#scroll-snap-stop">
+    <entry value="normal"/>
+    <entry value="always"/>
+  </CssProperty>
+
+</CssModule>

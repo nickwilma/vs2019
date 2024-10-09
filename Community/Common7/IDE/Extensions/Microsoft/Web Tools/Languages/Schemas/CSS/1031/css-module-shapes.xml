@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Shapes" standard-reference="http://www.w3.org/TR/css-shapes-1/" status="CR" pub-date="2014-03-20">
+
+  <CssPropertyValue type="basic-shape">
+    <entry value="inset()"/>
+    <entry value="circle()"/>
+    <entry value="ellipse()"/>
+    <entry value="polygon()"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="shape-outside" _locAttrData="description" version="3.0" browsers="none" type="box, basic-shape, image" syntax="div { $(name): margin-box; }" description="Diese Eigenschaft gibt eine orthogonale Drehung an, die auf ein Bild vor dem Layout angewendet werden soll." standard-reference="http://www.w3.org/TR/css-shapes-1/#shape-outside-property">
+
+    <entry value="none"/>
+    <entry value="margin-box"/>
+    <entry value="image()"/>
+  </CssProperty>
+
+  <CssProperty _locID="shape-image-threshold" _locAttrData="description" version="3.0" browsers="none" restriction="number" syntax="div { $(name): 0.5; }" description="Definiert den Schwellenwert für den Alphakanal, der zum Extrahieren der Form mithilfe eines Bilds verwendet wird. Ein Wert von 0,5 bedeutet, dass die Form alle Pixel einschließt, die mehr als 50 % undurchsichtig sind." standard-reference="http://www.w3.org/TR/css-shapes-1/#propdef-shape-image-threshold"/>
+
+  <CssProperty _locID="shape-margin" _locAttrData="description" version="3.0" browsers="none" restriction="length, percentage" syntax="div { $(name): 10px; }" description="Fügt einer &quot;shape-outside&quot; einen Rand hinzu. Auf diese Weise wird eine neue Form definiert, die die kleinste Kontur darstellt, die alle Punkte enthält, die den &quot;shape-margin&quot;-Abstand auswärts in senkrechter Richtung von einem Punkt auf der zugrunde liegenden Form darstellen." standard-reference="http://www.w3.org/TR/css-shapes-1/#propdef-shape-margin"/>
+
+</CssModule>

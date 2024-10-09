@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Counter Styles" standard-reference="http://www.w3.org/TR/css-counter-styles-3/" status="LC" pub-date="2014-08-26">
+
+  <!-- This is used to represent <image> in the definition at https://www.w3.org/TR/css-counter-styles-3/#typedef-symbol -->
+  <CssPropertyValue type="symbolsdef" extends="image"/>
+
+  <CssAtDirective _locID="counter-style" version="3.0" browsers="none" include-root-properties="false" include-root-directives="false" syntax="@$(name) { system: cyclic; }" standard-reference="http://www.w3.org/TR/css-counter-styles-3/#at-ruledef-counter-style">
+
+    <CssProperty _locID="system" _locAttrData="description" restriction="enum, integer, identifier" syntax="$(name): extends decimal;" description="Gibt an, welcher Algorithmus zum Generieren der Darstellung des Zählers basierend auf dem Zählerwert verwendet wird.">
+
+      <entry value="cyclic"/>
+      <entry value="numeric"/>
+      <entry value="alphabetic"/>
+      <entry value="symbolic"/>
+      <entry value="additive"/>
+      <entry value="fixed"/>
+      <entry value="extends"/>
+    </CssProperty>
+
+    <CssProperty _locID="negative" _locAttrData="description" type="symbolsdef" restriction="url, string, identifier" syntax="$(name): cyclic;" description="Definiert, wie die Darstellung geändert wird, wenn der Zählerwert negativ ist."/>
+
+    <CssProperty _locID="prefix" _locAttrData="description" type="symbolsdef" restriction="url, string, identifier" description="Gibt ein Symbol an, das der Markerdarstellung vorangestellt wird."/>
+
+    <CssProperty _locID="suffix" _locAttrData="description" type="symbolsdef" restriction="url, string, identifier" syntax="$(name): ') ';" description="Gibt ein Symbol an, das an die Markerdarstellung angefügt wird."/>
+
+    <CssProperty _locID="range" _locAttrData="description" restriction="enum, integer" syntax="$(name): infinite;" description="Gibt an, welcher Algorithmus zum Generieren der Darstellung des Zählers basierend auf dem Zählerwert verwendet wird.">
+      <entry value="infinite"/>
+      <entry value="auto"/>
+    </CssProperty>
+
+    <CssProperty _locID="pad" _locAttrData="description" type="symbolsdef" syntax="$(name): 2 '0';" restriction="url, integer, string, identifier" description="Ermöglicht einem Autor das Angeben eines Zählerstils mit &quot;fester Breite&quot;. Dabei werden Darstellungen, die kürzer als der Auffüllwert sind, mit einem bestimmten Symbol aufgefüllt."/>
+
+    <CssProperty _locID="fallback" _locAttrData="description" restriction="identifier" syntax="$(name): decimal;" description="Gibt einen Ausweichzählerstil an, der verwendet werden soll, wenn der aktuelle Zählerstil keine Darstellung für einen angegebenen Zählerwert erstellen kann."/>
+
+    <CssProperty _locID="symbols" _locAttrData="description" type="symbolsdef" syntax="$(name): url(white.svg);" restriction="url, string, identifier"/>
+
+    <CssProperty _locID="additive-symbols" type="symbolsdef" syntax="$(name): 6 ⚅, 5 ⚄, 4 ⚃, 3 ⚂, 2 ⚁, 1 ⚀;" restriction="url, integer, string, identifier"/>
+
+    <CssProperty _locID="speak-as" _locAttrData="description" restriction="enum, identifier" syntax="$(name): lower-latin;" description="Beschreibt, wie die gesprochene Form eines Zählers synthetisiert wird, der mit dem angegebenen Zählerstil formatiert ist.">
+
+      <entry value="auto"/>
+      <entry value="bullets"/>
+      <entry value="numbers"/>
+      <entry value="words"/>
+      <entry value="spell-out"/>
+    </CssProperty>
+
+  </CssAtDirective>
+
+  <CssProperty _locID="list-style" restriction="identifier">
+    <entry value="symbols()"/>
+  </CssProperty>
+
+  <CssProperty _locID="list-style-type" restriction="identifier">
+    <entry value="symbols()"/>
+  </CssProperty>
+
+</CssModule>

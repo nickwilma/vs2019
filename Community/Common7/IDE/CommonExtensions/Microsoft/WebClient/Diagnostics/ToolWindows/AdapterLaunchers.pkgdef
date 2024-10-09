@@ -1,0 +1,25 @@
+; Adapter launcher registration for Node
+[$RootKey$\CLSID\{BF55782B-1DC8-4A96-984E-3A689FA95844}]
+"Assembly"="Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost"
+"Class"="Microsoft.VisualStudio.WebClient.Diagnostics.NodeAdapterLauncher"
+"CodeBase"="$PackageFolder$\..\ToolWindows\Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost.dll"
+; Adapter launcher registration for Chrome
+[$RootKey$\CLSID\{9763becb-d8a8-4147-8a1b-0d26bfe54e6d}]
+"Assembly"="Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost"
+"Class"="Microsoft.VisualStudio.WebClient.Diagnostics.ChromeAdapterLauncher"
+"CodeBase"="$PackageFolder$\..\ToolWindows\Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost.dll"
+; Adapter launcher registration for Edge
+[$RootKey$\CLSID\{7ab3a3d1-1f56-4498-a789-04101f6dd077}]
+"Assembly"="Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost"
+"Class"="Microsoft.VisualStudio.WebClient.Diagnostics.EdgeAdapterLauncher"
+"CodeBase"="$PackageFolder$\..\ToolWindows\Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost.dll"
+; Adapter launcher registration for MSEdge (Chromium)
+[$RootKey$\CLSID\{e6132573-7817-43e9-9547-66a1551c9eef}]
+"Assembly"="Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost"
+"Class"="Microsoft.VisualStudio.WebClient.Diagnostics.MSEdgeAdapterLauncher"
+"CodeBase"="$PackageFolder$\..\ToolWindows\Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost.dll"
+; Custom Protocol Extension
+[$RootKey$\CLSID\{02902F16-ABAD-4B0A-8F76-34BC2EE257C5}]
+"Assembly"="Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost"
+"Class"="Microsoft.VisualStudio.WebClient.Diagnostics.JavascriptDebuggersProtocolExtension"
+"CodeBase"="$PackageFolder$\..\ToolWindows\Microsoft.VisualStudio.WebClient.Diagnostics.HtmlToolHost.dll"

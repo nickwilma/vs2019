@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Nach Funktionsaufruf filtern</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine Abfrage, die anhand eines Aufrufs einer Funktion filtert.</Description>
+      <Shortcut>qFiltFunc</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Felds, das gefiltert wird.</ToolTip>
+          <Default>ToUpper()</Default>
+        </Literal>
+        <Literal>
+          <ID>comparisonValue</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Wert des zweiten Arguments für die Funktion.</ToolTip>
+          <Default>"PEAR"</Default>
+        </Literal>
+        <Literal>
+          <ID>condition1</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die erste Bedingung, nach der gefiltert wird.</ToolTip>
+          <Default>= 0</Default>
+        </Literal>
+        <Literal>
+          <ID>functionCall</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Funktionsbedingung, nach der gefiltert wird.</ToolTip>
+          <Default>String.Compare</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Where $functionCall$($item$.$field$, $comparisonValue$) $condition1$ _
+                    Select $item$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

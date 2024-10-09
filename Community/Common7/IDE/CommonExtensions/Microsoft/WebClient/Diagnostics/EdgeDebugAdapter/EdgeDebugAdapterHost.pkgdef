@@ -1,0 +1,48 @@
+; Engine registration for launching Edge/PineZorro from an ASP.NET project
+[$RootKey$\AD7Metrics\Engine\{82827744-4765-4a27-9c0e-69b647c7ac19}]
+"CLSID"="{DAB324E9-7B35-454C-ACA8-F6BB0D5C8673}"
+"AlwaysLoadLocal"=dword:00000001
+"Attach"=dword:00000001
+"AddressBP"=dword:00000000
+"AutoSelectPriority"=dword:00000004
+"CallstackBP"=dword:00000000
+"Exceptions"=dword:00000001
+"ExceptionBreakpointCategory"="{1ce4d9f7-faac-42ee-b352-87fdfb6fb37b}"
+"Name"="JavaScript (Edge)"
+"AdapterTelemetryEventsNamespace"="vs/bpt/diagnostics/edgedebugadapter/"
+"AdapterTelemetryPropertiesNamespace"="VS.BPT.Diagnostics.DebugAdapter."
+"LocalsScopeName"="Local"
+"AdapterLauncher"="{7ab3a3d1-1f56-4498-a789-04101f6dd077}"
+"CustomProtocolExtension"="{02902F16-ABAD-4B0A-8F76-34BC2EE257C5}"
+@="VSCode Debugger Host"
+
+;
+; Registration for the Edge/PineZorro debugger exception
+;   Exception "state" is represented as a bitwise-or of any of the following values:
+;     -  dword:0001: Stop when the exception is thrown (EXCEPTION_STOP_FIRST_CHANCE)
+;     -  dword:0002: Stop if the exception is thrown and not caught (EXCEPTION_STOP_SECOND_CHANCE)
+;     -  dword:0020: Stop if the exception is thrown and not caught by "user code" (EXCEPTION_STOP_USER_UNCAUGHT)
+;     -  dword:1000: Exception has an associated numeric code
+;     -  dword:2000: Numeric code should be displayed in the UI in hex
+;     -  dword:4000: "Just My Code" supported - required for "user uncaught" exceptions
+;     - dword:10000: Exception category is a set of Visual Studio Code exception filters
+;   NOTE: Visual Studio doesn't allow exceptions to be completely ignored, so all exception states
+;         automatically include EXCEPTION_STOP_SECOND_CHANCE
+;
+; -------------------------------------------------------------------
+
+; Map exceptions codes so they'll work on locales other than US - For launch debugger
+[$RootKey$\AD7Metrics\Engine\{82827744-4765-4a27-9c0e-69b647c7ac19}\ExceptionBreakpointMappings]
+"All Exceptions"="all"
+"Uncaught Exceptions"="uncaught"
+
+; Custom expressions to support hit count breakpoints
+; These should be removed when this bug fix is ported to debug adapters inside VS:
+; https://github.com/Microsoft/vscode-chrome-debug-core/issues/291
+[$RootKey$\AD7Metrics\Engine\{82827744-4765-4a27-9c0e-69b647c7ac19}\HitCountBreakpointExpressions]
+"Equal"="= {0}"
+"EqualOrGreater"=">= {0}"
+"Mod"="% {0}"
+
+; Register our engine as supporting JavaScript debugging with VS debugger
+[$RootKey$\Debugger\JavaScript Engines\{82827744-4765-4a27-9c0e-69b647c7ac19}]

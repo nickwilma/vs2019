@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CssModule name="Mozilla Extensions" standard-reference="https://developer.mozilla.org/en/CSS_Reference/Mozilla_Extensions" pub-date="2012-02-23">
+
+  <CssAtDirective name="-moz-viewport" version="3.0" browsers="FF" include-root-properties="false" include-root-directives="false" syntax="@$(name) { width: device-width; }" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh868813.aspx">
+
+    <CssProperty ref="width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="height">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="max-width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="min-width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty name="zoom" restriction="number, percentage">
+      <entry value="auto"/>
+    </CssProperty>
+
+    <CssProperty name="max-zoom" restriction="number, percentage">
+    </CssProperty>
+
+    <CssProperty name="min-zoom" restriction="number, percentage">
+    </CssProperty>
+
+    <CssProperty name="user-zoom">
+      <entry value="zoom"/>
+      <entry value="fixed"/>
+    </CssProperty>
+
+    <CssProperty name="orientation">
+      <entry value="auto"/>
+      <entry value="landscape"/>
+      <entry value="portrait"/>
+    </CssProperty>
+  </CssAtDirective>
+
+  <CssAtDirective name="-moz-keyframes" _locID="moz-keyframes-rule" _locAttrData="description" version="3.0" browsers="FF5" syntax="@-moz-keyframes animation-name" description="Definiert eine Gruppe von Keyframes für Animationen." standard-reference="https://developer.mozilla.org/en/CSS/@keyframes"/>
+
+  <CssAtDirective name="-moz-document" _locID="moz-document-rule" _locAttrData="description" version="3.0" browsers="FF1.8" description="Die Regel '@-moz-document' ist eine Gecko-spezifische at-Regel, durch die die enthaltenen Stilregeln auf der Grundlage der URL des Dokuments eingeschränkt werden." standard-reference="https://developer.mozilla.org/en/CSS/@document"/>
+
+  <CssPseudo name=":-moz-any-link" version="3.0" browsers="FF1"/>
+  <CssPseudo name=":-moz-broken" version="3.0" browsers="FF3"/>
+  <CssPseudo name=":-moz-any" version="3.0" browsers="FF4"/>
+  <CssPseudo name=":-moz-placeholder" version="3.0" browsers="FF4"/>
+  <CssPseudo name="::-moz-selection" version="3.0" browsers="FF1"/>
+  <CssPseudo name=":-moz-drag-over" version="3.0" browsers="FF1"/>
+  <CssPseudo name=":-moz-first-node" version="3.0" browsers="FF1"/>
+  <CssPseudo name=":-moz-focusring" version="3.0" browsers="FF4"/>
+  <CssPseudo name=":-moz-last-node" version="3.0" browsers="FF1"/>
+  <CssPseudo name="::-moz-list-bullet" version="3.0" browsers="FF1"/>
+  <CssPseudo name="::-moz-list-number" version="3.0" browsers="FF1"/>
+  <CssPseudo name=":-moz-loading" version="3.0" browsers="FF3"/>
+  <CssPseudo name=":-moz-only-whitespace" version="3.0" browsers="FF1.5"/>
+  <CssPseudo name=":-moz-suppressed" version="3.0" browsers="FF3"/>
+  <CssPseudo name=":-moz-submit-invalid" version="3.0" browsers="FF4"/>
+  <CssPseudo name="::-moz-placeholder" version="3.0" browsers="FF9"/>
+  <CssPseudo name=":-moz-ui-valid" version="3.0" browsers="FF4"/>
+  <CssPseudo name=":-moz-ui-invalid" version="3.0" browsers="FF4"/>
+  <CssPseudo name=":-moz-user-disabled" version="3.0" browsers="FF3"/>
+  <CssPseudo name=":-moz-window-inactive" version="3.0" browsers="FF4"/>
+  <CssPseudo name="::-moz-focus-inner" version="3.0" browsers="FF4"/>
+  <CssPseudo name="::-moz-focus-outer" version="3.0" browsers="FF4"/>
+  <CssPseudo name="::-moz-progress-bar" version="3.0" browsers="FF9"/>
+  <CssPseudo name=":-moz-full-screen" version="3.0" browsers="FF9"/>
+  <CssPseudo name=":-moz-range-track" version="3.0" browsers="FF22"/>
+  <CssPseudo name=":-moz-range-thumb" version="3.0" browsers="FF22"/>
+
+  <CssProperty _locID="-moz-appearance" _locAttrData="description" version="3.0" browsers="FF1" restriction="enum" syntax=".example { $(name): toolbarbutton; }" description="Die CSS-Eigenschaft '-moz-appearance' wird in Gecko (Firefox) verwendet, um ein Element unter Verwendung einer plattformeigenen Formatierung anzuzeigen, die auf dem Design des Betriebssystems basiert." standard-reference="https://developer.mozilla.org/en/CSS/-moz-appearance">
+
+    <entry value="none"/>
+    <entry value="button"/>
+    <entry value="button-arrow-down"/>
+    <entry value="button-arrow-next"/>
+    <entry value="button-arrow-previous"/>
+    <entry value="button-arrow-up"/>
+    <entry value="button-bevel"/>
+    <entry value="checkbox"/>
+    <entry value="checkbox-container"/>
+    <entry value="checkbox-label"/>
+    <entry value="dialog"/>
+    <entry value="groupbox"/>
+    <entry value="listbox"/>
+    <entry value="menuarrow"/>
+    <entry value="menuimage"/>
+    <entry value="menuitem"/>
+    <entry value="menuitemtext"/>
+    <entry value="menulist"/>
+    <entry value="menulist-text"/>
+    <entry value="menulist-button"/>
+    <entry value="menulist-textfield"/>
+    <entry value="menupopup"/>
+    <entry value="menuradio"/>
+    <entry value="menuseparator"/>
+    <entry value="progressbar"/>
+    <entry value="progresschunk"/>
+    <entry value="radio"/>
+    <entry value="radio-container"/>
+    <entry value="radio-label"/>
+    <entry value="radiomenuitem"/>
+    <entry value="resizer"/>
+    <entry value="resizerpanel"/>
+    <entry value="scrollbarbutton-down"/>
+    <entry value="scrollbarbutton-left"/>
+    <entry value="scrollbarbutton-right"/>
+    <entry value="scrollbarbutton-up"/>
+    <entry value="scrollbartrack-horizontal"/>
+    <entry value="scrollbartrack-vertical"/>
+    <entry value="scrollbar-small"/>
+
+    <entry value="spinner"/>
+    <entry value="spinner-downbutton"/>
+    <entry value="spinner-textfield"/>
+    <entry value="spinner-upbutton"/>
+
+    <entry value="separator"/>
+    <entry value="statusbar"/>
+    <entry value="statusbarpanel"/>
+    <entry value="tab"/>
+    <entry value="tab-scroll-arrow-back"/>
+    <entry value="tab-scroll-arrow-forward"/>
+    <entry value="tabpanels"/>
+    <entry value="textfield"/>
+    <entry value="textfield-multiline"/>
+    <entry value="toolbar"/>
+    <entry value="toolbox"/>
+    <entry value="-moz-mac-unified-toolbar"/>
+    <entry value="-moz-win-borderless-glass"/>
+    <entry value="-moz-win-browsertabbar-toolbox"/>
+    <entry value="-moz-win-communications-toolbox"/>
+    <entry value="-moz-win-glass"/>
+    <entry value="-moz-win-media-toolbox"/>
+    <entry value="tooltip"/>
+    <entry value="treeheadercell"/>
+    <entry value="treeheadersortarrow"/>
+    <entry value="treeitem"/>
+    <entry value="treewisty"/>
+    <entry value="treetwistyopen"/>
+    <entry value="treeview"/>
+    <entry value="window"/>
+  </CssProperty>
+
+  <CssProperty name="-moz-background-clip" ref="background-clip" browsers="FF1-3.6">
+    <entry value="padding"/>
+  </CssProperty>
+
+  <CssProperty _locID="-moz-background-inline-policy" _locAttrData="description" version="3.0" browsers="FF1" restriction="enum" syntax="div { $(name): bounding-box; }" description="In Gecko-basierten Anwendungen wie Firefox gibt die CSS-Eigenschaft '-moz-background-inline-policy' an, wie mit dem Hintergrundbild eines Inlineelements verfahren wird, wenn der Inhalt des Inlineelements in mehrere Zeilen umbrochen wird. Die Wahl der Position wirkt sich bei der Wiederholung des Elements entscheidend aus." standard-reference="https://developer.mozilla.org/en/CSS/-moz-background-inline-policy">
+
+    <entry value="bounding-box"/>
+    <entry value="continuous"/>
+    <entry value="each-box"/>
+  </CssProperty>
+
+  <CssProperty name="-moz-background-origin" ref="background-origin" browsers="FF1"/>
+
+  <CssProperty name="-moz-box-sizing" ref="box-sizing" browsers="FF1"/>
+
+  <CssProperty _locID="-moz-border-left-colors" _locAttrData="description" type="color" restriction="color" version="3.0" browsers="FF1" syntax="td { $(name):  #00ff33 #33ff66 #66ff99; }" description="In Mozilla-Anwendungen wie Firefox legt '-moz-border-bottom-colors' eine Liste von Farben für die untere Rahmenlinie fest." standard-reference="https://developer.mozilla.org/en/CSS/-moz-border-left-colors"/>
+
+  <CssProperty name="-moz-border-top-colors" browsers="FF1" ref="-moz-border-left-colors"/>
+  <CssProperty name="-moz-border-right-colors" browsers="FF1" ref="-moz-border-left-colors"/>
+  <CssProperty name="-moz-border-bottom-colors" browsers="FF1" ref="-moz-border-left-colors"/>
+
+  <CssProperty name="-moz-border-image" ref="border-image" browsers="FF3.6"/>
+
+  <CssProperty name="-moz-columns" ref="columns" browsers="FF9"/>
+
+  <CssProperty name="-moz-column-width" ref="column-width" browsers="FF3.5"/>
+
+  <CssProperty name="-moz-column-count" ref="column-count" browsers="FF3.5"/>
+
+  <CssProperty name="-moz-column-gap" ref="column-gap" browsers="FF3.5"/>
+
+  <CssProperty name="-moz-column-rule" ref="column-rule" browsers="FF3.5"/>
+
+  <CssProperty name="-moz-column-rule-color" ref="column-rule-color" browsers="FF3.5"/>
+
+  <CssProperty name="-moz-column-rule-style" ref="column-rule-style" browsers="FF3.5"/>
+
+  <CssProperty name="-moz-column-rule-width" ref="column-rule-width" browsers="FF3.5"/>
+
+  <CssProperty _locID="-moz-user-select" ref="user-select" browsers="FF1.5" standard-reference="https://developer.mozilla.org/en/CSS/-moz-user-select">
+
+    <entry value="-moz-none"/>
+    <entry value="-moz-all"/>
+  </CssProperty>
+
+  <CssProperty _locID="-moz-user-focus" _locAttrData="description" browsers="FF1.5" type="enum" syntax="div { $(name): ignore; }" description="Wird zur Angabe verwendet, ob das Element den Fokus besitzen kann." standard-reference="https://developer.mozilla.org/en-US/docs/CSS/-moz-user-focus">
+
+    <entry value="ignore"/>
+    <entry value="normal"/>
+  </CssProperty>
+
+  <CssProperty name="-moz-transform" ref="transform" browsers="FF3.5"/>
+
+  <CssProperty name="-moz-transform-origin" ref="transform-origin" browsers="FF3.5"/>
+
+  <CssProperty name="-moz-transition-property" ref="transition-property" browsers="FF4"/>
+
+  <CssProperty name="-moz-transition-duration" ref="transition-duration" browsers="FF4"/>
+
+  <CssProperty name="-moz-transition-timing-function" ref="transition-timing-function" browsers="FF4"/>
+
+  <CssProperty name="-moz-transition-delay" ref="transition-delay" browsers="FF4"/>
+
+  <CssProperty name="-moz-transition" ref="transition" browsers="FF4"/>
+
+  <CssProperty _locID="-moz-box-orient" _locAttrData="description" version="3.0" browsers="FF1" restriction="enum" syntax="div { $(name): vertical; }" description="In Mozilla-Anwendungen legt '-moz-box-orient' fest, ob der Inhalt einer Box horizontal oder vertikal angelegt ist." standard-reference="https://developer.mozilla.org/en/CSS/-moz-box-orient">
+
+    <entry _locID="-moz-box-orient_horizontal" _locAttrData="description" value="horizontal" description="Die untergeordneten Elemente werden in der Box horizontal von links nach rechts angezeigt."/>
+    <entry _locID="-moz-box-orient_vertical" _locAttrData="description" value="vertical" description="Die untergeordneten Elemente werden in der Box vertikal von oben nach unten gestapelt angezeigt."/>
+    <entry _locID="-moz-box-orient_block-axis" _locAttrData="description" value="block-axis" description="Elemente sind an der Achse der Box ausgerichtet."/>
+    <entry _locID="-moz-box-orient_inline-axis" _locAttrData="description" value="inline-axis" description="Elemente sind vertikal ausgerichtet."/>
+  </CssProperty>
+
+  <CssProperty _locID="-moz-box-direction" _locAttrData="description" version="3.0" browsers="FF1" restriction="enum" syntax="div { $(name): reverse; }" description="In Mozilla-Anwendungen legt '-moz-box-direction' fest, ob der Inhalt einer Box normal (von oben oder links) oder in umgekehrter Reihenfolge (von unten oder rechts) dargestellt wird." standard-reference="https://developer.mozilla.org/en/CSS/-moz-box-direction">
+
+    <entry _locID="-moz-box-direction_normal" _locAttrData="description" value="normal" description="In einer Box mit einem für die horizontale Anzeige berechneten 'box-orient'-Wert werden die untergeordneten Elemente von links nach rechts angezeigt. Bei einem für die vertikale Anzeige berechneten Wert werden die Elemente von oben nach unten angezeigt."/>
+    <entry _locID="-moz-box-direction_reverse" _locAttrData="description" value="reverse" description="In einer Box mit einem für die horizontale Anzeige berechneten 'box-orient'-Wert werden die untergeordneten Elemente von rechts nach links angezeigt. Bei einem für die vertikale Anzeige berechneten Wert werden die Elemente von unten nach oben angezeigt."/>
+  </CssProperty>
+
+  <CssProperty _locID="-moz-box-ordinal-group" _locAttrData="description" version="3.0" browsers="FF1" restriction="integer" syntax="div { $(name): 5; }" description="Gibt die Ordnungsgruppe an, der das Element angehört. Elemente mit einer niedrigeren Ordnungsgruppe werden vor Elementen mit einer höheren Ordnungsgruppe angezeigt." standard-reference="https://developer.mozilla.org/en/CSS/-moz-box-ordinal-group"/>
+
+  <CssProperty _locID="-moz-box-align" _locAttrData="description" version="3.0" browsers="FF1" restriction="enum" syntax="div { $(name): end; }" description="In Mozilla-Anwendungen gibt '-moz-box-align' an, wie der Inhalt einer XUL-Box quer (senkrecht zur) Richtung des Layouts ausgerichtet wird. Der Effekt ist nur sichtbar, wenn zusätzlicher Platz in der Box verfügbar ist." standard-reference="https://developer.mozilla.org/en/CSS/-moz-box-align">
+
+    <entry _locID="-moz-box-align_start" _locAttrData="description" value="start" description="In einer Box mit normaler Schreibrichtung wird die obere Kante jedes untergeordneten Elements entlang der Oberseite der Box ausgerichtet. Zusätzlicher Leerraum wird unterhalb des Elements angezeigt. In einer Box mit umgekehrter Schreibrichtung wird die untere Kante jedes untergeordneten Elements entlang der Unterseite der Box ausgerichtet. Zusätzlicher Leerraum wird oberhalb des Elements angezeigt."/>
+    <entry _locID="-moz-box-align_end" _locAttrData="description" value="end" description="In einer Box mit normaler Schreibrichtung wird die untere Kante jedes untergeordneten Elements entlang der Unterseite der Box ausgerichtet. Zusätzlicher Leerraum wird oberhalb des Elements angezeigt. In einer Box mit umgekehrter Schreibrichtung wird die obere Kante jedes untergeordneten Elements entlang der Oberseite der Box ausgerichtet. Zusätzlicher Leerraum wird unterhalb des Elements angezeigt."/>
+    <entry _locID="-moz-box-align_center" _locAttrData="description" value="center" description="Zusätzlicher Leerraum wird gleichmäßig verteilt, eine Hälfe oberhalb des untergeordneten Elements und die andere Hälfte nach dem untergeordneten Element."/>
+    <entry _locID="-moz-box-align_baseline" _locAttrData="description" value="baseline" description="Wenn die Box in einer Linie mit der Achse oder horizontal ausgerichtet ist, werden alle untergeordneten Elemente anhand ihrer Grundlinie ausgerichtet. Zusätzlicher Leeraum wird ggf. davor und dahinter eingefügt. Beim Blockfluss wird die Grundlinie der ersten nicht leeren Zeilenbox innerhalb des ersten Elements verwendet und bei Tabellen die Grundlinie der ersten Zelle."/>
+    <entry _locID="-moz-box-align_stretch" _locAttrData="description" value="stretch" description="Die Höhe jedes untergeordneten Elements wird auf die Höhe des umschließenden Blocks ausgerichtet."/>
+  </CssProperty>
+
+  <CssProperty _locID="-moz-box-pack" _locAttrData="description" version="3.0" browsers="FF1" restriction="enum" syntax="div { $(name): end; }" description="In Mozilla-Anwendungen gibt '-moz-box-pack' an, wie der Inhalt der Box in Richtung des Layouts ausgerichtet wird. Der Effekt ist nur sichtbar, wenn zusätzlicher Leerraum in der Box verfügbar ist." standard-reference="https://developer.mozilla.org/en/CSS/-moz-box-pack">
+
+    <entry _locID="-moz-box-pack_start" _locAttrData="description" value="start" description="In einer Box mit normaler Richtung wird die linke Kante des ersten untergeordneten Elements auf der linken Seite platziert, wobei der gesamte zusätzliche Leerraum nach dem letzten untergeordneten Element angeordnet wird. In einer Box mit umgekehrter Richtung wird die rechte Kante des letzten untergeordneten Elements auf der rechten Seite platziert, wobei der gesamte zusätzliche Leerraum vor dem ersten untergeordneten Element angeordnet wird."/>
+    <entry _locID="-moz-box-pack_end" _locAttrData="description" value="end" description="In einer Box mit normaler Richtung wird die rechte Kante des letzten untergeordneten Elements auf der rechten Seite platziert, wobei der gesamte zusätzliche Leerraum vor dem ersten untergeordneten Element angeordnet wird. In einer Box mit umgekehrter Richtung wird die linke Kante des ersten untergeordneten Elements auf der linken Seite platziert, wobei der gesamte zusätzliche Leerraum nach dem letzten untergeordneten Element angeordnet wird."/>
+    <entry _locID="-moz-box-pack_center" _locAttrData="description" value="center" description="Der zusätzliche Leerraum wird gleichmäßig verteilt, wobei eine Hälfte vor dem ersten untergeordneten Element und die andere Hälfte nach dem letzten untergeordneten Element positioniert wird."/>
+    <entry _locID="-moz-box-pack_justify" _locAttrData="description" value="justify" description="Der Leerraum wird gleichmäßig auf die Abstände zwischen den untergeordneten Elementen verteilt, ohne dass zusätzlicher Leeraum vor dem ersten oder nach dem letzten untergeordneten Element positioniert wird. Wenn nur ein untergeordnetes Element vorhanden ist, wird der 'flex-pack'-Wert so behandelt wie 'start'."/>
+  </CssProperty>
+
+  <CssProperty _locID="-moz-box-flex" _locAttrData="description" version="3.0" browsers="FF1" restriction="number" syntax="div { $(name): 1; }" description="In Mozilla-Anwendungen gibt '-moz-box-flex' an, wie eine Box an Größe zunimmt, um die umschließende Box in deren Layoutrichtung auszufüllen." standard-reference="https://developer.mozilla.org/en/CSS/-moz-box-flex"/>
+
+  <CssProperty _locID="-moz-box-flexgroup" _locAttrData="description" version="3.0" browsers="FF1" restriction="integer" syntax="div { $(name): 3; }" description="Flexible Elemente können Flexgruppen mithilfe der 'box-flex-group'-Eigenschaft zugewiesen werden." standard-reference="https://developer.mozilla.org/en/CSS/-moz-box-flexgroup"/>
+
+  <!-- Animation -->
+
+  <CssProperty name="-moz-animation-name" ref="animation-name" browsers="FF9"/>
+
+  <CssProperty name="-moz-animation-duration" ref="animation-duration" browsers="FF9"/>
+
+  <CssProperty name="-moz-animation-fill-mode" ref="animation-fill-mode" browsers="FF5"/>
+
+  <CssProperty name="-moz-animation-timing-function" ref="animation-timing-function" browsers="FF9"/>
+
+  <CssProperty name="-moz-animation-iteration-count" ref="animation-iteration-count" browsers="FF9"/>
+
+  <CssProperty name="-moz-animation-direction" ref="animation-direction" browsers="FF9"/>
+
+  <CssProperty name="-moz-animation-play-state" ref="animation-play-state" browsers="FF9"/>
+
+  <CssProperty name="-moz-animation-delay" ref="animation-delay" browsers="FF9"/>
+
+  <CssProperty name="-moz-animation" ref="animation" browsers="FF9"/>
+
+  <CssProperty name="-moz-backface-visibility" ref="backface-visibility" browsers="FF10"/>
+
+  <CssProperty name="-moz-font-feature-settings" ref="font-feature-settings" browsers="FF4"/>
+
+  <CssProperty name="-moz-hyphens" ref="hyphens" browsers="FF9"/>
+
+  <CssProperty name="-moz-perspective" ref="perspective" browsers="FF10"/>
+
+  <CssProperty name="-moz-perspective-origin" ref="perspective-origin" browsers="FF10"/>
+
+  <CssProperty name="-moz-text-align-last" ref="text-align-last" browsers="FF12"/>
+
+  <CssProperty name="-moz-text-decoration-color" ref="text-decoration-color" browsers="FF6"/>
+
+  <CssProperty name="-moz-text-decoration-style" ref="text-decoration-style" browsers="FF6"/>
+
+  <CssProperty name="-moz-text-decoration-line" ref="text-decoration-line" browsers="FF6"/>
+
+  <CssProperty name="-moz-text-size-adjust" ref="text-size-adjust" browsers="FF"/>
+
+  <CssProperty name="-moz-filter" ref="filter" browsers="FF" syntax="div { $(name): blur(.5rem); }"/>
+
+  <CssProperty name="background-image">
+    <entry value="-moz-linear-gradient()" version="3.0" browsers="FF3.6"/>
+    <entry value="-moz-radial-gradient()" version="3.0" browsers="FF3.6"/>
+    <entry value="-moz-repeating-linear-gradient()" version="3.0" browsers="FF10"/>
+    <entry value="-moz-repeating-radial-gradient()" version="3.0" browsers="FF10"/>
+    <entry value="-moz-image-rect()" version="3.0" browsers="FF3.6"/>
+  </CssProperty>
+
+  <CssProperty name="background">
+    <entry value="-moz-linear-gradient()" version="3.0" browsers="FF3.6"/>
+    <entry value="-moz-radial-gradient()" version="3.0" browsers="FF3.6"/>
+    <entry value="-moz-repeating-linear-gradient()" version="3.0" browsers="FF10"/>
+    <entry value="-moz-repeating-radial-gradient()" version="3.0" browsers="FF10"/>
+    <entry value="-moz-element(#id)" version="3.0" browsers="FF3.6"/>
+  </CssProperty>
+
+  <CssProperty name="cursor">
+    <entry value="-moz-grab" version="3.0" browsers="FF"/>
+    <entry value="-moz-grabbing" version="3.0" browsers="FF"/>
+    <entry value="-moz-zoom-in" version="3.0" browsers="FF"/>
+    <entry value="-moz-zoom-out" version="3.0" browsers="FF"/>
+  </CssProperty>
+
+  <CssProperty name="display">
+    <entry value="-moz-box" browsers="FF"/>
+    <entry value="-moz-inline-box" browsers="FF"/>
+    <entry value="-moz-inline-grid" browsers="FF"/>
+    <entry value="-moz-inline-stack" browsers="FF"/>
+    <entry value="-moz-grid" browsers="FF"/>
+    <entry value="-moz-grid-group" browsers="FF"/>
+    <entry value="-moz-grid-line" browsers="FF"/>
+    <entry value="-moz-groupbox" browsers="FF"/>
+    <entry value="-moz-deck" browsers="FF"/>
+    <entry value="-moz-popup" browsers="FF"/>
+    <entry value="-moz-stack" browsers="FF"/>
+    <entry value="-moz-marker" browsers="FF"/>
+  </CssProperty>
+
+  <CssProperty name="empty-cells">
+    <entry value="-moz-show-background" version="3.0" browsers="FF"/>
+  </CssProperty>
+
+  <CssProperty name="overflow">
+    <entry value="-moz-hidden-unscrollable" version="3.0" browsers="FF"/>
+  </CssProperty>
+
+  <CssProperty name="image-rendering">
+    <entry value="-moz-crisp-edges" browsers="FF"/>
+  </CssProperty>
+
+  <CssProperty name="height">
+    <entry value="-moz-fit-content" browsers="FF"/>
+  </CssProperty>
+
+  <CssProperty name="width">
+    <entry value="-moz-fit-content" browsers="FF"/>
+  </CssProperty>
+
+  <CssProperty name="-moz-border-radius" ref="border-radius" browsers="FF" obsolete="Use &quot;border-radius&quot; instead"/>
+
+  <CssProperty name="-moz-border-radius-bottomleft" ref="border-bottom-left-radius" browsers="FF" obsolete="Use &quot;border-bottom-left-radius&quot; instead"/>
+
+  <CssProperty name="-moz-border-radius-bottomright" ref="border-bottom-right-radius" browsers="FF" obsolete="Use &quot;border-bottom-right-radius&quot; instead"/>
+
+  <CssProperty name="-moz-border-radius-topleft" ref="border-top-left-radius" browsers="FF" obsolete="Use &quot;border-top-left-radius&quot; instead"/>
+
+  <CssProperty name="-moz-border-radius-topright" ref="border-top-right-radius" browsers="FF" obsolete="Use &quot;border-top-right-radius&quot; instead"/>
+
+  <CssProperty name="-moz-box-shadow" ref="box-shadow" browsers="FF" obsolete="Use &quot;box-shadow&quot; instead"/>
+
+    <CssProperty name="-moz-osx-font-smoothing" version="3.0" browsers="FF25" restriction="enum" syntax="div { $(name): grayscale; }">
+
+        <entry value="grayscale"/>
+    </CssProperty>
+</CssModule>

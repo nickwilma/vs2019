@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Sound in einem Windows Form als Schleife abspielen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Spielt einen Sound als Schleife im Hintergrund ab.</Description>
+      <Shortcut>sndLoop</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>FileName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Sounddatei.</ToolTip>
+          <Default>"SoundFile.wav"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.Audio.Play($FileName$, AudioPlayMode.BackgroundLoop)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

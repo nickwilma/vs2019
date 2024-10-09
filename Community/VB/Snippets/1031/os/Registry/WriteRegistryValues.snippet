@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Registrierungswert schreiben</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Schreibt einen Zeichenfolgenregistrierungswert in den aktuellen Benutzerhive. </Description>
+      <Shortcut>regWrite</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Setting</ID>
+          <ToolTip>Ersetzen Sie dies durch die neuen Wertdaten.</ToolTip>
+          <Default>"value"</Default>
+        </Literal>
+        <Literal>
+          <ID>Key</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Registrierungsschlüsselnamen, in den Sie schreiben möchten.</ToolTip>
+          <Default>"Name"</Default>
+        </Literal>
+        <Literal>
+          <ID>Path</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Pfad zum Schlüssel.</ToolTip>
+          <Default>"HKEY_CURRENT_USER\Software\CompanyName\ProductName\KeyName"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.Registry.SetValue($Path$, $Key$, $Setting$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

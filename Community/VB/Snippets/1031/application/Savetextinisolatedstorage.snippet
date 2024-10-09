@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Text im isolierten Speicher speichern</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Schreibt eine Zeichenfolge in eine Assembly oder in den benutzerisolierten Speicher.</Description>
+      <Shortcut>appIsoSave</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.IO.IsolatedStorage</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>varName</ID>
+          <Type>String</Type>
+          <ToolTip>Der Variablenname für den isolierten Speicher.</ToolTip>
+          <Default>isolatedStorage</Default>
+        </Object>
+        <Literal>
+          <ID>fileName</ID>
+          <Type>String</Type>
+          <ToolTip>Der Dateiname der Datei im isolierten Speicher.</ToolTip>
+          <Default>"TestStore.txt"</Default>
+        </Literal>
+        <Object>
+          <ID>fileContents</ID>
+          <Type>String</Type>
+          <ToolTip>Die Zeichenfolgenvariable, die den Wert, der in die Datei im Speicher geschrieben werden soll, speichert.</ToolTip>
+          <Default>"The Data"</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[
+        Dim $varName$ = IsolatedStorageFile.GetStore(IsolatedStorageScope.User Or IsolatedStorageScope.Assembly Or IsolatedStorageScope.Domain, Nothing, Nothing)
+        Dim isoStream As New IsolatedStorageFileStream($fileName$, FileMode.Append, FileAccess.Write, isolatedStore)
+
+        Using writer As New StreamWriter(isoStream)
+		    writer.WriteLine($fileContents$)
+	    End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

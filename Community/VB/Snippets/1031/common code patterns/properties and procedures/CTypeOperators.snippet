@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CType-Operator definieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Definiert die CType-Operatoren für eine Klasse.</Description>
+      <Keywords>
+        <Keyword>überladende Operatoren</Keyword>
+        <Keyword>CType</Keyword>
+        <Keyword>DirectCast</Keyword>
+        <Keyword>Konvertierungsoperatoren</Keyword>
+        <Keyword>einschränkend</Keyword>
+        <Keyword>Operator-Schlüsselwort</Keyword>
+      </Keywords>
+      <Shortcut>OpCType</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>DataType</ID>
+          <Type/>
+          <ToolTip>Ersetzen Sie dies durch den Datentyp, den Sie in Ihre benutzerdefinierte Klasse konvertieren möchten.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>ClassName</ID>
+          <Type/>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Klasse, die implementiert wird.</ToolTip>
+          <Default>ThisClass</Default>
+        </Literal>
+        <Literal>
+          <ID>ReturnValue</ID>
+          <Type/>
+          <ToolTip>Ersetzen Sie dies durch den Rückgabewert.</ToolTip>
+          <Default>"Replace Me"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="type decl"><![CDATA[Public Shared Narrowing Operator CType(ByVal initialData As $DataType$) As $ClassName$
+          Return New $ClassName$()
+        End Operator
+        
+        Public Shared Widening Operator CType(ByVal initialData As $ClassName$) As $DataType$
+          Return $ReturnValue$
+        End Operator]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

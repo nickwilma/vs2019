@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Datei mithilfe von My.Computer.Network hochladen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Lädt eine lokale Datei in das Internet hoch.</Description>
+      <Shortcut>conUpload</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>address</ID>
+          <Type>String</Type>
+          <ToolTip>Die Adresse des Hochladeskripts oder der Zieldateiname.</ToolTip>
+          <Default>"http://www.someserver.com/upload.aspx"</Default>
+        </Literal>
+        <Literal>
+          <ID>localFile</ID>
+          <Type>String</Type>
+          <ToolTip>Der Pfad der hochzuladenden Datei.</ToolTip>
+          <Default>"c:\File.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.Network.UploadFile($localFile$, $address$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

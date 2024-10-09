@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Dreiecksform mithilfe des GraphicsPath-Objekts erstellen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Zeichnet ein Dreieck durch Verbinden einer Reihe von Punkten.</Description>
+      <Shortcut>drawTri</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing.Drawing2D</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Location1</ID>
+          <ToolTip>Ersetzen Sie dies durch die Startkoordinaten des ersten Zeilensegments.</ToolTip>
+          <Default>0, 0</Default>
+        </Literal>
+        <Literal>
+          <ID>Location2</ID>
+          <ToolTip>Ersetzen Sie dies durch die Startkoordinaten des zweiten Zeilensegments.</ToolTip>
+          <Default>100, 0</Default>
+        </Literal>
+        <Literal>
+          <ID>Location3</ID>
+          <ToolTip>Ersetzen Sie dies durch die Startkoordinaten des dritten Zeilensegments.</ToolTip>
+          <Default>100, 100</Default>
+        </Literal>
+        <Literal>
+          <ID>Location4</ID>
+          <ToolTip>Ersetzen Sie dies durch die Startkoordinaten des vierten Zeilensegments.</ToolTip>
+          <Default>0, 0</Default>
+        </Literal>
+        <Object>
+          <ID>PictureBox</ID>
+          <Type>System.Windows.Forms.PictureBox</Type>
+          <ToolTip>Ersetzen Sie dies durch ein Objekt, das eine CreateGraphics-Methode aufweist.</ToolTip>
+          <Default>PictureBox1</Default>
+        </Object>
+        <Object>
+          <ID>Pen</ID>
+          <Type>System.Drawing.Pen</Type>
+          <ToolTip>Ersetzen Sie dies durch einen Stift.</ToolTip>
+          <Default>Pens.Black</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim path As New GraphicsPath()
+Dim points() As Point = { _
+    New Point($Location1$), _
+    New Point($Location2$), _
+    New Point($Location3$), _
+    New Point($Location4$)}
+path.AddLines(points)
+
+Dim surface As Graphics = $PictureBox$.CreateGraphics
+surface.DrawPath($Pen$, path)
+            ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Eindimensionales Array initialisieren </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Initialisiert ein eindimensionales Array.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>arrInit</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>OneD</ID>
+          <Type>Object</Type>
+          <ToolTip>Ersetzen Sie dies durch eine durch Trennzeichen getrennte Liste von Werten.</ToolTip>
+          <Default>1, 2, 3</Default>
+        </Literal>
+        <Literal>
+          <ID>TwoD</ID>
+          <Type>Object</Type>
+          <ToolTip>Ersetzen Sie dies durch mit Trennzeichen getrennte Listen von Werten.</ToolTip>
+          <Default>{{5.8, 6.6}, {7.4, 8.2}}</Default>
+        </Literal>
+        <Literal>
+          <ID>Jagged</ID>
+          <Type>Object</Type>
+          <ToolTip>Ersetzen Sie dies durch Arraydeklarationen.</ToolTip>
+          <Default>{New Integer() {1, 2}, New Integer() {3, 4}}</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim oneDimArray() As Integer = {$OneD$}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

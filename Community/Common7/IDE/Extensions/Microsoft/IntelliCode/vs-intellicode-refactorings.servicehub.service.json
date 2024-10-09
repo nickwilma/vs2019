@@ -1,0 +1,10 @@
+﻿{
+    "host": "desktopClr.x86",
+    "hostGroupAllowed": true,
+  "entryPoint": {
+    "assemblyPath": "Microsoft.VisualStudio.IntelliCode.Refactorings.dll",
+    "fullClassName": "Microsoft.VisualStudio.IntelliCode.Refactorings.RefactoringsService",
+    "appBasePath": "%VSAPPIDDIR%",
+    "configPath": "%PkgDefApplicationConfigFile%"
+  }
+}

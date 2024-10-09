@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Skip und Take</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Eine Abfrage, die die ersten n Elemente eines geordneten Resultsets überspringt und die nächsten m Elemente übernimmt.</Description>
+      <Shortcut>qSkipTake</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana", "strawberry", "blueberry"}</Default>
+        </Literal>
+        <Literal>
+          <ID>orderField</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch das Feld, nach dem die Abfrage geordnet werden soll.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>orderDirection</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die Richtung, in der das Feld geordnet wird (aufsteigend/absteigend).</ToolTip>
+          <Default>Descending</Default>
+        </Literal>
+        <Literal>
+          <ID>skipCount</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch eine ganze Zahl, die die Anzahl der zu überspringenden Elemente angibt.</ToolTip>
+          <Default>2</Default>
+        </Literal>
+        <Literal>
+          <ID>takeCount</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch eine ganze Zahl, die die Anzahl der zu übernehmenden Elemente angibt.</ToolTip>
+          <Default>3</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Order By $item$.$orderField$ $orderDirection$ _
+                    Skip $skipCount$ _
+                    Take $takeCount$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

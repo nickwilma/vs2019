@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Fonts" standard-reference="https://drafts.csswg.org/css-fonts-4/" status="WD" pub-date="2020-12-02">
+
+  <CssAtDirective name="font-face" _locID="font-face-rule" _locAttrData="description" version="3.0" browsers="all" include-root-properties="false" include-root-directives="false" syntax="@font-face { &lt;font-description&gt; }" description="Ermöglicht die Verknüpfung mit Schriftarten, die bei Bedarf automatisch aktiviert werden. So können Autoren die Beschränkung der 'websicheren'-Schriftarten umgehen und unabhängig von den in einer bestimmten Benutzerumgebung verfügbaren Schriftarten eine konsistente Darstellung gewährleisten." standard-reference="http://www.w3.org/TR/css3-fonts/#the-font-face-rule">
+
+    <CssProperty ref="font"/>
+    <CssProperty _locID="font-face_font-family" _locAttrData="description" name="font-family" description="Definiert den Namen der Schriftfamilie, die in allen CSS-Schriftfamilien-Namensübereinstimmungen verwendet wird." syntax="@font-face { $(name): Gentium; }" standard-reference="http://www.w3.org/TR/css3-fonts/#descdef-font-family"/>
+    <CssProperty ref="font-size"/>
+    <CssProperty ref="font-variant"/>
+    <CssProperty ref="font-weight"/>
+    <CssProperty ref="font-style"/>
+    <CssProperty ref="font-size-adjust"/>
+    <CssProperty ref="font-stretch"/>
+    <CssProperty ref="font-display"/>
+
+    <CssProperty _locID="src" _locAttrData="description" version="3.0" restriction="enum, string, url, identifier" type="url" syntax="src: url(font.woff) format('woff');" description="Gibt die Ressource an, in der die Schriftartdaten enthalten sind. Diese Eigenschaft muss angegeben werden, unabhängig davon, ob die Schriftart heruntergeladen wird oder lokal installiert ist. Der Wert basiert auf einer durch Trennzeichen getrennten Prioritätsliste externer Verweise oder auf Namen lokal installierter Schriftarten." standard-reference="http://www.w3.org/TR/css3-fonts/#src-desc">
+
+      <entry value="local()"/>
+      <entry _locID="src_formatTT" _locAttrData="description" value="format('truetype')" description="Eine TrueType-Schriftart."/>
+      <entry _locID="src_formatOT" _locAttrData="description" value="format('opentype')" description="Eine OpenType-Schriftart."/>
+      <entry _locID="src_formatWOFF" _locAttrData="description" value="format('woff')" description="WOFF-Schriftart (Web Open Font Format)."/>
+      <entry _locID="src_formatEOT" _locAttrData="description" value="format('embedded-opentype')" description="Eingebettete OpenType-Schriftart."/>
+      <entry _locID="src_formatSVG" _locAttrData="description" value="format('svg')" description="Eine SVG-Schriftart."/>
+    </CssProperty>
+
+    <CssProperty _locID="unicode-range" _locAttrData="description" version="3.0" restriction="unicode-range" description="Der Bereich der Unicode-Zeichen, die vor einer bestimmten Schriftart unterstützt werden. Der Anfangswert ist U+0-10FFFF." syntax="'urange' [, 'urange']*" standard-reference="http://www.w3.org/TR/css3-fonts/#unicode-range"/>
+
+  </CssAtDirective>
+
+  <CssProperty _locID="font-weight" _locAttrData="description" version="1.0" restriction="enum" type="font-weight" syntax="th { $(name): bold; }" description="Gibt das Gewicht der Glyphen in der Schriftart sowie die Einstellungen für 'Fett' bzw. die Schriftstärke an." standard-reference="http://www.w3.org/TR/css3-fonts/#font-weight-the-font-weight-property"/>
+
+  <CssPropertyValue type="font-weight">
+    <entry _locID="font-weight_bold" _locAttrData="description" value="bold" description="Identisch mit 700."/>
+    <entry _locID="font-weight_bolder" _locAttrData="description" value="bolder" description="Gibt an, dass das Gewicht der Schriftart 'fetter' als der geerbte Wert ist."/>
+    <entry _locID="font-weight_lighter" _locAttrData="description" value="lighter" description="Gibt an, dass das Gewicht der Schriftart leichter als der geerbte Wert ist."/>
+    <entry _locID="font-weight_normal" _locAttrData="description" value="normal" description="Identisch mit 400."/>
+    <entry _locID="font-weight_100" _locAttrData="description" value="100" description="Dünn"/>
+    <entry _locID="font-weight_200" _locAttrData="description" value="200" description="Sehr dünn"/>
+    <entry _locID="font-weight_300" _locAttrData="description" value="300" description="Leicht"/>
+    <entry _locID="font-weight_400" _locAttrData="description" value="400" description="Normal"/>
+    <entry _locID="font-weight_500" _locAttrData="description" value="500" description="Mittel"/>
+    <entry _locID="font-weight_600" _locAttrData="description" value="600" description="Halbfett"/>
+    <entry _locID="font-weight_700" _locAttrData="description" value="700" description="Fett"/>
+    <entry _locID="font-weight_800" _locAttrData="description" value="800" description="Extrafett"/>
+    <entry _locID="font-weight_900" _locAttrData="description" value="900" description="Schwarz (schwer)"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-stretch" _locAttrData="description" version="3.0" browsers="FF9,IE9" restriction="enum" syntax="div { $(name): expanded; }" description="Die 'font-stretch'-Eigenschaft wird verwendet, um die horizontale Breite der Schriftart zu erweitern oder zu verringern. Der Änderung erfolgt relativ zur normalen Breite der Schriftart, so wie sie vom Browser angezeigt wird." standard-reference="http://www.w3.org/TR/css3-fonts/#font-stretch0">
+
+    <entry value="normal"/>
+    <entry value="ultra-condensed"/>
+    <entry value="extra-condensed"/>
+    <entry value="condensed"/>
+    <entry value="semi-condensed"/>
+    <entry value="semi-expanded"/>
+    <entry value="expanded"/>
+    <entry value="extra-expanded"/>
+    <entry value="ultra-expanded"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-size" _locAttrData="description" version="1.0" restriction="length, percentage" type="font-size" description="Gibt die gewünschte Höhe der Glyphen einer Schriftart an. Bei skalierbaren Schriftarten ist 'font-size' ein Skalierungsfaktor, der auf die EM-Einheit der Schriftart angewendet wird. (Beachten Sie, dass bestimmte Glyphen aus der EM-Box 'austreten' können.) Bei nicht skalierbaren Schriftarten wird 'font-size' in absolute Einheiten konvertiert und mit der deklarierten 'font-size' der Schriftart abgeglichen, wobei derselbe absolute Koordinatenraum für beide übereinstimmenden Werte verwendet wird." syntax="div { $(name): 12px; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-size-prop"/>
+
+  <CssPropertyValue type="font-size">
+    <entry value="large"/>
+    <entry value="larger"/>
+    <entry value="medium"/>
+    <entry value="small"/>
+    <entry value="smaller"/>
+    <entry value="x-large"/>
+    <entry value="x-small"/>
+    <entry value="xx-large"/>
+    <entry value="xx-small"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-style" _locAttrData="description" version="1.0" restriction="enum" type="font-style" syntax="body { $(name): italic; }" description="Ermöglicht die Auswahl kursiver oder schräg gestellter Schriftbilder. Kursivschriftarten sind von Natur aus kursiv, während schräg gestellte Schriftarten normalerweise geneigte Varianten des normalen Schriftbilds sind." standard-reference="http://www.w3.org/TR/css3-fonts/#font-style0"/>
+
+  <CssPropertyValue type="font-style">
+    <entry _locID="font-style_italic" _locAttrData="description" value="italic" description="Wählt eine als 'kursiv' bezeichnete Schriftart oder, falls diese nicht verfügbar ist, eine als 'oblique' bezeichnete Schriftart aus."/>
+    <entry _locID="font-style_normal" _locAttrData="description" value="normal" description="Wählt ein als 'normal' klassifiziertes Schriftbild aus."/>
+    <entry _locID="font-style_oblique" _locAttrData="description" value="oblique" description="Wählt eine als 'oblique' bezeichnete Schriftart aus."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-variant" _locAttrData="description" version="1.0" restriction="enum" type="font-variant" syntax="div { $(name): small-caps; }" description="Gibt die verschiedenen Darstellungen der Schriftart an." standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-prop"/>
+
+  <CssPropertyValue type="font-variant">
+    <entry _locID="font-variant_normal" _locAttrData="description" value="normal" description="Gibt ein Schriftbild an, das nicht als Kapitälchenschriftart bezeichnet ist."/>
+    <entry _locID="font-variant_small-caps" _locAttrData="description" value="small-caps" description="Gibt eine Schriftart an, die als Kapitälchenschriftart bezeichnet ist. Wenn keine Originalschriftart mit Kapitälchen verfügbar ist, sollten Benutzer-Agents eine Kapitälchenschriftart simulieren."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-family" _locAttrData="description" restriction="font" type="font" version="1.0" description="Gibt eine Prioritätsliste spezifischer oder generischer Schriftartfamilien-Namen an. Ein Benutzer-Agent durchläuft die Liste der Familiennamen, bis er eine verfügbare Schriftart findet, die eine Glyphe enthält, die dem darzustellenden Zeichen entspricht." syntax="body { $(name): arial, verdana; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-family0"/>
+
+  <CssPropertyValue type="font">
+    <entry value="Arial, Helvetica, sans-serif"/>
+    <entry value="Cambria, Cochin, Georgia, Times, Times New Roman, serif"/>
+    <entry value="Courier New, Courier, monospace"/>
+    <entry value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"/>
+    <entry value="'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"/>
+    <entry value="Georgia, 'Times New Roman', Times, serif"/>
+    <entry value="'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"/>
+    <entry value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"/>
+    <entry value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"/>
+    <entry value="'Times New Roman', Times, serif"/>
+    <entry value="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"/>
+    <entry value="Verdana, Geneva, Tahoma, sans-serif"/>
+    <entry value="serif"/>
+    <entry value="sans-serif"/>
+    <entry value="cursive"/>
+    <entry value="fantasy"/>
+    <entry value="monospace"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-size-adjust" _locAttrData="description" version="3.0" browsers="FF3.5,IE10" restriction="number" description="Diese Eigenschaft trägt dazu bei, die Lesbarkeit von Text zu erhalten, wenn eine alternative Schriftart (Fallback) eingesetzt wird. In diesem Fall wird 'font-size' so angepasst, dass die X-Höhe unabhängig von der verwendeten Schriftart identisch ist." syntax="div { $(name): 0.58; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-size-adjust">
+
+    <entry _locID="font-size-adjust_none" _locAttrData="description" value="none" description="Die X-Höhe der Schriftart wird nicht beibehalten."/>
+  </CssProperty>
+
+  <CssProperty _locID="font" _locAttrData="description" version="1.0" restriction="font" type="font-weight, font-style, font-variant, font-size" description="Kurzschreibweise zum Festlegen von 'font-style', 'font-variant', 'font-weight', 'font-size', 'line-height' und 'font-family' am selben Ort im Stylesheet. Die Syntax dieser Eigenschaft basiert auf einer herkömmlichen typografischen Kurzschreibweise, mit der mehrere Schriftarteigenschaften festgelegt werden." syntax="body { $(name): bold 12px arial, verdana; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font">
+
+    <entry _locID="font_caption" _locAttrData="description" value="caption" version="3.0" description="Die Schriftart für beschriftete Steuerelemente ((z.B. Schaltflächen, Dropdownlisten usw.)."/>
+    <entry _locID="font_icon" _locAttrData="description" value="icon" version="3.0" description="Die zur Beschriftung von Symbolen verwendete Schriftart."/>
+    <entry _locID="font_menu" _locAttrData="description" value="menu" version="3.0" description="Die in Menüs verwendete Schriftart (z.B. Dropdownmenüs und Menülisten)."/>
+    <entry _locID="font_message-box" _locAttrData="description" value="message-box" version="3.0" description="Die in Dialogfeldern verwendete Schriftart."/>
+    <entry _locID="font_small-caption" _locAttrData="description" value="small-caption" version="3.0" description="Die zur Beschriftung kleiner Steuerelemente verwendete Schriftart."/>
+    <entry _locID="font_status-bar" _locAttrData="description" value="status-bar" version="3.0" description="Die in Fensterstatusleisten verwendete Schriftart."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-feature-settings" _locAttrData="description" version="3.0" browsers="IE10" restriction="string, integer" description="Diese Eigenschaft ermöglicht die systemnahe Steuerung der OpenType-Schriftarteigenschaften. Sie eröffnet den Zugang zu Schriftarteigenschaften, die weniger stark verbreitet sind, in einigen Fällen jedoch wertvolle Dienste leisten." syntax="body { $(name): 'hwid'; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-feature-settings">
+
+    <entry _locID="font-feature-settings-normal" _locAttrData="description" value="normal" version="3.0" description="Die Glyphenersetzung oder -positionierung ändert sich nicht."/>
+    <entry value="on" browsers="none"/>
+    <entry value="off" browsers="none"/>
+    <entry value="&quot;dlig&quot;"/>
+    <entry value="&quot;smcp&quot;"/>
+    <entry value="&quot;c2cs&quot;"/>
+    <entry value="&quot;liga&quot;"/>
+    <entry value="&quot;lnum&quot;"/>
+    <entry value="&quot;onum&quot;"/>
+    <entry value="&quot;tnum&quot;"/>
+    <entry value="&quot;kern&quot;"/>
+    <entry value="&quot;swsh&quot;"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-kerning" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Kerning ist die kontextabhängige Anpassung der Abstände zwischen Glyphen. Die Eigenschaft wird zur Steuerung des metrischen Kernings verwendet, das auf den in der Schriftart enthaltenen Anpassungsdaten basiert." syntax="body { $(name): normal; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-kerning">
+
+      <entry value="auto"/>
+      <entry value="normal"/>
+      <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-language-override" _locAttrData="description" version="3.0" browsers="none" restriction="string" description="Der Wert 'normal' impliziert, dass beim Rendering mit OpenType-Schriftarten die Dokumentsprache verwendet wird, um das OpenType-Sprachsystem abzuleiten, über das beim Renderingvorgang sprachspezifische Funktionen ausgewählt werden." syntax="body { $(name): 'SRB'; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-language-override-prop">
+
+    <entry _locID="font-language-override_normal" _locAttrData="description" value="normal" description="Impliziert, dass beim Rendering mit OpenType-Schriftarten die Dokumentsprache verwendet wird, um das OpenType-Sprachsystem abzuleiten, über das beim Renderingvorgang sprachspezifische Funktionen ausgewählt werden."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-synthesis-weight" _locAttrData="description" _version="4.0" restriction="enum" description="Über diese Eigenschaft wird gesteuert, ob Benutzer-Agents befugt sind, Schriftarten mit Fettformatierung nachzubilden, wenn in einer Schriftartfamilie keine entsprechende Schriftart enthalten ist." syntax="html:lang(ar) { $(font-synthesis-weight): none; }" standard-reference="https://drafts.csswg.org/css-fonts-4/#font-synthesis-weight">
+
+    <entry value="auto" _locID="font-synthesis-weight_auto" _locAttrData="description" description="Die Nachbildung von Schriftarten mit Fettformatierung ist zulässig."/>
+    <entry value="none" _locID="font-synthesis-weight_none" _locAttrData="description" description="Die Nachbildung von Schriftarten mit Fettformatierung ist nicht zulässig."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-synthesis-style" _locAttrData="description" _version="4.0" restriction="enum" description="Über diese Eigenschaft wird gesteuert, ob Benutzer-Agents befugt sind, Schriftarten mit Schrägstellung nachzubilden, wenn in einer Schriftartfamilie keine entsprechende Schriftart enthalten ist." syntax="html:lang(ar) { $(font-synthesis-style): none; }" standard-reference="https://drafts.csswg.org/css-fonts-4/#font-synthesis-style">
+
+    <entry value="auto" _locID="font-synthesis-style_auto" _locAttrData="description" description="Die Nachbildung von Schriftarten mit Schrägstellung ist zulässig."/>
+    <entry value="none" _locID="font-synthesis-style_none" _locAttrData="description" description="Die Nachbildung von Schriftarten mit Schrägstellung ist nicht zulässig."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-synthesis-small-caps" _locAttrData="description" _version="4.0" restriction="enum" description="Über diese Eigenschaft wird gesteuert, ob Benutzer-Agents befugt sind, Schriftarten mit Kapitälchen nachzubilden, wenn in einer Schriftartfamilie keine entsprechende Schriftart enthalten ist." syntax="html:lang(ar) { $(font-synthesis-small-caps): none; }" standard-reference="https://drafts.csswg.org/css-fonts-4/#font-synthesis-small-caps">
+
+    <entry value="auto" _locID="font-synthesis-small-caps_auto" _locAttrData="description" description="Die Nachbildung von Schriftarten mit Kapitälchen ist zulässig."/>
+    <entry value="none" _locID="font-synthesis-small-caps_none" _locAttrData="description" description="Die Nachbildung von Schriftarten mit Kapitälchen ist nicht zulässig."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-synthesis" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Über diese Eigenschaft wird gesteuert, ob Benutzer-Agents befugt sind, fette oder schräg gestellte Schriftarten nachzubilden, wenn in einer Schriftartfamilie keine entsprechende Schriftart enthalten ist." syntax="html:lang(ar) { $(name): none; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-synthesis">
+
+    <entry _locID="font-synthesis_none" _locAttrData="description" value="none" description="Lässt keine nachgebildeten Schriftarten zu."/>
+    <entry value="style"/>
+    <entry value="weight"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-alternates" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Für ein bestimmtes Zeichen können Schriftarten eine Vielzahl alternativer Glyphen zusätzlich zur Standardglyphe dieses Zeichens bereitstellen. Mithilfe dieser Eigenschaft wird die Auswahl dieser alternativen Glyphen gesteuert." syntax="h2 { $(name): styleset(3,5); }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-variant-alternates">
+
+    <entry value="normal"/>
+    <entry _locID="font-variant-alternates_stylistic" _locAttrData="description" value="stylistic()" description="Aktiviert die Anzeige stilistischer Varianten."/>
+    <entry _locID="font-variant-alternates_contextual" _locAttrData="description" value="contextual" description="Aktiviert die Anzeige kontextabhängiger Varianten."/>
+    <entry _locID="font-variant-alternates_no-contextual" _locAttrData="description" value="no-contextual" description="Deaktiviert die Anzeige kontextabhängiger Varianten."/>
+    <entry _locID="font-variant-alternates_historical-forms" _locAttrData="description" value="historical-forms" description="Aktiviert die Anzeige historischer Formen."/>
+    <entry _locID="font-variant-alternates_styleset" _locAttrData="description" value="styleset()" description="Aktiviert die Anzeige mit stilistischen Variationen."/>
+    <entry _locID="font-variant-alternates_character-variant" _locAttrData="description" value="character-variant()" description="Aktiviert die Anzeige bestimmter Zeichenvarianten."/>
+    <entry _locID="font-variant-alternates_swash" _locAttrData="description" value="swash()" description="Aktiviert die Anzeige von Glyphen in Schwungschrift."/>
+    <entry _locID="font-variant-alternates_ornaments" _locAttrData="description" value="ornaments()" description="Aktiviert die Ersetzung von Standardglyphen durch Ornamente, falls mit der Schriftart bereitgestellt."/>
+    <entry _locID="font-variant-alternates_annotation" _locAttrData="description" value="annotation()" description="Aktiviert die Anzeige alternativer Anmerkungsformate."/>
+    <entry _locID="font-variant-alternates_ruby" _locAttrData="description" value="ruby" description="Aktiviert die Anzeige von Ruby-Glyphen. Durch diesen Wert werden nur Glyphen zur Verwendung in Ruby-Text ausgewählt, er wirkt sich nicht auf die Skalierung von Schriftarten aus."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-caps" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Ermöglicht die Steuerung von Großbuchstaben." syntax="p { $(name): titling-caps; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-caps-prop">
+
+    <entry value="normal"/>
+    <entry _locID="font-variant-caps_small-caps" _locAttrData="description" value="small-caps" description="Ermöglicht die Anzeige von Kapitälchen. Glyphen in Form von Kapitälchen verwenden normalerweise Großbuchstaben, sind jedoch so hoch wie Kleinbuchstaben."/>
+    <entry _locID="font-variant-caps_all-small-caps" _locAttrData="description" value="all-small-caps" description="Ermöglicht die Anzeige von Kapitälchen sowohl für Groß- als auch für Kleinbuchstaben."/>
+    <entry _locID="font-variant-caps_petite-caps" _locAttrData="description" value="petite-caps" description="Ermöglicht die Anzeige kleiner Kapitälchen."/>
+    <entry _locID="font-variant-caps_all-petite-caps" _locAttrData="description" value="all-petite-caps" description="Ermöglicht die Anzeige kleiner Kapitälchen sowohl für Groß- als auch für Kleinbuchstaben."/>
+    <entry _locID="font-variant-caps_titling-caps" _locAttrData="description" value="titling-caps" description="Ermöglicht die Darstellung von Versalien."/>
+    <entry _locID="font-variant-caps_unicase" _locAttrData="description" value="unicase" description="Ermöglicht die Anzeige einer Mischung aus Kapitälchen für Großbuchstaben und normalen Kleinbuchstaben."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-east-asian" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Ermöglicht die Steuerung der Glyphenersetzung und die Positionierung in ostasiatischem Text." syntax="mark { $(name): normal; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-east-asian-prop">
+
+    <entry value="normal"/>
+    <entry _locID="font-variant-east-asian_hojo-kanji" _locAttrData="description" value="hojo-kanji" description="Ermöglicht die Darstellung von Hojo-Kanji-Schriftarten."/>
+    <entry _locID="font-variant-east-asian_jis78" _locAttrData="description" value="jis78" description="Ermöglicht die Darstellung von JIS78-Schriftarten."/>
+    <entry _locID="font-variant-east-asian_jis83" _locAttrData="description" value="jis83" description="Ermöglicht die Darstellung von JIS83-Schriftarten."/>
+    <entry _locID="font-variant-east-asian_jis90" _locAttrData="description" value="jis90" description="Ermöglicht die Darstellung von JIS90-Schriftarten."/>
+    <entry _locID="font-variant-east-asian_jis04" _locAttrData="description" value="jis04" description="Ermöglicht die Darstellung von JIS04-Schriftarten."/>
+    <entry _locID="font-variant-east-asian_nlckanji" _locAttrData="description" value="nlckanji" description="Ermöglicht die Darstellung von NLC-Kanji-Schriftarten."/>
+    <entry _locID="font-variant-east-asian_" _locAttrData="description" value="simplified" description="Ermöglicht die Darstellung vereinfachter Schriftarten."/>
+    <entry _locID="font-variant-east-asian_traditional" _locAttrData="description" value="traditional" description="Ermöglicht die Darstellung traditioneller Schriftarten."/>
+    <entry _locID="font-variant-east-asian_full-width" _locAttrData="description" value="full-width" description="Ermöglicht die Darstellung von Varianten voller Breite."/>
+    <entry _locID="font-variant-east-asian_proportional-width" _locAttrData="description" value="proportional-width" description="Ermöglicht die Darstellung von Varianten in Proportionalschrift."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-ligatures" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Steuert, ob Ligaturen aktiviert oder deaktiviert sein sollen. Der Wert 'normal' impliziert, dass die von der Schriftart festgelegten Standardwerte verwendet werden." syntax="div { $(name): historical-ligatures; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-ligatures-prop">
+
+    <entry _locID="font-variant-ligatures_normal" _locAttrData="description" value="normal" description="Impliziert, dass die von der Schriftart festgelegten Standardwerte verwendet werden."/>
+    <entry _locID="font-variant-ligatures_common-ligatures" _locAttrData="description" value="common-ligatures" description="Aktiviert die Anzeige allgemeiner Ligaturen."/>
+    <entry _locID="font-variant-ligatures_no-common-ligatures" _locAttrData="description" value="no-common-ligatures" description="Deaktiviert die Anzeige allgemeiner Ligaturen."/>
+    <entry _locID="font-variant-ligatures_additional-ligatures" _locAttrData="description" value="additional-ligatures" description="Aktiviert die Anzeige zusätzlicher Ligaturen."/>
+    <entry _locID="font-variant-ligatures_no-additional-ligatures" _locAttrData="description" value="no-additional-ligatures" description="Deaktiviert die Anzeige zusätzlicher Ligaturen."/>
+    <entry _locID="font-variant-ligatures_historical-ligatures" _locAttrData="description" value="historical-ligatures" description="Aktiviert die Anzeige historischer Ligaturen."/>
+    <entry _locID="font-variant-ligatures_no-historical-ligatures" _locAttrData="description" value="no-historical-ligatures" description="Deaktiviert die Anzeige historischer Ligaturen."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-numeric" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Ermöglicht die Steuerung numerischer Formate." syntax=".amount { $(name): oldstyle-nums diagonal-fractions; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-numeric-prop">
+
+    <entry value="normal"/>
+    <entry _locID="font-variant-numeric_lining-nums" _locAttrData="description" value="lining-nums" description="Ermöglicht die Anzeige von gleich hohen Ziffern."/>
+    <entry _locID="font-variant-numeric_oldstyle-nums" _locAttrData="description" value="oldstyle-nums" description="Ermöglicht die Anzeige von Mediävalziffern."/>
+    <entry _locID="font-variant-numeric_proportional-nums" _locAttrData="description" value="proportional-nums" description="Ermöglicht die Anzeige von Proportionalziffern."/>
+    <entry _locID="font-variant-numeric_tabular-nums" _locAttrData="description" value="tabular-nums" description="Ermöglicht die Anzeige von Tabellenziffern."/>
+    <entry _locID="font-variant-numeric_diagonal-fractions" _locAttrData="description" value="diagonal-fractions" description="Ermöglicht die Anzeige von Bruchzahlen mit diagonalen Bruchstrichen."/>
+    <entry _locID="font-variant-numeric_stacked-fractions" _locAttrData="description" value="stacked-fractions" description="Ermöglicht die Anzeige von Bruchzahlen mit horizontalen Bruchstrichen."/>
+    <entry _locID="font-variant-numeric_slashed-zero" _locAttrData="description" value="slashed-zero" description="Ermöglicht die Anzeige von durchgestrichenen Nullen."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-position" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Gibt die vertikale Position an." syntax="sub { $(name): subscript; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-variant-position">
+
+    <entry value="normal"/>
+    <entry value="sub"/>
+    <entry value="super"/>
+    <entry value="ordinal"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-display" _locAttrData="description" version="4.0" browsers="C64,FF59,S11" restriction="enum" description="Legt basierend darauf, ob die Schriftart heruntergeladen wurde und verwendungsbereit ist, die Anzeige der Schriftart fest." syntax="sub { $(name): auto; }" standard-reference="http://www.w3.org/TR/css-fonts-4/#font-display-desc">
+
+    <entry _locID="font-display-auto" _locAttrData="description" value="auto" description="Die Richtlinie zur Schriftartanzeige wurde durch den Benutzer-Agent definiert."/>
+    <entry _locID="font-display-block" _locAttrData="description" value="block" description="Hierdurch wird für die Schriftart ein kurzer block-Zeitraum und ein unendlicher swap-Zeitraum festgelegt."/>
+    <entry _locID="font-display-swap" _locAttrData="description" value="swap" description="Hierdurch wird für die Schriftart ein extrem kurzer block-Zeitraum und ein unendlicher swap-Zeitraum festgelegt."/>
+    <entry _locID="font-display-fallback" _locAttrData="description" value="fallback" description="Hierdurch wird für die Schriftart ein extrem kurzer block-Zeitraum und ein kurzer swap-Zeitraum festgelegt."/>
+    <entry _locID="font-display-optional" _locAttrData="description" value="optional" description="Hierdurch wird für die Schriftart ein extrem kurzer block-Zeitraum und ein swap-Zeitraum von 0 Sekunden festgelegt."/>
+  </CssProperty>
+
+  <CssProperty _locID="font-optical-sizing" _locAttrData="description" version="4.0" restriction="enum" description="Hiermit wird festgelegt, ob der Benutzer-Agent Glyphen basierend auf optischer Größe ändern darf." syntax="span { $(name): none; }" standard-reference="https://drafts.csswg.org/css-fonts-4/#font-optical-sizing-def">
+
+    <entry _locID="font-optical-sizing_auto" _locAttrData="description" value="auto" description="Der Benutzer-Agent darf die Form von Glyphen basierend auf dem Schriftgrad und der Pixeldichte des Bildschirms ändern."/>
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variation-settings" _locAttrData="description" version="4.0" restriction="enum, string" description="Diese Eigenschaft bietet grundlegende Steuerungsfunktionen für OpenType- oder TrueType-Schriftartvariationen." syntax="span { $(name): wght 700; }" standard-reference="https://drafts.csswg.org/css-fonts-4/#font-variation-settings-def">
+
+    <entry value="normal"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-palette" _locAttrData="description" _version="4.0" restriction="enum, string" description="Ändert die Farbpalette basierend auf Metadaten, die in der Schriftart eingebettet sind, oder basierend auf benutzerdefinierten Regeln, die in einer @font-palette-values-Regel definiert sind." syntax=".banner { font-palette: dark; }" standard-reference="https://drafts.csswg.org/css-fonts-4/#font-palette-prop">
+
+    <entry value="none"/>
+    <entry value="normal"/>
+    <entry value="light"/>
+    <entry value="dark"/>
+  </CssProperty>
+
+  <CssAtDirective name="font-palette-values" _locID="font-palette-values-rule" _locAttrData="description" version="4.0" include-root-properties="false" include-root-directives="false" syntax="@font-palette-values Purplish { &lt;font-description&gt; }" description="Hiermit wird eine Farbpalette definiert und einer bestimmten Schriftart zugeordnet. So kann ein Webautor beliebige Farben für die Verwendung in einer Farbschriftart auswählen und ist nicht auf die bereits vorhandenen Paletten innerhalb der Schriftartdateien angewiesen." standard-reference="https://drafts.csswg.org/css-fonts-4/#font-palette-values">
+
+    <CssProperty ref="font-family"/>
+
+    <CssProperty name="base-palette" _locID="font-palette-values-base-palette" _locAttrData="description" _version="4.0" restriction="string, integer" description="Der Deskriptor der Basispalette akzeptiert entweder einen (nullbasierten) Index der numerischen Palette oder eine Zeichenfolge, die einer benannten Palette entspricht." syntax="@font-palette-values Purplish { base-palette: 'Dark'; }" standard-reference="https://drafts.csswg.org/css-fonts-4/#base-palette-desc"/>
+    <CssProperty name="override-color" _locID="font-palette-values-override-color" _locAttrData="description" _version="4.0" description="Dieser Deskriptor überschreibt eine Farbe der ursprünglichen, durch diese @font-palette-values-Regel dargestellten Farbpalette oder fügt dieser eine Farbe hinzu." syntax="@font-palette-values Purplish { override-color: 'Outline' rgb(204, 51, 153); }" standard-reference="https://drafts.csswg.org/css-fonts-4/#override-color"/>
+  </CssAtDirective>
+
+  <CssProperty _locID="font-variant-emoji" _locAttrData="description" _version="4.0" restriction="enum" description="Mit dieser Eigenschaft können Webautoren auswählen, ob bestimmte Emoji-Codepunkte als Emoji oder in Textform dargestellt werden." syntax="&lt;div style=&quot;font-family: 'Custom Emoji'; font-variant-emoji: emoji;&quot;&gt;&amp;#x1F6CB;&lt;/div&gt;" standard-reference="https://drafts.csswg.org/css-fonts-4/#font-variant-emoji-prop">
+
+    <entry value="auto" _locID="font-variant-emoji-auto" _locAttrData="description" description="Benutzer-Agents können auswählen, ob sie einen zur Darstellung verwendeten Codepunkt (Presentation Participating Code Point) im Emoji- oder Textformat zeichnen möchten."/>
+    <entry value="text" _locID="font-variant-emoji-text" _locAttrData="description" description="Codepunkte werden so gerendert, als würde U+FE0E VARIATION SELECTOR-15 an jeden zur Darstellung verwendeten Codepunkt (Presentation Participating Code Point) angefügt."/>
+    <entry value="emoji" _locID="font-variant-emoji-emoji" _locAttrData="description" description="Codepunkte werden so gerendert, als würde U+FE0F VARIATION SELECTOR-16 an jeden zur Darstellung verwendeten Codepunkt (Presentation Participating Code Point) angefügt."/>
+    <entry value="unicode" _locID="font-variant-emoji-unicode" _locAttrData="description" description="Codepunkte werden gemäß UTS51 als &quot;emoji-default&quot;, &quot;text-default&quot; oder &quot;text-only&quot; gerendert, abhängig von den Werten der Eigenschaften &quot;Emoji&quot; und &quot;Emoji_Presentation&quot; für jeden zur Darstellung verwendeten Codepunkt (Presentation Participating Code Point)."/>
+  </CssProperty>
+
+</CssModule>

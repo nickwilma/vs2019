@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Basic User Interface" standard-reference="http://www.w3.org/TR/css3-ui/" status="WD" pub-date="2015-04-09">
+
+    <CssPseudo name=":default" _locID="default-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3,IE10,O10,S5" syntax="input:default { color: red; }" description="Der ':default'-Selektor gilt für ein oder mehrere UI-Elemente, die in einer Gruppe ähnlicher Elemente als Standard gelten. Diese Auswahl bezieht sich normalerweise auf Kontextmenüoptionen, Schaltflächen und Auswahllisten/-menüs." standard-reference="http://www.w3.org/TR/css3-ui/#pseudo-default"/>
+
+    <CssPseudo name=":valid" _locID="valid-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF4,IE10,O10,S5" syntax="input:valid { border-color: green; }" description="Ein Element ist ':valid' oder ':invalid'. wenn es gemäß der Datenüberprüfungssemantik einer anderen Spezifikation gültig bzw. ungültig ist." standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+    <CssPseudo name=":invalid" _locID="invalid-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF4,IE10,O10,S5" syntax="input:invalid { border-color: red; }" description="Ein Element ist ':valid' oder ':invalid'. wenn es gemäß der Datenüberprüfungssemantik einer anderen Spezifikation gültig bzw. ungültig ist." standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+    <CssPseudo name=":in-range" _locID="in-range-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF10,IE10,O9.6,S5.1" syntax="input:in-range { color: green; }" description="Die innerhalb und außerhalb des gültigen Bereichs liegenden Pseudoklassen sollten zusammen mit dem Attribut 'min' oder 'max' verwendet werden, unabhängig davon, ob es sich um eine Bereichseingabe, ein Zahlenfeld oder ein anderes Element handelt, das diese Attribute akzeptiert." standard-reference="http://www.w3.org/TR/css3-ui/#in-range"/>
+
+    <CssPseudo name=":out-of-range" _locID="out-of-range-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF10,IE10,O9.6,S5.1" syntax="input:out-of-range { color: red; }" description="Die innerhalb und außerhalb des gültigen Bereichs liegenden Pseudoklassen sollten zusammen mit dem Attribut 'min' oder 'max' verwendet werden, unabhängig davon, ob es sich um eine Bereichseingabe, ein Zahlenfeld oder ein anderes Element handelt, das diese Attribute akzeptiert." standard-reference="http://www.w3.org/TR/css3-ui/#out-of-range"/>
+
+    <CssPseudo name=":required" _locID="required-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF4,IE10,O10,S5" syntax="input:optional { color: yellow; }" description="Ein Formularelement ist ':required' oder ':optional', wenn ein Wert für dieses Element zwingend oder optional eingegeben werden muss, bevor das zugehörige Formular übermittelt werden kann. Andere Elemente als Formularelemente sind weder erforderlich noch optional." standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+    <CssPseudo name=":optional" _locID="optional-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF4,IE10,O10,S5" syntax="input:optional { color: yellow; }" description="Ein Formularelement ist ':required' oder ':optional', wenn ein Wert für dieses Element zwingend oder optional eingegeben werden muss, bevor das zugehörige Formular übermittelt werden kann. Andere Elemente als Formularelemente sind weder erforderlich noch optional." standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+    <CssPseudo name=":read-only" _locID="read-only-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF10,IE10,O9,S4" syntax="input:read-only { margin: auto; }" description="Ein Element, dessen Inhalt nicht vom Benutzer geändert werden kann, ist ':read-only'. Elemente, deren Inhalt vom Benutzer geändert werden kann (z.B. Texteingabefelder), werden als Felder mit ':read-write'-Zugriff angesehen. In normalen Dokumenten sind die meisten Elemente ':read-only'." standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+    <CssPseudo name=":read-write" _locID="read-write-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF10,IE10,O9,S4" syntax="input:read-write { margin: auto 2px; }" description="Ein Element, dessen Inhalt nicht vom Benutzer geändert werden kann, ist ':read-only'. Elemente, deren Inhalt vom Benutzer geändert werden kann (z.B. Texteingabefelder), werden als Felder mit ':read-write'-Zugriff angesehen. In normalen Dokumenten sind die meisten Elemente ':read-only'." standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+    <CssPseudo name=":indeterminate" _locID="indeterminate-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.6,IE9,O10.6,S3" syntax="input:indeterminate { margin: auto 2px; }" description="Die ':indeterminate'-Pseudoklasse gilt für UI-Elemente, deren Wert sich in einem unbestimmten Zustand befindet." standard-reference="http://www.w3.org/TR/css3-ui/#indeterminate"/>
+
+    <CssProperty _locID="outline-color" _locAttrData="description" ref="color" version="2.0" browsers="C,FF1.5,IE8,O8,S1.2" description="Die Farbe der Kontur." standard-reference="http://www.w3.org/TR/css3-ui/#outline-color0">
+
+        <entry _locID="outline-color_invert" _locAttrData="description" value="invert" description="Von 'Invert' wird die Farbinversion der Pixel auf dem Bildschirm erwartet. Dies ist eine verbreitete Methode, um sicherzustellen, dass der Fokusrahmen unabhängig vom Farbhintergrund sichtbar ist."/>
+    </CssProperty>
+
+    <CssProperty _locID="outline-style" _locAttrData="description" ref="border-style" version="2.0" browsers="C,FF1.5,IE8,O8,S1.2" description="Der Stil der Kontur." standard-reference="http://www.w3.org/TR/css3-ui/#outline-style0">
+        <entry version="3.0" value="auto"/>
+    </CssProperty>
+
+    <CssProperty _locID="outline" _locAttrData="description" ref="border" version="2.0" browsers="C,FF1.5,IE8,O8,S1.2" description="Kurzschreibweise zur Festlegung der drei Eigenschaften 'outline-style', 'outline-width' und 'outline-color'." standard-reference="http://www.w3.org/TR/css3-ui/#outline0">
+
+        <entry version="3.0" value="auto"/>
+        <entry _locID="outline_invert" _locAttrData="description" value="invert" description="Von &quot;Invert&quot; wird die Farbinversion der Pixel auf dem Bildschirm erwartet. Dies ist eine verbreitete Methode, um sicherzustellen, dass der Fokusrahmen unabhängig von der Farbe des Hintergrunds sichtbar ist."/>
+    </CssProperty>
+
+    <CssProperty _locID="outline-width" _locAttrData="description" ref="border-width" version="2.0" browsers="C,FF1.5,IE8,O8,S1.2" description="Die Breite der Kontur." standard-reference="http://www.w3.org/TR/css3-ui/#outline-width0"/>
+
+    <CssProperty _locID="outline-offset" _locAttrData="description" version="3.0" browsers="C,FF1.5,O9.5,S1.2" restriction="length" syntax="article { $(name): 15px; }" description="Die Breite der Kontur." standard-reference="http://www.w3.org/TR/css3-ui/#outline-offset0">
+    </CssProperty>
+
+    <CssProperty _locID="resize" _locAttrData="description" version="3.0" browsers="C,FF4,S3" restriction="enum" syntax="div { $(name): both; }" description="Ermöglicht die Steuerung der Darstellung und Funktion des Größenänderungsmechanismus (z.B. eines Größenänderungsfelds oder Widgets) für das Element. Bezieht sich auf Elemente, deren 'overflow'-Eigenschaft auf einen anderen Wert als 'visible' festgelegt wurde." standard-reference="http://www.w3.org/TR/css3-ui/#resize0">
+
+        <entry _locID="resize_none" _locAttrData="description" value="none" description="Der Benutzer-Agent stellt keinen Größenänderungsmechanismus für das Element bereit, und der Benutzer erhält keine direkte Bearbeitungsmöglichkeit zum Ändern der Elementgröße."/>
+        <entry _locID="resize_both" _locAttrData="description" value="both" description="Der Benutzer-Agent stellt einen bidirektionalen Größenänderungsmechanismus bereit, über den der Benutzer sowohl die Höhe als auch die Breite des Elements anpassen kann."/>
+        <entry _locID="resize_horizontal" _locAttrData="description" value="horizontal" description="Der Benutzer-Agent stellt einen unidirektionalen Mechanismus zur Änderung der horizontalen Größe bereit, über den der Benutzer nur die Breite des Elements anpassen kann."/>
+        <entry _locID="resize_vertical" _locAttrData="description" value="vertical" description="Der Benutzer-Agent stellt einen unidirektionalen Mechanismus zur Änderung der vertikalen Größe bereit, über den der Benutzer nur die Höhe des Elements anpassen kann."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-overflow" _locAttrData="description" version="3.0" browsers="C,FF9,IE5.5,O11.6,S2" restriction="enum, string" syntax="span { $(name): ellipsis; }" description="Der Text kann beispielsweise überlaufen, wenn ein Umbruch verhindert wird." standard-reference="http://www.w3.org/TR/css3-ui/#text-overflow0">
+
+        <entry _locID="text-overflow_clip" _locAttrData="description" value="clip" description="Schneidet den überlaufenden Inlineinhalt ab. Möglicherweise werden Zeichen nur teilweise dargestellt."/>
+        <entry _locID="text-overflow_ellipsis" _locAttrData="description" value="ellipsis" description="Zeigt ein Auslassungszeichen (U+2026) an, um auf abgeschnittenen Inlineinhalt hinzuweisen."/>
+    </CssProperty>
+
+    <CssProperty _locID="icon" _locAttrData="description" version="3.0" browsers="none" restriction="url" type="url" description="Gibt dem Autor die Möglichkeit, ein beliebiges Element durch ein Symbol darzustellen. Das Elementsymbol wird erst verwendet/angezeigt, wenn die 'content'-Eigenschaft auf den Wert 'icon' festgelegt wird." syntax="auto | 'uri' [, 'uri']*" standard-reference="http://www.w3.org/TR/css3-ui/#icon">
+
+        <entry _locID="icon_auto" _locAttrData="description" value="auto" description="Verwendet ein vom Benutzer-Agent bereitgestelltes generisches Standardsymbol."/>
+    </CssProperty>
+
+    <CssProperty _locID="cursor" _locAttrData="description" version="2.0" restriction="url, number" description="Ermöglicht die Steuerung der Cursordarstellung in einem Element." syntax="nav { $(name): pointer; }" standard-reference="http://www.w3.org/TR/css3-ui/#cursor0">
+
+        <entry _locID="cursor_auto" _locAttrData="description" value="auto" description="Der Benutzer-Agent bestimmt, welcher Cursor je nach Kontext angezeigt werden soll."/>
+        <entry _locID="cursor_default" _locAttrData="description" value="default" description="Der plattformabhängige Standardcursor, der häufig als Pfeil dargestellt wird."/>
+        <entry _locID="cursor_none" _locAttrData="description" value="none" version="3.0" description="Für das Element wird kein Cursor dargestellt."/>
+        <entry _locID="cursor_context-menu" _locAttrData="description" value="context-menu" version="3.0" description="Ein Kontextmenü ist unterhalb des Cursors für das Objekt verfügbar. Wird häufig als Pfeil mit einer kleinen menüähnlichen Grafik dargestellt."/>
+        <entry _locID="cursor_help" _locAttrData="description" value="help" description="Hilfe ist unterhalb des Cursors für das Objekt verfügbar. Wird häufig als Fragezeichen oder Sprechblase dargestellt."/>
+        <entry _locID="cursor_pointer" _locAttrData="description" value="pointer" description="Der Cursor ist ein Zeiger, der einen Link angibt."/>
+        <entry _locID="cursor_progress" _locAttrData="description" value="progress" version="2.1" description="Eine Statusanzeige. Obwohl das Programm einige Verarbeitungsschritte ausführt, unterscheidet sich dieser Cursor von einem normalen Wartecursor, weil der Benutzer weiterhin mit dem Programm interagieren kann. Wird häufig als sich drehender Ball oder als Pfeil mit einer Uhr oder einer Sanduhr dargestellt."/>
+        <entry _locID="cursor_wait" _locAttrData="description" value="wait" description="Gibt an, dass das Programm beschäftigt ist und der Benutzer warten soll. Wird häufig als Uhr oder Sanduhr dargestellt."/>
+        <entry _locID="cursor_cell" _locAttrData="description" value="cell" version="3.0" description="Gibt an, dass eine Zelle oder eine Gruppe von Zellen ausgewählt werden kann. Wird häufig als dickes Pluszeichen mit einem Punkt in der Mitte dargestellt."/>
+        <entry _locID="cursor_crosshair" _locAttrData="description" value="crosshair" description="Ein einfaches Fadenkreuz (d.h., kurze Liniensegmente, die einem '+'-Zeichen ähneln). Wird häufig verwendet, um einen Auswahlmodus für eine zweidimensionale Bitmapgrafik anzuzeigen."/>
+        <entry _locID="cursor_text" _locAttrData="description" value="text" description="Zeigt an, dass Text ausgewählt werden kann. Wird häufig als vertikaler I-Balken dargestellt."/>
+        <entry _locID="cursor_vertical-text" _locAttrData="description" value="vertical-text" version="3.0" description="Zeigt vertikalen Text an, der ausgewählt werden kann. Wird häufig als horizontaler I-Balken dargestellt."/>
+        <entry _locID="cursor_alias" _locAttrData="description" value="alias" version="3.0" description="Zeigt einen Alias von bzw. eine Verknüpfung zu einem Element an, das erstellt werden soll. Wird häufig als Pfeil mit einem kleinen gekrümmten Pfeil angezeigt."/>
+        <entry _locID="cursor_copy" _locAttrData="description" value="copy" version="3.0" description="Zeigt an, das ein Element kopiert werden muss. Wird häufig als Pfeil mit einem kleinen Pluszeichen angezeigt."/>
+        <entry _locID="cursor_move" _locAttrData="description" value="move" description="Gibt an, dass ein Element verschoben werden muss."/>
+        <entry _locID="cursor_no-drop" _locAttrData="description" value="no-drop" version="3.0" description="Zeigt an, dass das gezogene Element nicht an der aktuellen Cursorposition abgelegt werden kann. Wird häufig als Hand oder Zeiger mit einem kleinen durchgestrichenen Kreis dargestellt."/>
+        <entry _locID="cursor_not-allowed" _locAttrData="description" value="not-allowed" version="3.0" description="Zeigt an, dass die angeforderte Aktion nicht ausgeführt wird. Wird häufig als durchgestrichener Kreis dargestellt."/>
+        <entry _locID="cursor_not-grab" _locAttrData="description" value="grab" version="3.0" description="Gibt an, dass ein Element erfasst (gezogen, um verschoben zu werden) werden kann. Wird häufig als der Handrücken einer geöffneten Hand gerendert."/>
+        <entry _locID="cursor_not-grabbing" _locAttrData="description" value="grabbing" version="3.0" description="Gibt an, dass ein Element aktuell erfasst (gezogen, um verschoben zu werden) wird. Wird häufig als der Handrücken einer Hand mit geschlossenen Fingern größtenteils außerhalb des Sichtfelds gerendert."/>
+        <entry _locID="cursor_e-resize" _locAttrData="description" value="e-resize" description="Gibt an, dass der rechte Rand (Ost) verschoben werden muss."/>
+        <entry _locID="cursor_n-resize" _locAttrData="description" value="n-resize" description="Gibt an, dass der obere Rand (Nord) verschoben werden muss."/>
+        <entry _locID="cursor_ne-resize" _locAttrData="description" value="ne-resize" description="Gibt an, dass der Verschiebevorgang in der oberen rechten Ecke (Nordost) startet."/>
+        <entry _locID="cursor_nw-resize" _locAttrData="description" value="nw-resize" description="Gibt an, dass der Verschiebevorgang in der oberen linken Ecke (Nordwest) startet."/>
+        <entry _locID="cursor_s-resize" _locAttrData="description" value="s-resize" description="Gibt an, dass der untere Rand (Süd) verschoben werden muss."/>
+        <entry _locID="cursor_se-resize" _locAttrData="description" value="se-resize" description="Gibt an, dass der Verschiebevorgang in der unteren rechten Ecke (Südost) startet."/>
+        <entry _locID="cursor_sw-resize" _locAttrData="description" value="sw-resize" description="Gibt an, dass der Verschiebevorgang in der unteren linken Ecke (Südwest) startet."/>
+        <entry _locID="cursor_w-resize" _locAttrData="description" value="w-resize" description="Gibt an, dass der linke Rand (West) verschoben werden muss."/>
+        <entry _locID="cursor_ew-resize" _locAttrData="description" value="ew-resize" version="3.0" description="Gibt einen bidirektionalen Größenänderungscursor (Ostwest) an."/>
+        <entry _locID="cursor_ns-resize" _locAttrData="description" value="ns-resize" version="3.0" description="Gibt einen bidirektionalen Cursor (Nordsüd) an."/>
+        <entry _locID="cursor_nesw-resize" _locAttrData="description" value="nesw-resize" version="3.0" description="Gibt einen bidirektionalen Cursor (Nordost/Südwest) an."/>
+        <entry _locID="cursor_nwse-resize" _locAttrData="description" value="nwse-resize" version="3.0" description="Gibt einen bidirektionalen Cursor (Nordwest/Südost) an."/>
+        <entry _locID="cursor_col-resize" _locAttrData="description" value="col-resize" version="3.0" description="Gibt an, dass die Größe des Elements oder der Spalte horizontal geändert werden kann. Wird häufig in Form eines nach links und rechts weisenden Doppelpfeils mit einem vertikalen Balken in der Mitte angezeigt."/>
+        <entry _locID="cursor_row-resize" _locAttrData="description" value="row-resize" version="3.0" description="Gibt an, dass die Größe des Elements oder der Zeile vertikal geändert werden kann. Wird häufig in Form eines nach oben und unten weisenden Doppelpfeils mit einem horizontalen Balken in der Mitte angezeigt."/>
+        <entry _locID="cursor_all-scroll" _locAttrData="description" value="all-scroll" version="3.0" description="Gibt an, dass für ein Element ein Bildlauf in eine beliebige Richtung ausgeführt werden kann. Wird häufig in Form von Pfeilen dargestellt, die nach oben, unten, links und rechts weisen und in der Mitte einen Punkt aufweisen."/>
+        <entry _locID="cursor_zoom-in" _locAttrData="description" value="zoom-in" version="3.0" browsers="none" description="Gibt an, dass ein Element vergrößert bzw. verkleinert (gezoomt) werden kann und wird häufig als Lupe gerendert, in deren Glas ein '+' für die Vergrößerungsfunktion bzw. ein '-' für die Verkleinerungsfunktion dargestellt ist."/>
+        <entry _locID="cursor_zoom-out" _locAttrData="description" value="zoom-out" version="3.0" browsers="none" description="Gibt an, dass ein Element vergrößert bzw. verkleinert (gezoomt) werden kann und wird häufig als Lupe gerendert, in deren Glas ein '+' für die Vergrößerungsfunktion bzw. ein '-' für die Verkleinerungsfunktion dargestellt ist."/>
+    </CssProperty>
+
+    <CssProperty _locID="nav-index" _locAttrData="description" version="3.0" browsers="O9.5" restriction="number" description="Stellt eine von der Eingabemethode unabhängige Möglichkeit bereit, die sequenzielle Navigationsfolge (auch bekannt als 'Tabulatorreihenfolge') anzugeben." syntax="auto | 'number'" standard-reference="http://www.w3.org/TR/css3-ui/#nav-index0">
+
+        <entry value="auto" description="The element's sequential navigation order is assigned automatically by the user agent."/>
+    </CssProperty>
+
+    <CssProperty _locID="nav-up" _locAttrData="description" version="3.0" browsers="O9.5" restriction="enum, identifier, string" description="Bietet eine Möglichkeit zur Steuerung der richtungsbasierten Fokusnavigation." syntax="auto | 'id' [ current | root | 'target-name' ]?" standard-reference="http://www.w3.org/TR/css3-ui/#nav-up">
+
+        <entry value="auto" description="The user agent automatically determines which element to navigate the focus to in response to directional navigational input."/>
+        <entry value="current"/>
+        <entry value="root"/>
+    </CssProperty>
+
+    <CssProperty _locID="nav-left" ref="nav-up" browsers="O9.5"/>
+    <CssProperty _locID="nav-right" ref="nav-up" browsers="O9.5"/>
+    <CssProperty _locID="nav-down" ref="nav-up" browsers="O9.5"/>
+
+    <CssProperty name="content">
+        <entry value="icon" description="The (pseudo-)element is replaced in its entirety by the resource referenced by its 'icon' property, and treated as a replaced element."/>
+    </CssProperty>
+
+    <CssPropertyValue type="imemodes">
+        <entry value="auto" description="No change is made to the current input method editor state. This is the default."/>
+        <entry value="normal" description="The IME state should be normal; this value can be used in a user style sheet to override the page setting."/>
+        <entry value="active" description="The input method editor is initially active; text entry is performed using it unless the user specifically dismisses it."/>
+        <entry value="inactive" description="The input method editor is initially inactive, but the user may activate it if they wish."/>
+        <entry value="disabled" description="The input method editor is disabled and may not be activated by the user."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="ime-mode" _locAttrData="description" version="3.0" browsers="FF3,IE5" type="imemodes" restriction="enum" syntax="body { $(name): active; }" description="Steuert den Zustand des Eingabemethoden-Editors für Textfelder." standard-reference="http://www.w3.org/TR/css3-ui/#ime-mode"/>
+
+    <CssProperty _locID="user-select" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="div { $(name): text; }" description="Steuert die Darstellung einer Auswahl." standard-reference="http://css-infos.net/property/-webkit-user-select">
+
+        <entry value="none"/>
+        <entry value="text"/>
+        <entry value="toggle"/>
+        <entry value="element"/>
+        <entry value="elements"/>
+        <entry value="all"/>
+    </CssProperty>
+
+</CssModule>

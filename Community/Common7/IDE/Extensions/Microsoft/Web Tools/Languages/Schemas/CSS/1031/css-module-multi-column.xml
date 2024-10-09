@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Multi-column" standard-reference="http://www.w3.org/TR/css3-multicol/" status="CR" pub-date="2011-04-12">
+
+  <CssProperty _locID="column-width" _locAttrData="description" version="3.0" browsers="IE10,O11.5,S9" restriction="length, enum" syntax="div { $(name): 100px; }" description="Diese Eigenschaft beschreibt die Spaltenbreite in Elementen, die mehrere Spalten umfassen." standard-reference="http://www.w3.org/TR/css3-multicol/#column-width">
+
+    <entry _locID="column-width_auto" _locAttrData="description" value="auto" description="Die Breite hängt von den Werten anderer Eigenschaften ab."/>
+  </CssProperty>
+
+  <CssProperty _locID="column-count" _locAttrData="description" version="3.0" browsers="IE10,O11.5,S9" restriction="integer, enum" syntax="div { $(name): 3; }" description="Beschreibt die optimale Anzahl von Spalten, in die der Inhalt des Elements fließt." standard-reference="http://www.w3.org/TR/css3-multicol/#column-count">
+
+    <entry _locID="column-count_auto" _locAttrData="description" value="auto" description="Bestimmt die Spaltenanzahl anhand der 'column-width'-Eigenschaft und der Elementbreite."/>
+  </CssProperty>
+
+  <CssProperty _locID="columns" _locAttrData="description" version="3.0" browsers="IE10,O11.5,S9" restriction="length, integer, enum" syntax="div { $(name): 100px 3; }" description="Kurzschreibweise zum Festlegen sowohl von 'column-width' als auch von 'column-count'." standard-reference="http://www.w3.org/TR/css3-multicol/#columns0">
+
+    <entry _locID="columns_auto" _locAttrData="description" value="auto" description="Die Breite hängt von den Werten anderer Eigenschaften ab."/>
+  </CssProperty>
+
+  <CssProperty _locID="column-gap" _locAttrData="description" version="3.0" browsers="IE10,O11.5,S9" restriction="length, enum" syntax="div { $(name): 10px; }" description="Legt den Abstand zwischen Spalten fest. Wenn eine Spaltentrennlinie zwischen Spalten festgelegt wurde, wird sie in der Mitte angezeigt." standard-reference="http://www.w3.org/TR/css3-multicol/#column-gap0">
+
+    <entry _locID="column-gap_normal" _locAttrData="description" value="normal" description="Ist spezifisch für den Benutzer-Agent und entspricht normalerweise '1em'."/>
+  </CssProperty>
+
+  <CssProperty _locID="column-rule-color" _locAttrData="description" version="3.0" browsers="IE10,O11.5,S9" type="color" restriction="color" syntax="div { $(name): #ff0; }" description="Legt die Farbe der Spaltentrennlinie fest." standard-reference="http://www.w3.org/TR/css3-multicol/#column-rule-color"/>
+
+  <CssProperty _locID="column-rule-style" _locAttrData="description" version="3.0" browsers="IE10,O11.5,S9" type="border-style" restriction="enum" syntax="div { $(name): solid; }" description="Legt den Stil der Trennlinie zwischen Spalten eines Elements fest." standard-reference="http://www.w3.org/TR/css3-multicol/#column-rule-style"/>
+
+  <CssProperty _locID="column-rule-width" _locAttrData="description" version="3.0" browsers="IE10,O11.5,S9" type="border-width" restriction="length, enum" syntax="div { $(name): 3px; }" description="Legt die Breite der Trennlinie zwischen Spalten fest. Negative Werte sind nicht zulässig." standard-reference="http://www.w3.org/TR/css3-multicol/#column-rule-width"/>
+
+  <CssProperty _locID="column-rule" _locAttrData="description" ref="border" version="3.0" browsers="IE10,O11.6" description="Diese Eigenschaft ist eine Kurzschreibweise, um 'column-rule-width', 'column-rule-style' und 'column-rule-color' am selben Ort im Stylesheet festzulegen. Ausgelassene Werte werden auf ihre Ausgangswerte festgelegt." standard-reference="http://www.w3.org/TR/css3-multicol/#column-rule0"/>
+
+  <CssProperty _locID="break-inside" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="enum" syntax="h2 { $(name): avoid-column; }" description="Beschreibt das Verhalten von Seiten-/Spaltenumbrüchen innerhalb der erzeugten Box." standard-reference="http://www.w3.org/TR/css3-multicol/#column-breaks">
+
+    <entry _locID="break-inside_auto" _locAttrData="description" value="auto" description="Ein Seiten-/Spaltenumbruch innerhalb der erzeugten Box wird weder erzwungen noch unterbunden."/>
+    <entry _locID="break-inside_avoid" _locAttrData="description" value="avoid" description="Vermeidet einen Seiten-/Spaltenumbruch innerhalb der erzeugten Box."/>
+    <entry _locID="break-inside_avoid-page" _locAttrData="description" value="avoid-page" description="Vermeidet einen Seitenumbruch innerhalb der erzeugten Box."/>
+    <entry _locID="break-inside_avoid-column" _locAttrData="description" value="avoid-column" description="Vermeidet einen Spaltenumbruch innerhalb der erzeugten Box."/>
+  </CssProperty>
+
+  <CssProperty _locID="break-before" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="enum" syntax="h2 { $(name): column; }" description="Beschreibt das Verhalten von Seiten-/Spaltenumbrüchen vor der erzeugten Box." standard-reference="http://www.w3.org/TR/css3-multicol/#column-breaks">
+
+    <entry _locID="break-before_auto" _locAttrData="description" value="auto" description="Ein Seilten-/Spaltenumbruch vor/hinter der erzeugten Box wird weder erzwungen noch unterbunden."/>
+    <entry _locID="break-before_always" _locAttrData="description" value="always" description="Erzwingt immer einen Seitenumbruch vor/hinter der erzeugten Box."/>
+    <entry _locID="break-before_avoid" _locAttrData="description" value="avoid" description="Vermeidet einen Seiten-/Spaltenumbruch vor/hinter der erzeugten Box."/>
+    <entry _locID="break-before_left" _locAttrData="description" value="left" description="Erzwingt einen oder zwei Seitenumbrüche vor/hinter der erzeugten Box, sodass die nächste Seite als linke Seite formatiert wird."/>
+    <entry _locID="break-before_right" _locAttrData="description" value="right" description="Erzwingt einen oder zwei Seitenumbrüche vor/hinter der erzeugten Box, sodass die nächste Seite als rechte Seite formatiert wird."/>
+    <entry _locID="break-before_page" _locAttrData="description" value="page" description="Erzwingt immer einen Seitenumbruch vor/hinter der erzeugten Box."/>
+    <entry _locID="break-before_column" _locAttrData="description" value="column" description="Erzwingt immer einen Spaltenumbruch vor/hinter der erzeugten Box."/>
+    <entry _locID="break-before_avoid-page" _locAttrData="description" value="avoid-page" description="Vermeidet einen Seitenumbruch vor/hinter der erzeugten Box."/>
+    <entry _locID="break-before_avoid-column" _locAttrData="description" value="avoid-column" description="Vermeidet einen Spaltenumbruch vor/hinter der erzeugten Box."/>
+  </CssProperty>
+
+  <CssProperty _locID="break-after" browsers="IE10,O11.5" ref="break-before"/>
+
+  <CssProperty _locID="column-span" _locAttrData="description" version="3.0" browsers="IE10,O11.5,S9" restriction="enum" syntax="article { $(name): all; }" description="Beschreibt das Verhalten von Seiten-/Spaltenumbrüchen hinter der erzeugten Box." standard-reference="http://www.w3.org/TR/css3-multicol/#column-span0">
+
+    <entry _locID="column-span_none" _locAttrData="description" value="none" description="Das Element erstreckt sich nicht über mehrere Spalten."/>
+    <entry _locID="column-span_all" _locAttrData="description" value="all" description="Das Element erstreckt sich auf alle Spalten. Inhalt mit normaler Fließrichtung, der vor dem Element angezeigt wird, wird automatisch gleichmäßig auf alle Spalten vor dem Element verteilt."/>
+  </CssProperty>
+
+  <CssProperty _locID="column-fill" _locAttrData="description" version="3.0" browsers="IE10,O11.5,S9" restriction="enum" syntax="article { $(name): balance; }" description="Bei Endlosmedien wird diese Eigenschaft nur verwendet, wenn die Länge der Spalten beschränkt ist. Andernfalls wird der Inhalt automatisch gleichmäßig auf die Spalten verteilt." standard-reference="http://www.w3.org/TR/css3-multicol/#filling-columns">
+
+    <entry _locID="column-fill_auto" _locAttrData="description" value="auto" description="Füllt die Spalten nacheinander auf."/>
+    <entry _locID="column-fill_balance" _locAttrData="description" value="balance" description="Verteilt den Inhalt, falls möglich, gleichmäßig auf die Spalten."/>
+  </CssProperty>
+
+</CssModule>

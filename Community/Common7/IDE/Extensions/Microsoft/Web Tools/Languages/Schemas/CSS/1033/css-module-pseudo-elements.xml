@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2021: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2019 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Pseudo-elements" standard-reference="https://www.w3.org/TR/css-pseudo-4/" status="WD" pub-date="2020-12-31">
+
+  <CssPseudo name="::first-line"
+             _locID="first-line-pseudo-element"
+             _locAttrData="description"
+             syntax="p::first-line { color: green; }"
+             description="The ::first-line pseudo-element describes the contents of the first formatted line of an element."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#first-line-pseudo" />
+
+  <CssPseudo name="::first-letter"
+             _locID="first-letter-pseudo-element"
+             _locAttrData="description"
+             syntax="p::first-letter { font-size: 200%; }"
+             description="The ::first-letter pseudo-element represents the first letter of an element, if it is not preceded by any other content (such as images or inline tables) on its line."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#first-letter-pseudo" />
+
+  <CssPseudo name="::selection"
+             _locID="selection-pseudo-element"
+             _locAttrData="description"
+             syntax="p::selection { color: red; }"
+             description="The ::selection selector matches the portion of an element that is selected by a user. Only a few CSS properties can be applied to ::selection: color, background-color, cursor, caret-color, text-decoration, text-shadow, stroke-color, fill-color, and stroke-width."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#selectordef-selection" />
+
+  <CssPseudo name="::target-text"
+             _locID="target-text-pseudo-element"
+             _locAttrData="description"
+             syntax="p::target-text { color: red; }"
+             description="The ::target-text selector matches text directly targetted by the document URL’s fragment, if any. Only a few CSS properties can be applied to ::target-text: color, background-color, cursor, caret-color, text-decoration, text-shadow, stroke-color, fill-color, and stroke-width."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#selectordef-target-text" />
+
+  <CssPseudo name="::spelling-error"
+             _locID="spelling-error-pseudo-element"
+             _locAttrData="description"
+             syntax="p::spelling-error { color: red; }"
+             description="The ::spelling-error selector matches a portion of text that has been flagged by the user agent as misspelled. Only a few CSS properties can be applied to ::spelling-error: color, background-color, cursor, caret-color, text-decoration, text-shadow, stroke-color, fill-color, and stroke-width."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#selectordef-spelling-error" />
+
+  <CssPseudo name="::grammar-error"
+             _locID="grammar-error-pseudo-element"
+             _locAttrData="description"
+             version="3.0"
+             browsers="C,FF4,IE9,O9.5,S1.1"
+             syntax="p::grammar-error { color: red; }"
+             description="The ::grammar-error selector matches a portion of text that has been flagged by the user agent as grammatically incorrect. Only a few CSS properties can be applied to ::grammar-error: color, background-color, cursor, caret-color, text-decoration, text-shadow, stroke-color, fill-color, and stroke-width."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#selectordef-grammar-error"/>
+
+  <CssPseudo name="::before"
+             _locID="before-pseudo-element"
+             _locAttrData="description"
+             syntax="div::before { content: 'abc'; }"
+             description="Pseudo-element is used to insert content immediately before the content of an element (or other pseudo-element). The 'content' property is used to specify the content to insert."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#selectordef-before" />
+
+  <CssPseudo name="::after"
+             _locID="after-pseudo-element"
+             _locAttrData="description"
+             syntax="div::after { content: 'abc'; }"
+             description="Pseudo-element is used to insert content immediately after the content of an element (or other pseudo-element). The 'content' property is used to specify the content to insert."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#selectordef-after" />
+
+  <CssPseudo name="::marker"
+             _locID="marker-selector"
+             _locAttrData="description"
+             syntax="li::marker { content: counter(item, decimal) '.'; }"
+             description="For a '::marker' pseudo-element to be generated, its superior parent must have a computed 'display' value of 'list-item'."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#marker-pseudo" />
+
+  <CssPseudo name="::placeholder"
+             _locID="placeholder-selector"
+             _locAttrData="description"
+             syntax="::placeholder { color: blue; }"
+             description="Represents placeholder text in an input field: text that represents the input and provides a hint to the user on how to fill out the form."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#placeholder-pseudo" />
+
+  <CssPseudo name="::file-selector-button"
+             _locID="file-selector-button-selector"
+             _locAttrData="description"
+             syntax="::file-selector-button { border: 3px solid green; }"
+             description="Targets the &lt;button&gt; inside an &lt;input&gt; element with type=file, if the user agent renders such a button."
+             standard-reference="https://www.w3.org/TR/css-pseudo-4/#file-selector-button-pseudo" />
+
+</CssModule>

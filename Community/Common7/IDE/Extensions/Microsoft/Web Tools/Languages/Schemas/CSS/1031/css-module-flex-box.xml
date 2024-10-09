@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Flexible Box Layout" standard-reference="http://www.w3.org/TR/css-flexbox-1/" status="LC" pub-date="2014-09-25">
+
+  <CssPropertyValue type="flexdirections">
+    <entry value="row"/>
+    <entry value="row-reverse"/>
+    <entry value="column"/>
+    <entry value="column-reverse"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="flexwraps">
+    <entry _locID="flex-wrap_nowrap" _locAttrData="description" value="nowrap" description="Die Flexbox umfasst eine Zeile. Die 'cross-start'-Richtung entspricht der 'start'-Richtung bzw. 'before'-Richtung des aktuellen Schreibmodus, je nachdem, welche sich auf der Querachse befindet, und die 'cross-end'-Richtung verläuft entgegengesetzt zur 'cross-start'-Richtung."/>
+    <entry _locID="flex-pack_wrap" _locAttrData="description" value="wrap" description="Die Flexbox umfasst mehrere Zeilen. Die 'cross-start'-Richtung entspricht der 'start'-Richtung bzw. 'before'-Richtung des aktuellen Schreibmodus, je nachdem, welche sich auf der Querachse befindet, und die 'cross-end'-Richtung verläuft entgegengesetzt zur 'cross-start'-Richtung."/>
+    <entry _locID="flex-pack_wrap-reverse" _locAttrData="description" value="wrap-reverse" description="Entspricht 'wrap', außer dass die 'cross-start'-Richtung und die 'cross-end'-Richtung vertauscht werden."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="align-content" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" restriction="enum" syntax="p { $(name): flex-start; }" description="Richtet die Zeilen eines Flexcontainers innerhalb des Flexcontainers aus, wenn zusätzlicher Platz auf der Querachse vorhanden ist, vergleichbar mit der Ausrichtung einzelner Elemente auf der Hauptachse mittels 'justify-content'." standard-reference="http://www.w3.org/TR/css-flexbox-1/#align-content">
+
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+    <entry value="center"/>
+    <entry value="space-between"/>
+    <entry value="space-around"/>
+    <entry value="stretch"/>
+  </CssProperty>
+
+  <CssProperty _locID="align-items" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" restriction="enum" syntax="p { $(name): flex-start; }" description="Flexelemente können auf der Querachse zur aktuellen Zeile des Flexcontainers ausgerichtet werden, vergleichbar mit 'justify-content', aber senkrecht dazu." standard-reference="http://www.w3.org/TR/css-flexbox-1/#align-items">
+
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+    <entry value="center"/>
+    <entry value="baseline"/>
+    <entry value="stretch"/>
+  </CssProperty>
+
+  <CssProperty _locID="align-self" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" restriction="enum" syntax="p { $(name): flex-start; }" description="Flexelemente können auf der Querachse zur aktuellen Zeile des Flexcontainers ausgerichtet werden, vergleichbar mit 'justify-content', aber senkrecht dazu." standard-reference="http://www.w3.org/TR/css-flexbox-1/#align-items">
+
+    <entry value="auto"/>
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+    <entry value="center"/>
+    <entry value="baseline"/>
+    <entry value="stretch"/>
+  </CssProperty>
+
+  <CssProperty _locID="display">
+    <entry value="flex"/>
+    <entry value="inline-flex"/>
+  </CssProperty>
+
+  <CssProperty _locID="flex-basis" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" restriction="length, number, percentage" syntax="p { $(name): 30%; }" description="Die Eigenschaft 'flex-basis' legt die Flexbasis fest. Negative Werte sind ungültig." standard-reference="http://www.w3.org/TR/css-flexbox-1/#flex-basis-propdef">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="flex-direction" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" type="flexdirections" restriction="enum" syntax="div { $(name): column; }" description="Gibt an, wie Flexboxelemente in der Flexbox platziert werden." standard-reference="http://www.w3.org/TR/css-flexbox-1/#flex-direction"/>
+
+  <CssProperty _locID="flex-flow" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" type="flexwraps, flexdirections" restriction="enum" syntax="div { $(name): column wrap; }" description="Gibt an, wie Flexboxelemente in der Flexbox platziert werden." standard-reference="http://www.w3.org/TR/css-flexbox-1/#flex-flow"/>
+
+  <CssProperty _locID="flex-grow" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" restriction="number" syntax="p { $(name): 4; }" description="Die Eigenschaft 'flex-grow' legt den Flex-Vergrößerungsfaktor fest. Negative Werte sind ungültig." standard-reference="http://www.w3.org/TR/css-flexbox-1/#flex-grow"/>
+
+  <CssProperty _locID="flex-shrink" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" restriction="number" syntax="p { $(name): 4; }" description="Die Eigenschaft 'flex-shrink' legt den Flex-Verkleinerungsfaktor fest. Negative Werte sind ungültig." standard-reference="http://www.w3.org/TR/css-flexbox-1/#flex-shrink"/>
+
+  <CssProperty _locID="flex" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" restriction="length, number, percentage" syntax="p { $(name): 0 1 auto; }" description="Gibt die Komponenten einer flexiblen Länge an: den Flex-Vergrößerungsfaktor und den Flex-Verkleinerungsfaktor sowie die Flexbasis." standard-reference="http://www.w3.org/TR/css-flexbox-1/#flex">
+
+    <entry value="auto"/>
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="flex-wrap" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" type="flexwraps" restriction="enum" syntax="div { $(name): nowrap; }" description="Steuert, ob die Flexbox einzeilig oder mehrzeilig ist, und legt die Richtung der Querachse fest. Dadurch wird die Richtung beim Stapeln neuer Zeilen und die Bedeutung der Eigenschaften 'flex-align', 'flex-item-align' und 'flex-line-pack' beeinflusst." standard-reference="http://www.w3.org/TR/css-flexbox-1/#flex-wrap"/>
+
+  <CssProperty _locID="justify-content" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" restriction="enum" syntax="p { $(name): flex-start; }" description="Richtet die Zeilen eines Flexcontainers innerhalb des Flexcontainers aus, wenn zusätzlicher Platz auf der Querachse vorhanden ist, vergleichbar mit der Ausrichtung einzelner Elemente auf der Hauptachse mittels 'justify-content'." standard-reference="http://www.w3.org/TR/css-flexbox-1/#align-content">
+
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+    <entry value="center"/>
+    <entry value="space-between"/>
+    <entry value="space-around"/>
+  </CssProperty>
+
+    <CssProperty _locID="initial-letter" _locAttrData="description" version="3.0" browsers="none" restriction="number, integer, enum" syntax="body { $(name): 3; }" description="Gibt den Stil für Anfangsbuchstaben vom Typ &quot;dropped&quot;, &quot;raised&quot; und &quot;sunken&quot; an." standard-reference="http://www.w3.org/TR/css-inline/#propdef-initial-letter">
+
+        <entry value="normal"/>
+    </CssProperty>
+
+    <CssProperty _locID="initial-letter-align" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="body { $(name): ideographic; }" description="Gibt die Ausrichtungspunkte an, die für die Größe und Position eines Anfangsbuchstabens verwendet werden." standard-reference="http://www.w3.org/TR/css-inline/#propdef-initial-letter-align">
+
+        <entry value="aplabetic"/>
+        <entry value="ideagraphic"/>
+        <entry value="hebrew"/>
+        <entry value="hanging"/>
+        <entry value="border-box"/>
+    </CssProperty>
+
+    <CssProperty _locID="initial-letter-wrap" _locAttrData="description" version="3.0" browsers="none" restriction="length, percentage, enum" syntax="body { $(name): first; }" description="Gibt an, ob Zeilen, auf die ein Anfangsbuchstabe Auswirkungen besitzt, gekürzt werden, um sie an die rechteckige Form des Anfangsbuchstabens anzupassen, oder die Kontur der Endkante des Glyphenumrisses verwendet wird." standard-reference="http://www.w3.org/TR/css-inline/#propdef-initial-letter-align">
+
+        <entry value="none"/>
+        <entry value="first"/>
+        <entry value="all"/>
+        <entry value="grid"/>
+    </CssProperty>
+
+  <CssProperty _locID="order" _locAttrData="description" version="3.0" browsers="C,FF,IE11,O12.1" restriction="integer" syntax="p { $(name): -1; }" description="Kontrolliert die Reihenfolge, in der Flexelemente innerhalb ihres Flexcontainers erscheinen, indem sie Ordnungsgruppen zugewiesen werden." standard-reference="http://www.w3.org/TR/css-flexbox-1/#order"/>
+
+</CssModule>

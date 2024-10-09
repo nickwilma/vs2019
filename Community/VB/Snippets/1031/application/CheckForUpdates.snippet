@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Auf Updates der ClickOnce-Anwendung überprüfen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Überprüft, ob Updates für die Anwendung zum Herunterladen zur Verfügung stehen.</Description>
+      <Shortcut>appCheckUp</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Deployment.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Deployment</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[If My.Application.IsNetworkDeployed() 
+	If My.Application.Deployment.CheckForUpdate() Then
+
+ 	End If
+
+End If]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

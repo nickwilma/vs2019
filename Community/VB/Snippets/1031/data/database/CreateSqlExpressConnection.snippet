@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Lokale SQLConnection zu SQL Express erstellen</Title>
+      <Author>Microsoft</Author>
+      <Description>Erstellt eine SQL-Verbindung für die Bereitstellung von Ersetzungen für die typischen Verbindungsname/Verbindungswert-Paare für eine SQL Express-Verbindung mithilfe von User Instance=True.</Description>
+      <Shortcut>adoCreateSqlExpConn</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Xml.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Data</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Data.SqlClient</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>dataBaseName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Dateinamen der Datenbank.</ToolTip>
+          <Default>Northwind</Default>
+        </Literal>
+        <Literal>
+          <ID>dataDirectory</ID>
+          <Type>String</Type>
+          <ToolTip>Um das DataDirectory, das als Teil von ClickOnce erstellt wurde, zu verwenden, verwenden Sie das |DataDirectory|-Makro.  Ersetzen Sie dieses Makro, wenn Sie ein bestimmtes Verzeichnis verwenden möchten.</ToolTip>
+          <Default>|DataDirectory|</Default>
+        </Literal>
+        <Object>
+          <ID>conn</ID>
+          <Type>SqlConnection</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Verbindungsobjekts.</ToolTip>
+          <Default>conn</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $conn$ As New SqlConnection()
+$conn$.ConnectionString = "Data Source=.\SQLEXPRESS;AttachDbFilename=$dataDirectory$\$dataBaseName$.mdf;Integrated Security=True;User Instance=True"
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

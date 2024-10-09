@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Speech" standard-reference="http://www.w3.org/TR/css3-speech/" status="WD" pub-date="2012-03-20">
+
+  <CssProperty _locID="voice-volume" _locAttrData="description" version="3.0" browsers="none" restriction="volume, enum" description="Bezieht sich auf die Amplitude der Waveformausgabe eines Sprachsynthesizers. Der Wert 'silent' ist '0' und 'x-loud' ist '100' zugeordnet. Die Zuordnung anderer Werte zu numerischen Lautstärkestufen ist von der Implementierung abhängig und kann je nach Sprachsynthesizer variieren." syntax="&lt;decibel&gt; | silent | x-soft | soft | medium | loud | x-loud" standard-reference="http://www.w3.org/TR/css3-speech/#voice-volume">
+
+    <entry _locID="voice-volume_silent" _locAttrData="description" value="silent" description="Der Lautstärkewert 0."/>
+    <entry value="x-soft"/>
+    <entry value="soft"/>
+    <entry value="medium"/>
+    <entry value="loud"/>
+    <entry _locID="voice-volume_x-loud" _locAttrData="description" value="x-loud" description="Der Lautstärkewert 100."/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-balance" _locAttrData="description" version="3.0" browsers="none" restriction="number(-100-100)" description="Bezieht sich auf die Balance zwischen linkem und rechtem Kanal und setzt die Verwendung eines 2-Kanal-Modells (stereo) voraus, das von Audiogeräten in der Regel unterstützt wird." syntax="&lt;number&gt; | left | center | right | leftwards | rightwards" standard-reference="http://www.w3.org/TR/css3-speech/#voice-balance">
+
+    <entry _locID="voice-balance_left" _locAttrData="description" value="left" description="Identisch mit -100."/>
+    <entry _locID="voice-balance_center" _locAttrData="description" value="center" description="Identisch mit '0'."/>
+    <entry _locID="voice-balance_right" _locAttrData="description" value="right" description="Identisch mit '100' oder '+100."/>
+    <entry _locID="voice-balance_leftwards" _locAttrData="description" value="leftwards" description="Verschiebt den Sound relativ zum geerbten 'voice-balance'-Wert nach links. Genauer gesagt wird 20 vom geerbten Wert subtrahiert und der resultierende Wert an '-100' und '100' angeheftet."/>
+    <entry _locID="voice-balance_rightwards" _locAttrData="description" value="rightwards" description="Verschiebt den Sound relativ zum geerbten 'voice-balance'-Wert nach rechts. Genauer gesagt wird 20 zum geerbten Wert hinzu addiert und der resultierende Wert an '-100' und '100' angeheftet."/>
+  </CssProperty>
+
+  <CssProperty _locID="speak" _locAttrData="description" version="2.0" browsers="none" restriction="enum" syntax="div { $(name): normal; }" description="Gibt an, ob Text akustisch ausgegeben wird, und falls ja, auf welche Weise dies geschieht." standard-reference="http://www.w3.org/TR/css3-speech/#speak">
+
+    <entry _locID="speak_none" _locAttrData="description" value="none" description="Unterdrückt die akustische Ausgabe, sodass das Element keine Renderingzeit erfordert."/>
+    <entry _locID="speak_normal" _locAttrData="description" value="normal" description="Verwendet sprachabhängige Ausspracheregeln für die Ausgabe eines Elements und seiner untergeordneten Elemente. Satzzeichen werden nicht mitgesprochen, aber auf natürliche Weise wiedergegeben, z.B. in Form von Sprechpausen."/>
+    <entry _locID="speak_spell-out" _locAttrData="description" value="spell-out" description="Buchstabiert den Text Zeichen für Zeichen (hilfreich bei Akronymen und Abkürzungen). Bei Sprachen mit wenigen Akzentzeichen können Akzente zugunsten alternativer Schreibweisen ohne Akzent ausgelassen werden."/>
+    <entry _locID="speak_digits" _locAttrData="description" value="digits" description="Gibt Zahlen Ziffer für Ziffer wieder, z.B. wird 'zwölf' als 'eins zwei' ausgegeben und '31' als 'drei eins'."/>
+    <entry _locID="speak_literal-punctuation" _locAttrData="description" value="literal-punctuation" description="Ähnlich wie 'normal', Satzzeichen wie Semikolons, Klammern usw. werden jedoch mitgesprochen."/>
+    <entry _locID="speak_no-punctuation" _locAttrData="description" value="no-punctuation" description="Ähnlich wie 'normal', aber Satzzeichen werden weder gesprochen noch in Form von Sprechpausen wiedergegeben."/>
+  </CssProperty>
+
+  <CssPropertyValue type="pause-time">
+    <entry value="none"/>
+    <entry value="x-weak"/>
+    <entry value="weak"/>
+    <entry value="medium"/>
+    <entry value="strong"/>
+    <entry value="x-strong"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="pause-before" _locAttrData="description" version="2.0" browsers="none" restriction="time" description="Gibt eine Pause oder prosodische Grenze an, die vor einem Element beachtet werden soll, bzw. vor einem 'cue-before', falls diese Eigenschaft angegeben ist. Die Werte geben die prosodische Stärke der Sprechpause an." syntax="h3 { $(name): 30ms; }" standard-reference="http://www.w3.org/TR/css3-speech/#pause-before" type="pause-time"/>
+
+  <CssProperty _locID="pause-after" _locAttrData="description" ref="pause-before" version="2.0" browsers="none" description="Gibt eine Pause oder prosodische Grenze an, die nach einem Element beachtet werden soll, bzw. nach einem 'cue-before', falls diese Eigenschaft angegeben ist. Die Werte geben die prosodische Stärke der Sprechpause an." standard-reference="http://www.w3.org/TR/css3-speech/#pause-after"/>
+
+  <CssProperty _locID="pause" _locAttrData="description" version="2.0" browsers="none" restriction="time, enum" type="pause-time" description="Kurzschreibweise zum Festlegen von 'pause-before' und 'pause-after'. Wenn zwei Werte angegeben sind, entspricht der erste Wert 'pause-before' und der zweite 'pause-after'. Wenn nur ein Wert angegeben ist, gilt dieser für beide Eigenschaften." syntax="h2 { $(name): 30ms 40ms; }" standard-reference="http://www.w3.org/TR/css3-speech/#pause"/>
+
+  <CssProperty _locID="rest-before" _locAttrData="description" version="3.0" browsers="none" type="pause-time" restriction="time" description="Gibt eine Sprechpause oder prosodische Grenze an, die vor dem Inhalt eines Elements beachtet werden soll." syntax="h3 { $(name): 4s; }" standard-reference="http://www.w3.org/TR/css3-speech/#rest-before"/>
+
+  <CssProperty _locID="rest-after" _locAttrData="description" ref="rest-before" description="Gibt eine Sprechpause oder prosodische Grenze an, die nach dem Inhalt eines Elements beachtet werden soll." standard-reference="http://www.w3.org/TR/css3-speech/#rest-after"/>
+
+  <CssProperty _locID="rest" _locAttrData="description" ref="rest-before" description="Kurzschreibweise zum Festlegen von 'rest-before' und 'rest-after'. Wenn zwei Werte angegeben sind, entspricht der erste Wert 'rest-before' und der zweite 'rest-after'. Wenn nur ein Wert angegeben ist, gilt dieser für beide Eigenschaften." standard-reference="http://www.w3.org/TR/css3-speech/#rest"/>
+
+  <CssProperty _locID="cue-before" _locAttrData="description" version="2.0" browsers="none" restriction="url, volume, enum" type="url" description="Akustiksymbole sind eine weitere Möglichkeit zur Unterscheidung semantischer Elemente. Die Signale können vor und/oder nach dem Element wiedergegeben werden, um es abzugrenzen." syntax="h1 { $(name): url(dong.wav) -3dB;}" standard-reference="http://www.w3.org/TR/css3-speech/#cue-before">
+
+    <entry _locID="cue-before_" _locAttrData="description" value="none" description="Es ist kein Akustiksymbol angegeben."/>
+    <entry _locID="cue-before_silent" _locAttrData="description" value="silent" description="Der Wert '0'."/>
+    <entry value="x-soft"/>
+    <entry value="soft"/>
+    <entry value="medium"/>
+    <entry value="loud"/>
+    <entry _locID="cue-before_x-loud" _locAttrData="description" value="x-loud" description="Der Wert '100'."/>
+  </CssProperty>
+
+  <CssProperty _locID="cue-after" ref="cue-before" standard-reference="http://www.w3.org/TR/css3-speech/#cue-after"/>
+
+  <CssProperty _locID="cue" _locAttrData="description" ref="cue-before" description="Kurzschreibweise zum Festlegen von 'cue-before' und 'cue-after'. Wenn zwei Werte angegeben sind, entspricht der erste Wert 'cue-before' und der zweite 'cue-after'. Wenn nur ein Wert angegeben ist, gilt dieser für beide Eigenschaften.." standard-reference="http://www.w3.org/TR/css3-speech/#cue"/>
+
+  <CssProperty _locID="voice-family" _locAttrData="description" version="2.0" browsers="none" restriction="number, string" syntax="[[&lt;specific-voice&gt; | &lt;generic-voice&gt; ],]* [&lt;specific-voice&gt; | &lt;generic-voice&gt; ]" description="Durch Trennzeichen getrennte Prioritätsliste der Namen von Stimmtypen (vgl. 'font-family')." standard-reference="http://www.w3.org/TR/css3-speech/#voice-family">
+
+    <entry _locID="voice-family_neutral" _locAttrData="description" value="neutral" description="Neutrale Stimme für 'generic-voice'."/>
+    <entry _locID="voice-family_male" _locAttrData="description" value="male" description="Männliche Stimme für 'generic-voice'."/>
+    <entry _locID="voice-family_female" _locAttrData="description" value="female" description="Weibliche Stimme für 'generic-voice'."/>
+
+    <entry value="child" description="Child voice for 'age'"/>
+    <entry value="young" description="Young person voice for 'age'"/>
+    <entry value="old" description="Old person voice for 'age'"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-rate" _locAttrData="description" version="3.0" browsers="none" restriction="percentage" description="Steuert die Sprechgeschwindigkeit. Die normale Geschwindigkeit einer Stimme hängt von der Sprache und dem Dialekt sowie von der Persönlichkeit des Sprechers ab." syntax="&lt;percentage&gt; | x-slow | slow | medium | fast | x-fast" standard-reference="http://www.w3.org/TR/css3-speech/#voice-rate">
+
+    <entry value="x-slow"/>
+    <entry value="slow"/>
+    <entry _locID="voice-rate_fast" _locAttrData="description" value="medium" description="Entspricht 100 %, der normalen Sprechgeschwindigkeit für diese Stimme."/>
+    <entry value="fast"/>
+    <entry value="x-fast"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-pitch" _locAttrData="description" version="3.0" browsers="none" restriction="percentage, number, frequency, semitones" syntax="h2 { $(name): absolute 30Hz; }" description="Gibt die durchschnittliche Tonhöhe (Frequenz) der Sprecherstimme an. Die durchschnittliche Tonhöhe einer Stimme hängt von der Stimmfamilie ab. Beispielsweise liegt die durchschnittliche Tonhöhe bei einer normalen männlichen Stimme bei etwa 120 Hz und bei einer weiblichen Stimme bei etwa 210 Hz." standard-reference="http://www.w3.org/TR/css3-speech/#voice-pitch">
+
+    <entry value="absolute"/>
+    <entry value="x-low"/>
+    <entry value="low"/>
+    <entry _locID="voice-pitch_medium" _locAttrData="description" value="medium" description="Entspricht 100 % und steht für eine normale Tonlage."/>
+    <entry value="high"/>
+    <entry value="x-high"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-range" _locAttrData="description" version="3.0" browsers="none" restriction="percentage, number, frequency, semitones" syntax="h2 { $(name): +10Hz; }" description="Gibt die Abweichung in der durchschnittlichen Tonhöhe an. Die menschliche Sprache weist Abweichungen im Tonfall und in der Tonhöhe auf; diese dienen dazu, eine zusätzliche Bedeutung oder Betonung zu vermitteln." standard-reference="http://www.w3.org/TR/css3-speech/#voice-props-voice-range">
+
+    <entry value="absolute"/>
+    <entry value="x-low"/>
+    <entry value="low"/>
+    <entry value="medium"/>
+    <entry value="high"/>
+    <entry value="x-high"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-stress" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="h2 { $(name): moderate; }" description="Gibt die anzuwendende Betonungsstärke an. Die Betonung ergibt sich aus einer Kombination folgender Faktoren: geänderte Tonhöhe, Timingwechsel, Abweichungen bei Lautstärke und anderen akustischen Merkmalen. Diese sind je nach Sprache unterschiedlich." standard-reference="http://www.w3.org/TR/css3-speech/#voice-stress">
+
+    <entry _locID="voice-stress_none" _locAttrData="description" value="none" description="Verhindert eine Betonung von Wörtern, die vom Synthesizer normalerweise betont werden."/>
+    <entry value="normal"/>
+    <entry value="moderate"/>
+    <entry value="strong"/>
+    <entry _locID="voice-stress_reduced" _locAttrData="description" value="reduced" description="Der Gegensatz zur Betonung eines Worts. Wenn beispielsweise die Betonung von 'Hör einmal' reduziert wird, lautet das gesprochene Ergebnis 'Hörmal'."/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-duration" _locAttrData="description" version="3.0" browsers="none" restriction="time" description="Autoren können festlegen, wie lange es dauern soll, den Inhalt des ausgewählten Elements auszugeben. Diese Eigenschaft überschreibt die 'voice-rate'-Eigenschaft." syntax="&lt;time&gt;" standard-reference="http://www.w3.org/TR/css3-speech/#voice-duration"/>
+
+  <CssProperty _locID="speak-as" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="div { $(name): spell-out; }" description="Legt auf Basis einer vordefinierten Werteliste fest, wie Text akustisch ausgegeben wird." standard-reference="http://www.w3.org/TR/css3-speech/#speak-as">
+
+    <entry _locID="speak-as_normal" _locAttrData="description" value="normal" description="Verwendet sprachabhängige Ausspracheregeln für die Wiedergabe des Elementinhalts."/>
+    <entry _locID="speak-as_spell-out" _locAttrData="description" value="spell-out" description="Buchstabiert den Text Buchstabe für Buchstabe (hilfreich für Akronyme und Abkürzungen)."/>
+    <entry _locID="speak-as_digits" _locAttrData="description" value="digits" description="Gibt Zahlen Ziffer für Ziffer wieder, z.B. wird 'zwölf' als 'eins zwei' ausgegeben und '31' als 'drei eins'."/>
+    <entry _locID="speak-as_literal-punctuation" _locAttrData="description" value="literal-punctuation" description="Satzzeichen wie Semikolons, Klammern usw. werden (Zeichen für Zeichen) mitgesprochen, anstatt natürliche Sprechpausen einzulegen."/>
+    <entry _locID="speak-as_no-punctuation" _locAttrData="description" value="no-punctuation" description="Satzzeichen werden nicht ausgegeben, weder gesprochen noch als Sprechpausen."/>
+  </CssProperty>
+
+  <CssProperty _locID="volume" _locAttrData="description" version="2.0" browsers="none" restriction="percentage, number" description="Die Lautstärke entspricht der mittleren Stärke der Waveform, d.h., eine hohe Tonlage mit der Lautstärke 50 kann leicht darüber liegen." syntax="&lt;number&gt; | &lt;percentage&gt; | silent | x-soft | soft | medium | loud | x-loud" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-volume">
+
+    <entry _locID="volume_silent" _locAttrData="description" value="silent" description="Überhaupt keine Tonausgabe. Der Wert '0' ist nicht gleichbedeutend mit 'silent'."/>
+    <entry _locID="volume_x-soft" _locAttrData="description" value="x-soft" description="Identisch mit '0'."/>
+    <entry _locID="volume_soft" _locAttrData="description" value="soft" description="Identisch mit '25'."/>
+    <entry _locID="volume_medium" _locAttrData="description" value="medium" description="Identisch mit '50'."/>
+    <entry _locID="volume_loud" _locAttrData="description" value="loud" description="Identisch mit '75'."/>
+    <entry _locID="volume_x-loud" _locAttrData="description" value="x-loud" description="Identisch mit '100'."/>
+  </CssProperty>
+
+  <CssProperty _locID="play-during" _locAttrData="description" version="2.0-2.1" browsers="none" restriction="url" type="url" description="Ein Hintergrundsound, der bei der Darstellung des Elementinhalts abgespielt werden soll." syntax="&lt;uri&gt; [ mix || repeat ]? | auto | none" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-play-during">
+
+    <entry _locID="play-during_mix" _locAttrData="description" value="mix" description="Der von der 'play-during'-Eigenschaft des übergeordneten Elements geerbte Sound wird weiter abgespielt und mit dem von &lt;uri&gt; angegebenen Sound vermischt."/>
+    <entry _locID="play-during_repeat" _locAttrData="description" value="repeat" description="Wenn der Sound zu kurz ist, wird er so lange wiederholt, wie die Ausgabe des ganzen Elements dauert. Andernfalls wird der Sound einmal wiedergegeben und die Wiedergabe dann beendet."/>
+    <entry _locID="play-during_auto" _locAttrData="description" value="auto" description="Der Sound des übergeordneten Elements wird weiter abgespielt."/>
+    <entry _locID="play-during_none" _locAttrData="description" value="none" description="Kein Hintergrundsound. Der Sound des übergeordneten Elements (falls vorhanden) wird während der Ausgabe des aktuellen Elements nicht wiedergegeben, nach dem aktuellen Element wird die Wiedergabe fortgesetzt."/>
+  </CssProperty>
+
+  <CssProperty _locID="azimuth" _locAttrData="description" version="2.0" browsers="none" restriction="angle" syntax="&lt;angle&gt; | [[ left-side | far-left | left | center-left | center | center-right | right | far-right | right-side ] || behind ] | leftwards | rightwards" description="Informationen für den Raumeffekt." standard-reference="http://www.w3.org/TR/2007/CR-CSS21-20070719/aural.html#propdef-azimuth">
+
+    <entry value="behind"/>
+    <entry _locID="azimuth_center" _locAttrData="description" value="center" description="Identisch mit '0deg', entspricht '180deg' bei 'behind'."/>
+    <entry _locID="azimuth_center-left" _locAttrData="description" value="center-left" description="Identisch mit '340deg', entspricht '200deg' bei 'behind'."/>
+    <entry _locID="azimuth_center-right" _locAttrData="description" value="center-right" description="Identisch mit '20deg', entspricht '160deg' bei 'behind'."/>
+    <entry _locID="azimuth_far-left" _locAttrData="description" value="far-left" description="Identisch mit '300deg', entspricht '240deg' bei 'behind'."/>
+    <entry _locID="azimuth_far-right" _locAttrData="description" value="far-right" description="Identisch mit '60deg', entspricht '120deg' bei 'behind'."/>
+    <entry _locID="azimuth_left" _locAttrData="description" value="left" description="Identisch mit '320deg', entspricht '220deg' bei 'behind'."/>
+    <entry _locID="azimuth_left-side" _locAttrData="description" value="left-side" description="Identisch mit '270deg', entspricht '270deg' bei 'behind'."/>
+    <entry _locID="azimuth_leftwards" _locAttrData="description" value="leftwards" description="Verschiebt die Schallquelle relativ zum aktuellen Winkel nach links. Genau genommen werden 20° abgezogen."/>
+    <entry _locID="azimuth_right" _locAttrData="description" value="right" description="Identisch mit '40deg', entspricht '140deg' bei 'behind'."/>
+    <entry _locID="azimuth_right-side" _locAttrData="description" value="right-side" description="Identisch mit '90deg', entspricht '90deg' bei 'behind'."/>
+    <entry _locID="azimuth_rightwards" _locAttrData="description" value="rightwards" description="Verschiebt die Schallquelle relativ zum aktuellen Winkel nach rechts. Genau genommen werden 20° hinzu addiert."/>
+  </CssProperty>
+
+  <CssProperty _locID="elevation" _locAttrData="description" version="2.0" browsers="none" restriction="angle" syntax="&lt;angle&gt; | below | level | above | higher | lower" description="Informationen für den Raumeffekt." standard-reference="http://www.w3.org/TR/2007/CR-CSS21-20070719/aural.html#propdef-azimuth">
+
+    <entry _locID="elevation_below" _locAttrData="description" value="below" description="Identisch mit '-90deg'."/>
+    <entry _locID="elevation_level" _locAttrData="description" value="level" description="Identisch mit '0deg'."/>
+    <entry _locID="elevation_above" _locAttrData="description" value="above" description="Identisch mit '90deg'."/>
+    <entry _locID="elevation_higher" _locAttrData="description" value="higher" description="Addiert 10° zum aktuellen Raumeffekt in der Vertikalen hinzu."/>
+    <entry _locID="elevation_lower" _locAttrData="description" value="lower" description="Subtrahiert 10° vom aktuellen Raumeffekt in der Vertikalen."/>
+  </CssProperty>
+
+  <CssProperty _locID="richness" _locAttrData="description, syntax" version="2.0" browsers="none" restriction="number(0-100)" syntax="Ein Wert zwischen '0' und '100'. Je höher der Wert, desto weiter trägt die Stimme. Niedrige Werte bezeichnen eine weiche, einschmeichelnde Stimme." description="Gibt die Sättigung oder Klangfülle der Sprecherstimme an. Eine harsche Stimme kann sich in einem großen Raum leichter durchsetzen als eine weiche Stimme." standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-richness"/>
+
+  <CssProperty _locID="stress" _locAttrData="description, syntax" version="2.0" browsers="none" restriction="number(0-100)" syntax="Ein Wert zwischen '0' und '100'. Die Bedeutung dieses Werts ist abhängig von der eingestellten Sprache. Der Wert '50' hat auf eine durchschnittliche männliche deutsche Stimme (durchschnittliche Tonhöhe = 122 Hz), die mit normaler Intonation und Betonung gesprochen wird, eine andere Wirkung als der Wert '50' bei einer italienischen Stimme." description="Gibt die Höhe der 'lokalen Spitzen' im Intonationsverlauf einer Stimme an. Beispielsweise ist Englisch eine betonte Sprache und verschiedene Satzteile erhalten eine primäre, sekundäre oder tertiäre Betonung." standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-stress"/>
+
+  <CssProperty _locID="pitch" _locAttrData="description" version="2.0" browsers="none" restriction="frequency" description="Gibt die durchschnittliche Tonhöhe (Frequenz) der Sprecherstimme an. Die durchschnittliche Tonhöhe einer Stimme hängt von der Stimmfamilie ab. Beispielsweise liegt die durchschnittliche Tonhöhe bei einer normalen männlichen Stimme bei etwa 120 Hz und bei einer weiblichen Stimme bei etwa 210 Hz." syntax="&lt;frequency&gt; | x-low | low | medium | high | x-high" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-pitch">
+
+    <entry value="x-low"/>
+    <entry value="low"/>
+    <entry _locID="pitch_medium" _locAttrData="description" value="medium" description="Entspricht 100 % und steht für eine normale Tonlage."/>
+    <entry value="high"/>
+    <entry value="x-high"/>
+  </CssProperty>
+
+  <CssProperty _locID="pitch-range" _locAttrData="description" version="2.0" browsers="none" restriction="number" description="Gibt Variationen in der durchschnittlichen Stimmhöhe an. Die wahrgenommene Tonhöhe einer menschlichen Stimme wird durch die grundlegende Frequenz bestimmt und liegt bei einer männlichen Stimme normalerweise bei 120 Hz und bei einer weiblichen Stimme bei 210 Hz." syntax="&lt;number&gt;" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-pitch-range"/>
+
+  <CssProperty _locID="speech-rate" _locAttrData="description" version="2.0" browsers="none" restriction="number" description="Steuert die Sprechgeschwindigkeit. Die normale Geschwindigkeit einer Stimme hängt von der Sprache und dem Dialekt sowie von der Persönlichkeit des Sprechers ab." syntax="&lt;number&gt; | x-slow | slow | medium | fast | x-fast | faster | slower" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-speech-rate">
+
+    <entry _locID="speech-rate_x-slow" _locAttrData="description" value="x-slow" description="Entspricht 80 Wörtern pro Minute."/>
+    <entry _locID="speech-rate_slow" _locAttrData="description" value="slow" description="Entspricht 120 Wörtern pro Minute."/>
+    <entry _locID="speech-rate_medium" _locAttrData="description" value="medium" description="Entspricht 180-200 Wörtern pro Minute."/>
+    <entry _locID="speech-rate_fast" _locAttrData="description" value="fast" description="Entspricht 300 Wörtern pro Minute."/>
+    <entry _locID="speech-rate_x-fast" _locAttrData="description" value="x-fast" description="Entspricht 500 Wörtern pro Minute."/>
+    <entry _locID="speech-rate_faster" _locAttrData="description" value="faster" description="Addiert 40 Wörter pro Minute zur aktuellen Sprechgeschwindigkeit hinzu."/>
+    <entry _locID="speech-rate_slower" _locAttrData="description" value="slower" description="Subtrahiert 40 Wörter pro Minute von der aktuellen Sprechgeschwindigkeit."/>
+  </CssProperty>
+
+</CssModule>

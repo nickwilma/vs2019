@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Text aus einer Datei lesen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Liest den Inhalt einer Textdatei in eine Zeichenfolge.</Description>
+      <Shortcut>filReadText</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>FileName</ID>
+          <ToolTip>Ersetzen Sie dies durch den Dateinamen.</ToolTip>
+          <Default>"C:\Test.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim fileContents As String
+fileContents = My.Computer.FileSystem.ReadAllText($FileName$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

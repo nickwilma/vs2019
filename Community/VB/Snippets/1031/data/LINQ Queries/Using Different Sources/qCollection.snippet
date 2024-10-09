@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Abfrage über eine Sammlung</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Eine Abfrage über eine Sammlung.</Description>
+      <Shortcut>qArray</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>name</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>names</Default>
+        </Literal>
+          <Literal>
+          <ID>dataSourceType</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Typ der Datenquelle.</ToolTip>
+          <Default>List(Of String)</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $dataSource$ As New $dataSourceType$
+        
+                 ' populate your collection here.
+                 ' $dataSource$.Add( ... )
+
+                 Dim $queryResult$ = From $item$ In $dataSource$ _
+                              Select $item$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

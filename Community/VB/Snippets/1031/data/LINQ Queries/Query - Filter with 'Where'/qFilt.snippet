@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Nach einzelnem Feld filtern</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine Abfrage, die die Ergebnisse anhand einer einzigen Bedingung in einem Feld filtert.</Description>
+      <Shortcut>qFilt</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>whereField</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Felds, das gefiltert wird.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>condition</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die Bedingung, nach der gefiltert werden soll.</ToolTip>
+          <Default>&gt;= 5</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Where $item$.$whereField$ $condition$ _
+                    Select $item$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

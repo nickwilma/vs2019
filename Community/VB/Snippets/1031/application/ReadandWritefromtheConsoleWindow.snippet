@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Vom Konsolenfenster aus lesen und schreiben</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Schreibt eine Aufforderung und liest anschließend die Benutzeraufforderung. Wird von einer Konsolenanwendung aus ausgeführt.</Description>
+      <Shortcut>appConRW</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>prompt</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die Eingabeaufforderung.</ToolTip>
+          <Default>"Type in a sentence and hit Enter:"</Default>
+        </Literal>
+        <Object>
+          <ID>inputFromConsole</ID>
+          <Type>String</Type>
+          <ToolTip>Die Zeichenfolgenvariable, die die Eingabe vom Konsolenfenster speichert.</ToolTip>
+          <Default>inputFromConsole</Default>
+        </Object>
+        <Object>
+          <ID>outputToConsole</ID>
+          <Type>String</Type>
+          <ToolTip>Die Zeichenfolgenvariable, die die Ausgabe in das Konsolenfenster speichert.</ToolTip>
+          <Default>outputToConsole</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Console.WriteLine($prompt$)
+$inputFromConsole$ = Console.ReadLine()
+Console.WriteLine($outputToConsole$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

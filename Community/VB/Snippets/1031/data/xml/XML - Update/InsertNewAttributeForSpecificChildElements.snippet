@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Neues Attribut für bestimmte untergeordnete Elemente einfügen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Fügt ein neues Attribut für bestimmte untergeordnete Elemente ein.</Description>
+      <Shortcut>xmlAttr</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Xelem</ID>
+          <Type>XElement</Type>
+          <ToolTip>Ersetzen Sie dies durch das XElement.</ToolTip>
+          <Default>&lt;rss&gt;&lt;channel&gt;&lt;item/&gt;&lt;/channel&gt;&lt;channel&gt;&lt;item/&gt;&lt;/channel&gt;&lt;/rss&gt;</Default>
+        </Literal>
+        <Literal>
+          <ID>AxisExpr</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Achsenausdruck.</ToolTip>
+          <Default>elem.&lt;channel&gt;.&lt;item&gt;</Default>
+        </Literal>       
+        <Literal>
+          <ID>newAttr</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des neuen Attributs.</ToolTip>
+          <Default>newAttr</Default>
+        </Literal> 
+        <Literal>
+          <ID>newVal</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Wert des neuen Attributs.</ToolTip>
+          <Default>attrVal</Default>
+        </Literal> 
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim elem = $Xelem$
+        For Each item In $AxisExpr$
+            item.@$newAttr$ = "$newVal$"
+        Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Namen eines Enumerationswerts suchen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Ruft den Zeichenfolgennamen eines Enumerationswerts ab.</Description>
+      <Shortcut>EnumStr</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>EnumerationName</ID>
+          <Type>System.Enum
+          </Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Enumeration.</ToolTip>
+          <Default>DayOfWeek</Default>
+        </Object>
+        <Literal>
+          <ID>EnumValue</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch den Wert der Enumerationskonstante.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim name As String = _
+    System.Enum.GetName(GetType($EnumerationName$), $EnumValue$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

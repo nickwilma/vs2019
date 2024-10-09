@@ -1,0 +1,68 @@
+{
+  "configurations": [
+    {
+      "name": "WSL-GCC-Debug",
+      "description": "TemplateDescription_Localize_WSLDebug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "cmakeExecutable": "cmake",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [
+        "linux_x64"
+      ],
+      "wslPath": "${defaultWSLPath}"
+    },
+    {
+      "name": "WSL-GCC-Release",
+      "description": "TemplateDescription_Localize_WSLRelease",
+      "generator": "Ninja",
+      "configurationType": "RelWithDebInfo",
+      "cmakeExecutable": "cmake",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [
+        "linux_x64"
+      ],
+      "wslPath": "${defaultWSLPath}"
+    },
+    {
+      "name": "WSL-Clang-Debug",
+      "description": "TemplateDescription_Localize_WSLClangDebug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "cmakeExecutable": "cmake",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [
+        "linux_clang_x64"
+      ],
+      "wslPath": "${defaultWSLPath}"
+    },
+    {
+      "name": "WSL-Clang-Release",
+      "description": "TemplateDescription_Localize_WSLClangRelease",
+      "generator": "Ninja",
+      "configurationType": "RelWithDebInfo",
+      "cmakeExecutable": "cmake",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [
+        "linux_clang_x64"
+      ],
+      "wslPath": "${defaultWSLPath}"
+    }    
+  ]
+}

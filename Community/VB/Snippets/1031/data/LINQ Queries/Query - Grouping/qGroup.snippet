@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>In Count() gruppieren nach</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine Abfrage, die die Ergebnisse gruppiert und die Anzahl der Elemente pro Gruppe zurückgibt.</Description>
+      <Shortcut>qGroup</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Felds, das zum Gruppieren der Ergebnisse verwendet wird.</ToolTip>
+          <Default>Length</Default>
+       </Literal>
+        <Literal>
+          <ID>groupingCondition</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Aggregator, der für die Gruppe aufgerufen werden soll.</ToolTip>
+          <Default>Count</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Group By $item$.$field$ Into $groupingCondition$() _
+                    Select $field$, $groupingCondition$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

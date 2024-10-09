@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Datei kopieren </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Kopiert die Datei "Source.txt" in eine zweite Datei, "Copy.txt".</Description>
+      <Shortcut>filCopyFile</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Source</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Quelldateinamen.</ToolTip>
+          <Default>"C:\Source.txt"</Default>
+        </Literal>
+        <Literal>
+          <ID>Destination</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Zielordnernamen.</ToolTip>
+          <Default>"C:\NewFolder\Dest.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.FileSystem.CopyFile($Source$, $Destination$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

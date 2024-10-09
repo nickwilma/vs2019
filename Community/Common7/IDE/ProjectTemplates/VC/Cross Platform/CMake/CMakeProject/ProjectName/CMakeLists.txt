@@ -1,0 +1,9 @@
+# $loctext_projectcmakelistscomment01$
+# $loctext_projectcmakelistscomment02$
+#
+cmake_minimum_required (VERSION 3.8)
+
+# $loctext_projectcmakelistscomment03$
+add_executable ($cmaketargetname$ "$projectname$.cpp" "$projectname$.h")
+
+# TODO: $loctext_projectcmakelistscomment04$

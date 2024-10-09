@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Box Alignment" standard-reference="http://www.w3.org/TR/css-align-3/" status="WD" pub-date="2020-04-21">
+
+  <CssPropertyValue type="justify-content">
+    <entry value="normal"/>
+    <entry value="left"/>
+    <entry value="right"/>
+    <entry value="space-between"/>
+    <entry value="space-around"/>
+    <entry value="space-evenly"/>
+    <entry value="stretch"/>
+    <entry value="safe center"/>
+    <entry value="unsafe center"/>
+    <entry value="center"/>
+    <entry value="start"/>
+    <entry value="end"/>
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="justify-content" _locAttrData="description" version="3.0" browsers="C29,FF28,IE11,O17,S9" restriction="enum" type="justify-content" description="Richtet den Inhalt des Felds als Ganzes (als Ausrichtungsobjekt) innerhalb des Felds selbst (als Ausrichtungscontainer) entlang der Inline-/Zeilen-/Hauptachse des Felds aus." syntax="div { $(name): flex-start; }" standard-reference="http://www.w3.org/TR/css-align-3/#propdef-justify-content"/>
+
+  <CssPropertyValue type="align-content">
+    <entry value="normal"/>
+    <entry value="baseline"/>
+    <entry value="first baseline"/>
+    <entry value="last baseline"/>
+    <entry value="space-between"/>
+    <entry value="space-around"/>
+    <entry value="space-evenly"/>
+    <entry value="stretch"/>
+    <entry value="safe center"/>
+    <entry value="unsafe center"/>
+    <entry value="center"/>
+    <entry value="start"/>
+    <entry value="end"/>
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="align-content" _locAttrData="description" version="3.0" browsers="C21,FF28,IE11,O12.1,S9" restriction="enum" type="align-content" description="Richtet den Inhalt des Felds als Ganzes (als Ausrichtungsobjekt) innerhalb des Felds selbst (als Ausrichtungscontainer) entlang der Block-/Spalten-/Querachse des Felds aus." syntax="div { $(name): stretch; }" standard-reference="http://www.w3.org/TR/css-align-3/#propdef-align-content"/>
+
+  <CssProperty _locID="place-content" _locAttrData="description" version="3.0" restriction="enum" type="align-content, justify-content" description="Hiermit werden die Eigenschaften &quot;align-content&quot; und &quot;justify-content&quot; in einer Deklaration festgelegt." syntax="div { $(name): end center; }" standard-reference="https://www.w3.org/TR/css-align-3/#place-content"/>
+
+  <CssPropertyValue type="justify-self">
+    <entry value="auto"/>
+    <entry value="normal"/>
+    <entry value="stretch"/>
+    <entry value="left"/>
+    <entry value="right"/>
+    <entry value="baseline"/>
+    <entry value="first baseline"/>
+    <entry value="last baseline"/>
+    <entry value="baseline"/>
+    <entry value="safe center"/>
+    <entry value="unsafe center"/>
+    <entry value="center"/>
+    <entry value="start"/>
+    <entry value="end"/>
+    <entry value="self-start"/>
+    <entry value="self-end"/>
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="justify-self" _locAttrData="description" version="3.0" browsers="FF,IE" restriction="enum" type="justify-self" description="Richtet das Feld (als Ausrichtungsobjekt) innerhalb des enthaltenden Blocks (als Ausrichtungscontainer) entlang der Inline-/Zeilen-/Hauptachse des Ausrichtungscontainers im Blocksatz aus." syntax="div { $(name): stretch; }" standard-reference="http://www.w3.org/TR/css-align-3/#propdef-justify-self"/>
+
+  <CssPropertyValue type="align-self">
+    <entry value="auto"/>
+    <entry value="normal"/>
+    <entry value="stretch"/>
+    <entry value="baseline"/>
+    <entry value="first baseline"/>
+    <entry value="last baseline"/>
+    <entry value="baseline"/>
+    <entry value="safe center"/>
+    <entry value="unsafe center"/>
+    <entry value="center"/>
+    <entry value="start"/>
+    <entry value="end"/>
+    <entry value="self-start"/>
+    <entry value="self-end"/>
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="align-self" _locAttrData="description" version="3.0" browsers="C21,FF20,IE11,O12.1,S9" restriction="enum" type="align-self" description="Richtet das Feld (als Ausrichtungsobjekt) innerhalb des enthaltenden Blocks (als Ausrichtungscontainer) entlang der Block-/Spalten-/Querachse des Ausrichtungscontainers aus." syntax="div { $(name): auto; }" standard-reference="http://www.w3.org/TR/css-align-3/#propdef-align-self"/>
+
+  <CssProperty _locID="place-self" _locAttrData="description" version="3.0" restriction="enum" type="align-self, justify-self" description="Hiermit werden die Eigenschaften &quot;align-self&quot; und &quot;justify-self&quot; in einer Deklaration festgelegt." syntax="div { $(name): end center; }" standard-reference="https://www.w3.org/TR/css-align-3/#place-self"/>
+
+  <CssPropertyValue type="justify-items">
+    <entry value="normal"/>
+    <entry value="stretch"/>
+    <entry value="baseline"/>
+    <entry value="first baseline"/>
+    <entry value="last baseline"/>
+    <entry value="baseline"/>
+    <entry value="safe center"/>
+    <entry value="unsafe center"/>
+    <entry value="center"/>
+    <entry value="start"/>
+    <entry value="end"/>
+    <entry value="self-start"/>
+    <entry value="self-end"/>
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+    <entry value="left"/>
+    <entry value="right"/>
+    <entry value="legacy right"/>
+    <entry value="legacy left"/>
+    <entry value="legacy center"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="justify-items" _locAttrData="description" version="3.0" browsers="FF,IE" restriction="enum" type="justify-items" description="Diese Eigenschaft gibt die standardmäßige Selbstausrichtung im Blocksatz für alle untergeordneten Felder (einschließlich anonymer Felder) an, die am Formatierungskontext dieses Felds beteiligt sind." syntax="div { $(name): stretch; }" standard-reference="http://www.w3.org/TR/css-align-3/#propdef-justify-items"/>
+
+  <CssPropertyValue type="align-items">
+    <entry value="normal"/>
+    <entry value="stretch"/>
+    <entry value="baseline"/>
+    <entry value="first baseline"/>
+    <entry value="last baseline"/>
+    <entry value="baseline"/>
+    <entry value="safe center"/>
+    <entry value="unsafe center"/>
+    <entry value="center"/>
+    <entry value="start"/>
+    <entry value="end"/>
+    <entry value="self-start"/>
+    <entry value="self-end"/>
+    <entry value="flex-start"/>
+    <entry value="flex-end"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="align-items" _locAttrData="description" version="3.0" browsers="CC21,FF20,IE11,O12.1,S9" restriction="enum" type="align-items" description="Diese Eigenschaft gibt die standardmäßige Selbstausrichtung für alle untergeordneten Felder (einschließlich anonymer Felder) an, die am Formatierungskontext dieses Felds beteiligt sind." syntax="div { $(name): stretch; }" standard-reference="http://www.w3.org/TR/css-align-3/#propdef-align-items"/>
+
+  <CssProperty _locID="place-items" _locAttrData="description" version="3.0" restriction="enum" type="align-items, justify-items" description="Hiermit werden die Eigenschaften &quot;align-items&quot; und &quot;justify-items&quot; in einer Deklaration festgelegt." syntax="div { $(name): end center; }" standard-reference="https://www.w3.org/TR/css-align-3/#place-items"/>
+
+  <CssProperty _locID="column-gap" _locAttrData="description" version="3.0" restriction="length, percentage" description="Hiermit werden Zwischenräume fester Länge zwischen Elementen im Container angegeben, in ähnlicher Weise wie beim Schlüsselwort &quot;space-between&quot; in den Eigenschaften für die Inhaltsverteilung. Anstelle eines Anteils des verbleibenden Raums wird jedoch eine feste Größe verwendet." syntax="div { $(name): 20px }" standard-reference="https://www.w3.org/TR/css-align-3/#column-row-gap">
+    <entry value="normal"/>
+  </CssProperty>
+
+  <CssProperty _locID="row-gap" _locAttrData="description" version="3.0" restriction="length, percentage" description="Hiermit werden Zwischenräume fester Länge zwischen Elementen im Container angegeben, in ähnlicher Weise wie beim Schlüsselwort &quot;space-between&quot; in den Eigenschaften für die Inhaltsverteilung. Anstelle eines Anteils des verbleibenden Raums wird jedoch eine feste Größe verwendet." syntax="div { $(name): 20px }" standard-reference="https://www.w3.org/TR/css-align-3/#column-row-gap">
+    <entry value="normal"/>
+  </CssProperty>
+
+  <CssProperty _locID="gap" _locAttrData="description" version="3.0" restriction="length, percentage" description="Dies ist eine Kompakteigenschaft, die &quot;row-gap&quot; und &quot;column-gap&quot; in einer Deklaration festlegt. Wenn für &quot;column-gap&quot; keine Angabe vorliegt, wird diese Eigenschaft auf den gleichen Wert wie &quot;row-gap&quot; festgelegt." syntax="div { $(name): 10px 20px }" standard-reference="https://www.w3.org/TR/css-align-3/#column-row-gap">
+    <entry value="normal"/>
+  </CssProperty>
+
+</CssModule>

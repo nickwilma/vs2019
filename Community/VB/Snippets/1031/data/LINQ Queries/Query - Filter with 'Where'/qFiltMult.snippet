@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Nach mehreren Feldern filtern</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine Abfrage, die die Ergebnisse anhand der Bedingungen in mehreren Feldern filtert.</Description>
+      <Shortcut>qFiltMult</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>whereField1</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des ersten Felds, das gefiltert wird.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>condition1</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die erste Bedingung, nach der gefiltert wird.</ToolTip>
+          <Default>&gt;= 5</Default>
+        </Literal>
+        <Literal>
+          <ID>whereField2</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des zweiten Felds, das gefiltert wird.</ToolTip>
+          <Default>ToUpper()</Default>
+        </Literal>
+        <Literal>
+          <ID>condition2</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die zweite Bedingung, nach der gefiltert wird.</ToolTip>
+          <Default>= "PEAR"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Where $item$.$whereField1$ $condition1$ And $item$.$whereField2$ $condition2$ _
+                    Select $item$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

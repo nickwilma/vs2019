@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Serverbasierte SQLConnection zu SQL Server erstellen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine SQL-Verbindung, die Ersetzungen für die typischen Verbindungsname/Verbindungswert-Paare bereitstellt.</Description>
+      <Shortcut>adoCreateSqlConn</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Xml.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Data.SqlClient</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Data</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>conn</ID>
+          <Type>SqlConnection</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Verbindungsobjekts.</ToolTip>
+          <Default>conn</Default>
+        </Literal>
+        <Literal>
+          <ID>serverName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Servers.</ToolTip>
+          <Default>ServerName</Default>
+        </Literal>
+        <Literal>
+          <ID>dataBaseName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Datenbank.</ToolTip>
+          <Default>Northwind</Default>
+        </Literal>
+        <Literal>
+          <ID>userId</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Benutzernamen für die Konnektivität zur Datenbank.</ToolTip>
+          <Default>&lt;user name&gt;</Default>
+        </Literal>
+        <Literal>
+          <ID>password</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch das Kennwort, das Ihrem Benutzernamen entspricht.</ToolTip>
+          <Default>&lt;your password&gt;</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Dim $conn$ As New SqlConnection()
+$conn$.ConnectionString = "Data Source=$serverName$;Initial Catalog=$dataBaseName$;Persist Security Info=True;User ID=$userId$;Password=$password$"]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

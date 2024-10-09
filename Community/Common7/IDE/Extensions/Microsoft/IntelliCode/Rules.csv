@@ -1,0 +1,156 @@
+indent_style,"""space""",use soft tabs (spaces) for indentation,Core editorconfig formatting - indentation
+indent_style,"""tab""",use hard tabs for indentation,Core editorconfig formatting - indentation
+csharp_indent_block_contents,"""false""",<<Undocumented - CUT>>,Formatting - indentation options
+csharp_indent_block_contents,"""true""",<<Undocumented - CUT>>,Formatting - indentation options
+csharp_indent_braces,"""false""",<<Undocumented - CUT>>,Formatting - indentation options
+csharp_indent_braces,"""true""",<<Undocumented - CUT>>,Formatting - indentation options
+csharp_indent_case_contents,"""false""",do not indent switch case contents.,Formatting - indentation options
+csharp_indent_case_contents,"""true""",indent switch case contents.,Formatting - indentation options
+csharp_indent_case_contents_when_block,"""false""",<<Undocumented>>,Formatting - indentation options
+csharp_indent_case_contents_when_block,"""true""",<<Undocumented>>,Formatting - indentation options
+csharp_indent_labels,"""flush_left""",Labels are placed at the leftmost column,Formatting - indentation options
+csharp_indent_labels,"""no_change""",Labels are placed at the same indent as the current context,Formatting - indentation options
+csharp_indent_labels,"""one_less_than_current""",Labels are placed at one less indent to the current context,Formatting - indentation options
+csharp_indent_switch_labels,"""false""",do not indent switch labels,Formatting - indentation options
+csharp_indent_switch_labels,"""true""",indent switch labels,Formatting - indentation options
+csharp_new_line_before_catch,"""false""",place catch statements on the same line,Formatting - new line options
+csharp_new_line_before_catch,"""true""",place catch statements on a new line,Formatting - new line options
+csharp_new_line_before_else,"""false""",place else statements on the same line,Formatting - new line options
+csharp_new_line_before_else,"""true""",place else statements on a new line,Formatting - new line options
+csharp_new_line_before_finally,"""false""",require finally statements to be on the same line as the closing brace,Formatting - new line options
+csharp_new_line_before_finally,"""true""",require finally statements to be on a new line after the closing brace,Formatting - new line options
+csharp_new_line_before_members_in_anonymous_types,"""false""",require members of anonymous types to be on the same line,Formatting - new line options
+csharp_new_line_before_members_in_anonymous_types,"""true""",require members of anonymous types to be on separate lines,Formatting - new line options
+csharp_new_line_before_members_in_object_initializers,"""false""",require members of object initializers to be on the same line,Formatting - new line options
+csharp_new_line_before_members_in_object_initializers,"""true""",require members of object intializers to be on separate lines,Formatting - new line options
+csharp_new_line_before_open_brace,,"Require braces to be on a new line for {} (also known as ""Allman"" style)",Formatting - new line options
+csharp_new_line_between_query_expression_clauses,"""false""",require elements of query expression clauses to be on the same line,Formatting - new line options
+csharp_new_line_between_query_expression_clauses,"""true""",require elements of query expression clauses to be on separate lines,Formatting - new line options
+dotnet_sort_system_directives_first,"""false""",do not place System.* using directives before other using directives,Formatting - organize using options
+dotnet_sort_system_directives_first,"""true""","sort System.* using directives alphabetically, and place them before other usings",Formatting - organize using options
+csharp_space_after_cast,"""false""",require NO space between a cast and the value,Formatting - spacing options
+csharp_space_after_cast,"""true""",require a space between a cast and the value,Formatting - spacing options
+csharp_space_after_colon_in_inheritance_clause,"""false""",require _no_ space before the colon for bases or interfaces in a type declaration,Formatting - spacing options
+csharp_space_after_colon_in_inheritance_clause,"""true""",require a space before the colon for bases or interfaces in a type declaration,Formatting - spacing options
+csharp_space_after_comma,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_after_comma,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_after_dot,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_after_dot,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_after_keywords_in_control_flow_statements,"""false""",require NO space after a keyword in a control flow statement such as a for loop,Formatting - spacing options
+csharp_space_after_keywords_in_control_flow_statements,"""true""",require a space after a keyword in a control flow statement such as a for loop,Formatting - spacing options
+csharp_space_after_semicolon_in_for_statement,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_after_semicolon_in_for_statement,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_around_binary_operators,"""before_and_after""",Insert space before and after the binary operator,Formatting - spacing options
+csharp_space_around_binary_operators,"""ignore""",Ignore spaces around binary operators,Formatting - spacing options
+csharp_space_around_binary_operators,"""none""",Remove spaces before and after the binary operator,Formatting - spacing options
+csharp_space_around_declaration_statements,"""true""",ignore spaces around variable declarations,Formatting - spacing options
+csharp_space_around_declaration_statements,"""false""",require a space a single space around variable declarations,Formatting - spacing options
+csharp_space_before_colon_in_inheritance_clause,"""false""",require _no_ space before the colon for bases or interfaces in a type declaration,Formatting - spacing options
+csharp_space_before_colon_in_inheritance_clause,"""true""",require a space before the colon for bases or interfaces in a type declaration,Formatting - spacing options
+csharp_space_before_comma,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_before_comma,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_before_dot,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_before_dot,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_before_open_square_brackets,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_before_open_square_brackets,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_before_semicolon_in_for_statement,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_before_semicolon_in_for_statement,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_between_empty_square_brackets,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_between_empty_square_brackets,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_between_method_call_empty_parameter_list_parentheses,"""false""",remove space within empty argument list parentheses,Formatting - spacing options
+csharp_space_between_method_call_empty_parameter_list_parentheses,"""true""",insert space within empty argument list parentheses,Formatting - spacing options
+csharp_space_between_method_call_name_and_opening_parenthesis,"""false""",remove space between method call name and opening parenthesis,Formatting - spacing options
+csharp_space_between_method_call_name_and_opening_parenthesis,"""true""",insert space between method call name and opening parenthesis,Formatting - spacing options
+csharp_space_between_method_call_parameter_list_parentheses,"""false""",do not place space characters after the opening parenthesis and before the closing parenthesis of a method call,Formatting - spacing options
+csharp_space_between_method_call_parameter_list_parentheses,"""true""",place a space character after the opening parenthesis and before the closing parenthesis of a method call,Formatting - spacing options
+csharp_space_between_method_declaration_empty_parameter_list_parentheses,"""false""",remove space within empty parameter list parentheses for a method declaration,Formatting - spacing options
+csharp_space_between_method_declaration_empty_parameter_list_parentheses,"""true""",insert space within empty parameter list parentheses for a method declaration,Formatting - spacing options
+csharp_space_between_method_declaration_name_and_open_parenthesis,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_between_method_declaration_name_and_open_parenthesis,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_between_method_declaration_parameter_list_parentheses,"""false""",place a space character after the opening parenthesis and before the closing parenthesis of a method declaration parameter list.,Formatting - spacing options
+csharp_space_between_method_declaration_parameter_list_parentheses,"""true""",do not place a space character after the opening parenthesis and before the closing parenthesis of a method declaration parameter list.,Formatting - spacing options
+csharp_space_between_parentheses,control_flow_statements,Place space between parentheses of control flow statements,Formatting - spacing options
+csharp_space_between_parentheses,expressions,Place space between parentheses of expressions,Formatting - spacing options
+csharp_space_between_parentheses,type_casts,Place space between parentheses of type casts,Formatting - spacing options
+csharp_space_between_square_brackets,"""false""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_space_between_square_brackets,"""true""",<<Undocumented - CUT>>,Formatting - spacing options
+csharp_preserve_single_line_blocks,"""false""",leave code block on separate lines,Formatting - wrapping options
+csharp_preserve_single_line_blocks,"""true""",leave code block on single line,Formatting - wrapping options
+csharp_preserve_single_line_statements,"""false""",leave statements and member declarations on different lines,Formatting - wrapping options
+csharp_preserve_single_line_statements,"""true""",leave statements and member declarations on the same line,Formatting - wrapping options
+csharp_style_expression_bodied_accessors,"""false""",Prefer block bodies for accessors,Style - expression bodied member options
+csharp_style_expression_bodied_accessors,"""true""",Prefer expression-bodied members for accessors,Style - expression bodied member options
+csharp_style_expression_bodied_accessors,"""when_on_single_line""",Prefer expression-bodied members for accessors when they will be a single line,Style - expression bodied member options
+csharp_style_expression_bodied_constructors,"""false""",Prefer block bodies for constructors,Style - expression bodied member options
+csharp_style_expression_bodied_constructors,"""true""",Prefer expression-bodied members for constructors,Style - expression bodied member options
+csharp_style_expression_bodied_constructors,"""when_on_single_line""",Prefer expression-bodied members for constructors when they will be a single line,Style - expression bodied member options
+csharp_style_expression_bodied_indexers,"""false""",Prefer block bodies for indexers,Style - expression bodied member options
+csharp_style_expression_bodied_indexers,"""true""",Prefer expression-bodied members for indexers,Style - expression bodied member options
+csharp_style_expression_bodied_indexers,"""when_on_single_line""",Prefer expression-bodied members for indexers when they will be a single line,Style - expression bodied member options
+csharp_style_expression_bodied_methods,"""false""",Prefer block bodies for methods,Style - expression bodied member options
+csharp_style_expression_bodied_methods,"""true""",Prefer expression-bodied members for methods,Style - expression bodied member options
+csharp_style_expression_bodied_methods,"""when_on_single_line""",Prefer expression-bodied members for methods when they will be a single line,Style - expression bodied member options
+csharp_style_expression_bodied_operators,"""false""",Prefer block bodies for operators,Style - expression bodied member options
+csharp_style_expression_bodied_operators,"""true""",Prefer expression-bodied members for operators,Style - expression bodied member options
+csharp_style_expression_bodied_operators,"""when_on_single_line""",Prefer expression-bodied members for operators when they will be a single line,Style - expression bodied member options
+csharp_style_expression_bodied_properties,"""false""",Prefer block bodies for properties,Style - expression bodied member options
+csharp_style_expression_bodied_properties,"""true""",Prefer expression-bodied members for properties,Style - expression bodied member options
+csharp_style_expression_bodied_properties,"""when_on_single_line""",Prefer expression-bodied members for properties when they will be a single line,Style - expression bodied member options
+csharp_style_inlined_variable_declaration,"""false""",prefer out variables to be declared before the method call,Style - expression level options
+csharp_style_inlined_variable_declaration,"""true""",prefer out variables to be declared inline in the argument list of a method call when possible,Style - expression level options
+dotnet_style_explicit_tuple_names,"""false""",prefer ItemX properties to tuple names,Style - expression level options
+dotnet_style_explicit_tuple_names,"""true""",prefer tuple names to ItemX properties,Style - expression level options
+dotnet_style_predefined_type_for_member_access,"""false""","prefer the type name for member access expressions, instead of the language keyword",Style - expression level options
+dotnet_style_predefined_type_for_member_access,"""true""","prefer the language keyword for member access expressions, instead of the type name, for types that have a keyword to represent them",Style - expression level options
+csharp_style_var_elsewhere,"""false""","prefer explicit type over var in all cases, unless overridden by another code style rule",Style - implicit and explicit types
+csharp_style_var_elsewhere,"""true""","prefer var over explicit type in all cases, unless overridden by another code style rule",Style - implicit and explicit types
+csharp_style_var_for_built_in_types,"""false""",prefer explicit type over var to declare variables with built-in system types such as int,Style - implicit and explicit types
+csharp_style_var_for_built_in_types,"""true""",prefer var is used to declare variables with built-in system types such as int,Style - implicit and explicit types
+csharp_style_var_when_type_is_apparent,"""false""",prefer explicit type over var when the type is already mentioned on the right-hand side of a declaration,Style - implicit and explicit types
+csharp_style_var_when_type_is_apparent,"""true""",prefer var when the type is already mentioned on the right-hand side of a declaration expression,Style - implicit and explicit types
+dotnet_style_predefined_type_for_locals_parameters_members,"""false""","prefer the type name for local variables, method parameters, and class members, instead of the language keyword",Style - language keyword and framework type options
+dotnet_style_predefined_type_for_locals_parameters_members,"""true""","prefer the language keyword for local variables, method parameters, and class members, instead of the type name, for types that have a keyword to represent them",Style - language keyword and framework type options
+dotnet_style_readonly_field ,"""true""","prefer that fields should be marked with readonly (C#) or ReadOnly (Visual Basic) if they are only ever assigned inline, or inside of a constructor",Style - readonly fields
+dotnet_style_readonly_field ,"""false""",specify no preference over whether fields should be marked with readonly (C#) or ReadOnly (Visual Basic),Style - readonly fields
+dotnet_style_require_accessibility_modifiers,"""always""",Prefer accessibility modifiers to be specified,Style - modifier options
+dotnet_style_require_accessibility_modifiers,"""for_non_interface_members""",Prefer accessibility modifiers to be declared except for public interface members. This will currently not differ from always and will act as future proofing for if C# adds default interface methods.,Style - modifier options
+dotnet_style_require_accessibility_modifiers,"""never""",Do not prefer accessibility modifiers to be specified,Style - modifier options
+dotnet_style_parentheses_in_arithmetic_binary_operators,"""always_for_clarity""","prefer parentheses to clarify arithmetic operator (*,/,%, +,-, <<,> >, &, ^, |) precedence",Style - Parentheses
+dotnet_style_parentheses_in_arithmetic_binary_operators,"""never_if_unnecessary""","prefer not to have parentheses when arithmetic operator (*,/,%, +,-, <<, >>, &, ^, |) precedence is obvious",Style - Parentheses
+dotnet_style_parentheses_in_relational_binary_operators ,"""always_for_clarity""","prefer parentheses to clarify relational operator (>, <,<=,>=, is, as, ==, !=) precedence",Style - Parentheses
+dotnet_style_parentheses_in_relational_binary_operators ,"""never_if_unnecessary""","prefer not to have parentheses when relational operator  (>, <,<=,>=, is, as, ==, !=) precedence is obvious",Style - Parentheses
+dotnet_style_parentheses_in_other_binary_operators,"""always_for_clarity""","prefer parentheses to clarify other binary operator (`&&`, `||`, `??`) precedence",Style - Parentheses
+dotnet_style_parentheses_in_other_binary_operators,"""never_if_unnecessary""","prefer to not have parentheses when other binary operator (`&&`, `||`, `??`) precedence is obvious",Style - Parentheses
+dotnet_style_parentheses_in_other_operators,"""always_for_clarity""",prefer parentheses to clarify operator precedence,Style - Parentheses
+dotnet_style_parentheses_in_other_operators,"""never_if_unnecessary""",prefer to not have parentheses when operator precedence is obvious,Style - Parentheses
+dotnet_style_prefer_auto_properties,"""true""",prefer auto-properties over properties with private backing fields,Style - Expression-level  preferences
+dotnet_style_prefer_auto_properties,"""false""",prefer properties with private backing fields over auto-properties.,Style - Expression-level  preferences
+dotnet_style_prefer_is_null_check_over_reference_equality_method,"""true""",prefer using a null check with pattern-matching over object.ReferenceEquals,Style - Expression-level  preferences
+dotnet_style_prefer_is_null_check_over_reference_equality_method,"""false""",prefer object.ReferenceEquals over a null check with pattern-matching,Style - Expression-level  preferences
+dotnet_style_prefer_conditional_expression_over_assignment,"""true""",prefer assignments with a ternary conditional over an if-else statement,Style - Expression-level  preferences
+dotnet_style_prefer_conditional_expression_over_assignment,"""false""",prefer assignments with an if-else statement over a ternary conditional,Style - Expression-level  preferences
+dotnet_style_prefer_conditional_expression_over_return ,"""true""",prefer return statements to use a ternary conditional over an if-else statement,Style - Expression-level  preferences
+dotnet_style_prefer_conditional_expression_over_return ,"""false""",prefer return statements to use an if-else statement over a ternary conditional,Style - Expression-level  preferences
+dotnet_style_qualification_for_event,"""false""",prefer events not to be prefaced with this. or Me. in Visual Basic,Style - qualification options
+dotnet_style_qualification_for_event,"""true""",prefer events to be prefaced with this. in C# or Me. in Visual Basic,Style - qualification options
+dotnet_style_qualification_for_field,"""false""",prefer fields not to be prefaced with this. or Me. in Visual Basic,Style - qualification options
+dotnet_style_qualification_for_field,"""true""",prefer fields to be prefaced with this. in C# or Me. in Visual Basic,Style - qualification options
+dotnet_style_qualification_for_method,"""false""",prefer methods not to be prefaced with this. or Me. in Visual Basic,Style - qualification options
+dotnet_style_qualification_for_method,"""true""",prefer methods to be prefaced with this. in C# or Me. in Visual Basic,Style - qualification options
+dotnet_style_qualification_for_property,"""false""",prefer properties not to be prefaced with this. or Me. in Visual Basic,Style - qualification options
+dotnet_style_qualification_for_property,"""true""",prefer properties to be prefaced with this. in C# or Me. in Visual Basic,Style - qualification options
+csharp_prefer_simple_default_expression,"""true""",Prefer default over default(T),Style - Expression-level  preferences
+csharp_prefer_simple_default_expression,"""false""",Prefer default(T) over default,Style - Expression-level  preferences
+csharp_style_pattern_local_over_anonymous_function,"""true""",Prefer local functions over anonymous functions,Style - Miscellaneous preferences
+csharp_style_pattern_local_over_anonymous_function,"""false""",Prefer anonymous functions over local functions,Style - Miscellaneous preferences
+csharp_style_pattern_matching_over_as_with_null_check,"""true""",Prefer pattern matching instead of is expression with type casts,Style - Pattern matching
+csharp_style_pattern_matching_over_as_with_null_check,"""false""",Prefer is expression with type casts instead of pattern matching,Style - Pattern matching
+dotnet_style_object_initializer,"""true""",Prefer objects to be initialized using object initializers when possible,Style - Expression-level  preferences
+dotnet_style_object_initializer,"""false""",Prefer objects to not be initialized using object initializers,Style - Expression-level  preferences
+dotnet_style_prefer_inferred_anonymous_type_member_names,"""true""",Prefer inferred anonymous type member names,Style - Expression-level  preferences
+dotnet_style_prefer_inferred_anonymous_type_member_names,"""false""",Prefer inferred anonymous type member names,Style - Expression-level  preferences
+dotnet_style_prefer_inferred_tuple_names,"""true""",Prefer inferred tuple element names,Style - Expression-level  preferences
+dotnet_style_prefer_inferred_tuple_names,"""false""",Prefer explicit tuple element names,Style - Expression-level  preferences
+csharp_prefer_braces,"""true""",Prefer curly braces even for one line of code,Style - Code block preferences
+csharp_prefer_braces,"""false""",Prefer no curly braces if allowed,Style - Code block preferences
+csharp_preferred_modifier_order,,"When this rule is set to a list of modifiers, prefer the specified ordering.",Style - Modifier preferences

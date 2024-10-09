@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Bestimmen, ob das Netzwerk verfügbar ist</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Bestimmt, ob die Netzwerkverbindung auf dem lokalen Computer verfügbar ist.</Description>
+      <Shortcut>conAvail</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim isAvailable = My.Computer.Network.IsAvailable]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

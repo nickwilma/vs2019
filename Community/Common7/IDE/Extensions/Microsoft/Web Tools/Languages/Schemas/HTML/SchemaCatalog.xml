@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemas>
+  <schema File="html.xsd" FriendlyName="HTML" Uri="http://schemas.microsoft.com/intellisense/html" />
+  <schema File="jQuery_mobile.xsd" FriendlyName="jQuery Mobile" 
+          Uri="http://schemas.microsoft.com/intellisense/jquery-mobile" IsSupplemental="true" CustomPrefix="data-" />
+  <schema File="windows.xsd" FriendlyName="Windows App"
+          Uri="http://schemas.microsoft.com/intellisense/windows" IsSupplemental="true" CustomPrefix="data-" />
+  <schema File="aria.xsd" FriendlyName="WIA-ARIA"
+          Uri="http://schemas.microsoft.com/intellisense/aria" IsSupplemental="true" CustomPrefix="aria-" />
+  <schema File="angular.xsd" FriendlyName="AngularJS"
+          Uri="http://schemas.microsoft.com/intellisense/angular" IsSupplemental="true" CustomPrefix="ng-" />
+  <schema File="svg.xsd" Uri="http://www.w3.org/2000/svg" IsXml="true" />
+  <schema File="xml.xsd" Uri="http://www.w3.org/XML/1998/namespace" />
+  <schema File="xlink.xsd" Uri="http://www.w3.org/1999/xlink" />
+</schemas>

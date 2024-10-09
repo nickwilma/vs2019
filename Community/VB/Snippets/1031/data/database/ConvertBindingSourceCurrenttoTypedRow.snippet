@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Konvertiert "BindingSource.Current" in eine bestimmte Zeile in einer DataTable.</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Ruft die aktuelle Zeile innerhalb einer Bindungsquelle ab und konvertiert sie in die bestimmte Zeile.  Empfohlene Methode für das Aufzeichnen der aktuellen Zeile anstelle der Verwendung von BindingSource.Position, wodurch möglicherweise eine andere Zeile basierend auf der Sortierung der DataView zurückgegeben wird.</Description>
+      <Shortcut>dtBindingSourceCurrent</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.XML</Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Object>
+          <ID>rowType</ID>
+          <Type>DataRow</Type>
+          <ToolTip>Ersetzen Sie dies durch den Typ für die DataRow aus Ihrem DataSet.</ToolTip>
+          <Default>NorthwindDataSet.CustomersRow</Default>
+        </Object>
+        <Object>
+          <ID>bindingSource</ID>
+          <Type>BindingSource</Type>
+          <ToolTip>Ersetzen Sie dies durch die BindingSource, von der die Zeile aufgezeichnet werden soll.</ToolTip>
+          <Default>CustomersBindingSource</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Dim row As $rowType$
+row = CType(CType(Me.$bindingSource$.Current, DataRowView).Row, $rowType$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

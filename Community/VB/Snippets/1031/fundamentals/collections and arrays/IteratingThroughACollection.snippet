@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Sammlung durchlaufen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Durchläuft bestimmte Elementtypen in einer Sammlung.</Description>
+      <Shortcut>colIter</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>itemVar</ID>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner für das Element in der Sammlung.</ToolTip>
+          <Default>name</Default>
+        </Literal>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Ersetzen Sie dies durch den Typ von Elementen, die in der Sammlung enthalten sind.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Object>
+          <ID>colVar</ID>
+          <Type>IEnumerable</Type>
+          <ToolTip>Ersetzen Sie dies durch die Sammlung, die durchlaufen werden soll.</ToolTip>
+          <Default>names</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[        ' Iterate through a collection
+        For Each $itemVar$ As $itemType$ In $colVar$
+
+        Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

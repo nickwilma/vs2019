@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Nur ausgewählte Teile des Quellcodes mithilfe von #If erstellen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Verwendet die #If-Compilerdirektive, um zu steuern, welcher Codeblock in die Assembly kompiliert wird.</Description>
+      <Shortcut>ifCond</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>condition</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Die Bedingung, die bestimmt, ob der Code innerhalb des Bereichs des #If-Konstrukts in die Kompilierung eingeschlossen wird.</ToolTip>
+          <Default>True</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[#If $condition$ Then
+
+#Else
+
+#End If]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

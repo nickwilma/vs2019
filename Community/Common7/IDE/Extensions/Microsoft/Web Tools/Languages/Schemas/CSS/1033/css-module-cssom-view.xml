@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2020: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2019 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="CSSOM View" standard-reference="https://www.w3.org/TR/cssom-view/" status="WD" pub-date="2016-03-17">
+
+  <CssProperty _locID="scroll-behavior"
+               _locAttrData="description"
+               restriction="enum"
+               syntax="div { $(name): smooth; }"
+               description="Specifies the scrolling behavior for a scrolling box, when scrolling happens due to navigation, CSSOM scrolling APIs, or scroll snapping operations not initiated by the user."
+               standard-reference="https://drafts.csswg.org/cssom-view/#smooth-scrolling">
+
+      <entry _locId="scroll-behavior_auto"
+             _locAttrData="description"
+             value="auto"
+             description="The scrolling box is scrolled in an instant fashion." />
+      <entry _locId="scroll-behavior_smooth"
+             _locAttrData="description"
+             value="smooth"
+             description="The scrolling box is scrolled in a smooth fashion using a user-agent-defined timing function over a user-agent-defined period of time. User agents should follow platform conventions, if any." />
+  </CssProperty>
+
+</CssModule>

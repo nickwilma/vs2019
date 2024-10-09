@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Zeichenfolge verschlüsseln</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Verschlüsselt Text aus einer Datei mithilfe des Rijndael-Verschlüsselungsalgorithmus.</Description>
+      <Shortcut>secEncrypt</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Security.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Security.Cryptography</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>fileName</ID>
+          <Type>String</Type>
+          <ToolTip>Der Name der Datei, in die der verschlüsselte Text geschrieben wird.</ToolTip>
+          <Default>"encrypted.txt"</Default>
+        </Literal>
+        <Object>
+          <ID>privateKey</ID>
+          <Type>Byte</Type>
+          <ToolTip>Der für das Verschlüsseln der Daten verwendete private Schlüssel.</ToolTip>
+          <Default>RijndaelAlg.Key</Default>
+        </Object>
+        <Object>
+          <ID>initializationVector</ID>
+          <Type>Byte</Type>
+          <ToolTip>Der Initialisierungsvektor, der im symmetrischen Schlüsselverschlüsselungsschema verwendet wird.
+</ToolTip>
+          <Default>RijndaelAlg.IV</Default>
+        </Object>
+        <Literal>
+          <ID>plainText</ID>
+          <Type>String</Type>
+          <ToolTip>Die Zeichenfolgenvariable, die den zu verschlüsselnden Text enthält.</ToolTip>
+          <Default>"Text to encrypt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Using fStream = File.Open("encrypted.txt", FileMode.OpenOrCreate)
+    Dim RijndaelAlg As Rijndael = Rijndael.Create
+    Using cStream As New CryptoStream(fStream,
+                                      RijndaelAlg.CreateEncryptor(RijndaelAlg.Key, RijndaelAlg.IV),
+                                      CryptoStreamMode.Write)
+
+        Using sWriter As New StreamWriter(cStream)
+            sWriter.WriteLine("Text to encrypt")
+        End Using
+    End Using
+End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

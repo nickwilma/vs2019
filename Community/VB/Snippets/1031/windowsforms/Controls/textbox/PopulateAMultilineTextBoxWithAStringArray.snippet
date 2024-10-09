@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Mehrzeilige Textfolge in mehrzeiligem TextBox eingeben</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Gibt eine mehrzeilige Zeichenfolge in ein mehrzeiliges Textfeld ein.</Description>
+      <Shortcut>tbArray</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>textboxName</ID>
+          <Type>TextBox</Type>
+          <ToolTip>Ersetzen Sie dies durch ein mehrzeiliges TextBox in Ihrem Formular.</ToolTip>
+          <Default>TextBox1</Default>
+        </Object>
+        <Literal>
+          <ID>arrayName</ID>
+          <ToolTip>Ersetzen Sie dies durch ein Array von Zeichenfolgen, um die Zeilen Ihrer TextBox zu füllen.</ToolTip>
+          <Default>names</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$textboxName$.Lines = $arrayName$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

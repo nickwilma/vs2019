@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2019: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Display" standard-reference="https://www.w3.org/TR/css-display-3" status="CR" pub-date="2020-12-18">
+
+  <CssPropertyValue type="display-outside">
+    <entry value="block"/>
+    <entry value="inline"/>
+    <entry value="run-in"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="display-inside">
+    <entry value="flow"/>
+    <entry value="flow-root"/>
+    <entry value="table"/>
+    <entry value="flex"/>
+    <entry value="grid"/>
+    <entry value="ruby"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="display-list-item">
+    <entry value="list-item"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="display-internal">
+    <entry value="table-row-group"/>
+    <entry value="table-header-group"/>
+    <entry value="table-footer-group"/>
+    <entry value="table-row"/>
+    <entry value="table-cell"/>
+    <entry value="table-group-column"/>
+    <entry value="table-column"/>
+    <entry value="table-caption"/>
+    <entry value="ruby-base"/>
+    <entry value="ruby-text"/>
+    <entry value="ruby-base-container"/>
+    <entry value="ruby-text-container"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="display-box">
+    <entry value="contents"/>
+    <entry value="none"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="display-legacy">
+    <entry value="inline-block"/>
+    <entry value="inline-table"/>
+    <entry value="inline-flex"/>
+    <entry value="inline-grid"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="display" _locAttrData="description" type="display-outside, display-inside, display-list-item, display-internal, display-box, display-legacy" description="Defines an element’s display type, which consists of the two basic qualities of how an element generates boxes: the inner display type, which defines (if it is a non-replaced element) the kind of formatting context it generates, dictating how its descendant boxes are laid out; and the outer display type, which dictates how the principal box itself participates in flow layout." syntax="div { $(name): block flow-root;" standard-reference="https://www.w3.org/TR/css-display-3/#the-display-properties"/>
+
+</CssModule>

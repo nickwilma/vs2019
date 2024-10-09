@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Bild in Byte() konvertieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Konvertiert ein Bild in Byte(). Bytearrays werden häufig zum Speichern von Bildinformationen in einer Datenbank verwendet.</Description>
+      <Shortcut>imageByte</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>inputImage</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Eingabebilds.</ToolTip>
+          <Default>img</Default>
+        </Literal>
+        <Literal>
+          <ID>outputByteArray</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Ausgabebytearrays.</ToolTip>
+          <Default>outBytes</Default>
+        </Literal>
+        <Literal>
+          <ID>tempStream</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des temporären Streams, der zum Lesen der Bilddaten verwendet wird.</ToolTip>
+          <Default>ms</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Public Function GetByteArrayFromImage(ByVal $inputImage$ As Bitmap) As Byte()
+        Dim $tempStream$ As New System.IO.MemoryStream
+        $inputImage$.Save($tempStream$, Imaging.ImageFormat.Bmp)
+        Dim $outputByteArray$(CInt($tempStream$.Length - 1)) As Byte
+        $tempStream$.Seek(0, System.IO.SeekOrigin.Begin)
+        $tempStream$.Read($outputByteArray$, 0, CInt($tempStream$.Length))
+        Return $outputByteArray$
+    End Function]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

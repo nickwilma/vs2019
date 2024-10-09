@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Klassendaten aus XML-Datei lesen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Liest mithilfe der XmlSerializer-Klasse Klassendaten, die zuvor in eine XML-Datei geschrieben wurden.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>xmlReadClass</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Xml.dll</Assembly>
+          <Version/>
+          <Url/>
+        </Reference>
+      </References>
+      <Imports>
+	<Import>
+	  <Namespace>System.Xml.Serialization</Namespace>
+	</Import>
+	<Import>
+	  <Namespace>System.IO</Namespace>
+	</Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>classType</ID>
+          <Type/>
+          <ToolTip>Ersetzen Sie dies durch den Namen der zu deserialisierenden Klasse.</ToolTip>
+          <Default>TheClass</Default>
+        </Literal>
+        <Literal>
+          <ID>filename</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Datei, die die serialisierten Daten enthält.</ToolTip>
+          <Default>"ClassData.xml"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim reader = New XmlSerializer(GetType($ClassType$))
+        Dim file = New StreamReader($filename$)
+        Dim fileData = CType(reader.Deserialize(file), $ClassType$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

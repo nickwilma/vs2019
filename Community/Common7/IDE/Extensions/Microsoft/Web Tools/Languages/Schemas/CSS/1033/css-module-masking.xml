@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2020: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2019 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Masking" standard-reference="https://www.w3.org/TR/css-masking-1/" status="CR" pub-date="2014-08-26">
+
+  <!-- This extends shape-box, which itself extends box. See https://www.w3.org/TR/css-masking-1/#typedef-geometry-box -->
+  <CssPropertyValue type="geometry-box">
+    <entry _locID="geometry-box_border-box"
+           _locAttrData="description"
+           value="border-box"
+           description="Defines the shape enclosed by the outside border edge." />
+    <entry _locID="geometry-box_padding-box"
+           _locAttrData="description"
+           value="padding-box"
+           description="Defines the shape enclosed by the outside padding edge." />
+    <entry _locID="geometry-box_content-box"
+           _locAttrData="description"
+           value="content-box"
+           description="Defines the shape enclosed by the outside content edge." />
+    <entry _locID="geometry-box_margin-box"
+           _locAttrData="description"
+           value="margin-box"
+           description="Defines the shape enclosed by the outside margin edge." />
+    <entry _locID="geometry-box_fill-box"
+           _locAttrData="description"
+           value="fill-box"
+           description="Uses the object bounding box as reference box." />
+    <entry _locID="geometry-box_stroke-box"
+           _locAttrData="description"
+           value="stroke-box"
+           description="Uses the stroke bounding box as reference box." />
+    <entry _locID="geometry-box_view-box"
+           _locAttrData="description"
+           value="view-box"
+           description="Uses the nearest SVG viewport as reference box." />
+  </CssPropertyValue>
+
+
+  <CssProperty _locID="clip-path"
+               _locAttrData="description"
+               type="geometry-box, basic-shape, url"
+               description="Defines the formula that must be used to mix the colors with the backdrop."
+               syntax="sub { $(name): ellipse(130px 140px at 10% 20%); }"
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-clip-path">
+    <entry value="none" />
+  </CssProperty>
+
+  <CssProperty _locID="clip-rule"
+               _locAttrData="description"
+               version="3.0"
+               restriction="enum"
+               description="Indicates the algorithm which is to be used to determine whether a given point is inside a shape for a clipping region created with a graphics element."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-clip-rule">
+
+    <entry _locID="clip-rule_nonzero"
+           _locAttrData="description"
+           value="nonzero"
+           description="This rule determines the 'insideness' of a point on the canvas by drawing a ray from that point to infinity in any direction and then examining the places where a segment of the shape crosses the ray." />
+    <entry _locID="clip-rule_evenodd"
+           _locAttrData="description"
+           value="evenodd"
+           description="This rule determines the 'insideness' of a point on the canvas by drawing a ray from that point to infinity in any direction and counting the number of path segments from the given shape that the ray crosses." />
+  </CssProperty>
+
+  <CssProperty _locID="mask-image"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum, url"
+               type="image"
+               description="Sets the mask layer image of an element."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-image">
+    <entry value="none" />
+  </CssProperty>
+
+  <CssPropertyValue type="masking-mode">
+    <entry value="alpha" />
+    <entry value="luminance" />
+    <entry value="auto" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="mask-mode"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum"
+               type="masking-mode"
+               description="Indicates whether the mask is treated as luminance mask or alpha mask."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-mode" />
+
+  <CssProperty _locID="mask-repeat"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum"
+               type="background-repeat"
+               description="Specifies how mask layer images are tiled after they have been sized and positioned."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-repeat" />
+
+  <CssProperty _locID="mask-position"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum, length, percentage"
+               type="background-position"
+               description="Specifies the initial position (after any resizing) of the mask within its corresponding background positioning area."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-position" />
+
+  <CssProperty _locID="mask-clip"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum"
+               type="geometry-box"
+               description="Specifies the initial position (after any resizing) of the mask within its corresponding background positioning area."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-clip">
+    <entry value="no-clip" />
+  </CssProperty>
+
+  <CssProperty _locID="mask-origin"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum"
+               type="geometry-box"
+               description="For elements rendered as a single box, specifies the mask positioning area. For elements rendered as multiple boxes (e.g., inline boxes on several lines, boxes on several pages) specifies which boxes box-decoration-break operates on to determine the mask positioning area."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-origin" />
+
+  <CssProperty _locID="mask-size"
+               _locAttrData="description"
+               version="4.0"
+               restriction="length, percentage"
+               type="bg-size"
+               description="Specifies the size of the mask layer images."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-size" />
+
+  <CssPropertyValue type="compositing-operator">
+    <entry value="add" />
+    <entry value="subtract" />
+    <entry value="intersect" />
+    <entry value="exclude" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="mask-composite"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum"
+               type="compositing-operator"
+               description="Defines the compositing operation used on the current mask layer with the mask layers below it."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-composite" />
+
+  <CssProperty _locID="mask"
+               _locAttrData="description"
+               version="4.0"
+               type="image, masking-mode, background-position, bg-size, background-repeat, geometry-box, compositing-operator"
+               description="Shorthand property for setting mask image, mode, repeat, position, clip, origin, size, and composite"
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask">
+    <entry value="none" />
+    <entry value="no-clip" />
+  </CssProperty>
+
+  <CssProperty _locID="mask-border-source"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum, url"
+               type="image"
+               description="Specifies an image to be used as mask border image."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-border-source">
+    <entry value="none" />
+  </CssProperty>
+
+  <CssProperty _locID="mask-border-mode"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum"
+               description="The mask-border-mode property indicates whether the image value for mask-border-source is treated as luminance mask or alpha mask."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-border-mode">
+    <entry value="alpha" />
+    <entry value="luminance" />
+  </CssProperty>
+
+  <CssProperty _locID="mask-border-slice"
+               _locAttrData="description"
+               version="4.0"
+               restriction="length, percentage"
+               description="This property specifies inward offsets from the top, right, bottom, and left edges of the mask border image, dividing it into nine regions: four corners, four edges and a middle. The middle image part is discarded and treated as fully opaque white (the content covered by the middle part is not masked and shines through) unless the fill keyword is present."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-border-slice">
+    <entry value="fill" />
+  </CssProperty>
+
+  <CssProperty _locID="mask-border-width"
+               _locAttrData="description"
+               version="4.0"
+               restriction="number, length, percentage"
+               description="The mask border image is drawn inside an area called the mask border image area."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-border-width">
+    <entry value="auto" />
+  </CssProperty>
+
+  <CssProperty _locID="mask-border-outset"
+               _locAttrData="description"
+               version="4.0"
+               restriction="length, percentage"
+               description="The values specify the amount by which the mask border image area extends beyond the border box. If it has four values, they set the outsets on the top, right, bottom and left sides in that order. If the left is missing, it is the same as the right; if the bottom is missing, it is the same as the top; if the right is missing, it is the same as the top."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-border-outset">
+  </CssProperty>
+
+  <CssProperty _locID="mask-border-repeat"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum"
+               type="border-image-repeat"
+               description="This property specifies how the images for the sides and the middle part of the mask border image are scaled and tiled. The first keyword applies to the horizontal sides, the second to the vertical ones. If the second keyword is absent, it is assumed to be the same as the first."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-border-repeat" />
+
+  <CssProperty _locID="mask-border"
+               _locAttrData="description"
+               version="4.0"
+               restriction="enum, length, percentage, url"
+               type="border-image-repeat, image"
+               description="This is a shorthand property for setting mask-border-source, mask-border-slice, mask-border-width, mask-border-outset and mask-border-repeat."
+               standard-reference="https://www.w3.org/TR/css-masking-1/#the-mask-border">
+    <entry value="none" />
+    <entry value="auto" />
+    <entry value="fill" />
+    <entry value="alpha" />
+    <entry value="luminance" />
+  </CssProperty>
+
+</CssModule>

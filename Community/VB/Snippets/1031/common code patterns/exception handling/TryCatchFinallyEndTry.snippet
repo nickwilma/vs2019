@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Try...Catch...Finally...End Try-Anweisung</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Fügt eine Try...Catch...Finally...End Try-Anweisung ein.</Description>
+      <Shortcut>TryCF</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>ExceptionType</ID>
+          <Type>Exception</Type>
+          <ToolTip>Ersetzen Sie dies durch den bestimmten Ausnahmetyp, den Sie abfangen möchten.</ToolTip>
+          <Default>ArgumentException</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Try
+
+Catch ex As $ExceptionType$
+
+Finally
+
+End Try]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

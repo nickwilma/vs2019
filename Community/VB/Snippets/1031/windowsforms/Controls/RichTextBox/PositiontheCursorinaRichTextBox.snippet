@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Cursor in RichTextBox positionieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Positioniert den Cursor in einem RichTextBox.</Description>
+      <Shortcut>richCursor</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>text</ID>
+          <Type>RichTextBox</Type>
+          <ToolTip>Ersetzen Sie dies durch ein RichTextBox-Steuerelement auf Ihrem Formular.</ToolTip>
+          <Default>RichTextBox1</Default>
+        </Object>
+        <Literal>
+          <ID>Location</ID>
+          <Type>Integer</Type>
+          <ToolTip>Ersetzen Sie dies durch die Position, an der der Cursor platziert werden soll.</ToolTip>
+          <Default>5</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$text$.Focus()
+$text$.Select($Location$, 0)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

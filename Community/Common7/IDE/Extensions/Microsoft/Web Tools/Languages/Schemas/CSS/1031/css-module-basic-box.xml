@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Basic Box" standard-reference="http://www.w3.org/TR/css3-box/" status="WD" pub-date="2007-08-09">
+
+  <CssProperty _locID="display" _locAttrData="description" version="1.0" restriction="enum" syntax="p { $(name): inline; }" description="In Verbindung mit 'float' und 'position' bestimmt diese Eigenschaft den Typ der Box(en), die für ein Element erzeugt werden." standard-reference="http://www.w3.org/TR/css3-box/#display">
+
+    <entry _locID="display_block" _locAttrData="description" value="block" version="2.0" description="Blockboxen"/>
+    <entry _locID="display_compact" _locAttrData="description" value="compact" version="3.0" browsers="none" description="Je nach Kontext handelt es sich um eine Blockbox oder um eine Markerbox. Die Eigenschaften gelten für kompakte Boxen in ihrem endgültigen Zustand."/>
+    <entry _locID="display_inline" _locAttrData="description" value="inline" version="2.0" description="Inlineboxen"/>
+    <entry _locID="display_inline-block" _locAttrData="description" value="inline-block" version="2.0" description="Eine Blockbox, die ähnlich einem ersetzten Element als einzelne Inlinebox von Inhalt umflossen wird. Das Innere eines Inlineblocks wird als Blockbox und die Box selbst als Inlinebox formatiert."/>
+    <entry value="inline-table" version="2.0"/>
+    <entry _locID="display_" _locAttrData="description" value="list-item" version="2.0" description="Eine oder mehrere Blockboxen und eine Markerbox."/>
+    <entry value="ruby" version="3.0"/>
+    <entry value="ruby-base" version="3.0"/>
+    <entry value="ruby-text" version="3.0"/>
+    <entry value="ruby-base-group" version="3.0" browsers="none"/>
+    <entry value="ruby-text-group" version="3.0" browsers="none"/>
+    <entry value="ruby-base-container" version="3.0"/>
+    <entry value="ruby-text-container" version="3.0"/>
+    <entry _locID="display_run-in" _locAttrData="description" value="run-in" version="2.0" description="Je nach Kontext entweder eine Blockbox oder eine Inlinebox. Die Eigenschaften gelten für Run-In-Boxen in ihrem endgültigen Zustand ('inline-level' oder 'block-level')."/>
+    <entry value="table" version="2.0"/>
+    <entry value="table-row-group" version="2.0"/>
+    <entry value="table-header-group" version="2.0"/>
+    <entry value="table-footer-group" version="2.0"/>
+    <entry value="table-row" version="2.0"/>
+    <entry value="table-column" version="2.0"/>
+    <entry value="table-column-group" version="2.0"/>
+    <entry value="table-cell" version="2.0"/>
+    <entry value="table-caption" version="2.0"/>
+    <entry _locID="display_none" _locAttrData="description" value="none" version="1.0" description="Dieser Wert führt dazu, dass von einem Element keine Boxen erstellt werden (d.h., das Element hat keinen Einfluss auf das Layout). Von den untergeordneten Elementen werden ebenfalls keine Boxen erstellt; dieses Verhalten kann nicht mithilfe der 'display'-Eigenschaft für untergeordnete Elemente überschrieben werden."/>
+    <entry value="contents" version="3.0" browsers="FF37"/>
+  </CssProperty>
+
+  <CssProperty _locID="padding" _locAttrData="description, syntax" version="1.0" restriction="length, percentage" description="Kurzschreibweise zum Festlegen von Werten für den Innenabstand (padding). Fehlt der Wert für den linken Abstand, wird der Wert für den rechten Abstand übernommen. Fehlt der Wert für den unteren Abstand, wird der Wert für den oberen Abstand übernommen. Fehlt der Wert für den rechten Abstand, wird der Wert für den oberen Abstand übernommen. Der Wert darf nicht negativ sein." syntax="div { $(name): 4px 7px 2px 4px; }
+                 div { $(name): top right bottom left; }" standard-reference="http://www.w3.org/TR/css3-box/#padding1"/>
+
+  <CssProperty _locID="padding-top" ref="padding" syntax="ul { $(name): 2em; }"/>
+  <CssProperty _locID="padding-right" ref="padding-top"/>
+  <CssProperty _locID="padding-left" ref="padding-top"/>
+  <CssProperty _locID="padding-bottom" ref="padding-top"/>
+
+  <CssProperty _locID="margin" _locAttrData="description, syntax" version="1.0" restriction="length, percentage" description="Kurzschreibweise zum Festlegen von Werten für den Außenabstand. Fehlt der Wert für den linken Abstand, wird der Wert für den rechten Abstand übernommen. Fehlt der Wert für den unteren Abstand, wird der Wert für den oberen Abstand übernommen. Fehlt der Wert für den rechten Abstand, wird der Wert für den oberen Abstand übernommen. Der Wert darf nicht negativ sein." syntax="div { $(name): 4px 7px 2px 4px; }
+               div { $(name): top right bottom left; }" standard-reference="http://www.w3.org/TR/css3-box/#margin1">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="margin-top" ref="margin" syntax="div { $(name): 4px; }"/>
+  <CssProperty _locID="margin-left" ref="margin-top"/>
+  <CssProperty _locID="margin-right" ref="margin-top"/>
+  <CssProperty _locID="margin-bottom" ref="margin-top"/>
+
+  <CssProperty _locID="float" _locAttrData="description" version="1.0" restriction="enum" syntax="img { $(name): right; }" description="Gibt an, wie eine Box umflossen wird. Diese Eigenschaft kann für beliebige Elemente festgelegt werden, gilt jedoch nur für Elemente, die Boxen ohne absolute Positionierung erzeugen." standard-reference="http://www.w3.org/TR/2006/WD-CSS21-20060411/visuren.html#propdef-float">
+
+    <entry _locID="float_left" _locAttrData="description" value="left" description="Das Element erzeugt eine Blockbox, die links ausgerichtet wird. Der weitere Inhalt umfließt von oben ausgehend (je nach Festlegung der 'clear'-Eigenschaft) die rechte Seite der Box."/>
+    <entry _locID="float_right" _locAttrData="description" value="right" description="Ähnlich wie 'left', außer dass die Box rechts ausgerichtet wird und der weitere Inhalt von oben ausgehend die linke Seite der Box umfließt."/>
+    <entry _locID="float_none" _locAttrData="description" value="none" description="Es findet kein Umfluss statt."/>
+  </CssProperty>
+
+  <CssProperty _locID="clear" _locAttrData="description" version="1.0" restriction="enum" description="Gibt an, auf welchen Seiten der Elementbox keine vorhergehenden float-positionierten Elemente dargestellt werden dürfen. Durch die 'clear'-Eigenschaft werden 'floats' innerhalb des Elements oder in anderen Blockformatierungen nicht berücksichtigt." syntax="footer { $(name): both; }" standard-reference="http://www.w3.org/TR/2006/WD-CSS21-20060411/visuren.html#propdef-clear">
+
+    <entry _locID="clear_none" _locAttrData="description" value="none" description="float-Elemente können auf beiden Seiten der Box erscheinen."/>
+    <entry _locID="clear_left" _locAttrData="description" value="left" description="Der Abstand der erzeugten Box wird so weit ausgedehnt, bis die obere Außenkante des Rahmens unter der unteren Außenkante aller vorangehenden links-floatierten Elemente liegt, die aus vorhergehenden Elementen im Quelldokument resultieren."/>
+    <entry _locID="clear_right" _locAttrData="description" value="right" description="Der Abstand der erzeugten Box wird so weit ausgedehnt, bis die obere Außenkante des Rahmens unter der unteren Außenkante aller vorangehenden rechts-floatierten Elemente liegt, die aus vorhergehenden Elementen im Quelldokument resultieren."/>
+    <entry _locID="clear_both" _locAttrData="description" value="both" description="Der Abstand der erzeugten Box wird so weit ausgedehnt, bis die obere Außenkante des Rahmens unter der unteren Außenkante aller vorangehenden rechts- und links-floatierten Elemente liegt, die aus vorhergehenden Elementen im Quelldokument resultieren."/>
+  </CssProperty>
+
+  <CssPropertyValue type="overflow">
+    <entry _locID="overflow_visible" _locAttrData="description" value="visible" version="2.0" description="Der Inhalt wird nicht abgeschnitten, d.h., er kann außerhalb des Inhaltsbereichs dargestellt werden."/>
+    <entry _locID="overflow_hidden" _locAttrData="description" value="hidden" version="2.0" description="Der Inhalt wird abgeschnitten, und es sollte kein Bildlaufmechanismus bereitgestellt werden, mit dem der Inhalt außerhalb des Clippingbereichs angezeigt werden kann."/>
+    <entry _locID="overflow_scroll" _locAttrData="description" value="scroll" version="2.0" description="Der Inhalt wird abgeschnitten, und wenn der Benutzer-Agent einen Bildlaufmechanismus auf dem Bildschirm bereitstellt (z.B. eine Bildlaufleiste oder eine Schwenkfunktion), sollte dieser Mechanismus für eine Box angezeigt werden, unabhängig davon, ob der Inhalt abgeschnitten ist oder nicht."/>
+    <entry _locID="overflow_auto" _locAttrData="description" value="auto" version="2.0" description="Das Verhalten des Werts 'auto' hängt vom Benutzer-Agent ab; es sollte jedoch einen Bildlaufmechanismus für überlaufende Elementinhalte bereitgestellt werden."/>
+    <entry _locID="overflow_no-display" _locAttrData="description" value="no-display" version="3.0" browsers="none" description="Wenn der Inhalt nicht in den Inhaltsbereich passt, wird wie bei der Einstellung 'display: none' die gesamte Box entfernt."/>
+    <entry _locID="overflow_no-content" _locAttrData="description" value="no-content" version="3.0" browsers="none" description="Wenn der Inhalt nicht in den Inhaltsbereich passt, wird wie bei der Einstellung 'visibility: hidden' der gesamte Inhalt ausgeblendet."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="overflow-x" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE5,O9.5,S3" type="overflow" restriction="enum" description="Gibt an, ob der Inhalt abgeschnitten wird, wenn er im Inhaltsbereich des Elements überläuft." syntax="div { $(name): hidden; }" standard-reference="http://www.w3.org/TR/css3-box/#overflow-x"/>
+
+  <CssProperty _locID="overflow-y" browsers="C,FF1.5,IE5,O9.5,S3" ref="overflow-x"/>
+
+  <CssProperty _locID="overflow" _locAttrData="description" version="2.0" type="overflow" restriction="enum" description="Kurzschreibweise zum Festlegen von 'overflow-x' und 'overflow-y'." syntax="div { overflow: hidden auto; }" standard-reference="http://www.w3.org/TR/css3-box/#overflow"/>
+
+  <CssProperty _locID="visibility" _locAttrData="description" version="2.0" browsers="all" restriction="enum" syntax="img { $(name): hidden; }" description="Gibt an, ob die von einem Element erzeugten Boxen sichtbar dargestellt werden. Unsichtbare Boxen wirken sich weiterhin auf das Layout aus (legen Sie die 'display'-Eigenschaft auf 'none' fest, um die Erstellung von Boxen insgesamt zu unterbinden)." standard-reference="http://www.w3.org/TR/css3-box/#visibility">
+
+    <entry _locID="visibility_visible" _locAttrData="description" value="visible" description="Die erzeugte Box ist sichtbar."/>
+    <entry _locID="visibility_hidden" _locAttrData="description" value="hidden" description="Die erzeugte Box ist unsichtbar (vollständig transparent, nichts wird gezeichnet); sie wirkt sich jedoch weiterhin auf das Layout aus."/>
+    <entry _locID="visibility_collapse" _locAttrData="description" value="collapse" description="Tabellenspezifisch. Wenn diese Eigenschaft für andere Elemente als Zeilen, Zeilengruppen, Spalten oder Spaltengruppen verwendet wird, hat 'collapse' die gleiche Auswirkung wie 'hidden'."/>
+  </CssProperty>
+
+  <CssProperty _locID="rotation" _locAttrData="description" version="3.0" browsers="none" restriction="angle" description="Dreht ein Block-Level-Element entgegen dem Uhrzeigersinn um einen Punkt, der durch 'rotation-point' festgelegt wird." syntax="img { $(name): 90deg; }" standard-reference="http://www.w3.org/TR/css3-box/#rotation"/>
+
+  <CssProperty _locID="rotation-point" _locAttrData="description" version="3.0" browsers="none" restriction="percentage, length" description="Ein Wertepaar, das einen Punkt als Abstand von der oberen linken Rahmenecke definiert. Der Ausgangswert ist '50% 50%'." syntax="img { $(name): 10% 25%; }" standard-reference="http://www.w3.org/TR/css3-box/#rotation-point">
+
+    <entry value="left"/>
+    <entry value="center"/>
+    <entry value="right"/>
+    <entry value="top"/>
+    <entry value="bottom"/>
+  </CssProperty>
+
+  <CssProperty _locID="clip" _locAttrData="description, syntax" version="2.0" browsers="all" restriction="enum" description="Definiert den sichtbaren Teil einer Elementbox." syntax="span { $(name): rect(0px, 60px, 200px, 0px); }
+        span { $(name): rect(top, right, bottom, left); }" standard-reference="http://www.w3.org/TR/CSS2/visufx.html#propdef-clip">
+
+    <entry value="auto"/>
+    <entry value="rect()"/>
+  </CssProperty>
+
+</CssModule>

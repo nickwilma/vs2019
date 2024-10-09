@@ -1,0 +1,606 @@
+{
+  "debugExtensions": {
+    "cppgdb": {
+      "vsDebugEngineGuid": "{ea6637c6-17df-45b5-a183-0951c54243bc}",
+      "VsDebugTargetInfo4": {
+        "bstrCurDir": "${workspaceRoot}",
+        "bstrExe": "${debugInfo.target}",
+        "bstrOptions": "*"
+      },
+      "templates": [
+        {
+          "templateId": "launchLinux",
+          "displayName": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1000",
+          "description": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1001",
+          "fileExtensions": [
+            "*.exe",
+            "*.out",
+            "*.elf",
+            "makefile"
+          ],
+          "initialConfiguration": {
+            "comment": "Learn how to configure remote debugging. For more info, see http://aka.ms/vslinuxdebug",
+            "debuggerConfiguration": "gdb",
+            "args": [],
+            "env": {}
+          }
+        },
+        {
+          "templateId": "attachLinux",
+          "displayName": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1002",
+          "description": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1003",
+          "fileExtensions": [
+            "*.exe",
+            "*.out",
+            "*.elf",
+            "makefile"
+          ],
+          "initialConfiguration": {
+            "comment": "Learn how to configure remote debugging. For more info, see http://aka.ms/vslinuxdebug",
+            "debuggerConfiguration": "gdb",
+            "processId": 0
+          }
+        },
+        {
+          "templateId": "launchLinuxServer",
+          "displayName": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1010",
+          "description": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1011",
+          "fileExtensions": [
+            "*.exe",
+            "*.out",
+            "*.elf",
+            "makefile"
+          ],
+          "initialConfiguration": {
+            "comment": "Learn how to configure remote debugging. For more info, see http://aka.ms/vslinuxdebug",
+            "debuggerConfiguration": "gdbserver",
+            "args": [],
+            "env": {}
+          }
+        },
+        {
+          "templateId": "attachLinuxServer",
+          "displayName": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1012",
+          "description": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1013",
+          "fileExtensions": [
+            "*.exe",
+            "*.out",
+            "*.elf",
+            "makefile"
+          ],
+          "initialConfiguration": {
+            "comment": "Learn how to configure remote debugging. For more info, see http://aka.ms/vslinuxdebug",
+            "debuggerConfiguration": "gdbserver",
+            "processId": 0
+          }
+        },
+        {
+          "templateId": "launchWSL",
+          "displayName": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1006",
+          "description": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1007",
+          "fileExtensions": [
+            "*.exe",
+            "*.out",
+            "*.elf",
+            "makefile"
+          ],
+          "initialConfiguration": {
+            "comment": "Learn how to configure WSL debugging. For more info, see http://aka.ms/vslinuxdebug",
+            "debuggerConfiguration": "gdb",
+            "args": [],
+            "env": {}
+          }
+        }
+        //,
+        //{
+        //  "templateId": "launchGdbserver",
+        //  "displayName": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1008",
+        //  "description": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1009",
+        //  "fileExtensions": [
+        //    "*.exe",
+        //    "*.out",
+        //    "*.elf",
+        //    "makefile"
+        //  ],
+        //  "initialConfiguration": {
+        //    "comment": "Learn how to configure remote debugging. For more info, see http://aka.ms/vslinuxdebug",
+        //    "debuggerConfiguration": "gdbserver",
+        //    "args": [],
+        //    "env": {}
+        //  }
+        //}
+      ],
+      "schema": {
+        "definitions": {
+          "gdb_linux_schema": {
+            "type": "object",
+            "properties": {
+              "comment": {
+                "type": "string",
+                "description": "Specifies the configuration documentation. The value is ignored."
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "cppgdb"
+                ]
+              },
+              "debuggerConfiguration": {
+                "type": "string",
+                "enum": [ "gdb", "gdbserver" ],
+                "description": "Specifies gdb or gdbserver configuration."
+              },
+              "args": {
+                "type": "array",
+                "description": "Specifies the command line arguments passed to the program being debugged.",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "env": {
+                "type": "object",
+                "description": "Specifies the environment variable \"name\": \"value\" pairs passed to the program being debugged."
+              },
+              "program": {
+                "type": "string",
+                "description": "Specifies the Linux path to the application to debug. Only required if it is different than the target executable in the build or deploy location."
+              },
+              "processId": {
+                "type": "integer",
+                "description": "Specifies the process id (pid) of a Linux process to attach the debugger to."
+              },
+              "remoteMachineName": {
+                "type": "string",
+                "description": "Specifies the name of the remote machine. Only required if different than the build machine. Must have an entry in the Connection Manager."
+              },
+              "cwd": {
+                "type": "string",
+                "description": "Specifies the current directory on the remote machine to run \"program\" from. The directory must exist."
+              },
+              "gdbPath": {
+                "type": "string",
+                "description": "Specifies the full Linux path to the gdb to use to debug in gdb configuration, and the full Windows path to gdb in gdbserver configuration, ."
+              },
+              "gdbserver": {
+                "type": "object",
+                "description": "Specifies the properties specific to debugging using gdbserver.",
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "description": "Specifies the Linux path to the gdbserver to use to debug. Defaults to \"gdbserver\"."
+                  },
+                  "remotePort": {
+                    "type": "integer",
+                    "description": "Specifies the port to use for gdbserver on the remote machine. Optional."
+                  },
+                  "localPort": {
+                    "type": "integer",
+                    "description": "Specifies the port to use on the local machine to communicate to gdbserver. Optional."
+                  }
+                }
+              },
+              "preDebugCommand": {
+                "type": "string",
+                "description": "Specifies the Linux command to run immediately before starting gdb or gdbserver. Debugging will start only after the command completes."
+              },
+              "disableDeploy": {
+                "type": "boolean",
+                "default": false,
+                "description": "Indicates whether build/debug separation is disabled. When enabled, this feature allows build and debug to happen on two separate machines."
+              },
+              "deployDirectory": {
+                "type": "string",
+                "description": "Specifies the directory on the remote machine specified by the remoteMachineName value that the executable will be copied to."
+              },
+              "deploy": {
+                "type": "array",
+                "description": "Specifies the advanced configuration for deployment settings.",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "sourceMachine": {
+                      "type": "string",
+                      "description": "Specifies the machine from which the file will be copied, please use the Connection Manager for adding new Linux machines. When using CMake the macro ${debugInfo.remoteMachineName} can be used as the value of this field."
+                    },
+                    "targetMachine": {
+                      "type": "string",
+                      "description": "Specifies the machine into which the file will be copied, please use the Connection Manager for adding new Linux machines. When using CMake the macro ${debugInfo.remoteMachineName} can be used as the value of this field."
+                    },
+                    "sourcePath": {
+                      "type": "string",
+                      "description": "Specifies the file location on sourceMachine."
+                    },
+                    "targetPath": {
+                      "type": "string",
+                      "description": "Specifies the file location on targetMachine."
+                    },
+                    "deploymentType": {
+                      "type": "string",
+                      "enum": [ "LocalRemote", "RemoteRemote" ],
+                      "description": "Specifies the deployment type. Setting this value to LocalRemote would mean copying from the local file system to a remote machine specified by remoteMachineName in launch.vs.json. RemoteRemote would be deploying from one remote machine specified in CMakeSettings.json to a different machine specified in launch.vs.json."
+                    },
+                    "executable": {
+                      "type": "boolean",
+                      "description": "Indicates whether the deployed file is an executable."
+                    }
+                  }
+                }
+              }
+            },
+            "required": [
+              "type", "debuggerConfiguration"
+            ]
+          },
+          "gdbLinuxTemplateLayout": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/default"
+              },
+              {
+                "$ref": "#/definitions/gdb_linux_schema"
+              }
+            ]
+          }
+        },
+        "configuration": "#/definitions/gdbLinuxTemplateLayout"
+      }
+    },
+    "cppdbg": {
+      "vsDebugEngineGuid": "{ea6637c6-17df-45b5-a183-0951c54243bc}",
+      "VsDebugTargetInfo4": {
+        "bstrCurDir": "${workspaceRoot}",
+        "bstrExe": "${debugInfo.target}",
+        "bstrOptions": "*"
+      },
+      "templates": [
+        {
+          "templateId": "launchMicro",
+          "displayName": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1004",
+          "description": "{f3491365-10cb-44a7-8aac-f54d566ec06c}:1005",
+          "fileExtensions": [
+            "*.exe",
+            "*.out",
+            "*.elf",
+            "makefile"
+          ],
+          "initialConfiguration": {
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}\\BUILD\\${workspaceRootFolderName}.elf",
+            "MIMode": "gdb",
+            "externalConsole": true,
+            "inheritEnvironments": [ "gcc_arm" ],
+            "miDebuggerPath": "${env.gccpath}\\bin\\arm-none-eabi-gdb.exe",
+            "setupCommands": [
+              {
+                "text": "Documentation: Learn how to configure embedded debugging",
+                "description": "For more info, see http://aka.ms/vsembeddeddebug",
+                "ignoreFailures": true
+              },
+              { "text": "-environment-cd ${workspaceRoot}/BUILD" },
+              // Connect to a externally started gdbserver
+              //   {
+              //     "text": "-target-select remote localhost:3333",
+              //     "description": "connect to target",
+              //     "ignoreFailures": false
+              //   },
+              {
+                "text": "-file-exec-and-symbols ${workspaceRootFolderName}.elf",
+                "description": "load file",
+                "ignoreFailures": false
+              },
+              {
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+              }
+            ],
+            "visualizerFile": "${debugInfo.linuxNatvisPath}",
+            "showDisplayString": true,
+            //launch a gdbserver
+            "miDebuggerServerAddress": "localhost:3333",
+            "launchCompleteCommand": "None",
+            "debugServerPath": "path-to-your\\gdbserver.exe",
+            "debugServerArgs": "-f path-to-your/board.cfg",
+            "serverStarted": "GDB\\ server\\ started", //start message from your gdb server
+            "filterStderr": true,
+            "filterStdout": true
+          }
+        }
+      ],
+      "schema": {
+        "definitions": {
+          "cpp_linux_schema": {
+            "type": "object",
+            "properties": {
+              "program": {
+                "type": "string",
+                "description": "Specifies the full path to program executable on the remote machine. When using CMake the macro ${debugInfo.fullTargetPath} can be used as the value of this field."
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "cppdbg"
+                ]
+              },
+              "processId": {
+                "type": "integer",
+                "description": "Specifies the optional process id to attach the debugger to."
+              },
+              "sourceFileMap": {
+                "type": "object",
+                "description": "Keys are compiler source locations and values are editor source locations or an object specifying further information.",
+                "additionalProperties": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "$ref": "#/definitions/cpp_linux_schema/definitions/sourceFileMapOptions"
+                        }
+                    ]
+                }
+              },
+              "MIMode": {
+                "type": "string",
+                "description": "Indicates the type of MI-enabled console debugger that the MIDebugEngine will connect to. \nAllowed values are \"gdb\", \"lldb\"."
+              },
+              "args": {
+                "type": "array",
+                "description": "Specifies the command line arguments passed to the program.",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "environment": {
+                "type": "array",
+                "description": "Specifies the environment variables to add to the environment for the program. This is as an array of objects with \"name\" and \"value\" properties, where \"name\" corresponds to the name of the variable and \"value\" corresponds to the value of the variable.",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "targetArchitecture": {
+                "type": "string",
+                "description": "Specifies the architecture of the debugger. This will automatically be detected unless this parameter is set. \nAllowed values are x86, arm, arm64, mips, x64, amd64, x86_64."
+              },
+              "visualizerFile": {
+                "type": "string",
+                "description": "Specifies the .natvis file to be used when debugging this process. This option is not compatible with GDB pretty printing. Please also see \"showDisplayString\" if using this setting."
+              },
+              "showDisplayString": {
+                "type": "boolean",
+                "description": "Indicates whether when a visualizerFile is specified, the display string should be enabled. Turning this option on can cause slower performance during debugging."
+              },
+              "remoteMachineName": {
+                "type": "string",
+                "description": "Specifies the remote Linux machine which hosts gdb and the program to debug. Please use the Connection Manager for adding new Linux machines. When using CMake the macro ${debugInfo.remoteMachineName} can be used as the value of this field."
+              },
+              "cwd": {
+                "type": "string",
+                "description": "Specifies the working directory of the target on the remote machine. When using CMake the macro ${debugInfo.defaultWorkingDirectory} can be used as the value of this field. Default value is the remote workspace root, unless overridded in the CMakeLists.txt file."
+              },
+              "miDebuggerPath": {
+                "type": "string",
+                "description": "Specifies the path to the MI-enabled debugger (such as gdb). When unspecified, it will search PATH first for the debugger."
+              },
+              "miDebuggerServerAddress": {
+                "type": "string",
+                "description": "Specifies the network address of the MI-enabled debugger server to connect to. \nExample: localhost:1234."
+              },
+              "disableDeploy": {
+                "type": "boolean",
+                "default": false,
+                "description": "Indicates whether build/debug separation is disabled. When enabled, this feature allows build and debug to happen on two separate machines."
+              },
+              "deployDirectory": {
+                "type": "string",
+                "description": "Specifies the directory on the remote machine specified by the remoteMachineName value that the executable will be copied to."
+              },
+              "deploy": {
+                "type": "array",
+                "description": "Specifies the advanced configuration for deployment settings.",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "sourceMachine": {
+                      "type": "string",
+                      "description": "Specifies the machine from which the file will be copied, please use the Connection Manager for adding new Linux machines. When using CMake the macro ${debugInfo.remoteMachineName} can be used as the value of this field."
+                    },
+                    "targetMachine": {
+                      "type": "string",
+                      "description": "Specifies the machine into which the file will be copied, please use the Connection Manager for adding new Linux machines. When using CMake the macro ${debugInfo.remoteMachineName} can be used as the value of this field."
+                    },
+                    "sourcePath": {
+                      "type": "string",
+                      "description": "Specifies the file location on sourceMachine."
+                    },
+                    "targetPath": {
+                      "type": "string",
+                      "description": "Specifies the file location on targetMachine."
+                    },
+                    "deploymentType": {
+                      "type": "string",
+                      "enum": [ "LocalRemote", "RemoteRemote" ],
+                      "description": "Specifies the description of the deployment type. Setting this value to LocalRemote would mean copying from the local file system to a remote machine specified by remoteMachineName in launch.vs.json. RemoteRemote would be deploying from one remote machine specified in CMakeSettings.json to a different machine specified in launch.vs.json."
+                    },
+                    "executable": {
+                      "type": "boolean",
+                      "description": "Indicates whether the deployed file is an executable."
+                    }
+                  }
+                }
+              },
+              "setupCommands": {
+                "type": "array",
+                "description": "Specifies one or more GDB/LLDB commands to execute in order to setup the underlying debugger as an array of objects with \"text\", \"description\" and \"ignoreFailures\" properties. \"text\" corresponds to the actual command to be executed for example: \"-enable-pretty-printing\". \"description\", which is optional, provides a description of the command. \"ignoreFailures\" is a boolean that indicates whether failures from the command should be ignored and defaults to \"false\".",
+                "items": {
+                  "$ref": "#/definitions/cpp_linux_schema/definitions/launchSetupCommands"
+                }
+              },
+              "customLaunchSetupCommands": {
+                "type": "array",
+                "description": "Replaces the default commands used to launch a target with some other commands. This is an array of objects with \"text\", \"description\" and \"ignoreFailures\" properties. \"text\" corresponds to the actual command to be executed for example, this can be \"-target-attach\" in order to attach to a target process. \"description\", which is optional, provides a description of the command. \"ignoreFailures\" is a boolean that indicates whether failures from the command should be ignored and defaults to \"false\".",
+                "items": {
+                  "$ref": "#/definitions/cpp_linux_schema/definitions/launchSetupCommands"
+                }
+              },
+              "launchCompleteCommand": {
+                "type": "string",
+                "enum": [
+                  "exec-run",
+                  "exec-continue",
+                  "None"
+                ],
+                "description": "Specifies the command to execute after the debugger is fully setup in order to cause the target process to run. \nAllowed values are \"exec-run\", \"exec-continue\", \"None\". \nThe default value is \"exec-run\"."
+              },
+              "debugServerPath": {
+                "type": "string",
+                "description": "Specifies the optional full path to debug server to launch. \nDefaults to null."
+              },
+              "debugServerArgs": {
+                "type": "string",
+                "description": "Specifies the optional debug server args. \nDefaults to null."
+              },
+              "serverStarted": {
+                "type": "string",
+                "description": "Specifies the optional server-started pattern to look for in the debug server output. \nDefaults to null."
+              },
+              "filterStdout": {
+                "type": "boolean",
+                "description": "Indicates whether to search stdout stream for server-started pattern and log stdout to debug output. \nDefaults to \"true\"."
+              },
+              "filterStderr": {
+                "type": "boolean",
+                "description": "Indicates whether to search stderr stream for server-started pattern and log stderr to debug output. \nDefaults to \"false\"."
+              },
+              "serverLaunchTimeout": {
+                "type": "integer",
+                "description": "Specifies the optional time, in milliseconds, for the debugger to wait for the debugServer to start up. \nDefaults to 10000."
+              },
+              "coreDumpPath": {
+                "type": "string",
+                "description": "Specifies the optional full path to a core dump file for the specified program. \nDefaults to null."
+              },
+              "externalConsole": {
+                "type": "boolean",
+                "description": "Indicates whether a console should be launched for the debugger. If \"true\", a console is launched. \nDefaults to \"false\". NOTE: This option is ignored in some cases for technical reasons."
+              },
+              "pipeTransport": {
+                "$ref": "#/definitions/cpp_linux_schema/definitions/pipeTransportOptions",
+                "description": "Specifies options to enable the debugger to connect to a remote computer using another executable as a pipe that will relay standard input/output between Visual Studio \nand the MI-enabled debugger (such as gdb)."
+              },
+              "remotePrelaunchCommand": {
+                "type": "string",
+                "description": "Specifies the command to execute on the remote Linux system before launching the debugger, for example \"gdbserver :12345 a.out >& /dev/null\"."
+              },
+                "remotePrelaunchWait": {
+                    "type": "string",
+                    "description": "Specifies the time to wait, in milliseconds, after running the prelaunch command and before launching the debugger. The intent is to give the prelaunch command time to perform its functions."
+                },
+                "enableAsan": {
+                    "type": "boolean",
+                    "description": "Enable the exception dialog in the debugger on Address Sanitizer errors."
+                }
+            },
+            "definitions": {
+              "launchSetupCommands": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "description": "Specifies the debugger command to execute."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Specifies the optional description for the command."
+                  },
+                  "ignoreFailures": {
+                    "type": "boolean",
+                    "description": "Indicates whether failures from the command should be ignored. If \"true\", failures are ignored. \nDefaults to \"false\"."
+                  }
+                }
+              },
+              "pipeTransportOptions": {
+                "type": "object",
+                "description": "Specifies options to enable the debugger to connect to a remote computer using another executable as a pipe that will relay standard input/output between Visual Studio \nand the MI-enabled debugger (such as gdb).",
+                "properties": {
+                    "pipeCwd": {
+                        "type": "string",
+                        "description": "Specifies the fully qualified path to the working directory for the pipe program."
+                    },
+                    "pipeProgram": {
+                        "type": "string",
+                        "description": "Specifies the fully qualified pipe command to execute."
+                    },
+                    "pipeArgs": {
+                        "type": "array",
+                        "description": "Specifies the command line arguments passed to the pipe program to configure the connection.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "pipeCmd": {
+                        "type": "array",
+                        "description": "Specifies the command line arguments passed to the pipe program to execute a command on the remote target. The arguments should contain the embedded string '${debuggerCommand}'. That string will be replaced by the debugger with the commmand to execute.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "debuggerPath": {
+                        "type": "string",
+                        "description": "Specifies the full path to the debugger on the target machine, for example /usr/bin/gdb."
+                    },
+                    "pipeEnv": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "description": "Specifies the environment variables passed to the pipe program."
+                    },
+                    "quoteArgs": {
+                        "type": "boolean",
+                        "description": "Indicates whether individual arguments contain characters (such as spaces or tabs), should be quoted. If \"false\", the debugger command will no longer be automatically quoted. \nDefault is \"true\"."
+                    },
+                    "disable": {
+                        "type": "boolean",
+                        "description": "Indicates whether use of the \"pipeTransport\" should be disabled. If set to \"true\", the use of \"pipeTransport\" will be disabled and instead gdb will be run on the local host."
+                    }
+                }
+              },
+              "sourceFileMapOptions": {
+                "type": "object",
+                "properties": {
+                  "editorPath": {
+                    "type": "string",
+                    "description": "Specifies the location of the source code for the editor to locate."
+                  },
+                  "useForBreakpoints": {
+                    "type": "boolean",
+                    "description": "Indicates whether when setting breakpoints, source mapping should be used. \nIf \"false\", only the filename and line number is used for setting breakpoints. \nIf \"true\", breakpoints will be set with the full path to the file and line number only when this source mapping is used. Otherwise just filename and line number will be used when setting breakpoints. \nDefault is \"true\"."
+                  }
+                }
+              }
+            }
+          },
+          "cppLinuxTemplateLayout": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/default"
+              },
+              {
+                "$ref": "#/definitions/cpp_linux_schema"
+              }
+            ]
+          }
+        },
+        "configuration": "#/definitions/cppLinuxTemplateLayout"
+      }
+    }
+  }
+}

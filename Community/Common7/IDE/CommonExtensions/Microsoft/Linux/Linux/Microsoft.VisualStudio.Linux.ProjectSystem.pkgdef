@@ -1,0 +1,20 @@
+﻿
+// Item filtering for Linux projects
+[$RootKey$\Projects\{EB21DC10-A496-4D6C-B221-49E4C7F8FB0B}]
+"Language(VsTemplate)"="VC"
+"DisplayProjectType(VsTemplate)"="#1501"
+"ShowOnlySpecifiedTemplates(VsTemplate)"=dword:00000000
+"TemplateGroupIDs(VsTemplate)"="VC-Linux"
+@="#10007"
+
+// Item template location for Linux projects
+[$RootKey$\Projects\{EB21DC10-A496-4D6C-B221-49E4C7F8FB0B}\AddItemTemplates\TemplateDirs\{F1C25864-3097-11D2-A5C5-00C04F7968B4}\/1]
+"SortPriority"=dword:0000000C
+"TemplatesDir"="$BaseInstallDir$\Common7\IDE\VC\VCProjectItems"
+@="#10007"
+
+[$RootKey$\ToolsOptionsPages\Cross Platform\Connection Manager\Remote Headers IntelliSense Manager]
+@="#113"
+"Package"="{CED01BD3-F24C-4019-9DC6-82A8A4C6313F}"
+"Page"="{BEC820CA-3C73-42FD-95EC-4F334F37280C}"
+"Keywords"="#123"

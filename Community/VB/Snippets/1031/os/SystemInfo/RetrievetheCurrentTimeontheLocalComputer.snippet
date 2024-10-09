@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Aktuelle Uhrzeit auf dem lokalen Computer abrufen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Zeigt die aktuelle Uhrzeit auf dem lokalen Computer an.</Description>
+      <Shortcut>sysTime</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim localTime = My.Computer.Clock.LocalTime]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

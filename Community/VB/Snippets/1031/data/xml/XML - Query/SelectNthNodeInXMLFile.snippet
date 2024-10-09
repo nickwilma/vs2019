@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>N-te Instanz eines Elements in einer XML-Datei suchen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sucht die n-te Instanz eines Elements in einer XML-Datei.</Description>
+      <Shortcut>xmlNElem</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+     <Literal>
+          <ID>FileName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Dateinamen.</ToolTip>
+          <Default>"data.xml"</Default>
+        </Literal>
+        <Literal>
+          <ID>NodePath</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Achseneigenschaftsausdruck.</ToolTip>
+          <Default>&lt;parent&gt;</Default>
+        </Literal>
+        <Literal>
+          <ID>Indexer</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die Indexnummer, die abgerufen werden soll. Die Indizierung von Ergebnissen beginnt bei 0.</ToolTip>
+          <Default>(5)</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim element = XElement.Load($FileName$)
+      Dim result = element.$NodePath$$Indexer$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Text Decoration" standard-reference="https://www.w3.org/TR/css-text-decor-4/" status="WD" pub-date="2020-05-06">
+
+  <CssPropertyValue type="text-decoration-line">
+    <entry _locID="text-decoration-line_none" _locAttrData="description" value="none" description="Neither produces nor inhibits text decoration."/>
+    <entry _locID="text-decoration-line_underline" _locAttrData="description" value="underline" description="Each line of text is underlined."/>
+    <entry _locID="text-decoration-line_overline" _locAttrData="description" value="overline" description="Each line of text has a line over it (i.e. on the opposite side from an underline)."/>
+    <entry _locID="text-decoration-line_line-through" _locAttrData="description" value="line-through" description="Each line of text has a line through the middle."/>
+    <entry _locID="text-decoration-line_blink" _locAttrData="description" value="blink" description="The text blinks (alternates between visible and invisible). This value is deprecated in favor of CSS Animations."/>
+    <entry _locID="text-decoration-line_spelling-error" _locAttrData="description" value="spelling-error" description="This value indicates the type of text decoration used by the User Agent to highlight spelling mistakes."/>
+    <entry _locID="text-decoration-line_grammar-error" _locAttrData="description" value="grammar-error" description="This value indicates the type of text decoration used by the User Agent to highlight spelling mistakes."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="text-decoration-line" _locAttrData="description" restriction="enum" type="text-decoration-line" syntax="h1 { $(name): underline; }" description="Specifies what line decorations, if any, are added to the element." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-decoration-line-property"/>
+
+  <CssPropertyValue type="text-decoration-style">
+    <entry value="solid"/>
+    <entry value="double"/>
+    <entry value="dotted"/>
+    <entry value="dashed"/>
+    <entry value="wavy"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="text-decoration-style" _locAttrData="description" restriction="enum" type="text-decoration-style" syntax="h1 { $(name): dashed; }" description="Sets the line-drawing style of underlines, overlines, and line-throughs." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-decoration-style-property"/>
+
+  <CssProperty _locID="text-decoration-color" _locAttrData="description" restriction="color" type="text-decoration-color" syntax="h1 { $(name): #00cc33; }" description="Sets the color of underlines, overlines, and line-throughs." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-decoration-color-property"/>
+
+  <CssPropertyValue type="text-decoration-thickness">
+    <entry value="auto"/>
+    <entry _locID="text-decoration-thickness_from-font" _locAttrData="description" value="from-font" description="If the first available font has metrics indicating a preferred underline width, use that width."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="text-decoration-thickness" _locAttrData="description" restriction="length, percentage" type="text-decoration-thickness" syntax="h1 { $(name): from-font; }" description="Sets the stroke thickness of underlines, overlines, and line-throughs." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-decoration-thickness-property"/>
+
+  <CssProperty _locID="text-decoration" _locAttrData="description" restriction="length, percentage, enum, color" type="text-decoration-line, text-decoration-thickness, text-decoration-style" syntax="h1 { $(name): underline overline #FF3028; }" description="A shorthand for setting text-decoration-line, text-decoration-thickness, text-decoration-style, and text-decoration-color in one declaration." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-decoration-property"/>
+
+  <CssProperty _locID="text-underline-position" _locAttrData="description" restriction="enum" syntax="h1 { $(name): under; }" description="Sets the position of an underline with respect to the text." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-underline-position-property">
+    <entry value="auto"/>
+    <entry value="from-font"/>
+    <entry value="under"/>
+    <entry value="left"/>
+    <entry value="right"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-underline-offset" _locAttrData="description" restriction="length, percentage" syntax="h1 { $(name): 5px; }" description="Sets the offset of underlines from their zero position." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-underline-offset-property">
+    <entry value="auto"/>
+  </CssProperty>
+
+  <!-- TODO: The text-decoration-skip properties are still being drafted -->
+
+  <CssPropertyValue type="text-emphasis-style">
+    <entry value="none"/>
+    <entry value="filled"/>
+    <entry value="open"/>
+    <entry value="dot"/>
+    <entry value="circle"/>
+    <entry value="double-circle"/>
+    <entry value="triangle"/>
+    <entry value="sesame"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="text-emphasis-style" _locAttrData="description" type="text-emphasis-style" syntax="h1 { $(name): sesame; }" description="Applies emphasis marks to the element’s text." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-emphasis-style-property"/>
+
+  <CssProperty _locID="text-emphasis-color" _locAttrData="description" restriction="color" syntax="h1 { $(name): #00cc33; }" description="Specifies the foreground color of the emphasis marks." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-emphasis-color-property"/>
+
+  <CssProperty _locID="text-emphasis" _locAttrData="description" restriction="enum, color" type="text-emphasis-style" syntax="h1 { $(name): double-circle #00cc33; }" description="Shorthand for setting text-emphasis-style and text-emphasis-color in one declaration." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-emphasis-property"/>
+
+  <CssProperty _locID="text-emphasis-position" _locAttrData="description" restriction="enum" syntax="h1 { $(name): over right; }" description="This property describes where emphasis marks are drawn at. If [ right | left ] is omitted, it defaults to right." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-emphasis-position-property">
+    <entry value="over"/>
+    <entry value="under"/>
+    <entry value="right"/>
+    <entry value="left"/>
+  </CssProperty>
+
+  <!-- TODO: text-emphasis-skip is still being brainstormed -->
+
+  <CssProperty _locID="text-shadow" _locAttrData="description" restriction="color, length" syntax="h1 { $(name): 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue; }" description="Accepts a comma-separated list of shadow effects to be applied to the text of the element. The shadow effects are applied front-to-back: the first shadow is on top." standard-reference="https://www.w3.org/TR/css-text-decor-4/#text-shadow-property">
+    <entry value="none"/>
+  </CssProperty>
+
+</CssModule>

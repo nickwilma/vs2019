@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium,
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University),
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Text" standard-reference="http://www.w3.org/TR/css3-text/" status="WD" pub-date="2013-10-10">
+
+    <CssProperty _locID="text-transform" _locAttrData="description" restriction="enum" syntax="h1 { $(name): capitalize; }" description="Steuert die Groß-/Kleinschreibung eines Elementtexts." standard-reference="http://www.w3.org/TR/css3-text/#text-transform0">
+
+        <entry _locID="text-transform_none" _locAttrData="description" value="none" description="Bewirkt keine Änderung der Groß-/Kleinschreibung."/>
+        <entry _locID="text-transform_capitalize" _locAttrData="description" value="capitalize" description="Setzt den ersten Buchstaben jedes Worts in Großbuchstaben um."/>
+        <entry _locID="text-transform_uppercase" _locAttrData="description" value="uppercase" description="Setzt alle Zeichen jedes Worts in Großbuchstaben um."/>
+        <entry _locID="text-transform_lowercase" _locAttrData="description" value="lowercase" description="Setzt alle Zeichen jedes Worts in Kleinbuchstaben um."/>
+        <entry _locID="text-transform_fullwidth" _locAttrData="description" value="full-width" version="3.0" browsers="none" description="Setzt alle Zeichen in volle Breite um. Wenn das Zeichen keine entsprechende Variante voller Breite aufweist, bleibt es unverändert."/>
+        <entry _locID="text-transform_fullsize-kana" _locAttrData="description" value="fullsize-kana" version="3.0" browsers="none" description="Konvertiert alle kleingeschriebenen Kana-Zeichen in normale Kana-Zeichen. Dieser Wert wird normalerweise für Ruby-Anmerkungstext verwendet."/>
+    </CssProperty>
+
+    <CssProperty _locID="white-space" _locAttrData="description" version="1.0" restriction="enum" syntax="section { $(name): nowrap; }" description="Kurzschreibweise zum Festlegen der Eigenschaften 'white-space-collapsing' und 'text-wrap'." standard-reference="http://www.w3.org/TR/css3-text/#white-space0">
+
+        <entry _locID="white-space_normal" _locAttrData="description" value="normal" description="Legt 'white-space-collapsing' auf 'collapse' und 'text-wrap' auf 'normal' fest."/>
+        <entry _locID="white-space_pre" _locAttrData="description" value="pre" description="Legt 'white-space-collapsing' auf 'preserve' und 'text-wrap' auf 'none' fest."/>
+        <entry _locID="white-space_nowrap" _locAttrData="description" value="nowrap" description="Legt 'white-space-collapsing' auf 'collapse' und 'text-wrap' auf 'none' fest."/>
+        <entry _locID="white-space_pre-wrap" _locAttrData="description" value="pre-wrap" description="Legt 'white-space-collapsing' auf 'preserve' und 'text-wrap' auf 'normal' fest."/>
+        <entry _locID="white-space_pre-line" _locAttrData="description" value="pre-line" description="Legt 'white-space-collapsing' auf 'preserve-breaks' und 'text-wrap' auf 'normal' fest."/>
+    </CssProperty>
+
+    <CssProperty _locID="tab-size" _locAttrData="description" version="3.0" browsers="none" restriction="integer, length" syntax="div { $(name): 4; }" description="Diese Eigenschaft legt die Breite fest, d.h. die Anzahl der Leerzeichen (U+0020) in einem Tabulatorzeichen (U+0009)." standard-reference="http://www.w3.org/TR/css3-text/#tab-size"/>
+
+    <CssProperty _locID="line-break" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="p { $(name): normal; }" description="Gibt an, welche Zeilenumbrucheinschränkungen für das Element gelten." standard-reference="http://www.w3.org/TR/css3-text/#line-break0">
+
+        <entry _locID="line-break_auto" _locAttrData="description" value="auto" description="Der Benutzer-Agent legt die Zeilenumbrucheinschränkungen fest, die für CJK-Schriftarten verwendet werden. Er kann die Einschränkungen abhängig von der Zeilenlänge abändern, d.h. einen weniger restriktiven Satz von Zeilenumbruchregeln für kurze Zeilen verwenden."/>
+        <entry _locID="line-break_loose" _locAttrData="description" value="loose" description="Verwendet den am wenigsten restriktiven Satz von Zeilenumbruchregeln. Wird normalerweise für kurze Zeilen, z.B. Zeitungstexte, verwendet."/>
+        <entry _locID="line-break_normal" _locAttrData="description" value="normal" description="Verwendet die gebräuchlichsten Zeilenumbruchregeln."/>
+        <entry _locID="line-break_strict" _locAttrData="description" value="strict" description="Verwendet in CJK-Schriftarten einen restriktiveren Satz von Zeilenumbruchregeln als bei der Einstellung 'normal'."/>
+    </CssProperty>
+
+    <CssProperty _locID="word-break" _locAttrData="description" version="3.0" browsers="C,FF15,IE5,S3" restriction="enum" syntax="p.album { $(name): break-all; }" description="Gibt die Zeilenumbruchmöglichkeiten für Nicht-CJK-Schriftarten an." standard-reference="http://www.w3.org/TR/css3-text/#word-break0">
+
+        <entry _locID="word-break_normal" _locAttrData="description" value="normal" description="Führt für Nicht-CJK-Schriftarten einen Umbruch nach deren eigenen Regeln aus."/>
+        <entry _locID="word-break_break-all" _locAttrData="description" value="break-all" description="Zeilenumbrüche können bei Nicht-CJK-Schriftarten zwischen zwei beliebigen Graphemgruppen eingefügt werden. Diese Option wird meistens in Kontexten eingesetzt, in denen überwiegend CJK-Zeichen mit wenig Nicht-CJK-Textinhalt verwendet werden und der Text in den einzelnen Zeilen gleichmäßiger verteilt werden soll."/>
+        <entry _locID="word-break_keep-all" _locAttrData="description" value="keep-all" description="Blockzeichen können Umbruchpunkte implizieren, ansonsten verhält sich die Option wie 'normal'. Die Option wird meistens verwendet, wenn Wortbegrenzungszeichen verfügbar sind, die Zeilenumbrüche möglich machen, z.B. in Koreanisch."/>
+        <entry value="break-word"/>
+    </CssProperty>
+
+    <CssProperty _locID="text-wrap" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="p.test { $(name): none; }" description="Gibt den Modus für den Textumbruch an." standard-reference="http://www.w3.org/TR/css3-text/#word-break0">
+
+        <entry _locID="text-wrap_normal" _locAttrData="description" value="normal" description="Zeilen können an bestimmten Umbruchpunkten umbrochen werden, die durch die gültigen Zeilenumbruchregeln vorgegeben werden. Bei dieser Eigenschaft werden die Regeln aus dem Unicode-Standard, Anhang Nr. 14, für die Zeilenumbruchklassen WJ, ZW und GL berücksichtigt."/>
+        <entry _locID="text-wrap_none" _locAttrData="description" value="none" description="Zeilen können nicht umbrochen werden; Text, der nicht in den Blockcontainer passt, fließt darüber hinaus."/>
+        <entry _locID="text-wrap_avoid" _locAttrData="description" value="avoid" description="Zeilenumbrüche innerhalb des Elements werden unterdrückt. Der Benutzer-Agent kann im Element nur einen Zeilenumbruch durchführen, wenn es keine weiteren gültigen Umbruchpunkte in der Zeile gibt."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-align" _locAttrData="description" version="1.0" restriction="string" browsers="all" syntax="h2 { $(name): center; }" description="Beschreibt, wie der Inlineinhalt eines Blocks horizontal ausgerichtet wird, wenn der Inhalt nicht vollständig in die Zeilenbox passt." standard-reference="http://www.w3.org/TR/css3-text/#text-align0">
+
+        <entry _locID="text-align_start" _locAttrData="description" value="start" version="3.0" browsers="none" description="Der Inlineinhalt ist auf den Startrand der Zeilenbox ausgerichtet."/>
+        <entry _locID="text-align_end" _locAttrData="description" value="end" version="3.0" browsers="none" description="Der Inlineinhalt ist auf den Endrand der Zeilenbox ausgerichtet."/>
+        <entry _locID="text-align_match-parent" _locAttrData="description" value="match-parent" version="3.0" browsers="none" description="Dieser Wert verhält sich wie der Wert 'inherit', mit der Ausnahme, dass ein geerbter 'start'-Wert oder 'end'-Wert mit dem 'direction'-Wert des übergeordneten Elements verrechnet wird."/>
+        <entry _locID="text-align_left" _locAttrData="description" value="left" description="Der Inlineinhalt ist an der linken Seite der Zeilenbox ausgerichtet. In vertikalen Texten ist 'left' an der Seite der Zeilenbox ausgerichtet, die bei der Schreibrichtung von links nach rechts den Startrand bildet."/>
+        <entry _locID="text-align_right" _locAttrData="description" value="right" description="Der Inlineinhalt ist an der rechten Seite der Zeilenbox ausgerichtet. In vertikalen Texten ist 'right' an der Seite der Zeilenbox ausgerichtet, die bei der Schreibrichtung von links nach rechts die Endrand bildet."/>
+        <entry _locID="text-align_center" _locAttrData="description" value="center" description="Die Inlineinhalte sind in der Zeilenbox zentriert."/>
+        <entry _locID="text-align_justify" _locAttrData="description" value="justify" description="Der Text wird entsprechend der durch die 'text-justify'-Eigenschaft angegebenen Methode im Blocksatz ausgerichtet."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-align-last" _locAttrData="description" version="3.0" browsers="FF12,IE5" restriction="enum" syntax="div { $(name): right; }" description="Beschreibt, wie die letzte Zeile eines Blocks oder eine Zeile unmittelbar vor einem erzwungenen Zeilenumbruch ausgerichtet wird, wenn 'text-align' auf 'justify' festgelegt ist." standard-reference="http://www.w3.org/TR/css3-text/#text-align-last0">
+
+        <entry value="auto" version="3.0"/>
+        <entry _locID="text-align-last_start" _locAttrData="description" value="start" version="3.0" browsers="none" description="Der Inlineinhalt ist auf den Startrand der Zeilenbox ausgerichtet."/>
+        <entry _locID="text-align-last_end" _locAttrData="description" value="end" version="3.0" browsers="none" description="Der Inlineinhalt ist auf den Endrand der Zeilenbox ausgerichtet."/>
+        <entry _locID="text-align-last_left" _locAttrData="description" value="left" description="Der Inlineinhalt ist an der linken Seite der Zeilenbox ausgerichtet. In vertikalen Texten ist 'left' an der Seite der Zeilenbox ausgerichtet, die bei der Schreibrichtung von links nach rechts den Startrand bildet."/>
+        <entry _locID="text-align-last_right" _locAttrData="description" value="right" description="Der Inlineinhalt ist an der rechten Seite der Zeilenbox ausgerichtet. In vertikalen Texten ist 'right' an der Seite der Zeilenbox ausgerichtet, die bei der Schreibrichtung von links nach rechts die Endrand bildet."/>
+        <entry _locID="text-align-last_center" _locAttrData="description" value="center" description="Die Inlineinhalte sind in der Zeilenbox zentriert."/>
+        <entry _locID="text-align-last_justify" _locAttrData="description" value="justify" description="Der Text wird entsprechend der durch die 'text-justify'-Eigenschaft angegebenen Methode im Blocksatz ausgerichtet."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-justify" _locAttrData="description" version="3.0" browsers="IE5.5" restriction="enum" description="Wählt den Blocksatz-Algorithmus aus, der verwendet wird, wenn 'text-align' auf 'justify' festgelegt ist. Die Eigenschaft gilt für Blockcontainer, der Benutzer-Agent kann die Verwendung u.U. jedoch auch in Inlineelementen implementieren." syntax="div { $(name): inter-word; }" standard-reference="http://www.w3.org/TR/css3-text/#text-justify0">
+
+        <entry _locID="text-justify_none" _locAttrData="description" value="none" browsers="none" description="Der Blocksatz ist deaktiviert."/>
+        <entry _locID="text-justify_auto" _locAttrData="description" value="auto" description="Der Benutzer-Agent legt den anzuwendenden Blocksatz-Algorithmus fest, indem er zwischen Leistung und angemessener Darstellungsqualität abwägt."/>
+        <entry _locID="text-justify_inter-word" _locAttrData="description" value="inter-word" description="Durch den Blocksatz werden Zwischenräume hauptsächlich bei Wortbregrenzungszeichen geändert. Dieser Wert wird normalerweise für Sprachen verwendet, bei denen Wörter durch Leerzeichen getrennt werden, z.B. Englisch oder in einigen Fällen auch Koreanisch."/>
+        <entry _locID="text-justify_inter-ideograph" _locAttrData="description" value="inter-ideograph" description="Durch den Blocksatz werden Zwischenräume in Schriftarten, die keine Wortzwischenräume kennen, hauptsächlich bei Wortbregrenzungszeichen und Grenzen zwischen Graphemen geändert. Dieser Wert wird normalerweise für CJK-Sprachen verwendet."/>
+        <entry _locID="text-justify_inter-cluster" _locAttrData="description" value="inter-cluster" description="Durch den Blocksatz werden Zwischenräume in Cluster-Schriften hauptsächlich bei Wortbegrenzungszeichen und Grenzen zwischen Graphemgruppen geändert. Dieser Wert wird normalerweise für südostasiatische Sprachen wie Thai verwendet."/>
+        <entry _locID="text-justify_distribute" _locAttrData="description" value="distribute" description="Durch den Blocksatz werden Zwischenräume sowohl bei Wortbegrenzungszeichen als auch bei Grenzen zwischen Graphemgruppen in allen Schriftsystemen geändert, mit Ausnahme von verbundenen und kursiven Gruppen. Dieser Wert wird z.B. in Japanisch häufig in Verbindung mit der 'text-align-last'-Eigenschaft verwendet."/>
+        <entry value="distribute-all-lines"/>
+        <entry value="distribute-center-last "/>
+        <entry value="newspaper "/>
+        <entry _locID="text-justify_kashida" _locAttrData="description" value="kashida" description="Durch den Blocksatz werden vornehmlich Zeichen in Arabisch und verwandten Schriftsystemen verlängert, die Kashida oder andere kalligrafische Verlängerungseffekte verwenden."/>
+        <entry _locID="text-justify_trim" _locAttrData="description" value="trim" browsers="none" description="Legt fest, dass Text (wenn möglich) zusammengezogen statt gestreckt wird. Dadurch kann beispielsweise Leerraum in Glyphen zusammengezogen werden, soweit dies im jeweiligen typografischen System zulässig ist."/>
+    </CssProperty>
+
+    <CssProperty _locID="word-spacing" _locAttrData="description" version="1.0" restriction="length, percentage" description="Gibt den minimalen, maximalen und optimalen Abstand zwischen Wörtern an." syntax="article { $(name): 3px; }" standard-reference="http://www.w3.org/TR/css3-text/#word-spacing0">
+
+        <entry _locID="word-spacing_normal" _locAttrData="description" value="normal" description="Der normale Wortabstand, so wie er durch die aktuelle Schriftart und/oder den Benutzer-Agent festgelegt ist."/>
+    </CssProperty>
+
+    <CssProperty _locID="letter-spacing" _locAttrData="description" version="1.0" restriction="length" description="Gibt den minimalen, maximalen und optimalen Abstand zwischen Graphemgruppen an." syntax="h2 { $(name): 2px; }" standard-reference="http://www.w3.org/TR/css3-text/#letter-spacing0">
+
+        <entry _locID="letter-spacing_normal" _locAttrData="description" value="normal" description="Der Zwischenraum entspricht dem normalen Abstand für die aktuelle Schriftart und weist normalerweise die Länge 0 auf."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-indent" _locAttrData="description" version="1.0" restriction="percentage, length" description="Gibt den Einzug an, der auf die Zeilen des Inlineinhalts eines Blocks angewendet wird. Der Einzug gilt nur für die erste Zeile des Inlineinhalts im Block, es sei denn, das Schlüsselwort 'hanging' wurde angegeben. In diesem Fall werden alle Zeilen außer der ersten eingezogen." syntax="li { $(name): 5px; }" standard-reference="http://www.w3.org/TR/css3-text/#text-indent0">
+
+        <entry _locID="text-indent_hanging" _locAttrData="description" value="hanging" version="3.0" browsers="none" description="Invertiert den Einzug der betroffenen Zeilen."/>
+        <entry _locID="text-indent_each-line" _locAttrData="description" value="each-line" version="3.0" browsers="none" description="Der Einzug gilt für die erste Zeile des Blockcontainers sowie wie jede Zeile nach einem erzwungenen Zeilenumbruch, er wirkt sich jedoch nicht auf die Zeilen nach einem Textumbruch aus."/>
+    </CssProperty>
+
+    <CssProperty _locID="hanging-punctuation" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="p { $(name): first; }" description="Legt fest, ob ein Satzzeichen (falls vorhanden) am Anfang oder Ende einer vollen Textzeile außerhalb des Inhaltsbereichs platziert wird." standard-reference="http://www.w3.org/TR/css3-text/#hanging-punctuation0">
+
+        <!-- Watch for changes! Reference says:
+          Need to work on the description. Add Unicode character classes.
+          Cover indentation as well. Check for Western use-cases. Add hyphens value?' -->
+
+        <entry _locID="hanging-punctuation_none" _locAttrData="description" value="none" description="Zeichen dürfen nicht 'überstehen'."/>
+        <entry _locID="hanging-punctuation_first" _locAttrData="description" value="first" description="Satzzeichen (insbesondere öffnende Klammern und Anführungszeichen) können am Anfang der ersten Zeile 'überstehen'."/>
+        <entry _locID="hanging-punctuation_last" _locAttrData="description" value="last" description="Eine schließende Klammer oder ein Anführungszeichen am Ende der letzten formatierten Zeile eines Elements weist hängende Interpunktion auf. Dies gilt für alle Zeichen in den Unicode-Kategorien Pe, Pf, Pi."/>
+        <entry _locID="hanging-punctuation_allow-end" _locAttrData="description" value="allow-end" description="Satzzeichen (insbesondere Punkte und Kommas) können am Ende aller Zeilen 'überstehen', wenn das Satzzeichen ansonsten nicht in die Zeile passt, bevor der Blocksatz angewendet wird."/>
+        <entry _locID="hanging-punctuation_force-end" _locAttrData="description" value="force-end" description="Satzzeichen (insbesondere Punkte und Kommas) können am Ende aller Zeilen 'überstehen'. Wenn der Blocksatz für diese Zeile aktiviert ist, erzwingt er das 'Überhängen' des Satzzeichens."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-decoration-line" _locAttrData="description" version="3.0" browsers="none" restriction="enum" type="text-decoration-lines" syntax="div { $(name): underline; }" description="Legt fest, welche Textverzierungen dem Element ggf. in Form von Linien hinzugefügt werden." standard-reference="http://www.w3.org/TR/css3-text/#text-decoration-line0"/>
+
+    <CssPropertyValue type="text-decoration-lines">
+        <entry _locID="text-decoration-line_none" _locAttrData="description" value="none" description="Textverzierungen werden weder erzeugt noch unterbunden."/>
+        <entry _locID="text-decoration-line_underline" _locAttrData="description" value="underline" description="Jede Textzeile wird unterstrichen."/>
+        <entry _locID="text-decoration-line_overline" _locAttrData="description" value="overline" description="Jede Textzeile wird überstrichen."/>
+        <entry _locID="text-decoration-line_line-through" _locAttrData="description" value="line-through" description="Jede Textzeile wird durchgestrichen."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="text-decoration-color" _locAttrData="description" version="3.0" browsers="none" type="color" restriction="color" syntax="div { $(name): #ff0; }" description="Gibt die Farbe der Textverzierung (unterstrichen, überstrichen, durchgestrichen) an, die auf das Element mit der Eigenschaft 'text-decoration-line' angewendet wird." standard-reference="http://www.w3.org/TR/css3-text/#text-decoration-color0"/>
+
+    <CssProperty _locID="text-decoration-style" _locAttrData="description" version="3.0" browsers="none" restriction="enum" type="text-decoration-styles" syntax="div { $(name): solid; }" description="Gibt die Linienart für die Textverzierung (unterstrichen, durchgestrichen und überstrichen) an." standard-reference="http://www.w3.org/TR/css3-text/#text-decoration-style0"/>
+
+    <CssPropertyValue type="text-decoration-styles">
+        <entry _locID="text-decoration-style_none" _locAttrData="description" value="none" description="Erzeugt keine Linie."/>
+        <entry _locID="text-decoration-style_solid" _locAttrData="description" value="solid" description="Erzeugt eine durchgezogene Linie."/>
+        <entry _locID="text-decoration-style_double" _locAttrData="description" value="double" description="Erzeugt eine doppelte Linie."/>
+        <entry _locID="text-decoration-style_dotted" _locAttrData="description" value="dotted" description="Erzeugt eine gepunktete Linie."/>
+        <entry _locID="text-decoration-style_dashed" _locAttrData="description" value="dashed" description="Erzeugt eine gestrichelte Linie."/>
+        <entry _locID="text-decoration-style_wavy" _locAttrData="description" value="wavy" description="Erzeugt eine Wellenlinie."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="text-decoration" _locAttrData="description" version="1.0" restriction="enum, color" type="text-decoration-lines, text-decoration-styles" description="Verzierungen für eine Schriftart, die in einem Elementtext verwendet werden." syntax="a:visited { $(name): line-through; }" standard-reference="http://www.w3.org/TR/css3-text/#text-decoration0"/>
+
+    <CssProperty _locID="text-decoration-skip" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="Gibt an, welche Teile des Elementinhalts keine Textverzierung erhalten. Mit dieser Einstellung werden Textverzierungen in allen erzeugten Zeilen gesteuert, sowohl in den vom Element als auch in den von untergeordneten Elementen dargestellten Zeilen." syntax="none | [ images || spaces || ink || all ]" standard-reference="http://www.w3.org/TR/css3-text/#text-decoration-skip0">
+
+        <entry _locID="text-decoration-skip_none" _locAttrData="description" value="none" description="Nichts überspringen: Die Textverzierung wird für den gesamten Textinhalt und für ersetzte Inlineelemente dargestellt."/>
+        <entry _locID="text-decoration-skip_objects" _locAttrData="description" value="objects" description="Überspringt dieses Element, wenn es sich um atomischen Inlineinhalt handelt (z.B. ein Bild oder einen Inlineblock)."/>
+        <entry _locID="text-decoration-skip_spaces" _locAttrData="description" value="spaces" description="Überspringt Leerraum: Dies umfasst normale Leerzeichen (U+0020) und Tabulatorzeichen (U+0009), geschützte Leerzeichen (U+00A0), ideografisch vorgegebene Leerzeichen (U+3000), alle Leerzeichen fester Breite (z.B. U+2000–U+200A, U+202F sowie U+205F) sowie angrenzende Zeichen- oder Wortabstände."/>
+        <entry _locID="text-decoration-skip_ink" _locAttrData="description" value="ink" description="Überspringt die Verzierung bei der der Darstellung von Glyphen: unterbricht die Verzierungslinie, sodass Text an der Stelle durchscheint, an der eine Glyphe normalerweise von der Verzierung durchgestrichen wird. Der Benutzer-Agent kann auch vorsehen, dass ein kleiner Abstand auf beiden Seiten der dargestellten Glyphe übersprungen wird."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-underline-position" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="article { $(name): auto; }" description="Legt die Position einer für dasselbe Element angegebenen Unterstreichung fest: Dies wirkt sich nicht auf die von Vorgängerelementen angegebenen Unterstreichungen aus. Diese Eigenschaft wird normalerweise für vertikale Schriften, z.B. in japanischen Dokumenten verwendet, in denen die Unterstreichung häufig gegenüber (rechts vom) jeweiligen Textlauf angezeigt werden soll." standard-reference="http://www.w3.org/TR/css3-text/#text-underline-position0">
+
+        <entry _locID="text-underline-position_auto" _locAttrData="description" value="auto" description="Der Benutzer-Agent kann auch einen Algorithmus anwenden, um die Position der Unterstreichung festzulegen. In einem Layout mit horizontalen Zeilen wird die Unterstreichung wie bei 'alphabetic' ausgerichtet. In einem Layout mit vertikalen Zeilen (mit der Spracheinstellung Japanisch oder Koreanisch) wird die Unterstreichung rechts neben der Zeile ausgerichtet."/>
+        <entry _locID="text-underline-position_alphabetic" _locAttrData="description" value="alphabetic" browsers="none" description="Die Unterstreichung wird an der 'alphabetic'-Grundlinie ausgerichtet. Es kann vorkommen, dass einige Unterlängen durchgestrichen sind."/>
+        <entry _locID="text-underline-position_below" _locAttrData="description" value="below" description="Die Unterstreichung ist auf die untere Kante der Inhaltsbox des Elements ausgerichtet."/>
+        <entry _locID="text-underline-position_left" _locAttrData="description" value="left" browsers="none" description="In vertikalen typografischen Systemen wird die Unterstreichung wie bei 'below' am linken Textrand ausgerichtet."/>
+        <entry _locID="text-underline-position_right" _locAttrData="description" value="right" browsers="none" description="In vertikalen typografischen Systemen wird die Unterstreichung wie bei 'below' ausgerichtet, es sei denn, sie ist am rechten Textrand ausgerichtet."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-emphasis-style" _locAttrData="description" version="3.0" browsers="none" restriction="string" type="text-emphasis-style" description="Wendet Betonungszeichen auf den Elementtext an." syntax="none | [[ filled | open ] || [ dot | circle | double-circle | triangle | sesame ]] | &lt;string&gt;" standard-reference="http://www.w3.org/TR/css3-text/#text-emphasis-style0"/>
+
+    <CssPropertyValue type="text-emphasis-style">
+        <entry _locID="text-emphasis-style_none" _locAttrData="description" value="none" description="Kein Betonungszeichen."/>
+        <entry _locID="text-emphasis-style_filled" _locAttrData="description" value="filled" description="Die Form ist mit einer Volltonfarbe gefüllt."/>
+        <entry _locID="text-emphasis-style_open" _locAttrData="description" value="open" description="Die Form ist leer."/>
+        <entry _locID="text-emphasis-style_dot" _locAttrData="description" value="dot" description="Stellt die Markierung in Form kleiner Kreise dar. Der ausgefüllte Punkt entspricht U+2022 '•', und der leere Punkt entspricht U+25E6 '◦'."/>
+        <entry _locID="text-emphasis-style_circle" _locAttrData="description" value="circle" description="Verwendet große Kreise als Markierung. Der ausgefüllte Kreis entspricht U+25CF '●', und der leere Kreis entspricht U+25CB '○'."/>
+        <entry _locID="text-emphasis-style_double-circle" _locAttrData="description" value="double-circle" description="Stellt die Markierung in Form doppelter Kreise dar. Der ausgefüllte doppelte Kreis entspricht U+25C9 '◉', und der leere doppelte Kreis entspricht U+25CE '◎'."/>
+        <entry _locID="text-emphasis-style_triangle" _locAttrData="description" value="triangle" description="Stellt die Markierung in Form von Dreiecken dar. Das ausgefüllte Dreieck entspricht U+25B2 '▲', und das leere Dreieck entspricht U+25B3 '△'."/>
+        <entry _locID="text-emphasis-style_sesame" _locAttrData="description" value="sesame" description="Stellt die Markierung sesamartig dar. Das gefüllte Symbol entspricht U+FE45 '﹅', und das leere Symbol entspricht U+FE46 '﹆'."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="text-emphasis-color" _locAttrData="description" version="3.0" browsers="none" type="color" restriction="color" description="Beschreibt die Vordergrundfarbe der Betonungszeichen." syntax="div { $(name): #ff0; }" standard-reference="http://www.w3.org/TR/css3-text/#text-emphasis-color0"/>
+
+    <CssProperty _locID="text-emphasis" _locAttrData="description" version="3.0" browsers="none" restriction="color, string" type="text-emphasis-style" description="Kurzschreibweise zum Festlegen von 'text-emphasis-style' und 'text-emphasis-color' in einer Deklaration." syntax="&lt;color&gt; | &lt;string&gt; | none | [ [ filled | open ] || [ dot | circle | double-circle | triangle | sesame ] ]" standard-reference="http://www.w3.org/TR/css3-text/#text-emphasis0"/>
+
+    <CssProperty _locID="text-emphasis-position" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="[ above | below ] &amp;&amp; [ right | left ]" description="Legt die Position der Betonungszeichen fest." standard-reference="http://www.w3.org/TR/css3-text/#text-emphasis-position0">
+
+        <entry _locID="text-emphasis-position_above" _locAttrData="description" value="above" description="Positioniert die Betonungszeichen in horizontalen typografischen Systemen über dem Text."/>
+        <entry _locID="text-emphasis-position_below" _locAttrData="description" value="below" description="Positioniert die Betonungszeichen in horizontalen typografischen Systemen unter dem Text."/>
+        <entry _locID="text-emphasis-position_right" _locAttrData="description" value="right" description="Positioniert die Betonungszeichen in vertikalen typografischen Systemen rechts neben dem Text."/>
+        <entry _locID="text-emphasis-position_left" _locAttrData="description" value="left" description="Positioniert die Betonungszeichen in vertikalen typografischen Systemen links neben dem Text."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-shadow" _locAttrData="description" version="3.0" browsers="C,FF3.6,IE10,O9.5,S1.1" restriction="length, color" description="Ermöglicht die Darstellung von Schatteneffekten für den Elementtext." syntax="h1 { $(name): 20px 12px 2px #333;}" standard-reference="http://www.w3.org/TR/css3-text/#text-shadow0">
+
+        <entry _locID="text-shadow" _locAttrData="description_none" value="none" description="Kein Schatten."/>
+    </CssProperty>
+
+    <CssProperty _locID="hyphens" _locAttrData="description" version="3.0" browsers="none" type="hyphens" restriction="enum" description="Diese Eigenschaft steuert, ob Trennstriche erlaubt sind, um weitere Trennmöglichkeiten innerhalb einer Textzeile anzubieten." syntax="div { $(name): manual; }" standard-reference="http://www.w3.org/TR/css3-text/#hyphens0"/>
+
+    <CssPropertyValue type="hyphens">
+        <entry _locID="hyphens_none" _locAttrData="description" value="none" description="Wörter werden bei Zeilenumbrüchen nicht getrennt, auch dann nicht, wenn Zeichen innerhalb des Worts einen Zeilenumbruchpunkt andeuten."/>
+        <entry _locID="hyphens_manuel" _locAttrData="description" value="manual" description="Wörter werden bei Zeilenumbrüchen nur umbrochen, wenn das Wort Zeichen enthält, die einen Zeilenumbruch zulassen."/>
+        <entry _locID="hyphens_auto" _locAttrData="description" value="auto" description="Bei der Ermittlung von Trennstellen innerhalb eines Worts haben bedingte Trennzeichen innerhalb eines Worts (falls vorhanden) Vorrang vor automatischen Funktionen."/>
+    </CssPropertyValue>
+
+    <CssProperty _locID="overflow-wrap" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="div { $(name): break-word; }" description="Diese Eigenschaft legt fest, ob der Benutzer-Agent einen Umbruch innerhalb eines Worts durchführen kann, um den Überlauf einer normalerweise untrennbaren Zeichenfolge zu verhindern, wenn diese zu lang für die Zeilenbox ist." standard-reference="http://www.w3.org/TR/css3-text/#overflow-wrap0">
+
+        <entry value="normal"/>
+        <entry value="break-word"/>
+    </CssProperty>
+
+    <CssProperty _locID="text-space-collapse" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="div { $(name): collapse; }" description="Diese Eigenschaft legt fest, ob und wie Leerraum innerhalb des Elements verkleinert wird. Die Werte haben die folgenden Bedeutungen, die entsprechend den Verarbeitungsregeln für Leerräume interpretiert werden müssen." standard-reference="http://www.w3.org/TR/css3-text/#text-space-collapse">
+
+        <entry value="collapse"/>
+        <entry value="preserve"/>
+        <entry value="preserve-breaks"/>
+    </CssProperty>
+
+    <CssProperty _locID="word-wrap" _locAttrData="description" version="2.0" restriction="enum" syntax="p { $(name): break-word; }" description="Gibt an, ob der Benutzer-Agent einen Umbruch innerhalb eines Worts vornehmen kann, um den Überlauf einer normalerweise untrennbaren Zeichenfolge zu verhindern, wenn diese zu lang ist." standard-reference="http://www.w3.org/TR/css3-text/#word-wrap0">
+
+        <entry _locID="word-wrap_normal" _locAttrData="description" value="normal" description="Zeilen können nur an zulässigen Umbruchpunkten umbrochen werden."/>
+        <entry _locID="word-wrap_break-word" _locAttrData="description" value="break-word" description="Ein untrennbares Wort kann an einer beliebigen Stelle umbrochen werden, wenn in der Zeile keine ansonsten zulässigen Umbruchpunkte enthalten sind."/>
+        <entry _locID="word-wrap_hyphenate" _locAttrData="description" value="hyphenate" browsers="none" description="Ein untrennbares Wort kann getrennt werden, wenn in der Zeile keine ansonsten zulässigen Umbruchpunkte enthalten sind. Dies gilt auch, wenn die Trennfunktion deaktiviert ist."/>
+    </CssProperty>
+
+    <CssProperty _locID="text-size-adjust" _locAttrData="description" version="3.0" browsers="none" restriction="enum, percentage" syntax="body { $(name): 150%; }" description="Gibt eine Größenanpassung für die Anzeige von Textinhalten in mobilen Browsern an." standard-reference="http://dev.w3.org/csswg/css-size-adjust/">
+
+        <entry value="auto"/>
+        <entry value="none"/>
+    </CssProperty>
+
+</CssModule>

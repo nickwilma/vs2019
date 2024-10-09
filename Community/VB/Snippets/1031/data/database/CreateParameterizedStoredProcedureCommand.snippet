@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Parametrisierte gespeicherte Prozedur erstellen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt ein Befehlsobjekt für das Ausführen einer gespeicherten Prozedur mit Parametern.</Description>
+      <Shortcut>adoSprocWParams</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.XML.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Data</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Data.SqlClient</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>procedureName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen der gespeicherten Prozedur.</ToolTip>
+          <Default>CustOrderHist</Default>
+        </Literal>
+        <Literal>
+          <ID>columnName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Parameternamen.</ToolTip>
+          <Default>@customerID</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den neuen Wert.</ToolTip>
+          <Default>"ALFKI"</Default>
+        </Literal>
+        <Object>
+          <ID>conn</ID>
+          <Type>System.Data.SqlClient.SqlConnection</Type>
+          <ToolTip>Ersetzen Sie dies durch ein Verbindungsobjekt.</ToolTip>
+          <Default>conn</Default>
+        </Object>
+        <Object>
+          <ID>firstParameter</ID>
+          <Type>SqlParameter</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Parameters.</ToolTip>
+          <Default>customerIDParam</Default>
+        </Object>
+        <Object>
+          <ID>sprocCmd</ID>
+          <Type>SqlCommand</Type>
+          <ToolTip>Ersetzen Sie dies durch das Befehlsobjekt.</ToolTip>
+          <Default>cmd</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $sprocCmd$ As New SqlCommand()
+$sprocCmd$.Connection = $conn$
+$sprocCmd$.CommandType = CommandType.StoredProcedure
+$sprocCmd$.CommandText = "$procedureName$"
+
+' Create a SqlParameter for each parameter in the stored procedure.
+Dim $firstParameter$ As New SqlParameter("$columnName$", $value$)
+$sprocCmd$.Parameters.Add($firstParameter$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

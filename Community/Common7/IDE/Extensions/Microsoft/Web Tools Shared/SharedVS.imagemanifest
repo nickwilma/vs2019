@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageManifest
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014">
+  
+  <Symbols>
+    <String Name="Resources" Value="/Microsoft.WebTools.Shared.VS;Component/Resources" />
+    <Guid Name="SharedImagesGuid" Value="{ACFE44B5-B1C2-4033-A1A3-5BF20E80F77B}" />
+    <ID Name="EncryptionKeyId" Value="1" />
+  </Symbols>
+  
+  <Images>
+    <Image Guid="$(SharedImagesGuid)" ID="$(EncryptionKeyId)">
+      <Source Uri="$(Resources)/EncryptionKey_16x.xaml" />
+      <Source Uri="$(Resources)/EncryptionKey_16x.png" >
+        <Size Value="16" />
+      </Source>
+    </Image>
+  </Images>
+  <ImageLists />
+</ImageManifest>

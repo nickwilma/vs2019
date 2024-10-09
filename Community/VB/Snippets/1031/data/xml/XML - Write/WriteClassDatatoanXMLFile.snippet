@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Klassendaten in XML-Datei schreiben</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Schreibt mithilfe der XmlSerializer-Klasse die Daten aus einer Klasse in eine XML-Datei.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>xmlWriteClass</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Xml.dll</Assembly>
+          <Version/>
+          <Url/>
+        </Reference>
+      </References>
+      <Imports>
+	    <Import>
+			<Namespace>System.XML.Serialization</Namespace>
+		</Import>
+	    <Import>
+			<Namespace>System.IO</Namespace>
+		</Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>class</ID>
+          <Type/>
+          <ToolTip>Ersetzen Sie dies durch den Typnamen der zu serialisierenden Klasse.</ToolTip>
+          <Default>ArrayList</Default>
+        </Literal>
+        <Literal>
+          <ID>filename</ID>
+          <Type/>
+          <ToolTip>Ersetzen Sie dies durch den Namen der Datei, in die die Daten geschrieben werden sollen.</ToolTip>
+          <Default>"SerializedData.xml"</Default>
+        </Literal>
+        <Literal>
+          <ID>dataInstance</ID>
+          <Type/>
+          <ToolTip>Ersetzen Sie dies durch die Instanz der Klasse, die die Daten enthält.</ToolTip>
+          <Default>dataToWrite</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Dim writer As New XMLSerializer(GetType($Class$))
+Dim file As New StreamWriter($filename$)
+writer.Serialize(file, $dataInstance$)
+file.Close()]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

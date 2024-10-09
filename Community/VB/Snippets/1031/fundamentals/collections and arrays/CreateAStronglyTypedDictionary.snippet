@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Verschlüsselte Sammlung mit nur einem Elementtyp erstellen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt ein Wörterbuch, das bestimmte Arten von Elementen enthält, die durch Schlüssel indiziert sind.</Description>
+      <Shortcut>colCreateKey</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>storageVar</ID>
+          <ToolTip>Ersetzen Sie dies durch einen Bezeichner für den Hintergrundspeicher.</ToolTip>
+          <Default>stateCaps</Default>
+        </Literal>
+        <Literal>
+          <ID>keyType</ID>
+          <ToolTip>Ersetzen Sie dies durch den Typ der Schlüssel in der Sammlung. </ToolTip>
+          <Default>String</Default>
+        </Literal>
+		<Literal>
+			<ID>itemType</ID>
+			<ToolTip>Ersetzen Sie dies durch den Typ des Elements, das die Sammlung speichert. </ToolTip>
+			<Default>String</Default>
+		</Literal>
+	<Literal>
+          <ID>keyValue1</ID>
+          <ToolTip>Ersetzen Sie dies durch den Schlüssel für das erste Element. </ToolTip>
+          <Default>"WA"</Default>
+        </Literal>
+        <Literal>
+          <ID>keyValue2</ID>
+          <ToolTip>Ersetzen Sie dies durch den Schlüssel für das zweite Element. </ToolTip>
+          <Default>"NM"</Default>
+        </Literal>
+	<Literal>
+          <ID>value1</ID>
+          <ToolTip>Ersetzen Sie dies durch den Wert für das erste Element. </ToolTip>
+          <Default>"Olympia"</Default>
+        </Literal>
+	<Literal>
+          <ID>value2</ID>
+          <ToolTip>Ersetzen Sie dies durch den Wert für das zweite Element. </ToolTip>
+          <Default>"Santa Fe"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[' Backing storage -- a generic dictionary
+Dim $storageVar$ As New Dictionary(Of $keyType$, $itemType$)
+
+' Add items to the dictionary
+$storageVar$.Add( $keyValue1$ , $value1$)
+$storageVar$.Add( $keyValue2$ , $value2$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

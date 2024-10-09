@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Wörterbuch durchlaufen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Durchläuft alle Elemente in einem Wörterbuch.</Description>
+      <Shortcut>colIterDict</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>itemVar</ID>
+          <ToolTip>Ersetzen Sie dies durch einen Bezeichner für ein Element in der Sammlung.</ToolTip>
+          <Default>capitol</Default>
+        </Literal>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Ersetzen Sie dies durch den Typ von Elementen in der Sammlung.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Object>
+          <ID>dicVar</ID>
+          <Type>IDictionary(Of TKey, TValue)</Type>
+          <ToolTip>Ersetzen Sie dies durch die Wörterbuchvariable, die durchlaufen werden soll.</ToolTip>
+          <Default>stateCaps</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[        ' Iterate through a dictionary
+        For Each $itemVar$ As $itemType$ In $dicVar$.Values
+
+        Next
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

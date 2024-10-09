@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Einträge aus Ereignisprotokollen lesen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Liest alle Ereignisprotokolleinträge.</Description>
+      <Shortcut>evReadLog</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>LogName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Protokollnamen auf dem lokalen Computer.</ToolTip>
+          <Default>"Application"</Default>
+        </Literal>
+        <Object>
+          <ID>EntryType</ID>
+          <Type>EventLogEntryType</Type>
+          <ToolTip>Ersetzen Sie dies durch einen Enumerationswert.</ToolTip>
+          <Default>EventLogEntryType.Error</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim log As New EventLog($LogName$)
+Dim entries As EventLogEntryCollection = log.Entries]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

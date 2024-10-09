@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>"Group By" und Gruppe umbenennen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Erstellt eine Abfrage, die die Ergebnisse gruppiert und die Gruppe umbenennt.</Description>
+      <Shortcut>qGroupRename</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Abfrage.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Variablen, die ein Element aus der Datenquelle darstellt.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Bezeichner der Datenquelle.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Namen des Felds, das zum Gruppieren der Ergebnisse verwendet wird.</ToolTip>
+          <Default>Length</Default>
+       </Literal>
+        <Literal>
+          <ID>groupName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Alias, den die Gruppe erhalten soll.</ToolTip>
+          <Default>CharCount</Default>
+        </Literal>
+        <Literal>
+          <ID>aggregateName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Alias, den das Aggregat erhalten soll.</ToolTip>
+          <Default>FruitCount</Default>
+        </Literal>
+        <Literal>
+          <ID>groupingCondition</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Aggregator, der für die Gruppe aufgerufen werden soll.</ToolTip>
+          <Default>Count</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Group By $groupName$ = $item$.$field$ Into $aggregateName$ = $groupingCondition$() _
+                    Select $groupName$, $aggregateName$ _
+                    Order By $aggregateName$ Descending, $groupName$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

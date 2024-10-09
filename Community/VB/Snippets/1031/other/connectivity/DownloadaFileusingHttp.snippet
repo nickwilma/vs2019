@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Datei über HTTP herunterladen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Lädt eine Datei über HTTP herunter.</Description>
+      <Shortcut>conDown</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>url</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die URL der herunterzuladenden Datei.</ToolTip>
+          <Default>"http://www.URLtoDownloadFrom.net"</Default>
+        </Literal>
+        <Literal>
+          <ID>location</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Pfad zu der lokalen Datei.</ToolTip>
+          <Default>"C:\filename.html"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.Network.DownloadFile($url$, $location$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

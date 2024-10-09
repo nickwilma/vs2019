@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Meldungen programmgesteuert senden und empfangen</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sendet eine Meldung an eine Warteschlange auf dem lokalen Computer, empfängt diese Meldung und formatiert den Text als Zeichenfolge.</Description>
+      <Shortcut>mqSendRec</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Messaging.dll</Assembly>
+          <Url/>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Messaging</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>QueueName</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch den Warteschlangennamen. "." steht für den lokalen Computer.</ToolTip>
+          <Default>".\QueueName"</Default>
+        </Literal>
+        <Literal>
+          <ID>Message</ID>
+          <Type>String</Type>
+          <ToolTip>Ersetzen Sie dies durch die Meldung. Die Meldung kann ein beliebiges Objekt sein.</ToolTip>
+          <Default>"Message text"</Default>
+        </Literal>
+        <Literal>
+          <ID>BodyType</ID>
+          <Type>System.Type</Type>
+          <ToolTip>Ersetzen Sie dies durch den Typ der Meldung. Dieser muss mit dem Typ des im Sendebefehl gesendeten Objekts übereinstimmen.</ToolTip>
+          <Default>GetType(String)</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim queue As New System.Messaging.MessageQueue($QueueName$)
+
+' Send a message to the queue.
+queue.Send($Message$)
+
+' Wait for the message to arrive, and then remove
+' it from the queue.
+Dim msg As Message
+msg = queue.Receive(New TimeSpan(0, 0, 3))
+
+' Convert the body to a string.
+msg.Formatter = New XmlMessageFormatter(New Type() {$BodyType$})
+Dim text As String = msg.Body.ToString]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,10 @@
+{
+  "comments": {
+    "blockComment": [ "<!--", "-->" ]
+  },
+  "indentationRules": {
+    "increaseIndentPattern": "(<(?!(?:area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr))(\\w[\\w\\d]*)([^/>]*(?!/)>[\\w\\d\\s]*)\\s*$)|(?:<!--[\\w\\d\\s]*$)",
+    "decreaseIndentPattern": "(?:</([_:\\w][_:\\w-.\\d]*)\\s*>)|(?:-->)"
+  },
+  "wordPattern": "(-?\\d*\\.\\d\\w*)|(\\/?[^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)"
+}

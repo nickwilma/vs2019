@@ -1,0 +1,52 @@
+﻿<VSTemplateManifest Version="1.0" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateDir>
+    <RelativePath>VC\Cross Platform</RelativePath>
+    <LocalizedName Package="{976cf7d5-2a72-47a3-9e46-5b7c3db95f17}" ID="2207" />
+    <SortOrder>20</SortOrder>
+  </VSTemplateDir>
+  <VSTemplateDir>
+    <RelativePath>VC\Cross Platform\Linux</RelativePath>
+    <LocalizedName Package="{976cf7d5-2a72-47a3-9e46-5b7c3db95f17}" ID="2208" />
+    <SortOrder>20</SortOrder>
+  </VSTemplateDir>
+  <VSTemplateContainer TemplateType="Project">
+    <RelativePathOnDisk>VC\Cross Platform\Linux\LinuxConsoleApplication</RelativePathOnDisk>
+    <TemplateFileName>ConsoleApplication.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name Package="{CED01BD3-F24C-4019-9DC6-82A8A4C6313F}" ID="126" />
+        <Description Package="{CED01BD3-F24C-4019-9DC6-82A8A4C6313F}" ID="127" />
+        <ProjectType>VC</ProjectType>
+        <TemplateID>Microsoft.VisualStudio.Linux.VC.ConsoleApplication</TemplateID>
+        <SortOrder>1000</SortOrder>
+        <CreateNewFolder>true</CreateNewFolder>
+        <CreateInPlace>true</CreateInPlace>
+        <DefaultName>ConsoleApplication</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <LocationField>Enabled</LocationField>
+        <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+        <Icon>Icon.ico</Icon>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Project">
+    <RelativePathOnDisk>VC\Cross Platform\Linux\RaspberryBlink</RelativePathOnDisk>
+    <TemplateFileName>Blink.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name Package="{CED01BD3-F24C-4019-9DC6-82A8A4C6313F}" ID="124" />
+        <Description Package="{CED01BD3-F24C-4019-9DC6-82A8A4C6313F}" ID="125" />
+        <ProjectType>VC</ProjectType>
+        <TemplateID>Microsoft.VisualStudio.Linux.VC.Raspberry.Blink</TemplateID>
+        <SortOrder>1000</SortOrder>
+        <CreateNewFolder>true</CreateNewFolder>
+        <CreateInPlace>true</CreateInPlace>
+        <DefaultName>Blink</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <LocationField>Enabled</LocationField>
+        <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+        <Icon>Icon.ico</Icon>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

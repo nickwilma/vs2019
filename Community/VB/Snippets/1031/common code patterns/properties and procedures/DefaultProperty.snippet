@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Standardeigenschaft definieren</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Definiert eine Standardeigenschaft oder Indexeigenschaft.</Description>
+      <Keywords>
+		  <Keyword>Eigenschaft</Keyword>
+		  <Keyword>Index</Keyword>
+		  <Keyword>Standard</Keyword>
+      </Keywords>
+      <Shortcut>PropDef</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>propertyName</ID>
+          <Type>
+          </Type>
+          <ToolTip>Benennen Sie dies in den beschreibenden Namen für die Eigenschaft um.</ToolTip>
+          <Default>PropertyName</Default>
+        </Literal>
+        <Literal>
+          <ID>indexType</ID>
+          <Type>
+          </Type>
+          <ToolTip>Ersetzen Sie dies durch den Typ des Index.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>propertyType</ID>
+          <Type>
+          </Type>
+          <ToolTip>Ersetzen Sie dies durch den von der Eigenschaft zurückgegebenen Typ.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>IndexIsValid</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Ersetzen Sie dies durch einen Ausdruck, um zu testen, ob der Index gültig ist.</ToolTip>
+          <Default>True</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Default Property $propertyName$(ByVal index As $indexType$) As $propertyType$
+        Get
+            If $IndexIsValid$ Then
+                
+            Else
+                Throw New ArgumentOutOfRangeException
+            End If
+        End Get
+        Set(ByVal Value As $propertyType$)
+            If $IndexIsValid$ Then
+                
+            Else
+                Throw New ArgumentOutOfRangeException
+            End If
+        End Set
+    End Property]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
